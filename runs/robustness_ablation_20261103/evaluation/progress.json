@@ -1,0 +1,134 @@
+{
+  "status": "completed",
+  "protocol_sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+  "manifest_signature": "f78b0982c2046b03b7b66afa7d34127a651523f0e506c4bd88e8ee602e05eb1e",
+  "total_cases": 18,
+  "completed_cases": {
+    "baseline_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed42/nominal.json",
+      "sha256": "0ee6e790af0c26d667937667e32578a94042f3e147ef8996ab4552b97422cbf1",
+      "policy_id": "baseline_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "baseline_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed42/randomized.json",
+      "sha256": "7427e515736b6980d0e2b941780f7a6cae6a23f096149f9a89f0c1efa30f015b",
+      "policy_id": "baseline_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "baseline_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed43/nominal.json",
+      "sha256": "a0e3398a3a314c6eca9d38ff0c0a9398d73a8b3bca39696b19e200461d689976",
+      "policy_id": "baseline_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "baseline_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed43/randomized.json",
+      "sha256": "c731707e50404469b47d85814d36bcd0995a708d26aa4a6b3120d599596d37f1",
+      "policy_id": "baseline_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "baseline_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed44/nominal.json",
+      "sha256": "cb0900ec349949c1104a7ec3a3d0356ae658285f49eba962952735409b1dbb50",
+      "policy_id": "baseline_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "baseline_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed44/randomized.json",
+      "sha256": "a5f96529b5b32229d4b4944a84dad16fafc6ffcb6c2e131c72938649c5041a2a",
+      "policy_id": "baseline_seed44",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "full_dr_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed42/nominal.json",
+      "sha256": "3eef0b1d8a803c645309734591af08a5a9fcce0862e5df058a177834c1fa4620",
+      "policy_id": "full_dr_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "full_dr_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed42/randomized.json",
+      "sha256": "7ab4b2f75d5a8638fc8f2e072ae844090ffe6c6cc78d90f2f39d1ef8d6e0b551",
+      "policy_id": "full_dr_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "full_dr_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed43/nominal.json",
+      "sha256": "d12437691d7275362fb304e7b7082eca8243352b6de1a2eb3bbf86eb67494e9d",
+      "policy_id": "full_dr_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "full_dr_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed43/randomized.json",
+      "sha256": "6c94dee0c4896a3dec64fb4bafb75eca14ede1bc76562ba812572c940da38358",
+      "policy_id": "full_dr_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "full_dr_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed44/nominal.json",
+      "sha256": "2fcca5c0596526af662aeae302fcce8d3d2ffdbd40b0c25b3cf3704f703dfdba",
+      "policy_id": "full_dr_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "full_dr_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed44/randomized.json",
+      "sha256": "cc5d9291bffc117d681dfdf4c4f8f13170342a4f267835dc72705b5cc1d1c772",
+      "policy_id": "full_dr_seed44",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "fixed_delay_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed42/nominal.json",
+      "sha256": "5dba8e01370cd0b226962dbd0092d4ff574d0209731418770b9c91191340047e",
+      "policy_id": "fixed_delay_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "fixed_delay_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed42/randomized.json",
+      "sha256": "31e59371de5be76006100b596e497af94121ba26b50654e3c7a6a6f45b49b4bd",
+      "policy_id": "fixed_delay_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "fixed_delay_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed43/nominal.json",
+      "sha256": "ac5161f8622f3d778a9eb5f7e5d27180615d87dd637107d1ae54083d4ed678a1",
+      "policy_id": "fixed_delay_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "fixed_delay_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed43/randomized.json",
+      "sha256": "a44b7a6ef281dede229817f274904a6bd8f6b394f66bd2b56fcd8a06b0e57c24",
+      "policy_id": "fixed_delay_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "fixed_delay_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed44/nominal.json",
+      "sha256": "449744fac4c1fa90fb1ec5ebd1544726fc4f8c8a914fb7da30bdf5078ca94f2a",
+      "policy_id": "fixed_delay_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "fixed_delay_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed44/randomized.json",
+      "sha256": "33f9d7c48d1f7710c2ee122be7c297f4077dc04a2e02686a97b9660df4b5cab7",
+      "policy_id": "fixed_delay_seed44",
+      "condition": "randomized",
+      "resumed": false
+    }
+  }
+}

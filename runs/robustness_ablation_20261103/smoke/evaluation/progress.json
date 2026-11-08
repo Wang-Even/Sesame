@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "protocol_sha256": "985449cf39a6ae07378922bcb9508dfe517687864f8b33dcf2d777f076488a99",
+  "manifest_signature": "09d1e6cddaa9ac4411212a6a5565c14bcf16ade98286e4af01f0f9fb534e8070",
+  "total_cases": 4,
+  "completed_cases": {
+    "baseline_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/baseline_seed42/nominal.json",
+      "sha256": "7c65d8cfdcb0fe46122287a3df7376677d2a13e868deb2779eadfda91a9b40c7",
+      "policy_id": "baseline_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "baseline_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/baseline_seed42/randomized.json",
+      "sha256": "bb7ae36a53012e1018cb967b5162b16206382f28bb02a7db6d55b61bc3b04b7d",
+      "policy_id": "baseline_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "fixed_delay_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/fixed_delay_seed42/nominal.json",
+      "sha256": "8743f2ba50a451d3eb170ba86bc8997b9cab5f4611fe972d62e1812cadfbc3a4",
+      "policy_id": "fixed_delay_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "fixed_delay_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/fixed_delay_seed42/randomized.json",
+      "sha256": "53333b15491c39adc573f9092547e10311502964437aba226fa08b314ce2d587",
+      "policy_id": "fixed_delay_seed42",
+      "condition": "randomized",
+      "resumed": false
+    }
+  }
+}

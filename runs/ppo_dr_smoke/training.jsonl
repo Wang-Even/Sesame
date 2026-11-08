@@ -1,0 +1,1 @@
+{"iteration": 1, "environment_transitions": 512, "collection_seconds": 1.5023720264434814, "update_seconds": 0.45381999015808105, "learning_rate": 1e-05, "losses": {"value_function": 0.009681156580336392, "surrogate": -0.04575055614113808, "entropy": 5.8101133584976195}, "mean_episode_return": null, "mean_episode_length_steps": null, "episode_metrics": {}}

@@ -1,0 +1,20 @@
+{
+  "algorithm": "dqn",
+  "seed": 44,
+  "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44",
+  "num_envs": 256,
+  "total_transitions": 2048000,
+  "warmup_transitions": 65536,
+  "batch_size": 512,
+  "replay_capacity": 262144,
+  "updates_per_vector_step": 2,
+  "smoke": false,
+  "device": "cuda:0",
+  "reward_scale": 1.0,
+  "dqn_epsilon_initial": 1.0,
+  "dqn_epsilon_final": 0.05,
+  "dqn_epsilon_decay_fraction": 0.5,
+  "observation_normalization": "fixed physical scaling from environment",
+  "timeout_bootstrap": "pre-reset observation; true terminations masked",
+  "replay_checkpointed": false
+}

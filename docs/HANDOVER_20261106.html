@@ -1,0 +1,553 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sesame 机器人行走实验报告（简版）</title><style>body{font:16px/1.75 system-ui,"Noto Sans CJK SC",sans-serif;color:#203047;max-width:1120px;margin:32px auto;padding:0 24px}h1{font-size:30px}h2{margin-top:2.5em;border-bottom:2px solid #dbe5f0;padding-bottom:.3em}h3{margin-top:1.7em}a{color:#1753b6}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow-x:auto}th,td{border:1px solid #dce4ed;padding:9px 12px;vertical-align:top}th{background:#edf3fa}tr:nth-child(even){background:#f8fafc}pre{background:#f1f5f9;padding:16px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.55}code{font-family:ui-monospace,Consolas,monospace}p code,td code{font-size:.9em;background:#f0f4f8;padding:1px 3px}img{max-width:100%;height:auto}.toc{background:#f6f9fc;border:1px solid #dce4ed;padding:16px 24px;border-radius:8px}.toc ul{margin:.2em 0}.notice{color:#5c6879;font-size:14px}@media print{body{max-width:none;margin:0;padding:0;font-size:10pt}h2,h3{break-after:avoid}pre,table{font-size:8pt}tr,img{break-inside:avoid}a{color:inherit}pre{white-space:pre-wrap}.toc{break-after:page}@page{size:A4;margin:16mm}}</style></head><body><p class="notice"><a href="HANDOVER_20261106.md">可编辑 Markdown</a> · 模型、代码、视频和数据链接指向本机项目文件。</p><nav aria-label="目录"><div class="toc">
+<ul>
+<li><a href="#1">1. 代码结构与使用方法</a><ul>
+<li><a href="#_1">代码入口</a></li>
+<li><a href="#_2">模型权重</a></li>
+<li><a href="#_3">初始化环境</a></li>
+<li><a href="#_4">训练当前版本</a></li>
+<li><a href="#_5">复评现有模型并生成报告</a></li>
+<li><a href="#_6">重新录像</a></li>
+</ul>
+</li>
+<li><a href="#2">2. 奖励函数设计</a></li>
+<li><a href="#3-demo">3. 已完成的 Demo、测评指标与结果</a><ul>
+<li><a href="#_7">基线方法</a></li>
+<li><a href="#_8">测评指标</a></li>
+<li><a href="#_9">测试设置</a></li>
+<li><a href="#pposacdqn">PPO、SAC、DQN 结果</a></li>
+<li><a href="#dyna-ppo">Dyna-PPO 已有结果</a></li>
+<li><a href="#demo">Demo 视频</a></li>
+</ul>
+</li>
+<li><a href="#4">4. 待改进的地方与对应方法</a><ul>
+<li><a href="#domain-randomization">已尝试：域随机化（Domain Randomization）</a></li>
+<li><a href="#_10">后续改进</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav><h1 id="sesame">Sesame 机器人行走实验报告（简版）</h1>
+<p>更新：2026-11-08；目录：<code>/home/ywwang/sesame</code>。任务是在平地沿世界 <code>+X</code> 方向以 0.10 m/s 行走。基线方法为 <strong>PPO、SAC、DQN</strong>，并保留 <strong>Dyna-PPO</strong> 已有结果。PPO 只展示奖励改进后的结果；域随机化作为已尝试的改进方法。课程统一评分和真机部署尚未接入。</p>
+<h2 id="1">1. 代码结构与使用方法</h2>
+<h3 id="_1">代码入口</h3>
+<table>
+<thead>
+<tr>
+<th>文件或目录</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>assets/</code></td>
+<td>机器人源模型、Isaac USD 和网格</td>
+</tr>
+<tr>
+<td><a href="../sesame_rl/environment.py">environment.py</a></td>
+<td>基础观测、动作、奖励和终止条件</td>
+</tr>
+<tr>
+<td><a href="../sesame_rl/dr_environment.py">dr_environment.py</a></td>
+<td>物理参数、时延和初态随机化</td>
+</tr>
+<tr>
+<td><a href="../sesame_rl/study_environment.py">study_environment.py</a></td>
+<td>时延消融及评估指标</td>
+</tr>
+<tr>
+<td><a href="../sesame_rl/heading_environment.py">heading_environment.py</a></td>
+<td>新增绝对航向奖励</td>
+</tr>
+<tr>
+<td><a href="../scripts/train_heading_ppo.py">train_heading_ppo.py</a></td>
+<td>当前 PPO 训练入口，已加入航向奖励</td>
+</tr>
+<tr>
+<td><a href="../sesame_rl/offpolicy.py">offpolicy.py</a>、<a href="../scripts/train_offpolicy.py">train_offpolicy.py</a></td>
+<td>SAC、DQN 算法与训练入口</td>
+</tr>
+<tr>
+<td><a href="../sesame_rl/dyna_ppo.py">dyna_ppo.py</a>、<a href="../sesame_rl/dyna_world_model.py">dyna_world_model.py</a></td>
+<td>Dyna-PPO 算法与动力学/奖励模型</td>
+</tr>
+<tr>
+<td><a href="../scripts/train_dyna_ppo.py">train_dyna_ppo.py</a></td>
+<td>已有 Dyna-PPO 训练入口，仍使用旧奖励</td>
+</tr>
+<tr>
+<td><a href="../scripts/evaluate_offpolicy.py">evaluate_offpolicy.py</a>、<a href="../scripts/analyze_offpolicy.py">analyze_offpolicy.py</a></td>
+<td>PPO、SAC、DQN 的共同评估、统计和曲线</td>
+</tr>
+<tr>
+<td><a href="../scripts/evaluate_dyna_ppo.py">evaluate_dyna_ppo.py</a>、<a href="../scripts/analyze_dyna_ppo.py">analyze_dyna_ppo.py</a></td>
+<td>Dyna-PPO 评估与报告入口</td>
+</tr>
+<tr>
+<td><a href="../scripts/record_offpolicy_video.py">record_offpolicy_video.py</a></td>
+<td>PPO、SAC、DQN 的单模型录像</td>
+</tr>
+<tr>
+<td><code>runs/</code>、<code>docs/</code>、<code>reports/</code></td>
+<td>实验结果、说明文档、验证记录</td>
+</tr>
+</tbody>
+</table>
+<p><a id="模型权重"></a></p>
+<h3 id="_2">模型权重</h3>
+<p>下表直接链接到清理后保留的 <strong>12 个最终模型</strong>；各列对应训练随机种子，均为 <code>final.pt</code>。模型与本报告的结果和 Demo 对应，训练目录同时保留配置、日志和源码快照。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>种子 42</th>
+<th>种子 43</th>
+<th>种子 44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PPO</td>
+<td><a href="../runs/ppo_heading_20261105/training/heading_seed42/final.pt">final.pt</a></td>
+<td><a href="../runs/ppo_heading_20261105/training/heading_seed43/final.pt">final.pt</a></td>
+<td><a href="../runs/ppo_heading_20261105/training/heading_seed44/final.pt">final.pt</a></td>
+</tr>
+<tr>
+<td>SAC</td>
+<td><a href="../runs/offpolicy_heading_20261107/training/sac_seed42/final.pt">final.pt</a></td>
+<td><a href="../runs/offpolicy_heading_20261107/training/sac_seed43/final.pt">final.pt</a></td>
+<td><a href="../runs/offpolicy_heading_20261107/training/sac_seed44/final.pt">final.pt</a></td>
+</tr>
+<tr>
+<td>DQN</td>
+<td><a href="../runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt">final.pt</a></td>
+<td><a href="../runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt">final.pt</a></td>
+<td><a href="../runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt">final.pt</a></td>
+</tr>
+<tr>
+<td>Dyna-PPO</td>
+<td><a href="../runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt">final.pt</a></td>
+<td><a href="../runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt">final.pt</a></td>
+<td><a href="../runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt">final.pt</a></td>
+</tr>
+</tbody>
+</table>
+<p>PPO、SAC、DQN 使用共同的改进奖励，对应<a href="../runs/offpolicy_heading_20261107/evaluation_protocol.json">评估配置</a>中的 9 个模型；Dyna-PPO 使用旧奖励，其结果单独列出。2026-11-08 已删除其余旧权重、中间检查点和测试模型，历史结果与视频仍保留，详见<a href="../reports/model_cleanup_20261108.json">清理记录</a>。</p>
+<p><strong>接口要点：</strong>36 维观测包括机身速度、角速度、重力方向、速度指令、8 个关节位置/速度及上一动作。8 维动作按 <code>[R1,R2,L1,L2,R4,R3,L3,L4]</code> 排列，经 <code>裁剪→q_stand+0.58a→限位/限速→域随机化中的时延/滞后</code> 执行。控制频率 50 Hz，回合最长 10 秒。PPO、Dyna-PPO 加载时保留模型中的观测归一化参数；SAC、DQN 使用环境已有的固定观测缩放。</p>
+<h3 id="_3">初始化环境</h3>
+<p>在同一个 Bash 终端先执行下面的代码。训练、推理和仿真必须使用 CUDA；新实验使用新目录，保留冻结源码、协议和历史结果，不执行 Git 操作。</p>
+<pre><code class="language-bash">cd /home/ywwang/sesame
+nvidia-smi
+isaac_py() {
+  CONDA_NO_PLUGINS=true PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 \
+  /home/ubuntu/miniforge3/bin/conda run -n env_isaaclab --no-capture-output \
+  /home/ubuntu/miniforge3/envs/env_isaaclab/bin/python &quot;$@&quot;
+}
+</code></pre>
+<h3 id="_4">训练当前版本</h3>
+<pre><code class="language-bash">SESAME_TRAIN_DIR=&quot;$(mktemp -d /home/ywwang/sesame/runs/heading_retrain_XXXXXX)&quot;
+isaac_py -u scripts/train_heading_ppo.py \
+  --seed 42 --num-envs 256 --iterations 250 --steps-per-env 32 \
+  --heading-penalty-scale 0.5 --run-dir &quot;$SESAME_TRAIN_DIR&quot;
+</code></pre>
+<p>每个随机种子训练 204.8 万步。三个随机种子分别使用 42、43、44，并各用新目录。正式入口固定上述预算；短测需加 <code>--smoke</code>，例如改为 16 环境、20 次更新。成功后检查 <code>result.json</code> 中的 <code>status=completed</code> 和 <code>reload_max_abs_action_error=0</code>。</p>
+<p>SAC 使用同一奖励和域随机化设置：</p>
+<pre><code class="language-bash">SESAME_SAC_RUN=&quot;$(mktemp -d /home/ywwang/sesame/runs/sac_retrain_XXXXXX)&quot;
+isaac_py -u scripts/train_offpolicy.py --algorithm sac --seed 42 --run-dir &quot;$SESAME_SAC_RUN&quot;
+</code></pre>
+<p>DQN 将 <code>--algorithm sac</code> 改为 <code>--algorithm dqn</code>，并使用新目录。两者每个随机种子同样训练 204.8 万步；参数见 <a href="OFFPOLICY_STUDY_20261107.md">SAC、DQN 实验说明</a>。</p>
+<h3 id="_5">复评现有模型并生成报告</h3>
+<pre><code class="language-bash">SESAME_EVAL_STUDY=&quot;$(mktemp -d /home/ywwang/sesame/runs/algorithms_reeval_XXXXXX)&quot;
+cp runs/offpolicy_heading_20261107/evaluation_protocol.json &quot;$SESAME_EVAL_STUDY/evaluation_protocol.json&quot;
+cp runs/offpolicy_heading_20261107/evaluation_protocol.sha256 &quot;$SESAME_EVAL_STUDY/evaluation_protocol.sha256&quot;
+isaac_py -u scripts/evaluate_offpolicy.py \
+  --protocol &quot;$SESAME_EVAL_STUDY/evaluation_protocol.json&quot; \
+  --output-dir &quot;$SESAME_EVAL_STUDY/evaluation&quot;
+
+PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
+  /home/ubuntu/miniforge3/envs/metaworld_v010/bin/python -s \
+  scripts/analyze_offpolicy.py &quot;$SESAME_EVAL_STUDY&quot;
+</code></pre>
+<p>此命令复评配置中<strong>已有的九个 PPO、SAC、DQN 最终模型</strong>。Dyna-PPO 的历史完整对比配置还引用已删除的旧 PPO 权重，不能直接重跑。新训练结果须建立新评估配置并更新模型路径/哈希，不会自动纳入复评。报告输出到新目录的 <code>analysis/</code>；绘图只读取保存的数据，可使用 CPU。</p>
+<h3 id="_6">重新录像</h3>
+<pre><code class="language-bash">SESAME_VIDEO_DIR=&quot;$(mktemp -d /home/ywwang/sesame/runs/algorithm_video_XXXXXX)&quot;
+isaac_py -u scripts/record_offpolicy_video.py \
+  --protocol runs/offpolicy_heading_20261107/evaluation_protocol.json \
+  --policy-id ppo_seed42 \
+  --output-dir &quot;$SESAME_VIDEO_DIR&quot;
+</code></pre>
+<p>此命令录制 PPO；将 <code>--policy-id</code> 改为 <code>sac_seed42</code> 或 <code>dqn_seed42</code> 可录制对应方法，每次使用新目录。录像使用 <code>evaluation_protocol.json</code>，固定训练种子 42、测试种子 25042；首次渲染可能需要几分钟初始化。</p>
+<p>Dyna-PPO 的配置与实现见 <a href="DYNA_PPO_STUDY.md">Dyna-PPO 说明</a>。文档中的目录是历史结果，重跑时须换成新目录。</p>
+<h2 id="2">2. 奖励函数设计</h2>
+<p>下表为 <strong>PPO、SAC、DQN 共同使用的改进后奖励</strong>。<code>v</code> 为<strong>世界系线速度</strong>，<code>ω</code> 为<strong>机身系角速度</strong>；<code>u=clip(-projected_gravity_b.z,0,1)</code> 为直立程度；<code>a</code> 为裁剪后的归一化动作；<code>mean</code> 对 8 个关节取平均。下表均为奖励率。</p>
+<table>
+<thead>
+<tr>
+<th>奖励项</th>
+<th>当前公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平面速度跟踪</td>
+<td><code>1.5 × exp(-((vx-0.10)²+vy²)/0.01) × u²</code></td>
+</tr>
+<tr>
+<td>向前运动</td>
+<td><code>clip(vx/0.10,-1,1) × u²</code></td>
+</tr>
+<tr>
+<td>直立</td>
+<td><code>+0.35 × u</code></td>
+</tr>
+<tr>
+<td>横向速度</td>
+<td><code>-0.10 × (vy/0.10)²</code></td>
+</tr>
+<tr>
+<td>偏航角速度</td>
+<td><code>-0.03 × ωz²</code></td>
+</tr>
+<tr>
+<td>横滚/俯仰角速度</td>
+<td><code>-0.01 × (ωx²+ωy²)</code></td>
+</tr>
+<tr>
+<td>垂直速度</td>
+<td><code>-0.02 × (vz/0.10)²</code></td>
+</tr>
+<tr>
+<td>力矩</td>
+<td><code>-0.02 × mean((τ/0.18)²)</code></td>
+</tr>
+<tr>
+<td>相邻动作差</td>
+<td><code>-0.08 × mean((a_t-a_(t-1))²)</code></td>
+</tr>
+<tr>
+<td>偏离站姿</td>
+<td><code>-0.10 × mean((q-q_stand)²)</code></td>
+</tr>
+<tr>
+<td><strong>新增航向项</strong></td>
+<td><code>-0.5 × (1-cos(ψ-ψ_cmd))</code>，当前目标航向 <code>ψ_cmd=0</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>单步奖励 = <code>0.02 × 奖励率总和 − 2 × I(真正终止)</code>。</strong> 跌倒、越界或无效状态扣终止惩罚，正常超时不扣。偏航 90° 时新增单步惩罚为 <code>-0.01</code>；零平面指令时关闭航向项。</p>
+<p>航向项针对“机身侧着朝目标方向走”的问题；原偏航角速度惩罚只能限制转动。动作差约束的是裁剪动作，不是实际关节加速度；力矩为仿真估计，不能当作实测能耗。滑脚、腾空、异常接触、软限位和关节加速度奖励目前尚未加入。</p>
+<h2 id="3-demo">3. 已完成的 Demo、测评指标与结果</h2>
+<h3 id="_7">基线方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>实现与动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PPO</td>
+<td>普通 PPO；8 维连续动作，使用改进后的奖励</td>
+</tr>
+<tr>
+<td>SAC</td>
+<td>双 Q 网络、随机策略和自动温度调节；8 维连续动作，使用相同奖励</td>
+</tr>
+<tr>
+<td>DQN</td>
+<td>分支网络和 Double DQN 更新；每个关节离散为 <code>[-1,-0.5,0,0.5,1]</code>，使用相同奖励</td>
+</tr>
+</tbody>
+</table>
+<p>DQN 的动作空间经过离散化，与 PPO、SAC 的连续动作不同；正文统一称为 DQN。三种方法均使用完整域随机化，每个随机种子训练 <strong>204.8 万步</strong>。PPO 复用奖励改进后的最终模型，SAC、DQN 从头训练；网络、观测归一化和更新次数不同，计算量不等同。</p>
+<h3 id="_8">测评指标</h3>
+<p>主指标是<strong>前向速度误差</strong>，同时检查航向、侧移、跌倒和平滑性。RMSE 表示均方根误差，RMS 表示均方根。下表的 <code>mean</code> 对该回合的采样点取平均。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>计算方法</th>
+<th>单位与判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前向速度误差（RMSE）</td>
+<td><code>√mean((vx−0.10)²)</code></td>
+<td>m/s，越低越好</td>
+</tr>
+<tr>
+<td>平面速度误差（RMSE）</td>
+<td><code>√mean((vx−0.10)²+vy²)</code></td>
+<td>m/s，越低越好</td>
+</tr>
+<tr>
+<td>航向误差（RMS）</td>
+<td>整个回合相对世界 +X 的角度误差均方根；角差折回 <code>[-π,π]</code> 后计算并换算为度</td>
+<td>°，越低越好</td>
+</tr>
+<tr>
+<td>终点偏航</td>
+<td>回合终点航向角误差的绝对值</td>
+<td>°，越低越好，与整个回合的航向误差不同</td>
+</tr>
+<tr>
+<td>终点侧移</td>
+<td><code>abs(y末−y初)</code></td>
+<td>m 或 cm，越低越好</td>
+</tr>
+<tr>
+<td>前向位移</td>
+<td><code>x末−x初</code></td>
+<td>m，10 秒目标约 1 m，并非越远越好</td>
+</tr>
+<tr>
+<td>跌倒率</td>
+<td>跌倒回合数 ÷ 总回合数</td>
+<td>%，越低越好</td>
+</tr>
+<tr>
+<td>关节目标加速度（RMS）</td>
+<td>实际执行的关节目标位置二阶差分：<code>(q*_t−2q*_(t−1)+q*_(t−2))/Δt²</code>，再取 RMS</td>
+<td>rad/s²，结合速度和位移判断平滑性</td>
+</tr>
+<tr>
+<td>实际关节加速度（RMS）</td>
+<td>仿真关节速度一阶差分：<code>(q̇_t−q̇_(t−1))/Δt</code>，再取 RMS</td>
+<td>rad/s²，结合速度和位移判断平滑性</td>
+</tr>
+</tbody>
+</table>
+<p><code>vx、vy</code> 为世界坐标系速度。<code>q*</code> 是经过动作裁剪、关节约束及时延/滞后处理后的关节目标位置；加速度按 <strong>50 Hz（Δt=0.02 s）</strong>采样，对时间和 8 个关节取均方根，排除重置跳变。这两项用于观察抖动程度，不是抖动频率或物理瞬时峰值；不能用不走路换取较低加速度。</p>
+<p>跌倒判定为机身高度低于 <strong>0.023 m</strong>，或直立度低于 <strong>0.5</strong>（约整体倾斜超过 60°）。越界和无效状态另行记录，不自动计入跌倒。辅助记录关节目标变化率、动作裁剪比例、总回报和回合时长。</p>
+<h3 id="_9">测试设置</h3>
+<p>分别在<strong>标准参数</strong>和<strong>随机参数</strong>下测试；随机参数来自训练时的域随机化范围。使用训练种子 42/43/44、测试种子 25042/26042，每个测试种子取前 64 个环境的首回合：每模型每条件 <strong>128 回合</strong>，每方法每条件 <strong>384 回合</strong>，三种方法共 <strong>2304 回合</strong>。每回合最长 10 秒，使用确定性动作，并保证各方法的初态和实际物理参数相同。</p>
+<p>先计算每回合指标，再求每模型的 128 回合均值，最后报告 <strong>3 个训练种子的均值 ± 样本标准差</strong>。表中 PPO 为改进奖励后的模型在本次共同测试场景中的结果。</p>
+<h3 id="pposacdqn">PPO、SAC、DQN 结果</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>方法</th>
+<th>前向速度误差 RMSE（m/s）</th>
+<th>航向误差 RMS（°）</th>
+<th>终点侧移（cm）</th>
+<th>前向位移（m）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准参数</td>
+<td>PPO</td>
+<td>0.06570 ± 0.00259</td>
+<td>6.68 ± 1.50</td>
+<td>13.04 ± 9.45</td>
+<td>1.357 ± 0.012</td>
+</tr>
+<tr>
+<td>标准参数</td>
+<td>SAC</td>
+<td>0.04661 ± 0.00543</td>
+<td>8.58 ± 0.70</td>
+<td>5.00 ± 0.85</td>
+<td>1.139 ± 0.162</td>
+</tr>
+<tr>
+<td>标准参数</td>
+<td>DQN</td>
+<td>0.07526 ± 0.00175</td>
+<td>14.76 ± 3.31</td>
+<td>11.84 ± 5.35</td>
+<td>1.177 ± 0.140</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>PPO</td>
+<td>0.03610 ± 0.00129</td>
+<td>4.80 ± 0.09</td>
+<td>3.73 ± 0.66</td>
+<td>1.187 ± 0.036</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>SAC</td>
+<td>0.04399 ± 0.00137</td>
+<td>6.55 ± 0.97</td>
+<td>2.85 ± 0.43</td>
+<td>1.089 ± 0.026</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>DQN</td>
+<td>0.06102 ± 0.00462</td>
+<td>14.87 ± 4.06</td>
+<td>13.04 ± 2.17</td>
+<td>0.969 ± 0.095</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>方法</th>
+<th>关节目标加速度 RMS（rad/s²）</th>
+<th>实际关节加速度 RMS（rad/s²）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准参数</td>
+<td>PPO</td>
+<td>479.74 ± 20.59</td>
+<td>500.74 ± 14.74</td>
+</tr>
+<tr>
+<td>标准参数</td>
+<td>SAC</td>
+<td>532.16 ± 23.20</td>
+<td>499.05 ± 30.46</td>
+</tr>
+<tr>
+<td>标准参数</td>
+<td>DQN</td>
+<td>485.57 ± 49.87</td>
+<td>511.11 ± 37.96</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>PPO</td>
+<td>136.35 ± 7.88</td>
+<td>284.21 ± 11.08</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>SAC</td>
+<td>135.73 ± 1.68</td>
+<td>302.09 ± 3.89</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>DQN</td>
+<td>128.31 ± 4.21</td>
+<td>305.33 ± 34.06</td>
+</tr>
+</tbody>
+</table>
+<p>三种方法在每种条件的 384 回合中均为 <strong>0 次跌倒</strong>，全部完成 10 秒。SAC 的标准参数速度误差比 PPO 低约 <strong>29%</strong>；随机参数下，PPO 的速度和航向误差最低，SAC 的侧移最小。DQN 已能前进，但速度和航向误差较大。加速度指标没有显示 SAC 或 DQN 全面改善平滑性，需同时看行走效果。</p>
+<p>数据来源：<a href="../runs/offpolicy_heading_20261107/analysis/summary.json">本次完整结果</a>。<a href="../runs/offpolicy_heading_20261107/analysis/performance.png">指标对照图</a> · <a href="../runs/offpolicy_heading_20261107/analysis/training_curves.png">训练曲线</a>。</p>
+<h3 id="dyna-ppo">Dyna-PPO 已有结果</h3>
+<p>Dyna-PPO 在 PPO 上增加动力学/奖励模型和单步模型预测更新。已有实验使用<strong>旧奖励</strong>和测试种子 <strong>3042/4042</strong>，因此单独保留，不能与上表直接判断算法优劣。每模型每条件同样评估 128 回合，表中为 3 个训练种子的均值 ± 样本标准差；每条件跌倒 0/384。其统计只提供终点偏航，不能替代整个回合的航向 RMS。</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>方法</th>
+<th>前向速度误差 RMSE（m/s）</th>
+<th>终点偏航（°）</th>
+<th>终点侧移（cm）</th>
+<th>关节目标加速度 RMS（rad/s²）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准参数</td>
+<td>Dyna-PPO</td>
+<td>0.06173 ± 0.01135</td>
+<td>26.06 ± 34.04</td>
+<td>9.22 ± 6.40</td>
+<td>371.16 ± 77.36</td>
+</tr>
+<tr>
+<td>随机参数</td>
+<td>Dyna-PPO</td>
+<td>0.04226 ± 0.00573</td>
+<td>28.45 ± 34.73</td>
+<td>7.73 ± 4.30</td>
+<td>112.99 ± 26.27</td>
+</tr>
+</tbody>
+</table>
+<p>数据来源：<a href="../runs/dyna_ppo_20261103/analysis/summary.json">Dyna-PPO 统计</a>。</p>
+<h3 id="demo">Demo 视频</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>视频</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PPO</td>
+<td><a href="../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4">10 秒 Demo</a></td>
+</tr>
+<tr>
+<td>SAC</td>
+<td><a href="../runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4">10 秒 Demo</a></td>
+</tr>
+<tr>
+<td>DQN</td>
+<td><a href="../runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4">10 秒 Demo</a></td>
+</tr>
+<tr>
+<td>Dyna-PPO</td>
+<td><a href="../runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4">已有 Demo</a></td>
+</tr>
+</tbody>
+</table>
+<p>PPO、SAC、DQN 视频固定训练种子 42、测试种子 25042，实际初态和物理参数相同；Dyna-PPO 使用旧测试种子 3042。视频是单回合展示，效果结论以上述多回合统计为准。</p>
+<h2 id="4">4. 待改进的地方与对应方法</h2>
+<h3 id="domain-randomization">已尝试：域随机化（Domain Randomization）</h3>
+<p>针对固定仿真参数下学到的策略可能难以适应摩擦、质量和执行器变化的问题，在训练回合重置时随机采样物理参数、执行时延和初态。<strong>已实现并用于 PPO、SAC、DQN 和已有 Dyna-PPO 的训练</strong>，作为鲁棒性改进尝试，不单列算法。</p>
+<p>当前范围：有效接触摩擦 0.6–1.2；质量/惯量、PD 增益为标准值的 0.8–1.2 倍；力矩/速度上限为 0.8–1.0 倍；执行滞后 0.02–0.06 秒、时延 0–2 个控制步；初始关节扰动 ±0.035 rad、偏航 ±5°、平面速度 ±0.02 m/s。观测噪声未启用。</p>
+<p>目标是减小物理参数变化时的性能退化。本表没有同奖励下开关 DR 的对照，不能单独归因 DR 的收益。后续可固定 PPO、奖励与训练预算，只改变 DR 开关/范围，在相同的标准参数和随机参数测试样本上验证。</p>
+<h3 id="_10">后续改进</h3>
+<p>以下为尚未实现的建议。每轮只改一个关键设计，同时检查速度、航向、侧移、平滑性和跌倒情况。</p>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>对应方法</th>
+<th>验证重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>平滑性仍需优化</strong>：关节目标加速度较大</td>
+<td>保留航向项，单独增加归一化目标二阶差分惩罚；实际关节加速度惩罚另做一组</td>
+<td>对应 RMS 降低，且不靠减速或不走路换取平滑</td>
+</tr>
+<tr>
+<td><strong>侧移和速度超调</strong></td>
+<td>分别调整横向速度权重或速度跟踪尺度，不同时改多个权重</td>
+<td>XY 速度 RMSE、侧移及 10 秒位移；目标约 1 m，并非越远越好</td>
+</tr>
+<tr>
+<td><strong>标准参数下的速度误差仍较高</strong></td>
+<td>比较纯域随机化与“标准参数＋域随机化”混合训练；当前 DR 滞后范围不含零滞后</td>
+<td>标准参数和随机参数两类测试都保留</td>
+</tr>
+<tr>
+<td><strong>Dyna-PPO 的奖励尚未统一</strong></td>
+<td>Dyna-PPO 接入相同改进奖励后重新训练，再使用相同测试样本比较</td>
+<td>相同环境交互步数，同时报告额外计算开销</td>
+</tr>
+<tr>
+<td><strong>缺少脚部接触信息</strong></td>
+<td>先接入足端接触诊断，再逐项研究滑脚、腾空或异常接触奖励</td>
+<td>接触标签与录像一致，不照搬大型机器人的阈值</td>
+</tr>
+<tr>
+<td><strong>软限位与站姿冲突</strong>：四个站姿关节位于边界</td>
+<td>先核对关节行程和标定站姿，再设计软限位罚项</td>
+<td>站立不被持续重罚，动作和真实关节均不越限</td>
+</tr>
+<tr>
+<td><strong>课程评测与真机未接入</strong></td>
+<td>获取课程接口，核对归一化、关节顺序、单位和周期；接入预测状态开环部署</td>
+<td>官方完整 rollout，以及真机启动、行走和停止</td>
+</tr>
+</tbody>
+</table>
+<p><strong>建议下一步先做平滑性单项消融：</strong>开发集确定候选权重，再用 42/43/44 三种子、同等训练预算和新的配对测试种子比较，提前约定可接受的速度/航向退化范围。当前加速度指标是 <strong>50 Hz 差分 RMS</strong>，排除重置跳变，不是抖动频率或物理瞬时峰值。</p></body></html>

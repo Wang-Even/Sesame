@@ -1,0 +1,416 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T09:07:30.861273+00:00",
+  "scope": "Independent standard-library metadata recomputation; no simulator, model, torch or GPU work",
+  "summary_sha256": "9f39028d9ae1d5452168f2df7ab1d8029ce1b463c6ca364808492a8b2ceb80b1",
+  "protocol_sha256": "be2c4eaa0d802674907f479ca40c6bf7808b7c172a9275e3cc1cfa37fd03237f",
+  "verified_input_hash_count": 36,
+  "completed_cases": 12,
+  "total_episodes": 1536,
+  "total_falls": 0,
+  "all_episode_durations_s": 10.0,
+  "matched_initial_condition_sets": 4,
+  "trajectory_checks": [
+    {
+      "policy_id": "full_dr_seed42",
+      "condition": "nominal",
+      "samples": 500,
+      "trajectory_sha256": "24359eeafbeb69152db3c3ee0996fbee3f506ec943fabd5e4f0ab35cfb387435",
+      "recomputed": {
+        "heading_rms_rad": 0.19448879588024418,
+        "heading_max_abs_rad": 0.3584788941911892,
+        "velocity_x_rmse_m_s": 0.058171734486718016,
+        "velocity_xy_tracking_rmse_m_s": 0.08148188611262197
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 2.268717685938171e-09,
+        "heading_max_abs_rad": 9.579257553848919e-09,
+        "velocity_x_rmse_m_s": 7.177691621618187e-09,
+        "velocity_xy_tracking_rmse_m_s": 2.7024677939913033e-08
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "full_dr_seed42",
+      "condition": "randomized",
+      "samples": 500,
+      "trajectory_sha256": "3f0e7b40e418a6d5bd2c35d49b177c84d7f0ec2d566f409fe79b544d96874a44",
+      "recomputed": {
+        "heading_rms_rad": 0.24284676498181978,
+        "heading_max_abs_rad": 0.38101054511417337,
+        "velocity_x_rmse_m_s": 0.03962916854335708,
+        "velocity_xy_tracking_rmse_m_s": 0.052192998454158805
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 6.669752439236731e-08,
+        "heading_max_abs_rad": 1.706729940709195e-08,
+        "velocity_x_rmse_m_s": 3.990393453168206e-09,
+        "velocity_xy_tracking_rmse_m_s": 2.458507515623598e-09
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "full_dr_seed43",
+      "condition": "nominal",
+      "samples": 500,
+      "trajectory_sha256": "7890e624d011a36e66d02924b14e26ee5c4240b1f8769acfce1fff3f150b5a36",
+      "recomputed": {
+        "heading_rms_rad": 0.12120708648530261,
+        "heading_max_abs_rad": 0.3112536514790835,
+        "velocity_x_rmse_m_s": 0.06551533381143883,
+        "velocity_xy_tracking_rmse_m_s": 0.08951686623676096
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 1.7467377960711516e-09,
+        "heading_max_abs_rad": 1.4403659320816331e-08,
+        "velocity_x_rmse_m_s": 1.8874771884336283e-09,
+        "velocity_xy_tracking_rmse_m_s": 1.1891290799259657e-08
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "full_dr_seed43",
+      "condition": "randomized",
+      "samples": 500,
+      "trajectory_sha256": "11336e55cf9268989836680da5245fe6b0d807095d97b8bd880fdac749df6d4c",
+      "recomputed": {
+        "heading_rms_rad": 0.09593670015053701,
+        "heading_max_abs_rad": 0.25928171336960265,
+        "velocity_x_rmse_m_s": 0.03694682939156895,
+        "velocity_xy_tracking_rmse_m_s": 0.04805545436923102
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 3.035349893654171e-08,
+        "heading_max_abs_rad": 1.1321788340179495e-08,
+        "velocity_x_rmse_m_s": 1.1192709155338765e-08,
+        "velocity_xy_tracking_rmse_m_s": 7.19384399272549e-10
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "full_dr_seed44",
+      "condition": "nominal",
+      "samples": 500,
+      "trajectory_sha256": "e49470bc49690906c046bafca319957851f50d4b63a818cef79e05555ae6f624",
+      "recomputed": {
+        "heading_rms_rad": 0.8125672876647709,
+        "heading_max_abs_rad": 1.1848392456854264,
+        "velocity_x_rmse_m_s": 0.05903538289845675,
+        "velocity_xy_tracking_rmse_m_s": 0.08723192011075237
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 1.1323010906671982e-07,
+        "heading_max_abs_rad": 2.971800139306424e-09,
+        "velocity_x_rmse_m_s": 7.184154687811528e-09,
+        "velocity_xy_tracking_rmse_m_s": 9.413264057123172e-10
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "full_dr_seed44",
+      "condition": "randomized",
+      "samples": 500,
+      "trajectory_sha256": "3c0d4b174ba6d1667a43790c1936e667cba024e093272b5dcc9576177fbdb683",
+      "recomputed": {
+        "heading_rms_rad": 0.29387882313236546,
+        "heading_max_abs_rad": 0.4175619423496828,
+        "velocity_x_rmse_m_s": 0.03961555009673177,
+        "velocity_xy_tracking_rmse_m_s": 0.049254127037779684
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 5.9218257186799406e-08,
+        "heading_max_abs_rad": 5.9497251569951e-09,
+        "velocity_x_rmse_m_s": 4.6748930074280715e-09,
+        "velocity_xy_tracking_rmse_m_s": 1.1366860265538126e-08
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "heading_seed42",
+      "condition": "nominal",
+      "samples": 500,
+      "trajectory_sha256": "8a45a1b4820affe1833ae6ea8da0f79b5bec3a0a9be53b23d88c904b34c7af7e",
+      "recomputed": {
+        "heading_rms_rad": 0.11486033050499107,
+        "heading_max_abs_rad": 0.2705652913052257,
+        "velocity_x_rmse_m_s": 0.06638924017995548,
+        "velocity_xy_tracking_rmse_m_s": 0.091824007670347
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 1.9354440231045267e-08,
+        "heading_max_abs_rad": 9.874660145126057e-09,
+        "velocity_x_rmse_m_s": 1.4756619454159292e-08,
+        "velocity_xy_tracking_rmse_m_s": 2.3441869972939955e-09
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "heading_seed42",
+      "condition": "randomized",
+      "samples": 500,
+      "trajectory_sha256": "6ef4039488c8fb70bbb31ec005852352bdf905f237ba2a1fb624718f2e1fdc17",
+      "recomputed": {
+        "heading_rms_rad": 0.06817560362901154,
+        "heading_max_abs_rad": 0.16841426660800485,
+        "velocity_x_rmse_m_s": 0.03173329621196425,
+        "velocity_xy_tracking_rmse_m_s": 0.04496701371550223
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 2.800565335192573e-09,
+        "heading_max_abs_rad": 1.690631190598424e-09,
+        "velocity_x_rmse_m_s": 5.996164051391695e-10,
+        "velocity_xy_tracking_rmse_m_s": 8.077624832902863e-09
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "heading_seed43",
+      "condition": "nominal",
+      "samples": 500,
+      "trajectory_sha256": "c3a4ba29185f9ef419f42e1fb393b8c27777cb1b4c279a42ceba48b43c99832f",
+      "recomputed": {
+        "heading_rms_rad": 0.12192053949595144,
+        "heading_max_abs_rad": 0.30652105012260583,
+        "velocity_x_rmse_m_s": 0.06931761903116733,
+        "velocity_xy_tracking_rmse_m_s": 0.0903307056083976
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 6.017691400739267e-09,
+        "heading_max_abs_rad": 2.1842347652789584e-08,
+        "velocity_x_rmse_m_s": 2.5088551652840962e-09,
+        "velocity_xy_tracking_rmse_m_s": 8.012324442807639e-09
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "heading_seed43",
+      "condition": "randomized",
+      "samples": 500,
+      "trajectory_sha256": "e25f2ae66bc78ebddc111e9b87df87ee2586459d0ee0869df823bf442b0c133e",
+      "recomputed": {
+        "heading_rms_rad": 0.0780859994440676,
+        "heading_max_abs_rad": 0.1698789685999049,
+        "velocity_x_rmse_m_s": 0.034728614171747996,
+        "velocity_xy_tracking_rmse_m_s": 0.046152570021734785
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 1.068407309845476e-08,
+        "heading_max_abs_rad": 5.957018017754834e-09,
+        "velocity_x_rmse_m_s": 1.4209793341990462e-09,
+        "velocity_xy_tracking_rmse_m_s": 6.681543096576092e-10
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "heading_seed44",
+      "condition": "nominal",
+      "samples": 500,
+      "trajectory_sha256": "dd8d58840dd25b0b1c3b9ecedab8d8767b20bd0d9f05fc928813d701f0d62aba",
+      "recomputed": {
+        "heading_rms_rad": 0.1674943554432176,
+        "heading_max_abs_rad": 0.40947147789507493,
+        "velocity_x_rmse_m_s": 0.06511992437989628,
+        "velocity_xy_tracking_rmse_m_s": 0.09458419457976386
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 2.861330733461287e-08,
+        "heading_max_abs_rad": 4.143422993596602e-09,
+        "velocity_x_rmse_m_s": 9.669374578802348e-09,
+        "velocity_xy_tracking_rmse_m_s": 2.0125551669636366e-08
+      },
+      "passed": true
+    },
+    {
+      "policy_id": "heading_seed44",
+      "condition": "randomized",
+      "samples": 500,
+      "trajectory_sha256": "51d9fd9f93870c555cdcccab988c9ced31102c13ac7c607b01687d90079a91cb",
+      "recomputed": {
+        "heading_rms_rad": 0.06495302113744808,
+        "heading_max_abs_rad": 0.1821131583711596,
+        "velocity_x_rmse_m_s": 0.027104459118601317,
+        "velocity_xy_tracking_rmse_m_s": 0.04278346297425452
+      },
+      "absolute_errors": {
+        "heading_rms_rad": 5.677025238792766e-10,
+        "heading_max_abs_rad": 2.648541497229928e-09,
+        "velocity_x_rmse_m_s": 4.309657578721593e-09,
+        "velocity_xy_tracking_rmse_m_s": 1.343804177655894e-08
+      },
+      "passed": true
+    }
+  ],
+  "trajectory_tolerance": {
+    "relative": 2e-06,
+    "absolute": 2e-07,
+    "reason": "Stored diagnostics accumulated in float32 CUDA; independent serialized-state arithmetic uses Python float64"
+  },
+  "group_aggregation_checks": {
+    "n_independent_training_seeds": 3,
+    "metrics_per_group": 11,
+    "recomputed_from_all_episode_records": true,
+    "maximum_absolute_summary_error": 3.552713678800501e-15
+  },
+  "changes": [
+    {
+      "condition": "nominal",
+      "metric": "heading_rms_deg",
+      "old": 18.371634249708137,
+      "new": 6.651239058638588,
+      "percent_change": -63.796149170865114
+    },
+    {
+      "condition": "nominal",
+      "metric": "velocity_x_rmse_m_s",
+      "old": 0.062418313968616225,
+      "new": 0.0657492781659433,
+      "percent_change": 5.336517418592675
+    },
+    {
+      "condition": "nominal",
+      "metric": "velocity_xy_tracking_rmse_m_s",
+      "old": 0.08620399929350242,
+      "new": 0.09224554368605216,
+      "percent_change": 7.00842703594277
+    },
+    {
+      "condition": "nominal",
+      "metric": "distance_x_m",
+      "old": 1.2688355967402458,
+      "new": 1.3546200941006343,
+      "percent_change": 6.760883567640812
+    },
+    {
+      "condition": "nominal",
+      "metric": "abs_final_heading_yaw_deg",
+      "old": 21.022338439929214,
+      "new": 5.6626229188437485,
+      "percent_change": -73.06378196210404
+    },
+    {
+      "condition": "nominal",
+      "metric": "abs_lateral_displacement_m",
+      "old": 0.1471952355156342,
+      "new": 0.12847451477621993,
+      "percent_change": -12.71829259543246
+    },
+    {
+      "condition": "nominal",
+      "metric": "fall_rate",
+      "old": 0.0,
+      "new": 0.0,
+      "percent_change": null
+    },
+    {
+      "condition": "nominal",
+      "metric": "applied_target_rate_rms_rad_s",
+      "old": 7.52879765133063,
+      "new": 7.758058124532302,
+      "percent_change": 3.0451140250947297
+    },
+    {
+      "condition": "nominal",
+      "metric": "applied_target_acceleration_rms_rad_s2",
+      "old": 435.0403467814128,
+      "new": 479.2147385279338,
+      "percent_change": 10.154090781082552
+    },
+    {
+      "condition": "nominal",
+      "metric": "actual_joint_acceleration_rms_rad_s2",
+      "old": 479.04887652397156,
+      "new": 500.69082101186115,
+      "percent_change": 4.517690270964788
+    },
+    {
+      "condition": "nominal",
+      "metric": "raw_action_clipped_fraction",
+      "old": 0.32345963541666667,
+      "new": 0.26154296875,
+      "percent_change": -19.14200718952407
+    },
+    {
+      "condition": "randomized",
+      "metric": "heading_rms_deg",
+      "old": 13.266250559354013,
+      "new": 4.939099255437885,
+      "percent_change": -62.76944089560156
+    },
+    {
+      "condition": "randomized",
+      "metric": "velocity_x_rmse_m_s",
+      "old": 0.03823658631881699,
+      "new": 0.03594949427739872,
+      "percent_change": -5.98142319073276
+    },
+    {
+      "condition": "randomized",
+      "metric": "velocity_xy_tracking_rmse_m_s",
+      "old": 0.05449466758485263,
+      "new": 0.05299810213424886,
+      "percent_change": -2.7462603534070444
+    },
+    {
+      "condition": "randomized",
+      "metric": "distance_x_m",
+      "old": 1.1253554845849674,
+      "new": 1.1849361782272656,
+      "percent_change": 5.294388702808133
+    },
+    {
+      "condition": "randomized",
+      "metric": "abs_final_heading_yaw_deg",
+      "old": 13.305697741330805,
+      "new": 4.133056998247708,
+      "percent_change": -68.93769061498064
+    },
+    {
+      "condition": "randomized",
+      "metric": "abs_lateral_displacement_m",
+      "old": 0.034644185254971184,
+      "new": 0.04051558735469977,
+      "percent_change": 16.947727465711093
+    },
+    {
+      "condition": "randomized",
+      "metric": "fall_rate",
+      "old": 0.0,
+      "new": 0.0,
+      "percent_change": null
+    },
+    {
+      "condition": "randomized",
+      "metric": "applied_target_rate_rms_rad_s",
+      "old": 4.280533551548918,
+      "new": 4.315892284115155,
+      "percent_change": 0.8260356364557132
+    },
+    {
+      "condition": "randomized",
+      "metric": "applied_target_acceleration_rms_rad_s2",
+      "old": 137.85662778218588,
+      "new": 144.014317770799,
+      "percent_change": 4.466734815494187
+    },
+    {
+      "condition": "randomized",
+      "metric": "actual_joint_acceleration_rms_rad_s2",
+      "old": 281.83974289894104,
+      "new": 278.79127264022827,
+      "percent_change": -1.0816325005681882
+    },
+    {
+      "condition": "randomized",
+      "metric": "raw_action_clipped_fraction",
+      "old": 0.44186848958333336,
+      "new": 0.41996028645833333,
+      "percent_change": -4.958082244257493
+    }
+  ],
+  "interpretation": "Heading RMS improves in both domains and all three training seeds. Randomized forward RMSE improves about 6%, but lateral displacement rises about 17% and target acceleration RMS rises about 4.5%. Nominal forward RMSE worsens about 5.3% and target acceleration RMS rises about 10.2%. Zero observed falls does not establish lower fall risk; n=3 supports descriptive, not strong significance, claims.",
+  "refreshed_at_utc": "2026-11-05T09:11:37.380171+00:00",
+  "report_refresh": {
+    "previous_summary_sha256": "fff472c2f4a3cb77d5888a826840d5f485a531022c7a092157633e8b3d464eec",
+    "reason": "Analysis source updated report narrative/video link only; all prior metric means unchanged; group mean and sample SD rechecked; all input hashes reverified."
+  }
+}

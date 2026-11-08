@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "date": "2026-11-08",
+  "training_and_evaluation_complete": true,
+  "training_models_new": 6,
+  "evaluation_models": 9,
+  "evaluation_episodes": 2304,
+  "observed_falls": 0,
+  "evaluation_pairing_verified": true,
+  "training_validation": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training_validation.json",
+  "overview_numeric_cells_verified": 12,
+  "videos": [
+    {
+      "policy_id": "ppo_seed42",
+      "video": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+      "video_sha256": "c2da537eebe5ea8cffac6231bfac250ec874ebe7eca954761c94046bba7a3b6c",
+      "video_duration_s": 10.0,
+      "frames": 250,
+      "initial_condition_sha256": "6bc9e231d7b420cca2bb2674af3f6fd0e4eaf2027c784a342cfd782801466dd9"
+    },
+    {
+      "policy_id": "sac_seed42",
+      "video": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4",
+      "video_sha256": "9a939d4af47a6fe258f6113dd8a7b0ca96b14a8c931da61c074885580c342a41",
+      "video_duration_s": 10.0,
+      "frames": 250,
+      "initial_condition_sha256": "6bc9e231d7b420cca2bb2674af3f6fd0e4eaf2027c784a342cfd782801466dd9"
+    },
+    {
+      "policy_id": "dqn_seed42",
+      "video": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4",
+      "video_sha256": "302577956b93a8246a424f1a1e6722d4917e44b508d9ec586abb533c812c21a2",
+      "video_duration_s": 10.0,
+      "frames": 250,
+      "initial_condition_sha256": "6bc9e231d7b420cca2bb2674af3f6fd0e4eaf2027c784a342cfd782801466dd9"
+    }
+  ],
+  "video_pairing_verified": true,
+  "local_links": [
+    {
+      "target": "HANDOVER_20261106.md#2-奖励函数设计",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+    },
+    {
+      "target": "../runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt"
+    },
+    {
+      "target": "../runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt"
+    },
+    {
+      "target": "../runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/evaluation_protocol.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation_protocol.json"
+    },
+    {
+      "target": "HANDOVER_20261106.md#模型权重",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/summary.md",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.md"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/performance.png",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/performance.png"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/training_curves.png",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/training_curves.png"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/per_episode.csv",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/per_episode.csv"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4"
+    },
+    {
+      "target": "../reports/model_cleanup_20261108.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/reports/model_cleanup_20261108.json"
+    }
+  ],
+  "artifacts_sha256": {
+    "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.md": "76c1deed0655b1bac1c7ec4b276119bbcead7de898866ed421858f13b2d1ff5b",
+    "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.html": "21b8e0f7864c49e93e49706cc4b7d8e5f5bb3d4f286cf504f1cd2ff4b664261f",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json": "e13897fbe8a1823f8d17343a088711ed623241c340bd5e6be8670db6913ab65e",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/performance.png": "284e97d363b79c320bd1367b2655ee0c95a063b280582b2a934575594f68542f",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/training_curves.png": "b92809b98f41e19223670dcc0f7dab7b14514c4e4a8a408a5ef28eed2b2ca9fb",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.md": "e116f545d1b5c478fc6e6f96d8499f43cadc9d487f50e0338d4c1bbcf66dfcff",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.html": "1be3514ae4e8bac84cc24e8666a4087a95d2d6f9e63e42d76c7f7c75ca81670f",
+    "/home/ywwang/sesame/scripts/analyze_offpolicy.py": "1967a1c4fdf3e07d95d54cae8866e054d775532c9b0718c0b13f6ade35fdb785"
+  },
+  "independent_review": "Read-only audit verified per-episode statistics, source/asset hashes, training-curve points and compute metadata.",
+  "metric_definitions_included": true,
+  "report_update_scope": "Metric definitions, display names and direct links to retained final weights; experiment numeric statistics and CSVs unchanged.",
+  "weight_links_verified": 9,
+  "retained_weight_sha256_unchanged": true
+}

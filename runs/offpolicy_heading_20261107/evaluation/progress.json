@@ -1,0 +1,134 @@
+{
+  "status": "completed",
+  "protocol_sha256": "8e48ca0f7343086ef1e9b73647b52a777455e19e99c21b6facd1c606949a46a9",
+  "manifest_signature": "960ff9690887ffd96e648cbace96d4898eda6d1478018a99ae8899716322d099",
+  "total_cases": 18,
+  "completed_cases": {
+    "ppo_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed42/nominal.json",
+      "sha256": "340397f94bc0b920988a5fec04b012ea64d2ac5fb80aa57c8b2ae8a07037c128",
+      "policy_id": "ppo_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "ppo_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed42/randomized.json",
+      "sha256": "da5f7387f8dfc20f82534b0ec90accb8b4190df8a4d0a2aee5ed097a0898c868",
+      "policy_id": "ppo_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "ppo_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed43/nominal.json",
+      "sha256": "1c3914082a143cbb506c58f55777fdc4d4f21daf5af183337676d5cfeb785284",
+      "policy_id": "ppo_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "ppo_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed43/randomized.json",
+      "sha256": "19f76ab344ad6f3d16ce0304f50e79bfa17983bed3a0011efbd9ce75a2410414",
+      "policy_id": "ppo_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "ppo_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed44/nominal.json",
+      "sha256": "9b0ec8f4654a9022757567a5fa30e669fc7e5338e18f62998497765ca60b68d3",
+      "policy_id": "ppo_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "ppo_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed44/randomized.json",
+      "sha256": "325bbb07a7b734dd67a3390bf27130fb0afc0b91a01220f5a4ddbb17bb44f618",
+      "policy_id": "ppo_seed44",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "sac_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed42/nominal.json",
+      "sha256": "dfafdcc8b3b308b2402d4173b3530faa8f1fc3c9599b1d19723f21d1d88d0484",
+      "policy_id": "sac_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "sac_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed42/randomized.json",
+      "sha256": "ce6d8320dd29ff440ff278eac630269cf87cb88e5797d9853e93a94737270081",
+      "policy_id": "sac_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "sac_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed43/nominal.json",
+      "sha256": "db13c376bfed5d9c995ebe29085c124a8b76dff7946d98c7bf44d483060794d5",
+      "policy_id": "sac_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "sac_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed43/randomized.json",
+      "sha256": "f1479281f9fe240ad09338b676b17e155e892016e652a5f8b0e592e9b4e1b840",
+      "policy_id": "sac_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "sac_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed44/nominal.json",
+      "sha256": "2003343b70da5885b02e03ae973ea63500413f0891886a44e9adf6ad53df0d9b",
+      "policy_id": "sac_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "sac_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed44/randomized.json",
+      "sha256": "7968fcac65143d7c801daf0fbab8d6566352766a4a8898eb1b7a50d9585791b6",
+      "policy_id": "sac_seed44",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "dqn_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed42/nominal.json",
+      "sha256": "39f11e0c6d17d319daf8461ff74fc4b9e80eb40ca20a3a31827437c702b72dec",
+      "policy_id": "dqn_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "dqn_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed42/randomized.json",
+      "sha256": "f41af7292fa8012a85a34d97aba324746640929686fc8883f78ec2007a8038ec",
+      "policy_id": "dqn_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "dqn_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed43/nominal.json",
+      "sha256": "b17ccd54505e9afc352443c52363f2bfd0945c0c0f9f321949053773385a26f9",
+      "policy_id": "dqn_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "dqn_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed43/randomized.json",
+      "sha256": "a1c7a0bb16e319c0862ced62f9d9dfe034fe40b701ca98c1a8517c63a1fba11e",
+      "policy_id": "dqn_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "dqn_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed44/nominal.json",
+      "sha256": "6603bacc2246dc25082414b842fcc86fdc7b8392927d00f6596aa1b63653d2ab",
+      "policy_id": "dqn_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "dqn_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed44/randomized.json",
+      "sha256": "c4e4da1435b322835f49688363bd94f6a5d6ab0fa71b4d831423e2d4251479f0",
+      "policy_id": "dqn_seed44",
+      "condition": "randomized",
+      "resumed": false
+    }
+  }
+}

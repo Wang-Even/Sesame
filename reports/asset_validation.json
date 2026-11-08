@@ -1,0 +1,130 @@
+{
+  "all_file_hashes_match": true,
+  "checked_files": 123,
+  "stl_metadata": [
+    {
+      "path": "hardware/printing/stl/Bottom-Cover-v121.stl",
+      "format": "binary",
+      "triangles": 1702,
+      "bytes": 85184,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/Internal-Frame-v121.stl",
+      "format": "binary",
+      "triangles": 7780,
+      "bytes": 389084,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/L1-v117.stl",
+      "format": "binary",
+      "triangles": 7186,
+      "bytes": 359384,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/L2-v117.stl",
+      "format": "binary",
+      "triangles": 7666,
+      "bytes": 383384,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/L3-v117.stl",
+      "format": "binary",
+      "triangles": 2052,
+      "bytes": 102684,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/L4-v117.stl",
+      "format": "binary",
+      "triangles": 1826,
+      "bytes": 91384,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/R1-v117.stl",
+      "format": "binary",
+      "triangles": 7594,
+      "bytes": 379784,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/R2-v117.stl",
+      "format": "binary",
+      "triangles": 7578,
+      "bytes": 378984,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/R3-v117.stl",
+      "format": "binary",
+      "triangles": 2116,
+      "bytes": 105884,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/R4-v117.stl",
+      "format": "binary",
+      "triangles": 1890,
+      "bytes": 94584,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/Top-Cover-Cat-v100.stl",
+      "format": "binary",
+      "triangles": 3916,
+      "bytes": 195884,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/Top-Cover-Enclosed-v117.stl",
+      "format": "binary",
+      "triangles": 3682,
+      "bytes": 184184,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/Top-Cover-No-Ears-v100.stl",
+      "format": "binary",
+      "triangles": 2864,
+      "bytes": 143284,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/hats/magnetic-chainsaw-hat.stl",
+      "format": "binary",
+      "triangles": 1108,
+      "bytes": 55484,
+      "size_matches_triangle_count": true
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/hats/magnetic-modular-mount-hat.stl",
+      "format": "binary",
+      "triangles": 1744,
+      "bytes": 87284,
+      "size_matches_triangle_count": true
+    }
+  ],
+  "nested_archives": [
+    {
+      "path": "hardware/pcb/distro-v1/Gerber_Sesame-Distro-Board_PCB_Sesame-Distro-Board_V1.zip",
+      "file_count": 11,
+      "model_candidates": []
+    },
+    {
+      "path": "hardware/pcb/distro-v2/Gerber_Sesame-Distro-V2_PCB.zip",
+      "file_count": 13,
+      "model_candidates": []
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/Gerber_Sesame-Distro-Board-V3.1.zip",
+      "file_count": 12,
+      "model_candidates": []
+    }
+  ],
+  "errors": [],
+  "scope": "file integrity and STL binary structure only; no geometry or dynamics simulation"
+}

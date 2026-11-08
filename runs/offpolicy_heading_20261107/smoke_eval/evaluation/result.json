@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "pid": 3345383,
+  "study_id": "offpolicy_heading_20261107_smoke_eval",
+  "protocol_sha256": "46aeef518b929051f022d2f55e3864fa473951c0ddebca9dfcac28ac7b0799bf",
+  "manifest_signature": "69064b1d8a3a528b6e4391d13f44710c8f559d1c6ec42b37dda27e9e2d05da5f",
+  "smoke": true,
+  "evaluation": {
+    "num_envs": 16,
+    "episodes_per_seed": 4,
+    "seeds": [
+      19042
+    ],
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "heading_full_dr_for_all_policies"
+  },
+  "reward_version": "absolute_heading_v1",
+  "heading_penalty_scale": 0.5,
+  "started_at_utc": "2026-11-06T18:15:45.123824+00:00",
+  "git_operations": "disabled",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "rsl-rl-lib": "3.1.2",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "isaacsim": "not in distribution metadata"
+  },
+  "case_paths": [
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/sac_seed142/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/sac_seed142/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/dqn_seed142/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/dqn_seed142/randomized.json"
+  ],
+  "cases_completed": 4,
+  "pairing_verified_all_cases": true,
+  "wall_seconds_before_shutdown": 33.186819871887565,
+  "finished_at_utc": "2026-11-06T18:16:18.310819+00:00"
+}

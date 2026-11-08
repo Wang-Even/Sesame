@@ -1,0 +1,330 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[Info] [carb] Logging to file: /home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/isaac.log
+2026-11-06 18:16:49 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-06 18:16:49 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-06 18:16:49 [212ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-06 18:16:49 [303ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-06 18:16:49 [303ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-06 18:16:49 [303ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-06 18:16:49 [303ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-06 18:16:49 [303ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-06 18:16:49 [303ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-06 18:16:49 [303ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+2026-11-06 18:16:49 [407ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-11-06 18:16:49 [491ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.07    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090 D        | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2685      | 797f5e3a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 20.04.6 LTS (Focal Fossa) ubuntu, Version: 20.04.6, Kernel: 5.15.0-139-generic
+| Processor: 12th Gen Intel(R) Core(TM) i5-12600KF
+| Cores: 10 | Logical Cores: 10
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31876 | Free Memory: 10206
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 17592186044413
+|---------------------------------------------------------------------------------------------|
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-07_02-16-51.log
+[33m02:16:51 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.002
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2026-11-06 18:16:51 [2,097ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,097ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:16:51 [2,098ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO]: Time taken for scene creation : 0.302320 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 256
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m02:16:52 [articulation.py] WARNING: Spatial tendons are not supported in Isaac Sim < 5.0: patching spatial-tendon getter and setter to use dummy value[0m
+[INFO]: Time taken for simulation start : 0.693393 seconds
+[INFO]: Completed setting up the environment...
+sac seed=42 transitions=8192/2048000 updates=0 return=None
+sac seed=42 transitions=16384/2048000 updates=0 return=None
+sac seed=42 transitions=24576/2048000 updates=0 return=None
+sac seed=42 transitions=32768/2048000 updates=0 return=None
+sac seed=42 transitions=40960/2048000 updates=0 return=None
+sac seed=42 transitions=49152/2048000 updates=0 return=None
+sac seed=42 transitions=57344/2048000 updates=0 return=None
+sac seed=42 transitions=65536/2048000 updates=0 return=None
+sac seed=42 transitions=73728/2048000 updates=64 return=None
+sac seed=42 transitions=81920/2048000 updates=128 return=None
+sac seed=42 transitions=90112/2048000 updates=192 return=None
+sac seed=42 transitions=98304/2048000 updates=256 return=None
+sac seed=42 transitions=106496/2048000 updates=320 return=None
+sac seed=42 transitions=114688/2048000 updates=384 return=None
+sac seed=42 transitions=122880/2048000 updates=448 return=None
+sac seed=42 transitions=131072/2048000 updates=512 return=6.611493969336152
+sac seed=42 transitions=139264/2048000 updates=576 return=6.611493969336152
+sac seed=42 transitions=147456/2048000 updates=640 return=6.611493969336152
+sac seed=42 transitions=155648/2048000 updates=704 return=6.611493969336152
+sac seed=42 transitions=163840/2048000 updates=768 return=6.611493969336152
+sac seed=42 transitions=172032/2048000 updates=832 return=6.611493969336152
+sac seed=42 transitions=180224/2048000 updates=896 return=6.611493969336152
+sac seed=42 transitions=188416/2048000 updates=960 return=6.611493969336152
+sac seed=42 transitions=196608/2048000 updates=1024 return=6.611493969336152
+sac seed=42 transitions=204800/2048000 updates=1088 return=6.611493969336152
+sac seed=42 transitions=212992/2048000 updates=1152 return=6.611493969336152
+sac seed=42 transitions=221184/2048000 updates=1216 return=6.611493969336152
+sac seed=42 transitions=229376/2048000 updates=1280 return=6.611493969336152
+sac seed=42 transitions=237568/2048000 updates=1344 return=6.611493969336152
+sac seed=42 transitions=245760/2048000 updates=1408 return=6.611493969336152
+sac seed=42 transitions=253952/2048000 updates=1472 return=6.611493969336152
+sac seed=42 transitions=262144/2048000 updates=1536 return=6.887443828396499
+sac seed=42 transitions=270336/2048000 updates=1600 return=6.887443828396499
+sac seed=42 transitions=278528/2048000 updates=1664 return=6.887443828396499
+sac seed=42 transitions=286720/2048000 updates=1728 return=6.887443828396499
+sac seed=42 transitions=294912/2048000 updates=1792 return=6.887443828396499
+sac seed=42 transitions=303104/2048000 updates=1856 return=6.887443828396499
+sac seed=42 transitions=311296/2048000 updates=1920 return=6.887443828396499
+sac seed=42 transitions=319488/2048000 updates=1984 return=6.887443828396499
+sac seed=42 transitions=327680/2048000 updates=2048 return=6.887443828396499
+sac seed=42 transitions=335872/2048000 updates=2112 return=6.887443828396499
+sac seed=42 transitions=344064/2048000 updates=2176 return=6.887443828396499
+sac seed=42 transitions=352256/2048000 updates=2240 return=6.887443828396499
+sac seed=42 transitions=360448/2048000 updates=2304 return=6.887443828396499
+sac seed=42 transitions=368640/2048000 updates=2368 return=6.887443828396499
+sac seed=42 transitions=376832/2048000 updates=2432 return=6.887443828396499
+sac seed=42 transitions=385024/2048000 updates=2496 return=7.133977982215583
+sac seed=42 transitions=393216/2048000 updates=2560 return=7.133977982215583
+sac seed=42 transitions=401408/2048000 updates=2624 return=7.133977982215583
+sac seed=42 transitions=409600/2048000 updates=2688 return=7.133977982215583
+sac seed=42 transitions=417792/2048000 updates=2752 return=7.133977982215583
+sac seed=42 transitions=425984/2048000 updates=2816 return=7.133977982215583
+sac seed=42 transitions=434176/2048000 updates=2880 return=7.133977982215583
+sac seed=42 transitions=442368/2048000 updates=2944 return=7.133977982215583
+sac seed=42 transitions=450560/2048000 updates=3008 return=7.133977982215583
+sac seed=42 transitions=458752/2048000 updates=3072 return=7.133977982215583
+sac seed=42 transitions=466944/2048000 updates=3136 return=7.133977982215583
+sac seed=42 transitions=475136/2048000 updates=3200 return=7.133977982215583
+sac seed=42 transitions=483328/2048000 updates=3264 return=7.133977982215583
+sac seed=42 transitions=491520/2048000 updates=3328 return=7.133977982215583
+sac seed=42 transitions=499712/2048000 updates=3392 return=7.133977982215583
+sac seed=42 transitions=507904/2048000 updates=3456 return=7.133977982215583
+sac seed=42 transitions=516096/2048000 updates=3520 return=7.383289627730846
+sac seed=42 transitions=524288/2048000 updates=3584 return=7.383289627730846
+sac seed=42 transitions=532480/2048000 updates=3648 return=7.383289627730846
+sac seed=42 transitions=540672/2048000 updates=3712 return=7.383289627730846
+sac seed=42 transitions=548864/2048000 updates=3776 return=7.383289627730846
+sac seed=42 transitions=557056/2048000 updates=3840 return=7.383289627730846
+sac seed=42 transitions=565248/2048000 updates=3904 return=7.383289627730846
+sac seed=42 transitions=573440/2048000 updates=3968 return=7.383289627730846
+sac seed=42 transitions=581632/2048000 updates=4032 return=7.383289627730846
+sac seed=42 transitions=589824/2048000 updates=4096 return=7.383289627730846
+sac seed=42 transitions=598016/2048000 updates=4160 return=7.383289627730846
+sac seed=42 transitions=606208/2048000 updates=4224 return=7.383289627730846
+sac seed=42 transitions=614400/2048000 updates=4288 return=7.383289627730846
+sac seed=42 transitions=622592/2048000 updates=4352 return=7.383289627730846
+sac seed=42 transitions=630784/2048000 updates=4416 return=7.383289627730846
+sac seed=42 transitions=638976/2048000 updates=4480 return=7.383289627730846
+sac seed=42 transitions=647168/2048000 updates=4544 return=8.215539226308465
+sac seed=42 transitions=655360/2048000 updates=4608 return=8.215539226308465
+sac seed=42 transitions=663552/2048000 updates=4672 return=8.215539226308465
+sac seed=42 transitions=671744/2048000 updates=4736 return=8.215539226308465
+sac seed=42 transitions=679936/2048000 updates=4800 return=8.215539226308465
+sac seed=42 transitions=688128/2048000 updates=4864 return=8.215539226308465
+sac seed=42 transitions=696320/2048000 updates=4928 return=8.215539226308465
+sac seed=42 transitions=704512/2048000 updates=4992 return=8.215539226308465
+sac seed=42 transitions=712704/2048000 updates=5056 return=8.215539226308465
+sac seed=42 transitions=720896/2048000 updates=5120 return=8.215539226308465
+sac seed=42 transitions=729088/2048000 updates=5184 return=8.215539226308465
+sac seed=42 transitions=737280/2048000 updates=5248 return=8.215539226308465
+sac seed=42 transitions=745472/2048000 updates=5312 return=8.215539226308465
+sac seed=42 transitions=753664/2048000 updates=5376 return=8.215539226308465
+sac seed=42 transitions=761856/2048000 updates=5440 return=8.215539226308465
+sac seed=42 transitions=770048/2048000 updates=5504 return=9.63606208562851
+sac seed=42 transitions=778240/2048000 updates=5568 return=9.63606208562851
+sac seed=42 transitions=786432/2048000 updates=5632 return=9.63606208562851
+sac seed=42 transitions=794624/2048000 updates=5696 return=9.63606208562851
+sac seed=42 transitions=802816/2048000 updates=5760 return=9.63606208562851
+sac seed=42 transitions=811008/2048000 updates=5824 return=9.63606208562851
+sac seed=42 transitions=819200/2048000 updates=5888 return=9.63606208562851
+sac seed=42 transitions=827392/2048000 updates=5952 return=9.63606208562851
+sac seed=42 transitions=835584/2048000 updates=6016 return=9.63606208562851
+sac seed=42 transitions=843776/2048000 updates=6080 return=9.63606208562851
+sac seed=42 transitions=851968/2048000 updates=6144 return=9.63606208562851
+sac seed=42 transitions=860160/2048000 updates=6208 return=9.63606208562851
+sac seed=42 transitions=868352/2048000 updates=6272 return=9.63606208562851
+sac seed=42 transitions=876544/2048000 updates=6336 return=9.63606208562851
+sac seed=42 transitions=884736/2048000 updates=6400 return=9.63606208562851
+sac seed=42 transitions=892928/2048000 updates=6464 return=9.63606208562851
+sac seed=42 transitions=901120/2048000 updates=6528 return=12.504137553274632
+sac seed=42 transitions=909312/2048000 updates=6592 return=12.504137553274632
+sac seed=42 transitions=917504/2048000 updates=6656 return=12.504137553274632
+sac seed=42 transitions=925696/2048000 updates=6720 return=12.504137553274632
+sac seed=42 transitions=933888/2048000 updates=6784 return=12.504137553274632
+sac seed=42 transitions=942080/2048000 updates=6848 return=12.504137553274632
+sac seed=42 transitions=950272/2048000 updates=6912 return=12.504137553274632
+sac seed=42 transitions=958464/2048000 updates=6976 return=12.504137553274632
+sac seed=42 transitions=966656/2048000 updates=7040 return=12.504137553274632
+sac seed=42 transitions=974848/2048000 updates=7104 return=12.504137553274632
+sac seed=42 transitions=983040/2048000 updates=7168 return=12.504137553274632
+sac seed=42 transitions=991232/2048000 updates=7232 return=12.504137553274632
+sac seed=42 transitions=999424/2048000 updates=7296 return=12.504137553274632
+sac seed=42 transitions=1007616/2048000 updates=7360 return=12.504137553274632
+sac seed=42 transitions=1015808/2048000 updates=7424 return=12.504137553274632
+sac seed=42 transitions=1024000/2048000 updates=7488 return=15.84196226298809
+sac seed=42 transitions=1032192/2048000 updates=7552 return=15.84196226298809
+sac seed=42 transitions=1040384/2048000 updates=7616 return=15.84196226298809
+sac seed=42 transitions=1048576/2048000 updates=7680 return=15.84196226298809
+sac seed=42 transitions=1056768/2048000 updates=7744 return=15.84196226298809
+sac seed=42 transitions=1064960/2048000 updates=7808 return=15.84196226298809
+sac seed=42 transitions=1073152/2048000 updates=7872 return=15.84196226298809
+sac seed=42 transitions=1081344/2048000 updates=7936 return=15.84196226298809
+sac seed=42 transitions=1089536/2048000 updates=8000 return=15.84196226298809
+sac seed=42 transitions=1097728/2048000 updates=8064 return=15.84196226298809
+sac seed=42 transitions=1105920/2048000 updates=8128 return=15.84196226298809
+sac seed=42 transitions=1114112/2048000 updates=8192 return=15.84196226298809
+sac seed=42 transitions=1122304/2048000 updates=8256 return=15.84196226298809
+sac seed=42 transitions=1130496/2048000 updates=8320 return=15.84196226298809
+sac seed=42 transitions=1138688/2048000 updates=8384 return=15.84196226298809
+sac seed=42 transitions=1146880/2048000 updates=8448 return=15.84196226298809
+sac seed=42 transitions=1155072/2048000 updates=8512 return=17.01390529796481
+sac seed=42 transitions=1163264/2048000 updates=8576 return=17.01390529796481
+sac seed=42 transitions=1171456/2048000 updates=8640 return=17.01390529796481
+sac seed=42 transitions=1179648/2048000 updates=8704 return=17.01390529796481
+sac seed=42 transitions=1187840/2048000 updates=8768 return=17.01390529796481
+sac seed=42 transitions=1196032/2048000 updates=8832 return=17.01390529796481
+sac seed=42 transitions=1204224/2048000 updates=8896 return=17.01390529796481
+sac seed=42 transitions=1212416/2048000 updates=8960 return=17.01390529796481
+sac seed=42 transitions=1220608/2048000 updates=9024 return=17.01390529796481
+sac seed=42 transitions=1228800/2048000 updates=9088 return=17.01390529796481
+sac seed=42 transitions=1236992/2048000 updates=9152 return=17.01390529796481
+sac seed=42 transitions=1245184/2048000 updates=9216 return=17.01390529796481
+sac seed=42 transitions=1253376/2048000 updates=9280 return=17.01390529796481
+sac seed=42 transitions=1261568/2048000 updates=9344 return=17.01390529796481
+sac seed=42 transitions=1269760/2048000 updates=9408 return=17.01390529796481
+sac seed=42 transitions=1277952/2048000 updates=9472 return=17.01390529796481
+sac seed=42 transitions=1286144/2048000 updates=9536 return=17.902411304414272
+sac seed=42 transitions=1294336/2048000 updates=9600 return=17.902411304414272
+sac seed=42 transitions=1302528/2048000 updates=9664 return=17.902411304414272
+sac seed=42 transitions=1310720/2048000 updates=9728 return=17.902411304414272
+sac seed=42 transitions=1318912/2048000 updates=9792 return=17.902411304414272
+sac seed=42 transitions=1327104/2048000 updates=9856 return=17.902411304414272
+sac seed=42 transitions=1335296/2048000 updates=9920 return=17.902411304414272
+sac seed=42 transitions=1343488/2048000 updates=9984 return=17.902411304414272
+sac seed=42 transitions=1351680/2048000 updates=10048 return=17.902411304414272
+sac seed=42 transitions=1359872/2048000 updates=10112 return=17.902411304414272
+sac seed=42 transitions=1368064/2048000 updates=10176 return=17.902411304414272
+sac seed=42 transitions=1376256/2048000 updates=10240 return=17.902411304414272
+sac seed=42 transitions=1384448/2048000 updates=10304 return=17.902411304414272
+sac seed=42 transitions=1392640/2048000 updates=10368 return=17.902411304414272
+sac seed=42 transitions=1400832/2048000 updates=10432 return=17.902411304414272
+sac seed=42 transitions=1409024/2048000 updates=10496 return=18.86507708579302
+sac seed=42 transitions=1417216/2048000 updates=10560 return=18.86507708579302
+sac seed=42 transitions=1425408/2048000 updates=10624 return=18.86507708579302
+sac seed=42 transitions=1433600/2048000 updates=10688 return=18.86507708579302
+sac seed=42 transitions=1441792/2048000 updates=10752 return=18.86507708579302
+sac seed=42 transitions=1449984/2048000 updates=10816 return=18.86507708579302
+sac seed=42 transitions=1458176/2048000 updates=10880 return=18.86507708579302
+sac seed=42 transitions=1466368/2048000 updates=10944 return=18.86507708579302
+sac seed=42 transitions=1474560/2048000 updates=11008 return=18.86507708579302
+sac seed=42 transitions=1482752/2048000 updates=11072 return=18.86507708579302
+sac seed=42 transitions=1490944/2048000 updates=11136 return=18.86507708579302
+sac seed=42 transitions=1499136/2048000 updates=11200 return=18.86507708579302
+sac seed=42 transitions=1507328/2048000 updates=11264 return=18.86507708579302
+sac seed=42 transitions=1515520/2048000 updates=11328 return=18.86507708579302
+sac seed=42 transitions=1523712/2048000 updates=11392 return=18.86507708579302
+sac seed=42 transitions=1531904/2048000 updates=11456 return=18.86507708579302
+sac seed=42 transitions=1540096/2048000 updates=11520 return=19.44019914418459
+sac seed=42 transitions=1548288/2048000 updates=11584 return=19.44019914418459
+sac seed=42 transitions=1556480/2048000 updates=11648 return=19.44019914418459
+sac seed=42 transitions=1564672/2048000 updates=11712 return=19.44019914418459
+sac seed=42 transitions=1572864/2048000 updates=11776 return=19.44019914418459
+sac seed=42 transitions=1581056/2048000 updates=11840 return=19.44019914418459
+sac seed=42 transitions=1589248/2048000 updates=11904 return=19.44019914418459
+sac seed=42 transitions=1597440/2048000 updates=11968 return=19.44019914418459
+sac seed=42 transitions=1605632/2048000 updates=12032 return=19.44019914418459
+sac seed=42 transitions=1613824/2048000 updates=12096 return=19.44019914418459
+sac seed=42 transitions=1622016/2048000 updates=12160 return=19.44019914418459
+sac seed=42 transitions=1630208/2048000 updates=12224 return=19.44019914418459
+sac seed=42 transitions=1638400/2048000 updates=12288 return=19.44019914418459
+sac seed=42 transitions=1646592/2048000 updates=12352 return=19.44019914418459
+sac seed=42 transitions=1654784/2048000 updates=12416 return=19.44019914418459
+sac seed=42 transitions=1662976/2048000 updates=12480 return=19.44019914418459
+sac seed=42 transitions=1671168/2048000 updates=12544 return=20.130460113286972
+sac seed=42 transitions=1679360/2048000 updates=12608 return=20.130460113286972
+sac seed=42 transitions=1687552/2048000 updates=12672 return=20.130460113286972
+sac seed=42 transitions=1695744/2048000 updates=12736 return=20.130460113286972
+sac seed=42 transitions=1703936/2048000 updates=12800 return=20.130460113286972
+sac seed=42 transitions=1712128/2048000 updates=12864 return=20.130460113286972
+sac seed=42 transitions=1720320/2048000 updates=12928 return=20.130460113286972
+sac seed=42 transitions=1728512/2048000 updates=12992 return=20.130460113286972
+sac seed=42 transitions=1736704/2048000 updates=13056 return=20.130460113286972
+sac seed=42 transitions=1744896/2048000 updates=13120 return=20.130460113286972
+sac seed=42 transitions=1753088/2048000 updates=13184 return=20.130460113286972
+sac seed=42 transitions=1761280/2048000 updates=13248 return=20.130460113286972
+sac seed=42 transitions=1769472/2048000 updates=13312 return=20.130460113286972
+sac seed=42 transitions=1777664/2048000 updates=13376 return=20.130460113286972
+sac seed=42 transitions=1785856/2048000 updates=13440 return=20.130460113286972
+sac seed=42 transitions=1794048/2048000 updates=13504 return=20.663137316703796
+sac seed=42 transitions=1802240/2048000 updates=13568 return=20.663137316703796
+sac seed=42 transitions=1810432/2048000 updates=13632 return=20.663137316703796
+sac seed=42 transitions=1818624/2048000 updates=13696 return=20.663137316703796
+sac seed=42 transitions=1826816/2048000 updates=13760 return=20.663137316703796
+sac seed=42 transitions=1835008/2048000 updates=13824 return=20.663137316703796
+sac seed=42 transitions=1843200/2048000 updates=13888 return=20.663137316703796
+sac seed=42 transitions=1851392/2048000 updates=13952 return=20.663137316703796
+sac seed=42 transitions=1859584/2048000 updates=14016 return=20.663137316703796
+sac seed=42 transitions=1867776/2048000 updates=14080 return=20.663137316703796
+sac seed=42 transitions=1875968/2048000 updates=14144 return=20.663137316703796
+sac seed=42 transitions=1884160/2048000 updates=14208 return=20.663137316703796
+sac seed=42 transitions=1892352/2048000 updates=14272 return=20.663137316703796
+sac seed=42 transitions=1900544/2048000 updates=14336 return=20.663137316703796
+sac seed=42 transitions=1908736/2048000 updates=14400 return=20.663137316703796
+sac seed=42 transitions=1916928/2048000 updates=14464 return=20.663137316703796
+sac seed=42 transitions=1925120/2048000 updates=14528 return=21.147885255515575
+sac seed=42 transitions=1933312/2048000 updates=14592 return=21.147885255515575
+sac seed=42 transitions=1941504/2048000 updates=14656 return=21.147885255515575
+sac seed=42 transitions=1949696/2048000 updates=14720 return=21.147885255515575
+sac seed=42 transitions=1957888/2048000 updates=14784 return=21.147885255515575
+sac seed=42 transitions=1966080/2048000 updates=14848 return=21.147885255515575
+sac seed=42 transitions=1974272/2048000 updates=14912 return=21.147885255515575
+sac seed=42 transitions=1982464/2048000 updates=14976 return=21.147885255515575
+sac seed=42 transitions=1990656/2048000 updates=15040 return=21.147885255515575
+sac seed=42 transitions=1998848/2048000 updates=15104 return=21.147885255515575
+sac seed=42 transitions=2007040/2048000 updates=15168 return=21.147885255515575
+sac seed=42 transitions=2015232/2048000 updates=15232 return=21.147885255515575
+sac seed=42 transitions=2023424/2048000 updates=15296 return=21.147885255515575
+sac seed=42 transitions=2031616/2048000 updates=15360 return=21.147885255515575
+sac seed=42 transitions=2039808/2048000 updates=15424 return=21.147885255515575
+sac seed=42 transitions=2048000/2048000 updates=15488 return=21.23948383331299
+SESAME_OFFPOLICY_RESULT={"status": "completed", "pid": 3346036, "variant": "sac", "algorithm": "SAC", "train_seed": 42, "seed": 42, "smoke": false, "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42", "args": {"algorithm": "sac", "seed": 42, "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42", "num_envs": 256, "total_transitions": 2048000, "warmup_transitions": 65536, "batch_size": 512, "replay_capacity": 262144, "updates_per_vector_step": 2, "smoke": false}, "reward_version": "absolute_heading_v1", "heading_penalty_scale": 0.5, "domain_randomization": true, "fresh_from_scratch": true, "checkpoint_selection": "final only", "reward_scale": 1.0, "git_operations": "disabled", "started_at_utc": "2026-11-06T18:16:48.701312+00:00", "sources": [{"path": "sesame_rl/environment.py", "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "bytes": 20862}, {"path": "sesame_rl/dr_environment.py", "sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476", "bytes": 22356}, {"path": "sesame_rl/study_environment.py", "sha256": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a", "bytes": 11420}, {"path": "sesame_rl/heading_environment.py", "sha256": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a", "bytes": 6185}, {"path": "scripts/train_ppo.py", "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "bytes": 23496}, {"path": "scripts/train_ppo_dr.py", "sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01", "bytes": 26265}, {"path": "scripts/train_ppo_study.py", "sha256": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d", "bytes": 17419}, {"path": "scripts/train_heading_ppo.py", "sha256": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736", "bytes": 21126}, {"path": "scripts/run_heading_ppo_queue.py", "sha256": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73", "bytes": 5985}, {"path": "scripts/probe_heading_reward.py", "sha256": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6", "bytes": 12600}, {"path": "sesame_rl/offpolicy.py", "sha256": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03", "bytes": 26624}, {"path": "sesame_rl/offpolicy_environment.py", "sha256": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8", "bytes": 1135}, {"path": "scripts/train_offpolicy.py", "sha256": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad", "bytes": 18914}], "frozen_sources": {"sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476", "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a", "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a", "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01", "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d", "scripts/train_heading_ppo.py": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736", "scripts/run_heading_ppo_queue.py": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73", "scripts/probe_heading_reward.py": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6"}, "robot_asset_sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7", "reward_config": {"reward_version": "absolute_heading_v1", "base_reward": "All frozen SesameWalkEnv reward components retained unchanged", "new_term": "heading", "heading_penalty_scale": 0.5, "reward_rate_formula": "-scale * (1 - cos(world_yaw - atan2(command_world_y, command_world_x)))", "step_reward_formula": "heading_reward_rate * control_dt_s", "control_dt_s": 0.02, "zero_planar_command": "heading term is exactly zero", "nonfinite_rate": "mapped to zero, consistent with the frozen base reward handling", "target_heading": "world XY velocity-command direction; zero radians for the original +X command", "accounting": "Added once to returned reward, episode return and RewardRate/heading accumulator", "observation_dimension": 36, "action_dimension": 8, "training_physics": "Full domain randomization, unchanged from DR-PPO", "metric_reference": "Inherited study heading metrics remain relative to world +X, matching this fixed +X task"}, "gpu": "NVIDIA GeForce RTX 4090 D", "versions": {"torch": "2.7.0+cu128", "isaaclab": "0.49.0", "isaaclab-rl": "0.4.4", "gymnasium": "1.2.1"}, "training_wall_seconds": 209.7584505006671, "training_torch_memory": {"peak_allocated_bytes": 112526336, "peak_reserved_bytes": 130023424, "scope": "Torch only, includes replay; excludes non-Torch simulator allocations"}, "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt", "checkpoint_sha256": "3d0fcdb8df7583e206c30f0b71538a319789907160a475765d70a66a504d7122", "environment_transitions_total": 2048000, "optimizer_updates": 15488, "reload_max_abs_action_error": 0.0, "transition_validation": {"completed_episodes": 4096, "true_terminations": 0, "timeouts": 4096, "timeout_action_snapshot_checks": 4096, "nonterminal_snapshot_checks": 0}, "completed_training_episodes": 4096, "wall_seconds_before_shutdown": 215.21946821175516, "finished_at_utc": "2026-11-06T18:20:23.920940+00:00"}

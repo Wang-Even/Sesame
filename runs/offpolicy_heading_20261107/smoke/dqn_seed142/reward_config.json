@@ -1,0 +1,17 @@
+{
+  "reward_version": "absolute_heading_v1",
+  "base_reward": "All frozen SesameWalkEnv reward components retained unchanged",
+  "new_term": "heading",
+  "heading_penalty_scale": 0.5,
+  "reward_rate_formula": "-scale * (1 - cos(world_yaw - atan2(command_world_y, command_world_x)))",
+  "step_reward_formula": "heading_reward_rate * control_dt_s",
+  "control_dt_s": 0.02,
+  "zero_planar_command": "heading term is exactly zero",
+  "nonfinite_rate": "mapped to zero, consistent with the frozen base reward handling",
+  "target_heading": "world XY velocity-command direction; zero radians for the original +X command",
+  "accounting": "Added once to returned reward, episode return and RewardRate/heading accumulator",
+  "observation_dimension": 36,
+  "action_dimension": 8,
+  "training_physics": "Full domain randomization, unchanged from DR-PPO",
+  "metric_reference": "Inherited study heading metrics remain relative to world +X, matching this fixed +X task"
+}

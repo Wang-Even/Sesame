@@ -1,0 +1,128 @@
+{
+  "status": "completed",
+  "completed_at_asia_shanghai": "2026-11-03T05:42:19.584899+08:00",
+  "protocol_sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+  "training": {
+    "passed": true,
+    "models": 9,
+    "new_models": 7,
+    "total_training_transitions_including_reuse": 18432000,
+    "new_training_transitions": 14336000
+  },
+  "evaluation": {
+    "cases": 18,
+    "episodes": 2304,
+    "falls": 0,
+    "exact_pairing_passed": true,
+    "n_training_seeds_per_method": 3
+  },
+  "primary_metric": "instantaneous world-vx tracking RMSE against 0.10 m/s, per-episode then per-training-seed aggregation",
+  "primary_results": {
+    "nominal": {
+      "baseline": {
+        "mean": 0.04835817965795286,
+        "sd_across_training_seeds": 0.011409598136084763,
+        "n_training_seeds": 3,
+        "n_valid_training_seeds": 3,
+        "seed_means": {
+          "42": 0.06117102375719696,
+          "43": 0.044607355317566544,
+          "44": 0.03929615989909507
+        }
+      },
+      "full_dr": {
+        "mean": 0.062173450307454914,
+        "sd_across_training_seeds": 0.003002126259048608,
+        "n_training_seeds": 3,
+        "n_valid_training_seeds": 3,
+        "seed_means": {
+          "42": 0.058706921845441684,
+          "43": 0.06389457403565757,
+          "44": 0.06391885504126549
+        }
+      },
+      "fixed_delay": {
+        "mean": 0.10036569179889436,
+        "sd_across_training_seeds": 0.006137271856594512,
+        "n_training_seeds": 3,
+        "n_valid_training_seeds": 3,
+        "seed_means": {
+          "42": 0.09340681839967147,
+          "43": 0.10500558814965189,
+          "44": 0.10268466884735972
+        }
+      }
+    },
+    "randomized": {
+      "baseline": {
+        "mean": 0.06943441320133086,
+        "sd_across_training_seeds": 0.005564758465484315,
+        "n_training_seeds": 3,
+        "n_valid_training_seeds": 3,
+        "seed_means": {
+          "42": 0.07522793984389864,
+          "43": 0.06894447840750217,
+          "44": 0.06413082135259174
+        }
+      },
+      "full_dr": {
+        "mean": 0.03747506906317236,
+        "sd_across_training_seeds": 0.0017217166844990508,
+        "n_training_seeds": 3,
+        "n_valid_training_seeds": 3,
+        "seed_means": {
+          "42": 0.0356678963144077,
+          "43": 0.03766108778654598,
+          "44": 0.03909622308856342
+        }
+      },
+      "fixed_delay": {
+        "mean": 0.041718529173522256,
+        "sd_across_training_seeds": 0.0023835781107161666,
+        "n_training_seeds": 3,
+        "n_valid_training_seeds": 3,
+        "seed_means": {
+          "42": 0.04227266761881765,
+          "43": 0.0437762281508185,
+          "44": 0.03910669175093062
+        }
+      }
+    }
+  },
+  "video_verified": true,
+  "artifacts": {
+    "docs/ROBUSTNESS_STUDY.md": {
+      "sha256": "7e21d227a95f42ec45b4b8ed91e85a622e0d1c56d8a8748721dfb145e6344d4f",
+      "bytes": 11075
+    },
+    "runs/robustness_ablation_20261103/analysis/summary.md": {
+      "sha256": "e54b7607214d0484cb75dece39f45bd94e0acf5efd8b099d4c83304a11d7f075",
+      "bytes": 1432
+    },
+    "runs/robustness_ablation_20261103/analysis/performance.png": {
+      "sha256": "ccc494d8cfee0db07bfbba20fe6f44fdfda3a709f366c3b34a375c16b929b336",
+      "bytes": 233214
+    },
+    "runs/robustness_ablation_20261103/analysis/smoothness.png": {
+      "sha256": "757807b33e5b43375ce1cdd3b5ed6f4c534b2d178755d0b26a5ae308d387c3d7",
+      "bytes": 177553
+    },
+    "runs/robustness_ablation_20261103/analysis/learning_curves.png": {
+      "sha256": "579b8fd0280c247c247bdc87c963408c7f6dbc71c45e47574b8fcc868d3ae670",
+      "bytes": 272263
+    },
+    "runs/robustness_ablation_20261103/analysis/independent_review.json": {
+      "sha256": "123dfcf15b3354227dc9ad8fb32a1d4c93598c90b1162724187e597825fa2711",
+      "bytes": 10134
+    },
+    "runs/robustness_ablation_20261103/resolved_training_checkpoints.json": {
+      "sha256": "7f94fb94558705085ce3dc3214c34190880e538d6b10c20d8b51ab7c0451f8a8",
+      "bytes": 2983
+    },
+    "runs/robustness_ablation_20261103/videos/ppo_study_comparison_seed3042.mp4": {
+      "sha256": "0ebe4b46df43985e92208e27f5f7df435dea595f6709f37ad426e808f2752032",
+      "bytes": 5557140
+    }
+  },
+  "scope": "Local simulation within declared dynamics ranges; not official course score or hardware validation"
+}

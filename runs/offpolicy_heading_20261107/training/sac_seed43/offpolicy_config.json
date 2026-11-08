@@ -1,0 +1,19 @@
+{
+  "seed": 43,
+  "observation_dim": 36,
+  "action_dim": 8,
+  "hidden_dims": [
+    256,
+    256
+  ],
+  "gamma": 0.99,
+  "learning_rate": 0.0003,
+  "target_tau": 0.005,
+  "max_grad_norm": 10.0,
+  "reward_scale": 1.0,
+  "initial_temperature": 0.02,
+  "target_entropy": -8.0,
+  "log_std_min": -5.0,
+  "log_std_max": 2.0,
+  "initial_log_std": -1.0
+}

@@ -1,0 +1,140 @@
+{
+  "status": "completed",
+  "study_id": "dyna_ppo_20261103",
+  "protocol_sha256": "dd1bf152b1bf670ac9b4e4663a2b984cbc960f22cef8e8261448c748a5b099e8",
+  "manifest_signature": "77a5867cb6e08fe743b683aae557de70cf09727babfe6b5fb1ad807ac3ab892d",
+  "smoke": false,
+  "evaluation": {
+    "num_envs": 256,
+    "seeds": [
+      3042,
+      4042
+    ],
+    "episodes_per_seed": 64,
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "full_dr_for_all_policies",
+    "pairing": "exact initial states and actual physical parameters for every policy within each condition and seed",
+    "policy_action": "deterministic mean using saved observation normalizers",
+    "checkpoint_selection": "final only; no test-guided checkpoint selection",
+    "primary_metric": "per-episode instantaneous world-vx tracking RMSE versus 0.10m/s at 50Hz, then mean over episodes for each training seed",
+    "secondary_metrics": [
+      "xy velocity tracking RMSE",
+      "forward displacement",
+      "episode average speed error",
+      "absolute terminal heading",
+      "absolute terminal lateral displacement",
+      "falls",
+      "episode duration",
+      "applied joint-target change RMS rad/s",
+      "applied joint-target second-difference RMS rad/s^2",
+      "actual joint acceleration RMS at control sampling rate",
+      "raw action clipping fraction"
+    ],
+    "statistics": "n=3 independent training seeds per arm; report each seed and sample SD across seed means, not episode SEM as training variability",
+    "development_seed_excluded": 2042,
+    "scenario_status": "3042/4042 unused in policy training but previously observed in the DR study; fixed common re-evaluation, not a new blind test"
+  },
+  "started_at_utc": "2026-11-03T15:36:54.402801+00:00",
+  "git_operations": "disabled",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "rsl-rl-lib": "3.1.2",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "isaacsim": "not in distribution metadata"
+  },
+  "dyna_checkpoint_audits": {
+    "dyna_ppo_seed42": {
+      "verified": true,
+      "imagined_optimizer_steps": 734,
+      "verified_training_counters": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "model_fit_calls": 250,
+        "imagined_generated": 107520,
+        "imagined_accepted": 97123,
+        "imagined_optimizer_steps": 734,
+        "imagined_update_calls": 210
+      },
+      "world_model_fit_calls": 250,
+      "world_model_state_path": "dyna_state_dict.world_model",
+      "world_model_parameter_count": 119511,
+      "auxiliary_parameters_finite_cuda": true,
+      "world_model_forward_executed": false
+    },
+    "dyna_ppo_seed43": {
+      "verified": true,
+      "imagined_optimizer_steps": 736,
+      "verified_training_counters": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "model_fit_calls": 250,
+        "imagined_generated": 107520,
+        "imagined_accepted": 95676,
+        "imagined_optimizer_steps": 736,
+        "imagined_update_calls": 210
+      },
+      "world_model_fit_calls": 250,
+      "world_model_state_path": "dyna_state_dict.world_model",
+      "world_model_parameter_count": 119511,
+      "auxiliary_parameters_finite_cuda": true,
+      "world_model_forward_executed": false
+    },
+    "dyna_ppo_seed44": {
+      "verified": true,
+      "imagined_optimizer_steps": 742,
+      "verified_training_counters": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "model_fit_calls": 250,
+        "imagined_generated": 107520,
+        "imagined_accepted": 96310,
+        "imagined_optimizer_steps": 742,
+        "imagined_update_calls": 210
+      },
+      "world_model_fit_calls": 250,
+      "world_model_state_path": "dyna_state_dict.world_model",
+      "world_model_parameter_count": 119511,
+      "auxiliary_parameters_finite_cuda": true,
+      "world_model_forward_executed": false
+    }
+  },
+  "case_paths": [
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/baseline_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/baseline_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/baseline_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/baseline_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/baseline_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/baseline_seed44/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/full_dr_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/full_dr_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/full_dr_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/full_dr_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/full_dr_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/full_dr_seed44/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/dyna_ppo_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/dyna_ppo_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/dyna_ppo_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/dyna_ppo_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/dyna_ppo_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/evaluation/cases/dyna_ppo_seed44/randomized.json"
+  ],
+  "cases_completed": 18,
+  "pairing_verified_all_cases": true,
+  "wall_seconds_before_shutdown": 445.54853498004377,
+  "finished_at_utc": "2026-11-03T15:44:19.951540+00:00"
+}

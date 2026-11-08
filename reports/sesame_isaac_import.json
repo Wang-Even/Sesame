@@ -1,0 +1,306 @@
+{
+  "checked_at_utc": "2026-11-02T08:33:43.984035+00:00",
+  "source_repository": "https://github.com/lukehollis/sesame-ml",
+  "source_revision": "a3910f67b4aeb9ca9080a1ba1ffa971e53e35a18",
+  "source_urdf": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf",
+  "source_urdf_sha256": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+  "device": "cuda:0",
+  "passed": true,
+  "training_performed": false,
+  "limitations": [
+    "Reference model, not course-provided or hardware-calibrated parameters.",
+    "Short free-fall articulation load check; no floor contact, walking policy, or reward task tested.",
+    "Isaac Sim 4.5 joint friction semantics differ from MuJoCo frictionloss; no exact simulator equivalence claimed."
+  ],
+  "import_filename_adaptation": {
+    "derived_urdf": "/home/ywwang/sesame/assets/isaac/sesame/import_source/sesame.urdf",
+    "mesh_names": {
+      "Internal-Frame-v121.stl": "Internal_Frame_v121.stl",
+      "Bottom-Cover-v121.stl": "Bottom_Cover_v121.stl",
+      "Top-Cover-Enclosed-v117.stl": "Top_Cover_Enclosed_v117.stl",
+      "R1-v117.stl": "R1_v117.stl",
+      "R2-v117.stl": "R2_v117.stl",
+      "L1-v117.stl": "L1_v117.stl",
+      "L2-v117.stl": "L2_v117.stl",
+      "R4-v117.stl": "R4_v117.stl",
+      "R3-v117.stl": "R3_v117.stl",
+      "L3-v117.stl": "L3_v117.stl",
+      "L4-v117.stl": "L4_v117.stl"
+    },
+    "mesh_bytes_unchanged": true,
+    "reason": "Isaac Sim 4.5 requires valid USD identifiers for mesh basenames; upstream hyphens are invalid."
+  },
+  "source_model": {
+    "joint_names_firmware_order": [
+      "R1",
+      "R2",
+      "L1",
+      "L2",
+      "R4",
+      "R3",
+      "L3",
+      "L4"
+    ],
+    "joint_limits": {
+      "R1": {
+        "lower": 0.785398163,
+        "upper": 3.141592654,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "R2": {
+        "lower": 0.0,
+        "upper": 2.35619449,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "L1": {
+        "lower": 0.0,
+        "upper": 2.35619449,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "L2": {
+        "lower": 0.785398163,
+        "upper": 3.141592654,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "R4": {
+        "lower": 0.0,
+        "upper": 3.141592654,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "R3": {
+        "lower": 0.0,
+        "upper": 3.141592654,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "L3": {
+        "lower": 0.0,
+        "upper": 3.141592654,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      },
+      "L4": {
+        "lower": 0.0,
+        "upper": 3.141592654,
+        "effort": 0.18,
+        "velocity": 10.471975512
+      }
+    },
+    "link_masses_kg": {
+      "base": 0.28,
+      "r1_link": 0.02,
+      "r2_link": 0.02,
+      "l1_link": 0.02,
+      "l2_link": 0.02,
+      "r4_link": 0.006,
+      "r3_link": 0.006,
+      "l3_link": 0.006,
+      "l4_link": 0.006
+    },
+    "total_mass_kg": 0.3840000000000001,
+    "unique_visual_meshes": 11,
+    "all_meshes_resolve": true,
+    "initial_joint_pose_rad_from_mjcf_ref": {
+      "R1": 2.35619449,
+      "R3": 3.141592654,
+      "R2": 0.785398163,
+      "R4": 0.0,
+      "L1": 0.785398163,
+      "L3": 0.0,
+      "L2": 2.35619449,
+      "L4": 3.141592654
+    },
+    "servo_stiffness_from_mjcf_kp": {
+      "R1": 5.0,
+      "R2": 5.0,
+      "L1": 5.0,
+      "L2": 5.0,
+      "R4": 5.0,
+      "R3": 5.0,
+      "L3": 5.0,
+      "L4": 5.0
+    },
+    "damping_from_urdf": {
+      "R1": 0.0025,
+      "R2": 0.0025,
+      "L1": 0.0025,
+      "L2": 0.0025,
+      "R4": 0.0025,
+      "R3": 0.0025,
+      "L3": 0.0025,
+      "L4": 0.0025
+    }
+  },
+  "usd_path": "/home/ywwang/sesame/assets/isaac/sesame/sesame.usd",
+  "conversion": {
+    "free_base": true,
+    "import_inertia_tensor": true,
+    "merge_fixed_joints": true,
+    "inertia_handling": "4.5 importer import_inertia_tensor=True; no ignore-inertia override supported",
+    "fixed_link_note": "Six empty foot/IMU/camera marker links merged into parent bodies to avoid artificial masses; original URDF retains their frames.",
+    "self_collision": false,
+    "drive_note": "Position stiffness borrowed from upstream MJCF kp=5; damping=0.0025 and effort/velocity limits from URDF. No hardware calibration inferred."
+  },
+  "usd_metadata": {
+    "revolute_joints": [
+      {
+        "name": "L1",
+        "path": "/sesame_quadruped/joints/L1",
+        "axis": "Z",
+        "lower_deg": 0.0,
+        "upper_deg": 135.0
+      },
+      {
+        "name": "L3",
+        "path": "/sesame_quadruped/joints/L3",
+        "axis": "Z",
+        "lower_deg": 0.0,
+        "upper_deg": 180.0
+      },
+      {
+        "name": "L2",
+        "path": "/sesame_quadruped/joints/L2",
+        "axis": "Z",
+        "lower_deg": 45.0,
+        "upper_deg": 180.0
+      },
+      {
+        "name": "L4",
+        "path": "/sesame_quadruped/joints/L4",
+        "axis": "Z",
+        "lower_deg": 0.0,
+        "upper_deg": 180.0
+      },
+      {
+        "name": "R1",
+        "path": "/sesame_quadruped/joints/R1",
+        "axis": "Z",
+        "lower_deg": 45.0,
+        "upper_deg": 180.0
+      },
+      {
+        "name": "R3",
+        "path": "/sesame_quadruped/joints/R3",
+        "axis": "Z",
+        "lower_deg": 0.0,
+        "upper_deg": 180.0
+      },
+      {
+        "name": "R2",
+        "path": "/sesame_quadruped/joints/R2",
+        "axis": "Z",
+        "lower_deg": 0.0,
+        "upper_deg": 135.0
+      },
+      {
+        "name": "R4",
+        "path": "/sesame_quadruped/joints/R4",
+        "axis": "Z",
+        "lower_deg": 0.0,
+        "upper_deg": 180.0
+      }
+    ],
+    "link_masses_kg": {
+      "base": 0.2800000011920929,
+      "l1_link": 0.019999999552965164,
+      "l3_link": 0.006000000052154064,
+      "l2_link": 0.019999999552965164,
+      "l4_link": 0.006000000052154064,
+      "r1_link": 0.019999999552965164,
+      "r3_link": 0.006000000052154064,
+      "r2_link": 0.019999999552965164,
+      "r4_link": 0.006000000052154064
+    },
+    "total_mass_kg": 0.3839999996125698
+  },
+  "gpu_articulation": {
+    "joint_count": 8,
+    "body_count": 9,
+    "joint_order_isaac": [
+      "L1",
+      "L2",
+      "R1",
+      "R2",
+      "L3",
+      "L4",
+      "R3",
+      "R4"
+    ],
+    "firmware_order_indices_in_isaac": [
+      2,
+      3,
+      0,
+      1,
+      7,
+      6,
+      4,
+      5
+    ],
+    "is_fixed_base": false,
+    "device": "cuda:0",
+    "steps": 32,
+    "dt": 0.002,
+    "finite_joint_and_root_states": true,
+    "control_test": "Fixed upstream reference pose target, free-floating without ground contact; no trained policy.",
+    "initial_joint_positions_rad": [
+      [
+        0.7853981852531433,
+        2.356194496154785,
+        2.356194496154785,
+        0.7853981852531433,
+        0.0,
+        3.1415927410125732,
+        3.1415927410125732,
+        0.0
+      ]
+    ],
+    "final_joint_positions_rad": [
+      [
+        0.7853981852531433,
+        2.356194496154785,
+        2.356194496154785,
+        0.7853981852531433,
+        6.977883889260528e-17,
+        3.1415927410125732,
+        3.1415927410125732,
+        8.45714991093427e-13
+      ]
+    ],
+    "final_joint_velocities_rad_s": [
+      [
+        -3.931642338084185e-14,
+        -4.005519874117347e-13,
+        -1.2503659132384604e-13,
+        -3.161888285918568e-12,
+        2.454240695219656e-14,
+        1.535188398930562e-13,
+        -1.2553863113981545e-13,
+        -1.4918621893400541e-15
+      ]
+    ],
+    "final_base_position_m": [
+      [
+        -6.8636394311150095e-12,
+        -1.3378630885421683e-12,
+        0.47928112745285034
+      ]
+    ]
+  },
+  "shutdown": {
+    "completed": false,
+    "forced_process_exit": true,
+    "timeout_seconds": 15
+  },
+  "postcheck": {
+    "source_urdf_hash_unchanged": true,
+    "derived_urdf_only_mesh_filename_changes": true,
+    "process_exit_code": 0,
+    "remaining_gpu_processes": "415490, GPU-797f5e3a-a809-3d1c-17ed-fc992d036917, 2796 MiB"
+  },
+  "command": "CONDA_NO_PLUGINS=true PYTHONDONTWRITEBYTECODE=1 /home/ubuntu/miniforge3/bin/conda run -n env_isaaclab --no-capture-output /home/ubuntu/miniforge3/envs/env_isaaclab/bin/python /home/ywwang/sesame/scripts/import_sesame_isaac.py"
+}

@@ -1,0 +1,2892 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[Info] [carb] Logging to file: /home/ywwang/sesame/runs/dyna_ppo_20261103/smoke/seed42/isaac.log
+2026-11-03 15:19:22 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-03 15:19:22 [46ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-03 15:19:23 [835ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-03 15:19:23 [1,091ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-03 15:19:23 [1,091ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-03 15:19:23 [1,091ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-03 15:19:23 [1,091ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-03 15:19:23 [1,091ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-03 15:19:23 [1,091ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-03 15:19:23 [1,091ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+2026-11-03 15:19:23 [1,352ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-11-03 15:19:24 [1,517ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.07    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090 D        | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2685      | 797f5e3a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 20.04.6 LTS (Focal Fossa) ubuntu, Version: 20.04.6, Kernel: 5.15.0-139-generic
+| Processor: 12th Gen Intel(R) Core(TM) i5-12600KF
+| Cores: 10 | Logical Cores: 10
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31876 | Free Memory: 2588
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 17592186044413
+|---------------------------------------------------------------------------------------------|
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-03_23-19-27.log
+[33m23:19:27 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.002
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,821ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,822ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,822ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,822ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-03 15:19:28 [5,822ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO]: Time taken for scene creation : 0.549747 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 64
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m23:19:28 [articulation.py] WARNING: Spatial tendons are not supported in Isaac Sim < 5.0: patching spatial-tendon getter and setter to use dummy value[0m
+[INFO]: Time taken for simulation start : 0.802833 seconds
+[INFO]: Completed setting up the environment...
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+################################################################################
+                       [1m Learning iteration 0/45 [0m                        
+
+                       Computation: 1651 steps/s (collection: 0.953s, learning 0.287s)
+             Mean action noise std: 0.50
+                    value_function: 0.0104
+                         surrogate: -0.0303
+                           entropy: 5.8088
+                     wm_train_size: 1824.0000
+                wm_validation_size: 224.0000
+        wm_real_train_samples_seen: 1824.0000
+   wm_real_validation_samples_seen: 224.0000
+                wm_model_fit_calls: 0.0000
+               wm_ready_before_fit: 0.0000
+                          wm_ready: 0.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2048
+                    Iteration time: 1.24s
+                      Time elapsed: 00:00:01
+                               ETA: 00:00:55
+
+################################################################################
+                       [1m Learning iteration 1/45 [0m                        
+
+                       Computation: 2883 steps/s (collection: 0.560s, learning 0.151s)
+             Mean action noise std: 0.50
+                    value_function: 0.0150
+                         surrogate: -0.0181
+                           entropy: 5.8126
+                     wm_train_size: 3648.0000
+                wm_validation_size: 448.0000
+        wm_real_train_samples_seen: 3648.0000
+   wm_real_validation_samples_seen: 448.0000
+                wm_model_fit_calls: 1.0000
+               wm_ready_before_fit: 0.0000
+                          wm_ready: 0.0000
+            wm_train_dynamics_loss: 0.7849
+              wm_train_reward_loss: 0.8839
+wm_train_gradient_norm_before_clip: 0.3539
+wm_persistence_delta_mse_normalized: 1.1407
+          wm_uncertainty_threshold: 0.1645
+wm_validation_delta_mse_normalized: 1.0001
+wm_validation_persistence_delta_mse_normalized: 1.1407
+wm_validation_to_persistence_mse_ratio: 0.8767
+        wm_validation_obs_rmse_raw: 0.2054
+          wm_validation_reward_mae: 0.0091
+wm_validation_reward_mean_baseline_mae: 0.0101
+wm_validation_uncertainty_quantile: 0.1645
+wm_validation_pre_delta_mse_normalized: 1.1467
+wm_validation_pre_persistence_delta_mse_normalized: 1.1407
+wm_validation_pre_to_persistence_mse_ratio: 1.0052
+    wm_validation_pre_obs_rmse_raw: 0.2196
+      wm_validation_pre_reward_mae: 0.0101
+wm_validation_pre_reward_mean_baseline_mae: 0.0101
+wm_validation_pre_uncertainty_quantile: 0.1738
+wm_validation_post_delta_mse_normalized: 1.0001
+wm_validation_post_persistence_delta_mse_normalized: 1.1407
+wm_validation_post_to_persistence_mse_ratio: 0.8767
+   wm_validation_post_obs_rmse_raw: 0.2054
+     wm_validation_post_reward_mae: 0.0091
+wm_validation_post_reward_mean_baseline_mae: 0.0101
+wm_validation_post_uncertainty_quantile: 0.1645
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 448.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 24.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4096
+                    Iteration time: 0.71s
+                      Time elapsed: 00:00:01
+                               ETA: 00:00:42
+
+################################################################################
+                       [1m Learning iteration 2/45 [0m                        
+
+                       Computation: 2786 steps/s (collection: 0.627s, learning 0.108s)
+             Mean action noise std: 0.50
+                    value_function: 0.0110
+                         surrogate: -0.0238
+                           entropy: 5.8217
+                     wm_train_size: 5472.0000
+                wm_validation_size: 672.0000
+        wm_real_train_samples_seen: 5472.0000
+   wm_real_validation_samples_seen: 672.0000
+                wm_model_fit_calls: 2.0000
+               wm_ready_before_fit: 0.0000
+                          wm_ready: 0.0000
+            wm_train_dynamics_loss: 0.6877
+              wm_train_reward_loss: 0.8330
+wm_train_gradient_norm_before_clip: 0.3711
+wm_persistence_delta_mse_normalized: 1.1584
+          wm_uncertainty_threshold: 0.2137
+wm_validation_delta_mse_normalized: 0.8953
+wm_validation_persistence_delta_mse_normalized: 1.1584
+wm_validation_to_persistence_mse_ratio: 0.7729
+        wm_validation_obs_rmse_raw: 0.1925
+          wm_validation_reward_mae: 0.0092
+wm_validation_reward_mean_baseline_mae: 0.0102
+wm_validation_uncertainty_quantile: 0.2137
+wm_validation_pre_delta_mse_normalized: 1.0172
+wm_validation_pre_persistence_delta_mse_normalized: 1.1584
+wm_validation_pre_to_persistence_mse_ratio: 0.8781
+    wm_validation_pre_obs_rmse_raw: 0.2069
+      wm_validation_pre_reward_mae: 0.0094
+wm_validation_pre_reward_mean_baseline_mae: 0.0102
+wm_validation_pre_uncertainty_quantile: 0.1695
+wm_validation_post_delta_mse_normalized: 0.8953
+wm_validation_post_persistence_delta_mse_normalized: 1.1584
+wm_validation_post_to_persistence_mse_ratio: 0.7729
+   wm_validation_post_obs_rmse_raw: 0.1925
+     wm_validation_post_reward_mae: 0.0092
+wm_validation_post_reward_mean_baseline_mae: 0.0102
+wm_validation_post_uncertainty_quantile: 0.2137
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 672.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 48.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6144
+                    Iteration time: 0.74s
+                      Time elapsed: 00:00:02
+                               ETA: 00:00:38
+
+################################################################################
+                       [1m Learning iteration 3/45 [0m                        
+
+                       Computation: 1161 steps/s (collection: 1.672s, learning 0.091s)
+             Mean action noise std: 0.50
+                    value_function: 0.0116
+                         surrogate: -0.0169
+                           entropy: 5.8269
+                     wm_train_size: 7296.0000
+                wm_validation_size: 896.0000
+        wm_real_train_samples_seen: 7296.0000
+   wm_real_validation_samples_seen: 896.0000
+                wm_model_fit_calls: 3.0000
+               wm_ready_before_fit: 0.0000
+                          wm_ready: 0.0000
+            wm_train_dynamics_loss: 0.6177
+              wm_train_reward_loss: 0.8043
+wm_train_gradient_norm_before_clip: 0.3807
+wm_persistence_delta_mse_normalized: 1.1529
+          wm_uncertainty_threshold: 0.2369
+wm_validation_delta_mse_normalized: 0.7967
+wm_validation_persistence_delta_mse_normalized: 1.1529
+wm_validation_to_persistence_mse_ratio: 0.6911
+        wm_validation_obs_rmse_raw: 0.1822
+          wm_validation_reward_mae: 0.0094
+wm_validation_reward_mean_baseline_mae: 0.0104
+wm_validation_uncertainty_quantile: 0.2369
+wm_validation_pre_delta_mse_normalized: 0.8923
+wm_validation_pre_persistence_delta_mse_normalized: 1.1529
+wm_validation_pre_to_persistence_mse_ratio: 0.7739
+    wm_validation_pre_obs_rmse_raw: 0.1954
+      wm_validation_pre_reward_mae: 0.0094
+wm_validation_pre_reward_mean_baseline_mae: 0.0104
+wm_validation_pre_uncertainty_quantile: 0.2124
+wm_validation_post_delta_mse_normalized: 0.7967
+wm_validation_post_persistence_delta_mse_normalized: 1.1529
+wm_validation_post_to_persistence_mse_ratio: 0.6911
+   wm_validation_post_obs_rmse_raw: 0.1822
+     wm_validation_post_reward_mae: 0.0094
+wm_validation_post_reward_mean_baseline_mae: 0.0104
+wm_validation_post_uncertainty_quantile: 0.2369
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 896.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 72.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8192
+                    Iteration time: 1.76s
+                      Time elapsed: 00:00:04
+                               ETA: 00:00:46
+
+################################################################################
+                       [1m Learning iteration 4/45 [0m                        
+
+                       Computation: 3154 steps/s (collection: 0.561s, learning 0.088s)
+             Mean action noise std: 0.50
+                    value_function: 0.0087
+                         surrogate: -0.0222
+                           entropy: 5.8274
+                     wm_train_size: 9120.0000
+                wm_validation_size: 1120.0000
+        wm_real_train_samples_seen: 9120.0000
+   wm_real_validation_samples_seen: 1120.0000
+                wm_model_fit_calls: 4.0000
+               wm_ready_before_fit: 0.0000
+                          wm_ready: 0.0000
+            wm_train_dynamics_loss: 0.5581
+              wm_train_reward_loss: 0.8106
+wm_train_gradient_norm_before_clip: 0.3969
+wm_persistence_delta_mse_normalized: 1.1470
+          wm_uncertainty_threshold: 0.2277
+wm_validation_delta_mse_normalized: 0.7346
+wm_validation_persistence_delta_mse_normalized: 1.1470
+wm_validation_to_persistence_mse_ratio: 0.6405
+        wm_validation_obs_rmse_raw: 0.1738
+          wm_validation_reward_mae: 0.0095
+wm_validation_reward_mean_baseline_mae: 0.0106
+wm_validation_uncertainty_quantile: 0.2277
+wm_validation_pre_delta_mse_normalized: 0.7930
+wm_validation_pre_persistence_delta_mse_normalized: 1.1470
+wm_validation_pre_to_persistence_mse_ratio: 0.6914
+    wm_validation_pre_obs_rmse_raw: 0.1828
+      wm_validation_pre_reward_mae: 0.0095
+wm_validation_pre_reward_mean_baseline_mae: 0.0106
+wm_validation_pre_uncertainty_quantile: 0.2355
+wm_validation_post_delta_mse_normalized: 0.7346
+wm_validation_post_persistence_delta_mse_normalized: 1.1470
+wm_validation_post_to_persistence_mse_ratio: 0.6405
+   wm_validation_post_obs_rmse_raw: 0.1738
+     wm_validation_post_reward_mae: 0.0095
+wm_validation_post_reward_mean_baseline_mae: 0.0106
+wm_validation_post_uncertainty_quantile: 0.2277
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 1120.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 96.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10240
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:05
+                               ETA: 00:00:41
+
+################################################################################
+                       [1m Learning iteration 5/45 [0m                        
+
+                       Computation: 3229 steps/s (collection: 0.543s, learning 0.091s)
+             Mean action noise std: 0.50
+                    value_function: 0.0078
+                         surrogate: -0.0198
+                           entropy: 5.8247
+                     wm_train_size: 10944.0000
+                wm_validation_size: 1344.0000
+        wm_real_train_samples_seen: 10944.0000
+   wm_real_validation_samples_seen: 1344.0000
+                wm_model_fit_calls: 5.0000
+               wm_ready_before_fit: 0.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.5188
+              wm_train_reward_loss: 0.7973
+wm_train_gradient_norm_before_clip: 0.4055
+wm_persistence_delta_mse_normalized: 1.1271
+          wm_uncertainty_threshold: 0.2074
+wm_validation_delta_mse_normalized: 0.6870
+wm_validation_persistence_delta_mse_normalized: 1.1271
+wm_validation_to_persistence_mse_ratio: 0.6096
+        wm_validation_obs_rmse_raw: 0.1692
+          wm_validation_reward_mae: 0.0094
+wm_validation_reward_mean_baseline_mae: 0.0106
+wm_validation_uncertainty_quantile: 0.2074
+wm_validation_pre_delta_mse_normalized: 0.7203
+wm_validation_pre_persistence_delta_mse_normalized: 1.1271
+wm_validation_pre_to_persistence_mse_ratio: 0.6391
+    wm_validation_pre_obs_rmse_raw: 0.1744
+      wm_validation_pre_reward_mae: 0.0094
+wm_validation_pre_reward_mean_baseline_mae: 0.0106
+wm_validation_pre_uncertainty_quantile: 0.2266
+wm_validation_post_delta_mse_normalized: 0.6870
+wm_validation_post_persistence_delta_mse_normalized: 1.1271
+wm_validation_post_to_persistence_mse_ratio: 0.6096
+   wm_validation_post_obs_rmse_raw: 0.1692
+     wm_validation_post_reward_mae: 0.0094
+wm_validation_post_reward_mean_baseline_mae: 0.0106
+wm_validation_post_uncertainty_quantile: 0.2074
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 1344.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 120.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 12288
+                    Iteration time: 0.63s
+                      Time elapsed: 00:00:05
+                               ETA: 00:00:38
+
+################################################################################
+                       [1m Learning iteration 6/45 [0m                        
+
+                       Computation: 3256 steps/s (collection: 0.541s, learning 0.088s)
+             Mean action noise std: 0.50
+                    value_function: 0.0076
+                         surrogate: -0.0224
+                           entropy: 5.8172
+                     wm_train_size: 12768.0000
+                wm_validation_size: 1568.0000
+        wm_real_train_samples_seen: 12768.0000
+   wm_real_validation_samples_seen: 1568.0000
+                wm_model_fit_calls: 6.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.5029
+              wm_train_reward_loss: 0.7972
+wm_train_gradient_norm_before_clip: 0.4249
+wm_persistence_delta_mse_normalized: 1.1187
+          wm_uncertainty_threshold: 0.1908
+wm_validation_delta_mse_normalized: 0.6629
+wm_validation_persistence_delta_mse_normalized: 1.1187
+wm_validation_to_persistence_mse_ratio: 0.5926
+        wm_validation_obs_rmse_raw: 0.1671
+          wm_validation_reward_mae: 0.0096
+wm_validation_reward_mean_baseline_mae: 0.0108
+wm_validation_uncertainty_quantile: 0.1908
+wm_validation_pre_delta_mse_normalized: 0.6833
+wm_validation_pre_persistence_delta_mse_normalized: 1.1187
+wm_validation_pre_to_persistence_mse_ratio: 0.6108
+    wm_validation_pre_obs_rmse_raw: 0.1699
+      wm_validation_pre_reward_mae: 0.0096
+wm_validation_pre_reward_mean_baseline_mae: 0.0108
+wm_validation_pre_uncertainty_quantile: 0.2055
+wm_validation_post_delta_mse_normalized: 0.6629
+wm_validation_post_persistence_delta_mse_normalized: 1.1187
+wm_validation_post_to_persistence_mse_ratio: 0.5926
+   wm_validation_post_obs_rmse_raw: 0.1671
+     wm_validation_post_reward_mae: 0.0096
+wm_validation_post_reward_mean_baseline_mae: 0.0108
+wm_validation_post_uncertainty_quantile: 0.1908
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 1568.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 144.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 14336
+                    Iteration time: 0.63s
+                      Time elapsed: 00:00:06
+                               ETA: 00:00:35
+
+################################################################################
+                       [1m Learning iteration 7/45 [0m                        
+
+                       Computation: 1094 steps/s (collection: 1.779s, learning 0.092s)
+             Mean action noise std: 0.50
+                    value_function: 0.0075
+                         surrogate: -0.0201
+                           entropy: 5.8097
+                     wm_train_size: 14592.0000
+                wm_validation_size: 1792.0000
+        wm_real_train_samples_seen: 14592.0000
+   wm_real_validation_samples_seen: 1792.0000
+                wm_model_fit_calls: 7.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4899
+              wm_train_reward_loss: 0.7891
+wm_train_gradient_norm_before_clip: 0.4360
+wm_persistence_delta_mse_normalized: 1.1091
+          wm_uncertainty_threshold: 0.1841
+wm_validation_delta_mse_normalized: 0.6484
+wm_validation_persistence_delta_mse_normalized: 1.1091
+wm_validation_to_persistence_mse_ratio: 0.5847
+        wm_validation_obs_rmse_raw: 0.1670
+          wm_validation_reward_mae: 0.0096
+wm_validation_reward_mean_baseline_mae: 0.0108
+wm_validation_uncertainty_quantile: 0.1841
+wm_validation_pre_delta_mse_normalized: 0.6586
+wm_validation_pre_persistence_delta_mse_normalized: 1.1091
+wm_validation_pre_to_persistence_mse_ratio: 0.5938
+    wm_validation_pre_obs_rmse_raw: 0.1684
+      wm_validation_pre_reward_mae: 0.0096
+wm_validation_pre_reward_mean_baseline_mae: 0.0108
+wm_validation_pre_uncertainty_quantile: 0.1913
+wm_validation_post_delta_mse_normalized: 0.6484
+wm_validation_post_persistence_delta_mse_normalized: 1.1091
+wm_validation_post_to_persistence_mse_ratio: 0.5847
+   wm_validation_post_obs_rmse_raw: 0.1670
+     wm_validation_post_reward_mae: 0.0096
+wm_validation_post_reward_mean_baseline_mae: 0.0108
+wm_validation_post_uncertainty_quantile: 0.1841
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 1792.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 168.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 16384
+                    Iteration time: 1.87s
+                      Time elapsed: 00:00:08
+                               ETA: 00:00:39
+
+################################################################################
+                       [1m Learning iteration 8/45 [0m                        
+
+                       Computation: 3017 steps/s (collection: 0.587s, learning 0.091s)
+             Mean action noise std: 0.50
+                    value_function: 0.0073
+                         surrogate: -0.0213
+                           entropy: 5.8087
+                     wm_train_size: 16416.0000
+                wm_validation_size: 2016.0000
+        wm_real_train_samples_seen: 16416.0000
+   wm_real_validation_samples_seen: 2016.0000
+                wm_model_fit_calls: 8.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4825
+              wm_train_reward_loss: 0.7867
+wm_train_gradient_norm_before_clip: 0.4531
+wm_persistence_delta_mse_normalized: 1.1045
+          wm_uncertainty_threshold: 0.1760
+wm_validation_delta_mse_normalized: 0.6365
+wm_validation_persistence_delta_mse_normalized: 1.1045
+wm_validation_to_persistence_mse_ratio: 0.5763
+        wm_validation_obs_rmse_raw: 0.1648
+          wm_validation_reward_mae: 0.0096
+wm_validation_reward_mean_baseline_mae: 0.0108
+wm_validation_uncertainty_quantile: 0.1760
+wm_validation_pre_delta_mse_normalized: 0.6420
+wm_validation_pre_persistence_delta_mse_normalized: 1.1045
+wm_validation_pre_to_persistence_mse_ratio: 0.5813
+    wm_validation_pre_obs_rmse_raw: 0.1655
+      wm_validation_pre_reward_mae: 0.0096
+wm_validation_pre_reward_mean_baseline_mae: 0.0108
+wm_validation_pre_uncertainty_quantile: 0.1827
+wm_validation_post_delta_mse_normalized: 0.6365
+wm_validation_post_persistence_delta_mse_normalized: 1.1045
+wm_validation_post_to_persistence_mse_ratio: 0.5763
+   wm_validation_post_obs_rmse_raw: 0.1648
+     wm_validation_post_reward_mae: 0.0096
+wm_validation_post_reward_mean_baseline_mae: 0.0108
+wm_validation_post_uncertainty_quantile: 0.1760
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2016.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 192.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 18432
+                    Iteration time: 0.68s
+                      Time elapsed: 00:00:08
+                               ETA: 00:00:36
+
+################################################################################
+                       [1m Learning iteration 9/45 [0m                        
+
+                       Computation: 3182 steps/s (collection: 0.551s, learning 0.093s)
+             Mean action noise std: 0.50
+                    value_function: 0.0068
+                         surrogate: -0.0230
+                           entropy: 5.8117
+                     wm_train_size: 18240.0000
+                wm_validation_size: 2240.0000
+        wm_real_train_samples_seen: 18240.0000
+   wm_real_validation_samples_seen: 2240.0000
+                wm_model_fit_calls: 9.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4800
+              wm_train_reward_loss: 0.7675
+wm_train_gradient_norm_before_clip: 0.4656
+wm_persistence_delta_mse_normalized: 1.1089
+          wm_uncertainty_threshold: 0.1768
+wm_validation_delta_mse_normalized: 0.6343
+wm_validation_persistence_delta_mse_normalized: 1.1089
+wm_validation_to_persistence_mse_ratio: 0.5720
+        wm_validation_obs_rmse_raw: 0.1660
+          wm_validation_reward_mae: 0.0095
+wm_validation_reward_mean_baseline_mae: 0.0108
+wm_validation_uncertainty_quantile: 0.1768
+wm_validation_pre_delta_mse_normalized: 0.6386
+wm_validation_pre_persistence_delta_mse_normalized: 1.1089
+wm_validation_pre_to_persistence_mse_ratio: 0.5759
+    wm_validation_pre_obs_rmse_raw: 0.1665
+      wm_validation_pre_reward_mae: 0.0096
+wm_validation_pre_reward_mean_baseline_mae: 0.0108
+wm_validation_pre_uncertainty_quantile: 0.1788
+wm_validation_post_delta_mse_normalized: 0.6343
+wm_validation_post_persistence_delta_mse_normalized: 1.1089
+wm_validation_post_to_persistence_mse_ratio: 0.5720
+   wm_validation_post_obs_rmse_raw: 0.1660
+     wm_validation_post_reward_mae: 0.0095
+wm_validation_post_reward_mean_baseline_mae: 0.0108
+wm_validation_post_uncertainty_quantile: 0.1768
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2048.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 216.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 20480
+                    Iteration time: 0.64s
+                      Time elapsed: 00:00:09
+                               ETA: 00:00:34
+
+################################################################################
+                       [1m Learning iteration 10/45 [0m                       
+
+                       Computation: 2813 steps/s (collection: 0.550s, learning 0.178s)
+             Mean action noise std: 0.50
+                    value_function: 0.0064
+                         surrogate: -0.0214
+                           entropy: 5.8120
+                     wm_train_size: 20064.0000
+                wm_validation_size: 2464.0000
+        wm_real_train_samples_seen: 20064.0000
+   wm_real_validation_samples_seen: 2464.0000
+                wm_model_fit_calls: 10.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4759
+              wm_train_reward_loss: 0.7635
+wm_train_gradient_norm_before_clip: 0.4730
+wm_persistence_delta_mse_normalized: 1.1036
+          wm_uncertainty_threshold: 0.1780
+wm_validation_delta_mse_normalized: 0.6318
+wm_validation_persistence_delta_mse_normalized: 1.1036
+wm_validation_to_persistence_mse_ratio: 0.5725
+        wm_validation_obs_rmse_raw: 0.1671
+          wm_validation_reward_mae: 0.0094
+wm_validation_reward_mean_baseline_mae: 0.0108
+wm_validation_uncertainty_quantile: 0.1780
+wm_validation_pre_delta_mse_normalized: 0.6348
+wm_validation_pre_persistence_delta_mse_normalized: 1.1036
+wm_validation_pre_to_persistence_mse_ratio: 0.5752
+    wm_validation_pre_obs_rmse_raw: 0.1672
+      wm_validation_pre_reward_mae: 0.0095
+wm_validation_pre_reward_mean_baseline_mae: 0.0108
+wm_validation_pre_uncertainty_quantile: 0.1758
+wm_validation_post_delta_mse_normalized: 0.6318
+wm_validation_post_persistence_delta_mse_normalized: 1.1036
+wm_validation_post_to_persistence_mse_ratio: 0.5725
+   wm_validation_post_obs_rmse_raw: 0.1671
+     wm_validation_post_reward_mae: 0.0094
+wm_validation_post_reward_mean_baseline_mae: 0.0108
+wm_validation_post_uncertainty_quantile: 0.1780
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2048.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 240.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 22528
+                    Iteration time: 0.73s
+                      Time elapsed: 00:00:10
+                               ETA: 00:00:32
+
+################################################################################
+                       [1m Learning iteration 11/45 [0m                       
+
+                       Computation: 1041 steps/s (collection: 1.780s, learning 0.187s)
+             Mean action noise std: 0.50
+                    value_function: 0.0066
+                         surrogate: -0.0201
+                           entropy: 5.8160
+                     wm_train_size: 21888.0000
+                wm_validation_size: 2688.0000
+        wm_real_train_samples_seen: 21888.0000
+   wm_real_validation_samples_seen: 2688.0000
+                wm_model_fit_calls: 11.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4784
+              wm_train_reward_loss: 0.7731
+wm_train_gradient_norm_before_clip: 0.4836
+wm_persistence_delta_mse_normalized: 1.0933
+          wm_uncertainty_threshold: 0.1739
+wm_validation_delta_mse_normalized: 0.6239
+wm_validation_persistence_delta_mse_normalized: 1.0933
+wm_validation_to_persistence_mse_ratio: 0.5706
+        wm_validation_obs_rmse_raw: 0.1651
+          wm_validation_reward_mae: 0.0092
+wm_validation_reward_mean_baseline_mae: 0.0104
+wm_validation_uncertainty_quantile: 0.1739
+wm_validation_pre_delta_mse_normalized: 0.6259
+wm_validation_pre_persistence_delta_mse_normalized: 1.0933
+wm_validation_pre_to_persistence_mse_ratio: 0.5725
+    wm_validation_pre_obs_rmse_raw: 0.1652
+      wm_validation_pre_reward_mae: 0.0093
+wm_validation_pre_reward_mean_baseline_mae: 0.0104
+wm_validation_pre_uncertainty_quantile: 0.1740
+wm_validation_post_delta_mse_normalized: 0.6239
+wm_validation_post_persistence_delta_mse_normalized: 1.0933
+wm_validation_post_to_persistence_mse_ratio: 0.5706
+   wm_validation_post_obs_rmse_raw: 0.1651
+     wm_validation_post_reward_mae: 0.0092
+wm_validation_post_reward_mean_baseline_mae: 0.0104
+wm_validation_post_uncertainty_quantile: 0.1739
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2048.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 264.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24576
+                    Iteration time: 1.97s
+                      Time elapsed: 00:00:12
+                               ETA: 00:00:34
+
+################################################################################
+                       [1m Learning iteration 12/45 [0m                       
+
+                       Computation: 2730 steps/s (collection: 0.658s, learning 0.092s)
+             Mean action noise std: 0.50
+                    value_function: 0.0070
+                         surrogate: -0.0159
+                           entropy: 5.8183
+                     wm_train_size: 23712.0000
+                wm_validation_size: 2912.0000
+        wm_real_train_samples_seen: 23712.0000
+   wm_real_validation_samples_seen: 2912.0000
+                wm_model_fit_calls: 12.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4820
+              wm_train_reward_loss: 0.7562
+wm_train_gradient_norm_before_clip: 0.5019
+wm_persistence_delta_mse_normalized: 1.0933
+          wm_uncertainty_threshold: 0.1737
+wm_validation_delta_mse_normalized: 0.6149
+wm_validation_persistence_delta_mse_normalized: 1.0933
+wm_validation_to_persistence_mse_ratio: 0.5624
+        wm_validation_obs_rmse_raw: 0.1627
+          wm_validation_reward_mae: 0.0093
+wm_validation_reward_mean_baseline_mae: 0.0107
+wm_validation_uncertainty_quantile: 0.1737
+wm_validation_pre_delta_mse_normalized: 0.6161
+wm_validation_pre_persistence_delta_mse_normalized: 1.0933
+wm_validation_pre_to_persistence_mse_ratio: 0.5636
+    wm_validation_pre_obs_rmse_raw: 0.1629
+      wm_validation_pre_reward_mae: 0.0094
+wm_validation_pre_reward_mean_baseline_mae: 0.0107
+wm_validation_pre_uncertainty_quantile: 0.1724
+wm_validation_post_delta_mse_normalized: 0.6149
+wm_validation_post_persistence_delta_mse_normalized: 1.0933
+wm_validation_post_to_persistence_mse_ratio: 0.5624
+   wm_validation_post_obs_rmse_raw: 0.1627
+     wm_validation_post_reward_mae: 0.0093
+wm_validation_post_reward_mean_baseline_mae: 0.0107
+wm_validation_post_uncertainty_quantile: 0.1737
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2048.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 288.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 26624
+                    Iteration time: 0.75s
+                      Time elapsed: 00:00:12
+                               ETA: 00:00:32
+
+################################################################################
+                       [1m Learning iteration 13/45 [0m                       
+
+                       Computation: 3145 steps/s (collection: 0.561s, learning 0.091s)
+             Mean action noise std: 0.50
+                    value_function: 0.0072
+                         surrogate: -0.0144
+                           entropy: 5.8196
+                     wm_train_size: 25536.0000
+                wm_validation_size: 3136.0000
+        wm_real_train_samples_seen: 25536.0000
+   wm_real_validation_samples_seen: 3136.0000
+                wm_model_fit_calls: 13.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4743
+              wm_train_reward_loss: 0.7464
+wm_train_gradient_norm_before_clip: 0.5143
+wm_persistence_delta_mse_normalized: 1.1002
+          wm_uncertainty_threshold: 0.1721
+wm_validation_delta_mse_normalized: 0.6176
+wm_validation_persistence_delta_mse_normalized: 1.1002
+wm_validation_to_persistence_mse_ratio: 0.5613
+        wm_validation_obs_rmse_raw: 0.1632
+          wm_validation_reward_mae: 0.0094
+wm_validation_reward_mean_baseline_mae: 0.0107
+wm_validation_uncertainty_quantile: 0.1721
+wm_validation_pre_delta_mse_normalized: 0.6200
+wm_validation_pre_persistence_delta_mse_normalized: 1.1002
+wm_validation_pre_to_persistence_mse_ratio: 0.5636
+    wm_validation_pre_obs_rmse_raw: 0.1633
+      wm_validation_pre_reward_mae: 0.0094
+wm_validation_pre_reward_mean_baseline_mae: 0.0107
+wm_validation_pre_uncertainty_quantile: 0.1747
+wm_validation_post_delta_mse_normalized: 0.6176
+wm_validation_post_persistence_delta_mse_normalized: 1.1002
+wm_validation_post_to_persistence_mse_ratio: 0.5613
+   wm_validation_post_obs_rmse_raw: 0.1632
+     wm_validation_post_reward_mae: 0.0094
+wm_validation_post_reward_mean_baseline_mae: 0.0107
+wm_validation_post_uncertainty_quantile: 0.1721
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2048.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 312.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 28672
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:13
+                               ETA: 00:00:31
+
+################################################################################
+                       [1m Learning iteration 14/45 [0m                       
+
+                       Computation: 3168 steps/s (collection: 0.555s, learning 0.091s)
+             Mean action noise std: 0.50
+                    value_function: 0.0074
+                         surrogate: -0.0167
+                           entropy: 5.8226
+                     wm_train_size: 27360.0000
+                wm_validation_size: 3360.0000
+        wm_real_train_samples_seen: 27360.0000
+   wm_real_validation_samples_seen: 3360.0000
+                wm_model_fit_calls: 14.0000
+               wm_ready_before_fit: 1.0000
+                          wm_ready: 1.0000
+            wm_train_dynamics_loss: 0.4751
+              wm_train_reward_loss: 0.7476
+wm_train_gradient_norm_before_clip: 0.5170
+wm_persistence_delta_mse_normalized: 1.0559
+          wm_uncertainty_threshold: 0.1700
+wm_validation_delta_mse_normalized: 0.5994
+wm_validation_persistence_delta_mse_normalized: 1.0559
+wm_validation_to_persistence_mse_ratio: 0.5676
+        wm_validation_obs_rmse_raw: 0.1591
+          wm_validation_reward_mae: 0.0092
+wm_validation_reward_mean_baseline_mae: 0.0105
+wm_validation_uncertainty_quantile: 0.1700
+wm_validation_pre_delta_mse_normalized: 0.6010
+wm_validation_pre_persistence_delta_mse_normalized: 1.0559
+wm_validation_pre_to_persistence_mse_ratio: 0.5692
+    wm_validation_pre_obs_rmse_raw: 0.1593
+      wm_validation_pre_reward_mae: 0.0093
+wm_validation_pre_reward_mean_baseline_mae: 0.0105
+wm_validation_pre_uncertainty_quantile: 0.1698
+wm_validation_post_delta_mse_normalized: 0.5994
+wm_validation_post_persistence_delta_mse_normalized: 1.0559
+wm_validation_post_to_persistence_mse_ratio: 0.5676
+   wm_validation_post_obs_rmse_raw: 0.1591
+     wm_validation_post_reward_mae: 0.0092
+wm_validation_post_reward_mean_baseline_mae: 0.0105
+wm_validation_post_uncertainty_quantile: 0.1700
+                      wm_fit_steps: 24.0000
+          wm_validation_batch_size: 2048.0000
+               imagined_candidates: 0.0000
+                 imagined_accepted: 0.0000
+      imagined_acceptance_fraction: 0.0000
+          imagined_optimizer_steps: 0.0000
+                imagined_surrogate: 0.0000
+               imagined_value_loss: 0.0000
+                       imagined_kl: 0.0000
+  imagined_normalization_unchanged: 1.0000
+    imagined_optimizer_steps_total: 0.0000
+           imagined_accepted_total: 0.0000
+ world_model_optimizer_steps_total: 336.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 30720
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:14
+                               ETA: 00:00:29
+
+################################################################################
+                       [1m Learning iteration 15/45 [0m                       
+
+                       Computation: 3088 steps/s (collection: 0.559s, learning 0.104s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0061
+               Mean surrogate loss: -0.0231
+                 Mean entropy loss: 5.8257
+           Mean wm_train_size loss: 29127.0000
+      Mean wm_validation_size loss: 3577.0000
+Mean wm_real_train_samples_seen loss: 29127.0000
+Mean wm_real_validation_samples_seen loss: 3577.0000
+      Mean wm_model_fit_calls loss: 15.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4724
+    Mean wm_train_reward_loss loss: 0.7277
+Mean wm_train_gradient_norm_before_clip loss: 0.5164
+Mean wm_persistence_delta_mse_normalized loss: 1.0518
+Mean wm_uncertainty_threshold loss: 0.1713
+Mean wm_validation_delta_mse_normalized loss: 0.5971
+Mean wm_validation_persistence_delta_mse_normalized loss: 1.0518
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5677
+Mean wm_validation_obs_rmse_raw loss: 0.1614
+Mean wm_validation_reward_mae loss: 0.0089
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0103
+Mean wm_validation_uncertainty_quantile loss: 0.1713
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5983
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 1.0518
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5688
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1613
+Mean wm_validation_pre_reward_mae loss: 0.0089
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0103
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1707
+Mean wm_validation_post_delta_mse_normalized loss: 0.5971
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 1.0518
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5677
+Mean wm_validation_post_obs_rmse_raw loss: 0.1614
+Mean wm_validation_post_reward_mae loss: 0.0089
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0103
+Mean wm_validation_post_uncertainty_quantile loss: 0.1713
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 360.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+              Episode/distance_x_m: 0.0424
+                Episode/duration_s: 10.0000
+             Episode/avg_speed_m_s: 0.0042
+                    Episode/return: 8.1721
+             Episode/fall_fraction: 0.0000
+          Episode/timeout_fraction: 1.0000
+               RewardRate/tracking: 0.5175
+                RewardRate/forward: 0.0344
+                RewardRate/upright: 0.3500
+                RewardRate/lateral: -0.0277
+                    RewardRate/yaw: -0.0137
+        RewardRate/roll_pitch_rate: -0.0029
+      RewardRate/vertical_velocity: -0.0003
+                 RewardRate/torque: -0.0006
+            RewardRate/action_rate: -0.0377
+                   RewardRate/pose: -0.0016
+            RewardRate/termination: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 32768
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:14
+                               ETA: 00:00:28
+
+################################################################################
+                       [1m Learning iteration 16/45 [0m                       
+
+                       Computation: 1098 steps/s (collection: 1.772s, learning 0.092s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0080
+               Mean surrogate loss: -0.0163
+                 Mean entropy loss: 5.8279
+           Mean wm_train_size loss: 30951.0000
+      Mean wm_validation_size loss: 3801.0000
+Mean wm_real_train_samples_seen loss: 30951.0000
+Mean wm_real_validation_samples_seen loss: 3801.0000
+      Mean wm_model_fit_calls loss: 16.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4792
+    Mean wm_train_reward_loss loss: 0.7232
+Mean wm_train_gradient_norm_before_clip loss: 0.5157
+Mean wm_persistence_delta_mse_normalized loss: 1.0139
+Mean wm_uncertainty_threshold loss: 0.1719
+Mean wm_validation_delta_mse_normalized loss: 0.5651
+Mean wm_validation_persistence_delta_mse_normalized loss: 1.0139
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5574
+Mean wm_validation_obs_rmse_raw loss: 0.1551
+Mean wm_validation_reward_mae loss: 0.0092
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0107
+Mean wm_validation_uncertainty_quantile loss: 0.1719
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5673
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 1.0139
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5595
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1556
+Mean wm_validation_pre_reward_mae loss: 0.0092
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0107
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1693
+Mean wm_validation_post_delta_mse_normalized loss: 0.5651
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 1.0139
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5574
+Mean wm_validation_post_obs_rmse_raw loss: 0.1551
+Mean wm_validation_post_reward_mae loss: 0.0092
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0107
+Mean wm_validation_post_uncertainty_quantile loss: 0.1719
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 384.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 34816
+                    Iteration time: 1.86s
+                      Time elapsed: 00:00:16
+                               ETA: 00:00:28
+
+################################################################################
+                       [1m Learning iteration 17/45 [0m                       
+
+                       Computation: 3079 steps/s (collection: 0.578s, learning 0.087s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0078
+               Mean surrogate loss: -0.0177
+                 Mean entropy loss: 5.8345
+           Mean wm_train_size loss: 32775.0000
+      Mean wm_validation_size loss: 4025.0000
+Mean wm_real_train_samples_seen loss: 32775.0000
+Mean wm_real_validation_samples_seen loss: 4025.0000
+      Mean wm_model_fit_calls loss: 17.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4776
+    Mean wm_train_reward_loss loss: 0.7221
+Mean wm_train_gradient_norm_before_clip loss: 0.5338
+Mean wm_persistence_delta_mse_normalized loss: 0.9846
+Mean wm_uncertainty_threshold loss: 0.1698
+Mean wm_validation_delta_mse_normalized loss: 0.5571
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9846
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5658
+Mean wm_validation_obs_rmse_raw loss: 0.1575
+Mean wm_validation_reward_mae loss: 0.0091
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_uncertainty_quantile loss: 0.1698
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5579
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9846
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5666
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1574
+Mean wm_validation_pre_reward_mae loss: 0.0091
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1669
+Mean wm_validation_post_delta_mse_normalized loss: 0.5571
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9846
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5658
+Mean wm_validation_post_obs_rmse_raw loss: 0.1575
+Mean wm_validation_post_reward_mae loss: 0.0091
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_post_uncertainty_quantile loss: 0.1698
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 408.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 36864
+                    Iteration time: 0.67s
+                      Time elapsed: 00:00:17
+                               ETA: 00:00:27
+
+################################################################################
+                       [1m Learning iteration 18/45 [0m                       
+
+                       Computation: 3142 steps/s (collection: 0.557s, learning 0.095s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0076
+               Mean surrogate loss: -0.0155
+                 Mean entropy loss: 5.8357
+           Mean wm_train_size loss: 34599.0000
+      Mean wm_validation_size loss: 4249.0000
+Mean wm_real_train_samples_seen loss: 34599.0000
+Mean wm_real_validation_samples_seen loss: 4249.0000
+      Mean wm_model_fit_calls loss: 18.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4770
+    Mean wm_train_reward_loss loss: 0.7229
+Mean wm_train_gradient_norm_before_clip loss: 0.5262
+Mean wm_persistence_delta_mse_normalized loss: 0.9707
+Mean wm_uncertainty_threshold loss: 0.1708
+Mean wm_validation_delta_mse_normalized loss: 0.5387
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9707
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5550
+Mean wm_validation_obs_rmse_raw loss: 0.1564
+Mean wm_validation_reward_mae loss: 0.0087
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0102
+Mean wm_validation_uncertainty_quantile loss: 0.1708
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5414
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9707
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5577
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1567
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0102
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1684
+Mean wm_validation_post_delta_mse_normalized loss: 0.5387
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9707
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5550
+Mean wm_validation_post_obs_rmse_raw loss: 0.1564
+Mean wm_validation_post_reward_mae loss: 0.0087
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0102
+Mean wm_validation_post_uncertainty_quantile loss: 0.1708
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 432.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 38912
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:18
+                               ETA: 00:00:25
+
+################################################################################
+                       [1m Learning iteration 19/45 [0m                       
+
+                       Computation: 3143 steps/s (collection: 0.556s, learning 0.095s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0092
+               Mean surrogate loss: -0.0202
+                 Mean entropy loss: 5.8339
+           Mean wm_train_size loss: 36423.0000
+      Mean wm_validation_size loss: 4473.0000
+Mean wm_real_train_samples_seen loss: 36423.0000
+Mean wm_real_validation_samples_seen loss: 4473.0000
+      Mean wm_model_fit_calls loss: 19.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4796
+    Mean wm_train_reward_loss loss: 0.7156
+Mean wm_train_gradient_norm_before_clip loss: 0.5434
+Mean wm_persistence_delta_mse_normalized loss: 0.9437
+Mean wm_uncertainty_threshold loss: 0.1624
+Mean wm_validation_delta_mse_normalized loss: 0.5252
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9437
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5565
+Mean wm_validation_obs_rmse_raw loss: 0.1577
+Mean wm_validation_reward_mae loss: 0.0091
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_uncertainty_quantile loss: 0.1624
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5258
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9437
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5571
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1577
+Mean wm_validation_pre_reward_mae loss: 0.0091
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1661
+Mean wm_validation_post_delta_mse_normalized loss: 0.5252
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9437
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5565
+Mean wm_validation_post_obs_rmse_raw loss: 0.1577
+Mean wm_validation_post_reward_mae loss: 0.0091
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_post_uncertainty_quantile loss: 0.1624
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 456.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 40960
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:18
+                               ETA: 00:00:24
+
+################################################################################
+                       [1m Learning iteration 20/45 [0m                       
+
+                       Computation: 1085 steps/s (collection: 1.797s, learning 0.090s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0098
+               Mean surrogate loss: -0.0169
+                 Mean entropy loss: 5.8320
+           Mean wm_train_size loss: 38247.0000
+      Mean wm_validation_size loss: 4697.0000
+Mean wm_real_train_samples_seen loss: 38247.0000
+Mean wm_real_validation_samples_seen loss: 4697.0000
+      Mean wm_model_fit_calls loss: 20.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4815
+    Mean wm_train_reward_loss loss: 0.7156
+Mean wm_train_gradient_norm_before_clip loss: 0.5277
+Mean wm_persistence_delta_mse_normalized loss: 0.9348
+Mean wm_uncertainty_threshold loss: 0.1651
+Mean wm_validation_delta_mse_normalized loss: 0.5161
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9348
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5521
+Mean wm_validation_obs_rmse_raw loss: 0.1554
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_uncertainty_quantile loss: 0.1651
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5171
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9348
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5532
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1555
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1653
+Mean wm_validation_post_delta_mse_normalized loss: 0.5161
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9348
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5521
+Mean wm_validation_post_obs_rmse_raw loss: 0.1554
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0106
+Mean wm_validation_post_uncertainty_quantile loss: 0.1651
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 480.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 43008
+                    Iteration time: 1.89s
+                      Time elapsed: 00:00:20
+                               ETA: 00:00:24
+
+################################################################################
+                       [1m Learning iteration 21/45 [0m                       
+
+                       Computation: 2972 steps/s (collection: 0.598s, learning 0.091s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0097
+               Mean surrogate loss: -0.0158
+                 Mean entropy loss: 5.8273
+           Mean wm_train_size loss: 40071.0000
+      Mean wm_validation_size loss: 4921.0000
+Mean wm_real_train_samples_seen loss: 40071.0000
+Mean wm_real_validation_samples_seen loss: 4921.0000
+      Mean wm_model_fit_calls loss: 21.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4795
+    Mean wm_train_reward_loss loss: 0.6980
+Mean wm_train_gradient_norm_before_clip loss: 0.5168
+Mean wm_persistence_delta_mse_normalized loss: 0.9027
+Mean wm_uncertainty_threshold loss: 0.1619
+Mean wm_validation_delta_mse_normalized loss: 0.5055
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9027
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5600
+Mean wm_validation_obs_rmse_raw loss: 0.1576
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0103
+Mean wm_validation_uncertainty_quantile loss: 0.1619
+Mean wm_validation_pre_delta_mse_normalized loss: 0.5062
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9027
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5607
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1579
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0103
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1615
+Mean wm_validation_post_delta_mse_normalized loss: 0.5055
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9027
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5600
+Mean wm_validation_post_obs_rmse_raw loss: 0.1576
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0103
+Mean wm_validation_post_uncertainty_quantile loss: 0.1619
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 504.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 45056
+                    Iteration time: 0.69s
+                      Time elapsed: 00:00:21
+                               ETA: 00:00:23
+
+################################################################################
+                       [1m Learning iteration 22/45 [0m                       
+
+                       Computation: 3082 steps/s (collection: 0.577s, learning 0.087s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0112
+               Mean surrogate loss: -0.0183
+                 Mean entropy loss: 5.8238
+           Mean wm_train_size loss: 41895.0000
+      Mean wm_validation_size loss: 5145.0000
+Mean wm_real_train_samples_seen loss: 41895.0000
+Mean wm_real_validation_samples_seen loss: 5145.0000
+      Mean wm_model_fit_calls loss: 22.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4784
+    Mean wm_train_reward_loss loss: 0.6945
+Mean wm_train_gradient_norm_before_clip loss: 0.5111
+Mean wm_persistence_delta_mse_normalized loss: 0.9005
+Mean wm_uncertainty_threshold loss: 0.1609
+Mean wm_validation_delta_mse_normalized loss: 0.4972
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9005
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5522
+Mean wm_validation_obs_rmse_raw loss: 0.1583
+Mean wm_validation_reward_mae loss: 0.0089
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0105
+Mean wm_validation_uncertainty_quantile loss: 0.1609
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4983
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9005
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5534
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1582
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0105
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1635
+Mean wm_validation_post_delta_mse_normalized loss: 0.4972
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9005
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5522
+Mean wm_validation_post_obs_rmse_raw loss: 0.1583
+Mean wm_validation_post_reward_mae loss: 0.0089
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0105
+Mean wm_validation_post_uncertainty_quantile loss: 0.1609
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 528.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 47104
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:22
+                               ETA: 00:00:22
+
+################################################################################
+                       [1m Learning iteration 23/45 [0m                       
+
+                       Computation: 3158 steps/s (collection: 0.559s, learning 0.090s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0120
+               Mean surrogate loss: -0.0114
+                 Mean entropy loss: 5.8223
+           Mean wm_train_size loss: 43719.0000
+      Mean wm_validation_size loss: 5369.0000
+Mean wm_real_train_samples_seen loss: 43719.0000
+Mean wm_real_validation_samples_seen loss: 5369.0000
+      Mean wm_model_fit_calls loss: 23.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4779
+    Mean wm_train_reward_loss loss: 0.6786
+Mean wm_train_gradient_norm_before_clip loss: 0.4985
+Mean wm_persistence_delta_mse_normalized loss: 0.8793
+Mean wm_uncertainty_threshold loss: 0.1611
+Mean wm_validation_delta_mse_normalized loss: 0.4870
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8793
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5538
+Mean wm_validation_obs_rmse_raw loss: 0.1578
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_uncertainty_quantile loss: 0.1611
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4887
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8793
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5558
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1581
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1598
+Mean wm_validation_post_delta_mse_normalized loss: 0.4870
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8793
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5538
+Mean wm_validation_post_obs_rmse_raw loss: 0.1578
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_post_uncertainty_quantile loss: 0.1611
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 552.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 49152
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:22
+                               ETA: 00:00:20
+
+################################################################################
+                       [1m Learning iteration 24/45 [0m                       
+
+                       Computation: 2577 steps/s (collection: 0.674s, learning 0.121s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0116
+               Mean surrogate loss: -0.0154
+                 Mean entropy loss: 5.8221
+           Mean wm_train_size loss: 45543.0000
+      Mean wm_validation_size loss: 5593.0000
+Mean wm_real_train_samples_seen loss: 45543.0000
+Mean wm_real_validation_samples_seen loss: 5593.0000
+      Mean wm_model_fit_calls loss: 24.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4790
+    Mean wm_train_reward_loss loss: 0.6771
+Mean wm_train_gradient_norm_before_clip loss: 0.5125
+Mean wm_persistence_delta_mse_normalized loss: 0.8570
+Mean wm_uncertainty_threshold loss: 0.1598
+Mean wm_validation_delta_mse_normalized loss: 0.4696
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8570
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5479
+Mean wm_validation_obs_rmse_raw loss: 0.1574
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_uncertainty_quantile loss: 0.1598
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4709
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8570
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5495
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1576
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1624
+Mean wm_validation_post_delta_mse_normalized loss: 0.4696
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8570
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5479
+Mean wm_validation_post_obs_rmse_raw loss: 0.1574
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_post_uncertainty_quantile loss: 0.1598
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 576.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 51200
+                    Iteration time: 0.79s
+                      Time elapsed: 00:00:23
+                               ETA: 00:00:19
+
+################################################################################
+                       [1m Learning iteration 25/45 [0m                       
+
+                       Computation: 1175 steps/s (collection: 1.651s, learning 0.091s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0119
+               Mean surrogate loss: -0.0147
+                 Mean entropy loss: 5.8221
+           Mean wm_train_size loss: 47367.0000
+      Mean wm_validation_size loss: 5817.0000
+Mean wm_real_train_samples_seen loss: 47367.0000
+Mean wm_real_validation_samples_seen loss: 5817.0000
+      Mean wm_model_fit_calls loss: 25.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4727
+    Mean wm_train_reward_loss loss: 0.6518
+Mean wm_train_gradient_norm_before_clip loss: 0.4890
+Mean wm_persistence_delta_mse_normalized loss: 0.8679
+Mean wm_uncertainty_threshold loss: 0.1622
+Mean wm_validation_delta_mse_normalized loss: 0.4715
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8679
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5433
+Mean wm_validation_obs_rmse_raw loss: 0.1616
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0107
+Mean wm_validation_uncertainty_quantile loss: 0.1622
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4725
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8679
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5444
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1615
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0107
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1609
+Mean wm_validation_post_delta_mse_normalized loss: 0.4715
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8679
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5433
+Mean wm_validation_post_obs_rmse_raw loss: 0.1616
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0107
+Mean wm_validation_post_uncertainty_quantile loss: 0.1622
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 600.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 53248
+                    Iteration time: 1.74s
+                      Time elapsed: 00:00:25
+                               ETA: 00:00:19
+
+################################################################################
+                       [1m Learning iteration 26/45 [0m                       
+
+                       Computation: 3116 steps/s (collection: 0.567s, learning 0.090s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0121
+               Mean surrogate loss: -0.0132
+                 Mean entropy loss: 5.8222
+           Mean wm_train_size loss: 49191.0000
+      Mean wm_validation_size loss: 6041.0000
+Mean wm_real_train_samples_seen loss: 49191.0000
+Mean wm_real_validation_samples_seen loss: 6041.0000
+      Mean wm_model_fit_calls loss: 26.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4725
+    Mean wm_train_reward_loss loss: 0.6561
+Mean wm_train_gradient_norm_before_clip loss: 0.5054
+Mean wm_persistence_delta_mse_normalized loss: 0.8520
+Mean wm_uncertainty_threshold loss: 0.1659
+Mean wm_validation_delta_mse_normalized loss: 0.4634
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8520
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5439
+Mean wm_validation_obs_rmse_raw loss: 0.1625
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_uncertainty_quantile loss: 0.1659
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4647
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8520
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5455
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1626
+Mean wm_validation_pre_reward_mae loss: 0.0089
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1617
+Mean wm_validation_post_delta_mse_normalized loss: 0.4634
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8520
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5439
+Mean wm_validation_post_obs_rmse_raw loss: 0.1625
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0108
+Mean wm_validation_post_uncertainty_quantile loss: 0.1659
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 624.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 55296
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:25
+                               ETA: 00:00:18
+
+################################################################################
+                       [1m Learning iteration 27/45 [0m                       
+
+                       Computation: 3145 steps/s (collection: 0.556s, learning 0.095s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0128
+               Mean surrogate loss: -0.0135
+                 Mean entropy loss: 5.8190
+           Mean wm_train_size loss: 51015.0000
+      Mean wm_validation_size loss: 6265.0000
+Mean wm_real_train_samples_seen loss: 51015.0000
+Mean wm_real_validation_samples_seen loss: 6265.0000
+      Mean wm_model_fit_calls loss: 27.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4766
+    Mean wm_train_reward_loss loss: 0.6376
+Mean wm_train_gradient_norm_before_clip loss: 0.4973
+Mean wm_persistence_delta_mse_normalized loss: 0.8550
+Mean wm_uncertainty_threshold loss: 0.1643
+Mean wm_validation_delta_mse_normalized loss: 0.4577
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8550
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5353
+Mean wm_validation_obs_rmse_raw loss: 0.1642
+Mean wm_validation_reward_mae loss: 0.0087
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0110
+Mean wm_validation_uncertainty_quantile loss: 0.1643
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4582
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8550
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5359
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1642
+Mean wm_validation_pre_reward_mae loss: 0.0087
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0110
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1666
+Mean wm_validation_post_delta_mse_normalized loss: 0.4577
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8550
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5353
+Mean wm_validation_post_obs_rmse_raw loss: 0.1642
+Mean wm_validation_post_reward_mae loss: 0.0087
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0110
+Mean wm_validation_post_uncertainty_quantile loss: 0.1643
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 648.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 57344
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:26
+                               ETA: 00:00:17
+
+################################################################################
+                       [1m Learning iteration 28/45 [0m                       
+
+                       Computation: 3098 steps/s (collection: 0.572s, learning 0.089s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0124
+               Mean surrogate loss: -0.0136
+                 Mean entropy loss: 5.8166
+           Mean wm_train_size loss: 52839.0000
+      Mean wm_validation_size loss: 6489.0000
+Mean wm_real_train_samples_seen loss: 52839.0000
+Mean wm_real_validation_samples_seen loss: 6489.0000
+      Mean wm_model_fit_calls loss: 28.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4708
+    Mean wm_train_reward_loss loss: 0.6349
+Mean wm_train_gradient_norm_before_clip loss: 0.5215
+Mean wm_persistence_delta_mse_normalized loss: 0.8355
+Mean wm_uncertainty_threshold loss: 0.1634
+Mean wm_validation_delta_mse_normalized loss: 0.4460
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8355
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5338
+Mean wm_validation_obs_rmse_raw loss: 0.1616
+Mean wm_validation_reward_mae loss: 0.0086
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0110
+Mean wm_validation_uncertainty_quantile loss: 0.1634
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4476
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8355
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5357
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1617
+Mean wm_validation_pre_reward_mae loss: 0.0085
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0110
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1631
+Mean wm_validation_post_delta_mse_normalized loss: 0.4460
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8355
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5338
+Mean wm_validation_post_obs_rmse_raw loss: 0.1616
+Mean wm_validation_post_reward_mae loss: 0.0086
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0110
+Mean wm_validation_post_uncertainty_quantile loss: 0.1634
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 672.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 59392
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:27
+                               ETA: 00:00:15
+
+################################################################################
+                       [1m Learning iteration 29/45 [0m                       
+
+                       Computation: 1064 steps/s (collection: 1.833s, learning 0.091s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0135
+               Mean surrogate loss: -0.0149
+                 Mean entropy loss: 5.8172
+           Mean wm_train_size loss: 54663.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 54663.0000
+Mean wm_real_validation_samples_seen loss: 6713.0000
+      Mean wm_model_fit_calls loss: 29.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4704
+    Mean wm_train_reward_loss loss: 0.6200
+Mean wm_train_gradient_norm_before_clip loss: 0.4996
+Mean wm_persistence_delta_mse_normalized loss: 0.8359
+Mean wm_uncertainty_threshold loss: 0.1675
+Mean wm_validation_delta_mse_normalized loss: 0.4432
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8359
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5303
+Mean wm_validation_obs_rmse_raw loss: 0.1653
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0114
+Mean wm_validation_uncertainty_quantile loss: 0.1675
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4438
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8359
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5310
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1653
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0114
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1669
+Mean wm_validation_post_delta_mse_normalized loss: 0.4432
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8359
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5303
+Mean wm_validation_post_obs_rmse_raw loss: 0.1653
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0114
+Mean wm_validation_post_uncertainty_quantile loss: 0.1675
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 696.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 61440
+                    Iteration time: 1.92s
+                      Time elapsed: 00:00:29
+                               ETA: 00:00:15
+
+################################################################################
+                       [1m Learning iteration 30/45 [0m                       
+
+                       Computation: 2928 steps/s (collection: 0.594s, learning 0.106s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0118
+               Mean surrogate loss: -0.0130
+                 Mean entropy loss: 5.8169
+           Mean wm_train_size loss: 56487.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 56487.0000
+Mean wm_real_validation_samples_seen loss: 6937.0000
+      Mean wm_model_fit_calls loss: 30.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4720
+    Mean wm_train_reward_loss loss: 0.6159
+Mean wm_train_gradient_norm_before_clip loss: 0.5247
+Mean wm_persistence_delta_mse_normalized loss: 0.8313
+Mean wm_uncertainty_threshold loss: 0.1684
+Mean wm_validation_delta_mse_normalized loss: 0.4359
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8313
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5243
+Mean wm_validation_obs_rmse_raw loss: 0.1635
+Mean wm_validation_reward_mae loss: 0.0086
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0114
+Mean wm_validation_uncertainty_quantile loss: 0.1684
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4367
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8313
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5254
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1637
+Mean wm_validation_pre_reward_mae loss: 0.0087
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0114
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1636
+Mean wm_validation_post_delta_mse_normalized loss: 0.4359
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8313
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5243
+Mean wm_validation_post_obs_rmse_raw loss: 0.1635
+Mean wm_validation_post_reward_mae loss: 0.0086
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0114
+Mean wm_validation_post_uncertainty_quantile loss: 0.1684
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 720.0000
+                       Mean reward: 8.17
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 63488
+                    Iteration time: 0.70s
+                      Time elapsed: 00:00:29
+                               ETA: 00:00:14
+
+################################################################################
+                       [1m Learning iteration 31/45 [0m                       
+
+                       Computation: 3092 steps/s (collection: 0.564s, learning 0.098s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0089
+               Mean surrogate loss: -0.0150
+                 Mean entropy loss: 5.8149
+           Mean wm_train_size loss: 58254.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 58254.0000
+Mean wm_real_validation_samples_seen loss: 7154.0000
+      Mean wm_model_fit_calls loss: 31.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4724
+    Mean wm_train_reward_loss loss: 0.6188
+Mean wm_train_gradient_norm_before_clip loss: 0.5590
+Mean wm_persistence_delta_mse_normalized loss: 0.8337
+Mean wm_uncertainty_threshold loss: 0.1639
+Mean wm_validation_delta_mse_normalized loss: 0.4444
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8337
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5331
+Mean wm_validation_obs_rmse_raw loss: 0.1691
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0112
+Mean wm_validation_uncertainty_quantile loss: 0.1639
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4451
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8337
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5339
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1691
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0112
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1667
+Mean wm_validation_post_delta_mse_normalized loss: 0.4444
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8337
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5331
+Mean wm_validation_post_obs_rmse_raw loss: 0.1691
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0112
+Mean wm_validation_post_uncertainty_quantile loss: 0.1639
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 744.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+              Episode/distance_x_m: 0.3891
+                Episode/duration_s: 10.0000
+             Episode/avg_speed_m_s: 0.0389
+                    Episode/return: 11.3124
+             Episode/fall_fraction: 0.0000
+          Episode/timeout_fraction: 1.0000
+               RewardRate/tracking: 0.6137
+                RewardRate/forward: 0.2891
+                RewardRate/upright: 0.3500
+                RewardRate/lateral: -0.0499
+                    RewardRate/yaw: -0.0219
+        RewardRate/roll_pitch_rate: -0.0084
+      RewardRate/vertical_velocity: -0.0004
+                 RewardRate/torque: -0.0010
+            RewardRate/action_rate: -0.0365
+                   RewardRate/pose: -0.0035
+            RewardRate/termination: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 65536
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:30
+                               ETA: 00:00:13
+
+################################################################################
+                       [1m Learning iteration 32/45 [0m                       
+
+                       Computation: 3075 steps/s (collection: 0.572s, learning 0.093s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0097
+               Mean surrogate loss: -0.0178
+                 Mean entropy loss: 5.8138
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 60078.0000
+Mean wm_real_validation_samples_seen loss: 7378.0000
+      Mean wm_model_fit_calls loss: 32.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4747
+    Mean wm_train_reward_loss loss: 0.6081
+Mean wm_train_gradient_norm_before_clip loss: 0.5380
+Mean wm_persistence_delta_mse_normalized loss: 0.8242
+Mean wm_uncertainty_threshold loss: 0.1655
+Mean wm_validation_delta_mse_normalized loss: 0.4336
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8242
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5261
+Mean wm_validation_obs_rmse_raw loss: 0.1684
+Mean wm_validation_reward_mae loss: 0.0087
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0116
+Mean wm_validation_uncertainty_quantile loss: 0.1655
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4349
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8242
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5277
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1681
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0116
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1671
+Mean wm_validation_post_delta_mse_normalized loss: 0.4336
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8242
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5261
+Mean wm_validation_post_obs_rmse_raw loss: 0.1684
+Mean wm_validation_post_reward_mae loss: 0.0087
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0116
+Mean wm_validation_post_uncertainty_quantile loss: 0.1655
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 768.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 67584
+                    Iteration time: 0.67s
+                      Time elapsed: 00:00:31
+                               ETA: 00:00:12
+
+################################################################################
+                       [1m Learning iteration 33/45 [0m                       
+
+                       Computation: 1094 steps/s (collection: 1.730s, learning 0.140s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0100
+               Mean surrogate loss: -0.0131
+                 Mean entropy loss: 5.8140
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 61902.0000
+Mean wm_real_validation_samples_seen loss: 7602.0000
+      Mean wm_model_fit_calls loss: 33.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4766
+    Mean wm_train_reward_loss loss: 0.6081
+Mean wm_train_gradient_norm_before_clip loss: 0.5722
+Mean wm_persistence_delta_mse_normalized loss: 0.8380
+Mean wm_uncertainty_threshold loss: 0.1655
+Mean wm_validation_delta_mse_normalized loss: 0.4450
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8380
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5311
+Mean wm_validation_obs_rmse_raw loss: 0.1792
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0115
+Mean wm_validation_uncertainty_quantile loss: 0.1655
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4460
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8380
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5322
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1792
+Mean wm_validation_pre_reward_mae loss: 0.0089
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0115
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1673
+Mean wm_validation_post_delta_mse_normalized loss: 0.4450
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8380
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5311
+Mean wm_validation_post_obs_rmse_raw loss: 0.1792
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0115
+Mean wm_validation_post_uncertainty_quantile loss: 0.1655
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 792.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 69632
+                    Iteration time: 1.87s
+                      Time elapsed: 00:00:33
+                               ETA: 00:00:11
+
+################################################################################
+                       [1m Learning iteration 34/45 [0m                       
+
+                       Computation: 2949 steps/s (collection: 0.604s, learning 0.090s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0102
+               Mean surrogate loss: -0.0115
+                 Mean entropy loss: 5.8139
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 63726.0000
+Mean wm_real_validation_samples_seen loss: 7826.0000
+      Mean wm_model_fit_calls loss: 34.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4796
+    Mean wm_train_reward_loss loss: 0.6009
+Mean wm_train_gradient_norm_before_clip loss: 0.5267
+Mean wm_persistence_delta_mse_normalized loss: 0.8584
+Mean wm_uncertainty_threshold loss: 0.1688
+Mean wm_validation_delta_mse_normalized loss: 0.4504
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8584
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5246
+Mean wm_validation_obs_rmse_raw loss: 0.1827
+Mean wm_validation_reward_mae loss: 0.0089
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0118
+Mean wm_validation_uncertainty_quantile loss: 0.1688
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4515
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8584
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5260
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1830
+Mean wm_validation_pre_reward_mae loss: 0.0089
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0118
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1681
+Mean wm_validation_post_delta_mse_normalized loss: 0.4504
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8584
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5246
+Mean wm_validation_post_obs_rmse_raw loss: 0.1827
+Mean wm_validation_post_reward_mae loss: 0.0089
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0118
+Mean wm_validation_post_uncertainty_quantile loss: 0.1688
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 816.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 71680
+                    Iteration time: 0.69s
+                      Time elapsed: 00:00:33
+                               ETA: 00:00:10
+
+################################################################################
+                       [1m Learning iteration 35/45 [0m                       
+
+                       Computation: 3141 steps/s (collection: 0.564s, learning 0.088s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0098
+               Mean surrogate loss: -0.0171
+                 Mean entropy loss: 5.8132
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 65550.0000
+Mean wm_real_validation_samples_seen loss: 8050.0000
+      Mean wm_model_fit_calls loss: 35.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4850
+    Mean wm_train_reward_loss loss: 0.5964
+Mean wm_train_gradient_norm_before_clip loss: 0.5185
+Mean wm_persistence_delta_mse_normalized loss: 0.8620
+Mean wm_uncertainty_threshold loss: 0.1679
+Mean wm_validation_delta_mse_normalized loss: 0.4416
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8620
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5123
+Mean wm_validation_obs_rmse_raw loss: 0.1770
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0120
+Mean wm_validation_uncertainty_quantile loss: 0.1679
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4426
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8620
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5134
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1770
+Mean wm_validation_pre_reward_mae loss: 0.0089
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0120
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1702
+Mean wm_validation_post_delta_mse_normalized loss: 0.4416
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8620
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5123
+Mean wm_validation_post_obs_rmse_raw loss: 0.1770
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0120
+Mean wm_validation_post_uncertainty_quantile loss: 0.1679
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 840.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 73728
+                    Iteration time: 0.65s
+                      Time elapsed: 00:00:34
+                               ETA: 00:00:09
+
+################################################################################
+                       [1m Learning iteration 36/45 [0m                       
+
+                       Computation: 3122 steps/s (collection: 0.571s, learning 0.085s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0112
+               Mean surrogate loss: -0.0129
+                 Mean entropy loss: 5.8113
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 67374.0000
+Mean wm_real_validation_samples_seen loss: 8274.0000
+      Mean wm_model_fit_calls loss: 36.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4848
+    Mean wm_train_reward_loss loss: 0.5864
+Mean wm_train_gradient_norm_before_clip loss: 0.5317
+Mean wm_persistence_delta_mse_normalized loss: 0.8491
+Mean wm_uncertainty_threshold loss: 0.1682
+Mean wm_validation_delta_mse_normalized loss: 0.4338
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8491
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5109
+Mean wm_validation_obs_rmse_raw loss: 0.1800
+Mean wm_validation_reward_mae loss: 0.0086
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0116
+Mean wm_validation_uncertainty_quantile loss: 0.1682
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4345
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8491
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5117
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1799
+Mean wm_validation_pre_reward_mae loss: 0.0086
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0116
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1645
+Mean wm_validation_post_delta_mse_normalized loss: 0.4338
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8491
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5109
+Mean wm_validation_post_obs_rmse_raw loss: 0.1800
+Mean wm_validation_post_reward_mae loss: 0.0086
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0116
+Mean wm_validation_post_uncertainty_quantile loss: 0.1682
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 864.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 75776
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:35
+                               ETA: 00:00:08
+
+################################################################################
+                       [1m Learning iteration 37/45 [0m                       
+
+                       Computation: 2878 steps/s (collection: 0.574s, learning 0.137s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0119
+               Mean surrogate loss: -0.0153
+                 Mean entropy loss: 5.8064
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 69198.0000
+Mean wm_real_validation_samples_seen loss: 8498.0000
+      Mean wm_model_fit_calls loss: 37.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4929
+    Mean wm_train_reward_loss loss: 0.6026
+Mean wm_train_gradient_norm_before_clip loss: 0.6718
+Mean wm_persistence_delta_mse_normalized loss: 0.8736
+Mean wm_uncertainty_threshold loss: 0.1655
+Mean wm_validation_delta_mse_normalized loss: 0.4399
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8736
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5036
+Mean wm_validation_obs_rmse_raw loss: 0.1826
+Mean wm_validation_reward_mae loss: 0.0087
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0121
+Mean wm_validation_uncertainty_quantile loss: 0.1655
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4407
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8736
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5045
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1828
+Mean wm_validation_pre_reward_mae loss: 0.0087
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0121
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1710
+Mean wm_validation_post_delta_mse_normalized loss: 0.4399
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8736
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5036
+Mean wm_validation_post_obs_rmse_raw loss: 0.1826
+Mean wm_validation_post_reward_mae loss: 0.0087
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0121
+Mean wm_validation_post_uncertainty_quantile loss: 0.1655
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 888.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 77824
+                    Iteration time: 0.71s
+                      Time elapsed: 00:00:35
+                               ETA: 00:00:07
+
+################################################################################
+                       [1m Learning iteration 38/45 [0m                       
+
+                       Computation: 1099 steps/s (collection: 1.743s, learning 0.119s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0127
+               Mean surrogate loss: -0.0203
+                 Mean entropy loss: 5.8036
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 71022.0000
+Mean wm_real_validation_samples_seen loss: 8722.0000
+      Mean wm_model_fit_calls loss: 38.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4930
+    Mean wm_train_reward_loss loss: 0.5816
+Mean wm_train_gradient_norm_before_clip loss: 0.5974
+Mean wm_persistence_delta_mse_normalized loss: 0.8783
+Mean wm_uncertainty_threshold loss: 0.1666
+Mean wm_validation_delta_mse_normalized loss: 0.4406
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8783
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5016
+Mean wm_validation_obs_rmse_raw loss: 0.1836
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0122
+Mean wm_validation_uncertainty_quantile loss: 0.1666
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4416
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8783
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5027
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1837
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0122
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1674
+Mean wm_validation_post_delta_mse_normalized loss: 0.4406
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8783
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5016
+Mean wm_validation_post_obs_rmse_raw loss: 0.1836
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0122
+Mean wm_validation_post_uncertainty_quantile loss: 0.1666
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 912.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 79872
+                    Iteration time: 1.86s
+                      Time elapsed: 00:00:37
+                               ETA: 00:00:06
+
+################################################################################
+                       [1m Learning iteration 39/45 [0m                       
+
+                       Computation: 3076 steps/s (collection: 0.574s, learning 0.092s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0116
+               Mean surrogate loss: -0.0205
+                 Mean entropy loss: 5.8057
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 72846.0000
+Mean wm_real_validation_samples_seen loss: 8946.0000
+      Mean wm_model_fit_calls loss: 39.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4996
+    Mean wm_train_reward_loss loss: 0.5810
+Mean wm_train_gradient_norm_before_clip loss: 0.5991
+Mean wm_persistence_delta_mse_normalized loss: 0.8639
+Mean wm_uncertainty_threshold loss: 0.1688
+Mean wm_validation_delta_mse_normalized loss: 0.4334
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8639
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5017
+Mean wm_validation_obs_rmse_raw loss: 0.1840
+Mean wm_validation_reward_mae loss: 0.0085
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0119
+Mean wm_validation_uncertainty_quantile loss: 0.1688
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4338
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8639
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5021
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1839
+Mean wm_validation_pre_reward_mae loss: 0.0086
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0119
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1653
+Mean wm_validation_post_delta_mse_normalized loss: 0.4334
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8639
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5017
+Mean wm_validation_post_obs_rmse_raw loss: 0.1840
+Mean wm_validation_post_reward_mae loss: 0.0085
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0119
+Mean wm_validation_post_uncertainty_quantile loss: 0.1688
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 0.0000
+       Mean imagined_accepted loss: 0.0000
+Mean imagined_acceptance_fraction loss: 0.0000
+Mean imagined_optimizer_steps loss: 0.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0000
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_optimizer_steps_total loss: 0.0000
+ Mean imagined_accepted_total loss: 0.0000
+Mean world_model_optimizer_steps_total loss: 936.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 81920
+                    Iteration time: 0.67s
+                      Time elapsed: 00:00:38
+                               ETA: 00:00:05
+
+################################################################################
+                       [1m Learning iteration 40/45 [0m                       
+
+                       Computation: 3089 steps/s (collection: 0.561s, learning 0.102s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0104
+               Mean surrogate loss: -0.0200
+                 Mean entropy loss: 5.8073
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 74670.0000
+Mean wm_real_validation_samples_seen loss: 9170.0000
+      Mean wm_model_fit_calls loss: 40.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.4946
+    Mean wm_train_reward_loss loss: 0.5674
+Mean wm_train_gradient_norm_before_clip loss: 0.6125
+Mean wm_persistence_delta_mse_normalized loss: 0.8663
+Mean wm_uncertainty_threshold loss: 0.1654
+Mean wm_validation_delta_mse_normalized loss: 0.4351
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.8663
+Mean wm_validation_to_persistence_mse_ratio loss: 0.5023
+Mean wm_validation_obs_rmse_raw loss: 0.1895
+Mean wm_validation_reward_mae loss: 0.0088
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0123
+Mean wm_validation_uncertainty_quantile loss: 0.1654
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4378
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.8663
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.5053
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1900
+Mean wm_validation_pre_reward_mae loss: 0.0088
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0123
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1681
+Mean wm_validation_post_delta_mse_normalized loss: 0.4351
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.8663
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.5023
+Mean wm_validation_post_obs_rmse_raw loss: 0.1895
+Mean wm_validation_post_reward_mae loss: 0.0088
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0123
+Mean wm_validation_post_uncertainty_quantile loss: 0.1654
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 512.0000
+       Mean imagined_accepted loss: 428.0000
+Mean imagined_acceptance_fraction loss: 0.8359
+Mean imagined_optimizer_steps loss: 4.0000
+      Mean imagined_surrogate loss: 0.0010
+     Mean imagined_value_loss loss: 0.0035
+             Mean imagined_kl loss: 0.0002
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_uncertainty_mean loss: 0.1138
+Mean imagined_optimizer_steps_total loss: 4.0000
+ Mean imagined_accepted_total loss: 428.0000
+Mean world_model_optimizer_steps_total loss: 960.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 83968
+                    Iteration time: 0.66s
+                      Time elapsed: 00:00:38
+                               ETA: 00:00:04
+
+################################################################################
+                       [1m Learning iteration 41/45 [0m                       
+
+                       Computation: 3036 steps/s (collection: 0.565s, learning 0.110s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0093
+               Mean surrogate loss: -0.0185
+                 Mean entropy loss: 5.8073
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 76494.0000
+Mean wm_real_validation_samples_seen loss: 9394.0000
+      Mean wm_model_fit_calls loss: 41.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.5064
+    Mean wm_train_reward_loss loss: 0.5639
+Mean wm_train_gradient_norm_before_clip loss: 0.6229
+Mean wm_persistence_delta_mse_normalized loss: 0.9266
+Mean wm_uncertainty_threshold loss: 0.1661
+Mean wm_validation_delta_mse_normalized loss: 0.4518
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9266
+Mean wm_validation_to_persistence_mse_ratio loss: 0.4876
+Mean wm_validation_obs_rmse_raw loss: 0.1980
+Mean wm_validation_reward_mae loss: 0.0087
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0123
+Mean wm_validation_uncertainty_quantile loss: 0.1661
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4522
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9266
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.4880
+Mean wm_validation_pre_obs_rmse_raw loss: 0.1977
+Mean wm_validation_pre_reward_mae loss: 0.0087
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0123
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1661
+Mean wm_validation_post_delta_mse_normalized loss: 0.4518
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9266
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.4876
+Mean wm_validation_post_obs_rmse_raw loss: 0.1980
+Mean wm_validation_post_reward_mae loss: 0.0087
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0123
+Mean wm_validation_post_uncertainty_quantile loss: 0.1661
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 512.0000
+       Mean imagined_accepted loss: 449.0000
+Mean imagined_acceptance_fraction loss: 0.8770
+Mean imagined_optimizer_steps loss: 4.0000
+      Mean imagined_surrogate loss: -0.0000
+     Mean imagined_value_loss loss: 0.0031
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_uncertainty_mean loss: 0.1116
+Mean imagined_optimizer_steps_total loss: 8.0000
+ Mean imagined_accepted_total loss: 877.0000
+Mean world_model_optimizer_steps_total loss: 984.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 86016
+                    Iteration time: 0.67s
+                      Time elapsed: 00:00:39
+                               ETA: 00:00:03
+
+################################################################################
+                       [1m Learning iteration 42/45 [0m                       
+
+                       Computation: 1065 steps/s (collection: 1.815s, learning 0.106s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0104
+               Mean surrogate loss: -0.0125
+                 Mean entropy loss: 5.8064
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 78318.0000
+Mean wm_real_validation_samples_seen loss: 9618.0000
+      Mean wm_model_fit_calls loss: 42.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.5099
+    Mean wm_train_reward_loss loss: 0.5647
+Mean wm_train_gradient_norm_before_clip loss: 0.6100
+Mean wm_persistence_delta_mse_normalized loss: 0.9412
+Mean wm_uncertainty_threshold loss: 0.1659
+Mean wm_validation_delta_mse_normalized loss: 0.4639
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9412
+Mean wm_validation_to_persistence_mse_ratio loss: 0.4929
+Mean wm_validation_obs_rmse_raw loss: 0.2017
+Mean wm_validation_reward_mae loss: 0.0087
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0124
+Mean wm_validation_uncertainty_quantile loss: 0.1659
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4642
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9412
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.4932
+Mean wm_validation_pre_obs_rmse_raw loss: 0.2018
+Mean wm_validation_pre_reward_mae loss: 0.0087
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0124
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1672
+Mean wm_validation_post_delta_mse_normalized loss: 0.4639
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9412
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.4929
+Mean wm_validation_post_obs_rmse_raw loss: 0.2017
+Mean wm_validation_post_reward_mae loss: 0.0087
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0124
+Mean wm_validation_post_uncertainty_quantile loss: 0.1659
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 512.0000
+       Mean imagined_accepted loss: 443.0000
+Mean imagined_acceptance_fraction loss: 0.8652
+Mean imagined_optimizer_steps loss: 4.0000
+      Mean imagined_surrogate loss: 0.0000
+     Mean imagined_value_loss loss: 0.0033
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_uncertainty_mean loss: 0.1100
+Mean imagined_optimizer_steps_total loss: 12.0000
+ Mean imagined_accepted_total loss: 1320.0000
+Mean world_model_optimizer_steps_total loss: 1008.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 88064
+                    Iteration time: 1.92s
+                      Time elapsed: 00:00:41
+                               ETA: 00:00:02
+
+################################################################################
+                       [1m Learning iteration 43/45 [0m                       
+
+                       Computation: 2971 steps/s (collection: 0.586s, learning 0.103s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0112
+               Mean surrogate loss: -0.0153
+                 Mean entropy loss: 5.8052
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 80142.0000
+Mean wm_real_validation_samples_seen loss: 9842.0000
+      Mean wm_model_fit_calls loss: 43.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.5137
+    Mean wm_train_reward_loss loss: 0.5590
+Mean wm_train_gradient_norm_before_clip loss: 0.5615
+Mean wm_persistence_delta_mse_normalized loss: 0.9594
+Mean wm_uncertainty_threshold loss: 0.1684
+Mean wm_validation_delta_mse_normalized loss: 0.4593
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9594
+Mean wm_validation_to_persistence_mse_ratio loss: 0.4788
+Mean wm_validation_obs_rmse_raw loss: 0.2027
+Mean wm_validation_reward_mae loss: 0.0084
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0122
+Mean wm_validation_uncertainty_quantile loss: 0.1684
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4610
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9594
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.4806
+Mean wm_validation_pre_obs_rmse_raw loss: 0.2032
+Mean wm_validation_pre_reward_mae loss: 0.0084
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0122
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1695
+Mean wm_validation_post_delta_mse_normalized loss: 0.4593
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9594
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.4788
+Mean wm_validation_post_obs_rmse_raw loss: 0.2027
+Mean wm_validation_post_reward_mae loss: 0.0084
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0122
+Mean wm_validation_post_uncertainty_quantile loss: 0.1684
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 512.0000
+       Mean imagined_accepted loss: 453.0000
+Mean imagined_acceptance_fraction loss: 0.8848
+Mean imagined_optimizer_steps loss: 4.0000
+      Mean imagined_surrogate loss: 0.0001
+     Mean imagined_value_loss loss: 0.0032
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_uncertainty_mean loss: 0.1140
+Mean imagined_optimizer_steps_total loss: 16.0000
+ Mean imagined_accepted_total loss: 1773.0000
+Mean world_model_optimizer_steps_total loss: 1032.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 90112
+                    Iteration time: 0.69s
+                      Time elapsed: 00:00:42
+                               ETA: 00:00:01
+
+################################################################################
+                       [1m Learning iteration 44/45 [0m                       
+
+                       Computation: 3038 steps/s (collection: 0.571s, learning 0.103s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0112
+               Mean surrogate loss: -0.0117
+                 Mean entropy loss: 5.8053
+           Mean wm_train_size loss: 58983.0000
+      Mean wm_validation_size loss: 6553.0000
+Mean wm_real_train_samples_seen loss: 81966.0000
+Mean wm_real_validation_samples_seen loss: 10066.0000
+      Mean wm_model_fit_calls loss: 44.0000
+     Mean wm_ready_before_fit loss: 1.0000
+                Mean wm_ready loss: 1.0000
+  Mean wm_train_dynamics_loss loss: 0.5126
+    Mean wm_train_reward_loss loss: 0.5575
+Mean wm_train_gradient_norm_before_clip loss: 0.6164
+Mean wm_persistence_delta_mse_normalized loss: 0.9679
+Mean wm_uncertainty_threshold loss: 0.1674
+Mean wm_validation_delta_mse_normalized loss: 0.4677
+Mean wm_validation_persistence_delta_mse_normalized loss: 0.9679
+Mean wm_validation_to_persistence_mse_ratio loss: 0.4832
+Mean wm_validation_obs_rmse_raw loss: 0.2038
+Mean wm_validation_reward_mae loss: 0.0085
+Mean wm_validation_reward_mean_baseline_mae loss: 0.0124
+Mean wm_validation_uncertainty_quantile loss: 0.1674
+Mean wm_validation_pre_delta_mse_normalized loss: 0.4688
+Mean wm_validation_pre_persistence_delta_mse_normalized loss: 0.9679
+Mean wm_validation_pre_to_persistence_mse_ratio loss: 0.4843
+Mean wm_validation_pre_obs_rmse_raw loss: 0.2036
+Mean wm_validation_pre_reward_mae loss: 0.0085
+Mean wm_validation_pre_reward_mean_baseline_mae loss: 0.0124
+Mean wm_validation_pre_uncertainty_quantile loss: 0.1661
+Mean wm_validation_post_delta_mse_normalized loss: 0.4677
+Mean wm_validation_post_persistence_delta_mse_normalized loss: 0.9679
+Mean wm_validation_post_to_persistence_mse_ratio loss: 0.4832
+Mean wm_validation_post_obs_rmse_raw loss: 0.2038
+Mean wm_validation_post_reward_mae loss: 0.0085
+Mean wm_validation_post_reward_mean_baseline_mae loss: 0.0124
+Mean wm_validation_post_uncertainty_quantile loss: 0.1674
+            Mean wm_fit_steps loss: 24.0000
+Mean wm_validation_batch_size loss: 2048.0000
+     Mean imagined_candidates loss: 512.0000
+       Mean imagined_accepted loss: 453.0000
+Mean imagined_acceptance_fraction loss: 0.8848
+Mean imagined_optimizer_steps loss: 4.0000
+      Mean imagined_surrogate loss: -0.0001
+     Mean imagined_value_loss loss: 0.0036
+             Mean imagined_kl loss: 0.0000
+Mean imagined_normalization_unchanged loss: 1.0000
+Mean imagined_uncertainty_mean loss: 0.1127
+Mean imagined_optimizer_steps_total loss: 20.0000
+ Mean imagined_accepted_total loss: 2226.0000
+Mean world_model_optimizer_steps_total loss: 1056.0000
+                       Mean reward: 10.21
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 92160
+                    Iteration time: 0.67s
+                      Time elapsed: 00:00:42
+                               ETA: 00:00:00
+
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+SESAME_PPO_STUDY_RESULT={"status": "completed", "variant": "dyna_ppo", "train_seed": 42, "smoke": true, "fresh_from_scratch": true, "checkpoint_selection": "final only", "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/smoke/seed42", "args": {"variant": "dyna_ppo", "seed": 42, "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/smoke/seed42", "device": "cuda:0", "smoke": true, "dyna_config": "/home/ywwang/sesame/runs/dyna_ppo_20261103/dyna_config.json", "num_envs": 64, "iterations": 45, "steps_per_env": 32, "save_interval": 50, "hidden_dims": [128, 128, 64], "learning_rate": 0.0003}, "git_operations": "disabled", "started_at_utc": "2026-11-03T15:19:21.578258+00:00", "frozen_sources": {"sesame_rl/environment.py": {"sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "reference": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/sources/sesame_rl/environment.py", "matches": true}, "sesame_rl/dr_environment.py": {"sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476", "reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/sources/sesame_rl/dr_environment.py", "matches": true}, "scripts/train_ppo.py": {"sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "reference": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/sources/scripts/train_ppo.py", "matches": true}, "scripts/train_ppo_dr.py": {"sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01", "reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/sources/scripts/train_ppo_dr.py", "matches": true}}, "dyna_config_sha256": "eeaa6e9d51027328b97d5fbaa82bd693b87a086b1b92c08d4b4c4e49abdabb17", "algorithm": "DynaPPO", "training_environment_variant": "full_dr", "scope": "Local Dyna-style PPO implementation, not an exact replication of a named paper; continuing one-step imagined transitions, no learned termination model", "sources": [{"path": "scripts/train_ppo.py", "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "bytes": 23496}, {"path": "sesame_rl/environment.py", "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "bytes": 20862}, {"path": "scripts/import_sesame_isaac.py", "sha256": "98686160862bef42a74163729a4ef887f42e3f7f5ea0707e81fcda98b1230989", "bytes": 13980}, {"path": "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf", "sha256": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076", "bytes": 16174}, {"path": "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml", "sha256": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a", "bytes": 12500}, {"path": "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml", "sha256": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b", "bytes": 628}, {"path": "assets/isaac/sesame/.asset_hash", "sha256": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c", "bytes": 32}, {"path": "assets/isaac/sesame/config.yaml", "sha256": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6", "bytes": 856}, {"path": "assets/isaac/sesame/configuration/sesame_base.usd", "sha256": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937", "bytes": 3689591}, {"path": "assets/isaac/sesame/configuration/sesame_physics.usd", "sha256": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc", "bytes": 4006}, {"path": "assets/isaac/sesame/configuration/sesame_sensor.usd", "sha256": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e", "bytes": 656}, {"path": "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl", "sha256": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7", "bytes": 85184}, {"path": "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl", "sha256": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916", "bytes": 389084}, {"path": "assets/isaac/sesame/import_source/meshes/L1_v117.stl", "sha256": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558", "bytes": 359384}, {"path": "assets/isaac/sesame/import_source/meshes/L2_v117.stl", "sha256": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf", "bytes": 383384}, {"path": "assets/isaac/sesame/import_source/meshes/L3_v117.stl", "sha256": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3", "bytes": 102684}, {"path": "assets/isaac/sesame/import_source/meshes/L4_v117.stl", "sha256": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470", "bytes": 91384}, {"path": "assets/isaac/sesame/import_source/meshes/R1_v117.stl", "sha256": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871", "bytes": 379784}, {"path": "assets/isaac/sesame/import_source/meshes/R2_v117.stl", "sha256": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c", "bytes": 378984}, {"path": "assets/isaac/sesame/import_source/meshes/R3_v117.stl", "sha256": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e", "bytes": 105884}, {"path": "assets/isaac/sesame/import_source/meshes/R4_v117.stl", "sha256": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a", "bytes": 94584}, {"path": "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl", "sha256": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26", "bytes": 184184}, {"path": "assets/isaac/sesame/import_source/sesame.urdf", "sha256": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7", "bytes": 15018}, {"path": "assets/isaac/sesame/sesame.usd", "sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7", "bytes": 1602}, {"path": "scripts/train_ppo_dr.py", "sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01", "bytes": 26265}, {"path": "scripts/train_ppo_study.py", "sha256": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d", "bytes": 17419}, {"path": "sesame_rl/dr_environment.py", "sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476", "bytes": 22356}, {"path": "sesame_rl/study_environment.py", "sha256": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a", "bytes": 11420}, {"path": "scripts/train_dyna_ppo.py", "sha256": "daa8044a47a42493bd093cdc85b9784bea01b1fd18f2d0d8352fc9f01668fe9b", "bytes": 19872}, {"path": "sesame_rl/dyna_world_model.py", "sha256": "68d83478f73443b0a58b3fe97658d3ea208670c220a3e62b1b2e8302e323d015", "bytes": 19896}, {"path": "sesame_rl/dyna_ppo.py", "sha256": "4ca2081b3bddeb05190b40fa01c6d64ecf010c1a499d2cbe5798850407db6a17", "bytes": 12775}], "gpu": "NVIDIA GeForce RTX 4090 D", "versions": {"torch": "2.7.0+cu128", "rsl-rl-lib": "3.1.2", "isaaclab": "0.49.0", "isaaclab-rl": "0.4.4", "isaacsim": "not in distribution metadata", "gymnasium": "1.2.1"}, "observation_shape": [64, 36], "action_count": 8, "world_model_reload_max_abs_prediction_error": 0.0, "dyna_training_summary": {"real_transitions_seen": 92160, "real_updates": 45, "real_optimizer_steps": 900, "model_optimizer_steps": 1056, "model_member_optimizer_steps": 3168, "imagined_generated": 2560, "imagined_accepted": 2226, "imagined_optimizer_steps": 20, "imagined_update_calls": 5, "model_fit_calls": 44, "imagined_horizon": 1, "history_frames": 4, "replay_saved": false}, "checkpoint": "/home/ywwang/sesame/runs/dyna_ppo_20261103/smoke/seed42/final.pt", "checkpoint_sha256": "6a237e57fac5c8c089eb09362c9bbce81f728b2712e3171897ed2654bcbaf770", "training_iterations_this_run": 45, "environment_transitions_total": 92160, "dyna_checkpoint_keys": ["config", "history_frames", "imagined_accepted", "imagined_generated", "imagined_horizon", "imagined_optimizer_steps", "imagined_update_calls", "model_fit_calls", "model_member_optimizer_steps", "model_optimizer_steps", "real_optimizer_steps", "real_transitions_seen", "real_updates", "replay_saved", "rng_state", "seed", "version", "world_model"], "reload_max_abs_action_error": 0.0, "wall_seconds_before_shutdown": 51.56494156084955, "finished_at_utc": "2026-11-03T15:20:13.143441+00:00"}

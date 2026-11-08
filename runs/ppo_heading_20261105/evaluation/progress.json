@@ -1,0 +1,92 @@
+{
+  "status": "completed",
+  "protocol_sha256": "be2c4eaa0d802674907f479ca40c6bf7808b7c172a9275e3cc1cfa37fd03237f",
+  "manifest_signature": "7e6a64894859a3897b47f13917d696dfc46fa07bef039db97b7faef6ce440203",
+  "total_cases": 12,
+  "completed_cases": {
+    "full_dr_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed42/nominal.json",
+      "sha256": "112293c7d70e2050d35861dc48d5a7f15f16b8e20b811f9388eeb7725ebfec1f",
+      "policy_id": "full_dr_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "full_dr_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed42/randomized.json",
+      "sha256": "7fa813bcc1d855fd1c2b9c41548662a514f6ef30640943f13975b90f6adbefab",
+      "policy_id": "full_dr_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "full_dr_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed43/nominal.json",
+      "sha256": "4595a68785e4e4db5f534459025a44c7dc865061b5175bfa6af0a92acf962901",
+      "policy_id": "full_dr_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "full_dr_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed43/randomized.json",
+      "sha256": "2045e075c2716518f4f0c06f720f433510fc3336c0495fa3ac68e1ed717d38c0",
+      "policy_id": "full_dr_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "full_dr_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed44/nominal.json",
+      "sha256": "b400f6e7a2e5932ba13bf4e7c0669b72e53251abe5ba602a1cf97a763588abf7",
+      "policy_id": "full_dr_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "full_dr_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed44/randomized.json",
+      "sha256": "233f25edd6201acce85bf48e8c967ef3a3d6aa872e834c6f58e65e9ccc3f937a",
+      "policy_id": "full_dr_seed44",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "heading_seed42/nominal": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed42/nominal.json",
+      "sha256": "3efb0043fd51323275173283b62279053f2b798e53b44bd30674738bf901fd64",
+      "policy_id": "heading_seed42",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "heading_seed42/randomized": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed42/randomized.json",
+      "sha256": "5b75ea143f0f1784a1cdd548a0525941e364b86826ff5d8749fa6f4fd163754b",
+      "policy_id": "heading_seed42",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "heading_seed43/nominal": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed43/nominal.json",
+      "sha256": "b64d0dfe4884abaf5c00a83b98f0f45c3708c8a928f16d0d37fc317372ab52ee",
+      "policy_id": "heading_seed43",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "heading_seed43/randomized": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed43/randomized.json",
+      "sha256": "1ab51706133f8dbf8cdc5e094aa6972b5de6166b2f541b42e5a188c37a83f0b8",
+      "policy_id": "heading_seed43",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "heading_seed44/nominal": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed44/nominal.json",
+      "sha256": "7360a041558075d8e5503916de1929d43c4436494f970ea32a178f0e6851d9fb",
+      "policy_id": "heading_seed44",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "heading_seed44/randomized": {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed44/randomized.json",
+      "sha256": "15ee7528355fed22bff82dcbd3bd12afb461201880e852fdd7e0363a25742dec",
+      "policy_id": "heading_seed44",
+      "condition": "randomized",
+      "resumed": false
+    }
+  }
+}

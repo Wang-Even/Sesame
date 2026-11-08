@@ -1,0 +1,46 @@
+{
+  "status": "completed",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "num_envs": 256,
+  "steps_per_env": 32,
+  "updates_per_variant": 20,
+  "real_transitions_per_variant": 163840,
+  "headless": true,
+  "cameras_enabled": false,
+  "sampling_seconds": 0.1,
+  "measurement": "NVML process total GPU memory; unrelated processes excluded; CUDA/graphics records deduplicated by PID.",
+  "limits": "Short-run sampled peak, not historical 250-update peak; sub-100ms transients can be missed.",
+  "variants": [
+    {
+      "variant": "PPO",
+      "process_peak_MiB": 5513.50390625,
+      "process_peak_GiB": 5.384281158447266,
+      "pytorch_peak_allocated_MiB": 32.95458984375,
+      "pytorch_peak_reserved_MiB": 38.0,
+      "training_samples": 177,
+      "peak_samples": 120,
+      "configuration_matches_reference": {
+        "ppo_config.json": true,
+        "environment_config.json": true
+      },
+      "measurement": "/home/ywwang/sesame/runs/memory_probe_20261104_seed42/measurement.json",
+      "process_exited": true
+    },
+    {
+      "variant": "DR-PPO",
+      "process_peak_MiB": 5513.50390625,
+      "process_peak_GiB": 5.384281158447266,
+      "pytorch_peak_allocated_MiB": 33.396484375,
+      "pytorch_peak_reserved_MiB": 38.0,
+      "training_samples": 181,
+      "peak_samples": 17,
+      "configuration_matches_reference": {
+        "ppo_config.json": true,
+        "environment_config.json": true
+      },
+      "measurement": "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42/measurement.json",
+      "process_exited": true
+    }
+  ],
+  "audit": "passed"
+}

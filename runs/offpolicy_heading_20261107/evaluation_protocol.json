@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "study_id": "offpolicy_heading_20261107",
+  "research_question": "Compare PPO, SAC and branching DQN on identical heading_v1 reward and full DR.",
+  "training": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "num_envs": 256,
+    "transitions_per_run": 2048000,
+    "episode_length_s": 10.0,
+    "control_dt_s": 0.02,
+    "heading_penalty_scale": 0.5,
+    "reward_version": "absolute_heading_v1",
+    "domain_randomization": "full_dr unchanged",
+    "observation_dimension": 36,
+    "action_dimension": 8,
+    "checkpoint_selection": "final only",
+    "ppo_provenance": "Existing heading_v1 final models reused; fresh common test scenarios."
+  },
+  "evaluation": {
+    "num_envs": 256,
+    "episodes_per_seed": 64,
+    "seeds": [
+      25042,
+      26042
+    ],
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "heading_full_dr_for_all_policies",
+    "pairing": "Exact initial root/joint states and actual domain parameters across all nine policies.",
+    "checkpoint_selection": "final only",
+    "policy_action": "PPO saved-normalizer mean; SAC tanh mean; branching DQN greedy per-branch bins.",
+    "primary_metric": "Forward velocity RMSE; report heading, falls, displacement and smoothness jointly.",
+    "return_semantics": "Common heading_v1 reward, coefficient 0.5, for all training/evaluation methods."
+  },
+  "checkpoints": [
+    {
+      "id": "ppo_seed42",
+      "variant": "ppo",
+      "train_seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+      "sha256": "6056155ff2189a9a25490844f4eddda3ca5450392a5b3f5d18f3f2553e51fdbc"
+    },
+    {
+      "id": "ppo_seed43",
+      "variant": "ppo",
+      "train_seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+      "sha256": "3c8b525d64f4df55d56c9ec43b8963283caa6561ac8f32711290f5fc86670dcd"
+    },
+    {
+      "id": "ppo_seed44",
+      "variant": "ppo",
+      "train_seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+      "sha256": "622f2e095db92eb25fc7a59688863437ff43e981f2f6404e32549e1253b4e7c6"
+    },
+    {
+      "id": "sac_seed42",
+      "variant": "sac",
+      "train_seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+      "sha256": "3d0fcdb8df7583e206c30f0b71538a319789907160a475765d70a66a504d7122"
+    },
+    {
+      "id": "sac_seed43",
+      "variant": "sac",
+      "train_seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+      "sha256": "5284a35d1d640e8b1e1f8ac52b45d5241d6e3dad3c3ac95fed484082ca5fa9cc"
+    },
+    {
+      "id": "sac_seed44",
+      "variant": "sac",
+      "train_seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+      "sha256": "244d25462d1062dc289188a69f30f8ff00bfa56198266a8078e3ff7e04638622"
+    },
+    {
+      "id": "dqn_seed42",
+      "variant": "dqn",
+      "train_seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+      "sha256": "d356bf36d0d7f2d65a601c480ad9b0a6769840d0575f095af4b06a3e6cb00373"
+    },
+    {
+      "id": "dqn_seed43",
+      "variant": "dqn",
+      "train_seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+      "sha256": "346943f85d875ba4032d7fce2bdffdd3be8c6083cba9e766366c5c7bfdc4d5fd"
+    },
+    {
+      "id": "dqn_seed44",
+      "variant": "dqn",
+      "train_seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+      "sha256": "06764c50ff38f40a0047abe316525c7a71cf7711fd5f1eaf33045ba34b4b3453"
+    }
+  ],
+  "representative_sample": {
+    "train_seed": 42,
+    "evaluation_seed": 25042,
+    "condition": "randomized",
+    "env_id": 0,
+    "selection": "First episode; fixed before evaluating, no performance selection."
+  },
+  "limitations": [
+    "DQN means branching dueling Double-DQN with 5 bins per joint; action discretization differs from continuous PPO/SAC.",
+    "Equal real transitions do not imply equal optimizer work or wall-clock compute.",
+    "No hardware or out-of-distribution evaluation."
+  ],
+  "frozen_sources": {
+    "scripts/evaluate_offpolicy.py": "2d1549ad16bc133fae36484f691c2cf077b26fefb3af18cb5f0e5b9c37e5d812",
+    "scripts/evaluate_heading_ppo.py": "ae81c7899c35061a25fec92f787ee59e6dc190d83b9fa15dca8d0bad361e6f8b",
+    "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad",
+    "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+    "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+    "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a"
+  },
+  "training_protocol": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/protocol.json",
+  "training_protocol_sha256": "4c77a3817cdd5e36e4e742122b041c0dcb9a2d5cee2918ebc5dc291383612589"
+}

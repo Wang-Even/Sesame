@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "study_id": "offpolicy_heading_20261107",
+  "created_at_utc": "2026-11-06T18:16:17.969283+00:00",
+  "research_question": "Try SAC and branching DQN with identical improved heading PPO reward and full domain randomization.",
+  "training": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "num_envs": 256,
+    "transitions_per_run": 2048000,
+    "vector_steps": 8000,
+    "warmup_transitions": 65536,
+    "updates_per_vector_step": 2,
+    "optimizer_updates_per_run": 15488,
+    "batch_size": 512,
+    "replay_capacity": 262144,
+    "reward_version": "absolute_heading_v1",
+    "heading_penalty_scale": 0.5,
+    "reward_scale": 1.0,
+    "episode_length_s": 10.0,
+    "control_dt_s": 0.02,
+    "domain_randomization": "full_dr unchanged",
+    "checkpoint_selection": "final only",
+    "dqn_epsilon": {
+      "initial": 1.0,
+      "final": 0.05,
+      "linear_decay_fraction_of_real_transition_budget": 0.5
+    },
+    "algorithm_configs": {
+      "sac": {
+        "observation_dim": 36,
+        "action_dim": 8,
+        "hidden_dims": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "learning_rate": 0.0003,
+        "target_tau": 0.005,
+        "max_grad_norm": 10.0,
+        "reward_scale": 1.0,
+        "initial_temperature": 0.02,
+        "target_entropy": -8.0,
+        "log_std_min": -5.0,
+        "log_std_max": 2.0,
+        "initial_log_std": -1.0
+      },
+      "dqn": {
+        "observation_dim": 36,
+        "action_dim": 8,
+        "hidden_dims": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "learning_rate": 0.0003,
+        "target_tau": 0.005,
+        "max_grad_norm": 10.0,
+        "reward_scale": 1.0,
+        "action_bins": [
+          -1.0,
+          -0.5,
+          0.0,
+          0.5,
+          1.0
+        ],
+        "td_loss": "smooth_l1",
+        "branch_target_aggregation": "mean"
+      }
+    }
+  },
+  "training_runs": [
+    {
+      "id": "sac_seed42",
+      "algorithm": "sac",
+      "seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+    },
+    {
+      "id": "dqn_seed42",
+      "algorithm": "dqn",
+      "seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+    },
+    {
+      "id": "sac_seed43",
+      "algorithm": "sac",
+      "seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+    },
+    {
+      "id": "dqn_seed43",
+      "algorithm": "dqn",
+      "seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+    },
+    {
+      "id": "sac_seed44",
+      "algorithm": "sac",
+      "seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+    },
+    {
+      "id": "dqn_seed44",
+      "algorithm": "dqn",
+      "seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+    }
+  ],
+  "ppo_references": [
+    {
+      "id": "ppo_seed42",
+      "seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+      "sha256": "6056155ff2189a9a25490844f4eddda3ca5450392a5b3f5d18f3f2553e51fdbc"
+    },
+    {
+      "id": "ppo_seed43",
+      "seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+      "sha256": "3c8b525d64f4df55d56c9ec43b8963283caa6561ac8f32711290f5fc86670dcd"
+    },
+    {
+      "id": "ppo_seed44",
+      "seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+      "sha256": "622f2e095db92eb25fc7a59688863437ff43e981f2f6404e32549e1253b4e7c6"
+    }
+  ],
+  "evaluation_plan": {
+    "seeds": [
+      25042,
+      26042
+    ],
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "num_envs": 256,
+    "episodes_per_seed": 64,
+    "episode_length_s": 10.0,
+    "all_models_common_reward": "absolute_heading_v1",
+    "pair_initial_states_and_actual_physics": true,
+    "total_episodes": 2304,
+    "final_models_only": true,
+    "deterministic_actions": true,
+    "primary_metric": "velocity_x_rmse_m_s",
+    "report_jointly": [
+      "heading_rms_deg",
+      "fall_rate",
+      "distance_x_m",
+      "abs_lateral_displacement_m",
+      "applied_target_acceleration_rms_rad_s2",
+      "actual_joint_acceleration_rms_rad_s2"
+    ],
+    "representative_video": {
+      "train_seed": 42,
+      "eval_seed": 25042,
+      "condition": "randomized",
+      "first_episode": true
+    }
+  },
+  "limitations": [
+    "DQN is a branching dueling Double-DQN adaptation with five action bins per joint and uniform replay, not flat DQN or a full paper replication.",
+    "PPO uses its saved running observation normalization; SAC/DQN use fixed environment scaling only.",
+    "Equal real transition counts are not equal wall clock or optimizer budgets.",
+    "Initial fixed hyperparameters, no test-driven tuning, local simulation and in-range randomization only."
+  ],
+  "validation": {
+    "gpu_probe": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/probe/result.json",
+    "gpu_probe_sha256": "c0a534bd1f365ffea5ab8d847cfb842341d5fe73a72f7874bffabe2d34f4116e",
+    "smoke_runs": {
+      "sac": {
+        "result": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142/result.json",
+        "sha256": "c6b9a31cae9aaf508d26ed35ed50b36c0903d4a122cba9d697322b057718d73f",
+        "timeouts_checked": 32
+      },
+      "dqn": {
+        "result": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/result.json",
+        "sha256": "9c6a956b8628875f59b0a65a43c6a8eb3b4cdb5402dfe744ce6036d84e716d6f",
+        "timeouts_checked": 32
+      }
+    }
+  },
+  "frozen_sources": {
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+    "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+    "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+    "scripts/train_heading_ppo.py": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736",
+    "scripts/run_heading_ppo_queue.py": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73",
+    "scripts/probe_heading_reward.py": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6",
+    "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+    "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+    "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad",
+    "scripts/run_offpolicy_queue.py": "5b75dde3257bb42dbb13ab2ceb0aea0558de381f66991b31c722786c461cb622"
+  },
+  "robot_asset_sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7"
+}

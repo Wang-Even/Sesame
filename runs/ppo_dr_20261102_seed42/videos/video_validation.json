@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "script_sha256": "b5849944e33aa7548903da57cc27e4dae042ca6e752b54225a706213ff18c21f",
+  "script_snapshot": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/sources/scripts/record_ppo_dr_video.py",
+  "visual_inspection": "Both domains: first frame, 5-second thumbnail, and last video frame inspected; full robot visible with clear grid, world +X arrows, and HUD. Camera follows position only, preserving true yaw.",
+  "process_exit_codes": {
+    "nominal": 0,
+    "randomized": 0
+  },
+  "gpu_processes_after_recording": "493250, /home/ubuntu/miniforge3/envs/metaworld_v010/bin/python, 6576 MiB",
+  "domains": {
+    "nominal": {
+      "video": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/videos/nominal/ppo_dr_nominal_seed2042.mp4",
+      "sha256": "d48c881955226ffb761299cc204336220e6c97bef94563a58380dce803a3764e",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "25/1",
+            "nb_frames": "250"
+          }
+        ],
+        "format": {
+          "duration": "10.000000",
+          "size": "5953278"
+        }
+      },
+      "distance_x_m": 1.214389681816101,
+      "fell": false,
+      "duration_s": 10.0,
+      "final_heading_yaw_deg": 7.4051109518884655,
+      "max_abs_heading_yaw_deg": 25.197816065247856,
+      "lateral_displacement_m": -0.0789213702082634,
+      "domain_parameters": {
+        "enabled": false,
+        "mass_scale": 1.0,
+        "robot_friction": 0.8999999761581421,
+        "effective_contact_friction": 0.8999999761581421,
+        "kp_scale": 1.0,
+        "kd_scale": 1.0,
+        "effort_scale": 1.0,
+        "speed_scale": 1.0,
+        "target_tau_s": 0.0,
+        "delay_control_steps": 0,
+        "initial_yaw_rad": 0.0,
+        "initial_xy_velocity_m_s": [
+          0.0,
+          0.0
+        ],
+        "initial_joint_offset_rad": [
+          0.0010957717895507812,
+          -0.0006315112113952637,
+          -0.012639820575714111,
+          0.003480195999145508,
+          0.0,
+          -0.0021255016326904297,
+          0.0032323156483471394,
+          0.0
+        ]
+      },
+      "actual_physx_readback_passed": true
+    },
+    "randomized": {
+      "video": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/videos/randomized/ppo_dr_randomized_seed2042.mp4",
+      "sha256": "7cd82bb16702e31eaea002e2d5891cf336a4c42646b4a6c1e3463f17d39b977a",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "25/1",
+            "nb_frames": "250"
+          }
+        ],
+        "format": {
+          "duration": "10.000000",
+          "size": "5657250"
+        }
+      },
+      "distance_x_m": 1.0849450826644897,
+      "fell": false,
+      "duration_s": 10.0,
+      "final_heading_yaw_deg": 8.013846439023974,
+      "max_abs_heading_yaw_deg": 23.208996460081668,
+      "lateral_displacement_m": -0.014869801700115204,
+      "domain_parameters": {
+        "enabled": true,
+        "mass_scale": 1.118908405303955,
+        "robot_friction": 1.3095238208770752,
+        "effective_contact_friction": 1.1047618389129639,
+        "kp_scale": 0.9968912601470947,
+        "kd_scale": 0.87042236328125,
+        "effort_scale": 0.8969874978065491,
+        "speed_scale": 0.9416396617889404,
+        "target_tau_s": 0.0513840951025486,
+        "delay_control_steps": 1,
+        "initial_yaw_rad": -0.08430108428001404,
+        "initial_xy_velocity_m_s": [
+          0.01905754581093788,
+          0.011624325066804886
+        ],
+        "initial_joint_offset_rad": [
+          0.0025568008422851562,
+          -0.0014736056327819824,
+          -0.029492855072021484,
+          0.008120536804199219,
+          0.0,
+          -0.004959583282470703,
+          0.007542070001363754,
+          0.0
+        ]
+      },
+      "actual_physx_readback_passed": true
+    }
+  }
+}

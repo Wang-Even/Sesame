@@ -1,0 +1,419 @@
+{
+  "passed": true,
+  "date": "2026-11-08",
+  "retained_model_count": 12,
+  "retained_weight_sha256_unchanged": true,
+  "main_report_weight_links": 12,
+  "offpolicy_report_weight_links": 9,
+  "all_document_weight_links_valid": true,
+  "weight_links": [
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/ppo_heading_20261105/training/heading_seed42/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/ppo_heading_20261105/training/heading_seed43/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/ppo_heading_20261105/training/heading_seed44/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt"
+    },
+    {
+      "document": "docs/HANDOVER_20261106.md",
+      "target": "runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/ppo_heading_20261105/training/heading_seed42/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/ppo_heading_20261105/training/heading_seed43/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/ppo_heading_20261105/training/heading_seed44/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+    },
+    {
+      "document": "docs/OFFPOLICY_STUDY_20261107.md",
+      "target": "runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+    }
+  ],
+  "documents": {
+    "HANDOVER_20261106": {
+      "markdown_sha256": "e7154309246e63359fc362e14ad2da9beb62fe0ca0ba8ed98623711310b0143b",
+      "html_sha256": "122736e99d0d4f0469d31ecf36a70697556782009859d5c9f4c3a98016b38ecf",
+      "weight_links": 12,
+      "all_weight_files_exist": true,
+      "weight_sha256_unchanged": true,
+      "local_links": [
+        {
+          "target": "../sesame_rl/environment.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/environment.py"
+        },
+        {
+          "target": "../sesame_rl/dr_environment.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/dr_environment.py"
+        },
+        {
+          "target": "../sesame_rl/study_environment.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/study_environment.py"
+        },
+        {
+          "target": "../sesame_rl/heading_environment.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/heading_environment.py"
+        },
+        {
+          "target": "../scripts/train_heading_ppo.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/train_heading_ppo.py"
+        },
+        {
+          "target": "../sesame_rl/offpolicy.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/offpolicy.py"
+        },
+        {
+          "target": "../scripts/train_offpolicy.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/train_offpolicy.py"
+        },
+        {
+          "target": "../sesame_rl/dyna_ppo.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/dyna_ppo.py"
+        },
+        {
+          "target": "../sesame_rl/dyna_world_model.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/sesame_rl/dyna_world_model.py"
+        },
+        {
+          "target": "../scripts/train_dyna_ppo.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/train_dyna_ppo.py"
+        },
+        {
+          "target": "../scripts/evaluate_offpolicy.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/evaluate_offpolicy.py"
+        },
+        {
+          "target": "../scripts/analyze_offpolicy.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/analyze_offpolicy.py"
+        },
+        {
+          "target": "../scripts/evaluate_dyna_ppo.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/evaluate_dyna_ppo.py"
+        },
+        {
+          "target": "../scripts/analyze_dyna_ppo.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/analyze_dyna_ppo.py"
+        },
+        {
+          "target": "../scripts/record_offpolicy_video.py",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/scripts/record_offpolicy_video.py"
+        },
+        {
+          "target": "../runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt"
+        },
+        {
+          "target": "../runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt"
+        },
+        {
+          "target": "../runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+        },
+        {
+          "target": "../runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt"
+        },
+        {
+          "target": "../runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt"
+        },
+        {
+          "target": "../runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/evaluation_protocol.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation_protocol.json"
+        },
+        {
+          "target": "../reports/model_cleanup_20261108.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/reports/model_cleanup_20261108.json"
+        },
+        {
+          "target": "OFFPOLICY_STUDY_20261107.md",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.md"
+        },
+        {
+          "target": "DYNA_PPO_STUDY.md",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/docs/DYNA_PPO_STUDY.md"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/summary.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/performance.png",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/performance.png"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/training_curves.png",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/training_curves.png"
+        },
+        {
+          "target": "../runs/dyna_ppo_20261103/analysis/summary.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4"
+        },
+        {
+          "target": "../runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4"
+        }
+      ],
+      "bash_blocks_syntax_checked": 5,
+      "html_tables": 10,
+      "html_video_count": 0
+    },
+    "OFFPOLICY_STUDY_20261107": {
+      "markdown_sha256": "76c1deed0655b1bac1c7ec4b276119bbcead7de898866ed421858f13b2d1ff5b",
+      "html_sha256": "21b8e0f7864c49e93e49706cc4b7d8e5f5bb3d4f286cf504f1cd2ff4b664261f",
+      "weight_links": 9,
+      "all_weight_files_exist": true,
+      "weight_sha256_unchanged": true,
+      "local_links": [
+        {
+          "target": "HANDOVER_20261106.md#2-奖励函数设计",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+        },
+        {
+          "target": "../runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt"
+        },
+        {
+          "target": "../runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt"
+        },
+        {
+          "target": "../runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/evaluation_protocol.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation_protocol.json"
+        },
+        {
+          "target": "HANDOVER_20261106.md#模型权重",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/summary.md",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.md"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/performance.png",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/performance.png"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/training_curves.png",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/training_curves.png"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/analysis/per_episode.csv",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/per_episode.csv"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4"
+        },
+        {
+          "target": "../runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4"
+        },
+        {
+          "target": "../reports/model_cleanup_20261108.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/reports/model_cleanup_20261108.json"
+        }
+      ],
+      "bash_blocks_syntax_checked": 1,
+      "html_tables": 4,
+      "html_video_count": 3
+    }
+  },
+  "historical_deleted_weight_status_documented": true,
+  "model_or_simulator_execution": false,
+  "git_operations": false
+}

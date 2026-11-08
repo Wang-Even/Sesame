@@ -1,0 +1,13 @@
+START sac_seed42
+COMPLETED sac_seed42
+START dqn_seed42
+COMPLETED dqn_seed42
+START sac_seed43
+COMPLETED sac_seed43
+START dqn_seed43
+COMPLETED dqn_seed43
+START sac_seed44
+COMPLETED sac_seed44
+START dqn_seed44
+COMPLETED dqn_seed44
+ALL_TRAINING_AND_EVALUATION_COMPLETED

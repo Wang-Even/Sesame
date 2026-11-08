@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "report_role": "independent_editorial_review_of_saved_training_and_evaluation_metadata",
+  "official_score": false,
+  "created_at_utc": "2026-11-03T11:06:13.707174+00:00",
+  "scope": "仅检查已有JSONL/JSON及标量统计；未运行模型、仿真、GPU或Git。",
+  "source_inputs_sha256": {
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/protocol.json": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/summary.json": "71fec6735445f9c2aef1a501ab59ec680aeecf1db7593b381dd5cedb25a828e3",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/independent_review.json": "123dfcf15b3354227dc9ad8fb32a1d4c93598c90b1162724187e597825fa2711",
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/training.jsonl": "862072c72195b11c5645d8c43ad462ad4f711a77bc211072735433ba0d486347",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/training.jsonl": "57976f7c5946f8e16fc2268868bf4a4e12d282e0cae0f0b5b2b9017e3bbab78d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/training.jsonl": "fabe4234147876b97d1abc1393df7907e911ccf14ee59d0784853148e47a5c08",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/training.jsonl": "5e256179908e4ac6a3cbb6f9f044985a131824cce533e67d44bbe9cc98fac50b",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/training.jsonl": "8b2582d033637b576d340b2e06d5b7afd861a1d9a2d57ecb83145551d1b8c49d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/training.jsonl": "b2d1645f315791a3a20d816d1ab2d893592ac9621789602c345e839c3bf6a499",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed42/training.jsonl": "b14bee37c5594519e308345e26c553e1ce26b64ab4989a9ecd3633da644ec28f",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed43/training.jsonl": "3991b85e91109897bb45ea249624f1aa9422fddf202a3885230ee362154e3a46",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed44/training.jsonl": "f0fb53507462c28bd9de92867a6f7069cb6441e297d02664e2085e168b9713c1"
+  },
+  "training_curve_definition": {
+    "logged_return": "RSL-RL rewbuffer mean over the latest 100 completed training episodes",
+    "additional_plot_smoothing": "10-update trailing mean within each training seed",
+    "group_line": "mean of three smoothed training-seed series",
+    "group_band": "sample SD across three training seeds; not a confidence interval",
+    "first_nonmissing_return_update_all_runs": 16,
+    "transitions_per_update": 8192,
+    "missing_values_are_not_zero": true,
+    "final_checkpoints_only": true
+  },
+  "per_run_training_metadata": [
+    {
+      "id": "baseline_seed42",
+      "variant": "baseline",
+      "training_seed": 42,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 20.55993442583084,
+      "last_50_update_mean_return": 20.316433298206327,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "baseline_seed43",
+      "variant": "baseline",
+      "training_seed": 43,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 20.574924152374265,
+      "last_50_update_mean_return": 20.21493039932251,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "baseline_seed44",
+      "variant": "baseline",
+      "training_seed": 44,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 21.830388273239134,
+      "last_50_update_mean_return": 21.56940963516235,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "full_dr_seed42",
+      "variant": "full_dr",
+      "training_seed": 42,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 21.662138034820558,
+      "last_50_update_mean_return": 21.56935251159668,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "full_dr_seed43",
+      "variant": "full_dr",
+      "training_seed": 43,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 21.954191373825072,
+      "last_50_update_mean_return": 21.570684600830077,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "full_dr_seed44",
+      "variant": "full_dr",
+      "training_seed": 44,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 21.875906539916993,
+      "last_50_update_mean_return": 21.57670841064453,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "fixed_delay_seed42",
+      "variant": "fixed_delay",
+      "training_seed": 42,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 22.658538375854494,
+      "last_50_update_mean_return": 22.566411541748046,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "fixed_delay_seed43",
+      "variant": "fixed_delay",
+      "training_seed": 43,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 22.81798454284668,
+      "last_50_update_mean_return": 22.599725029754637,
+      "all_logged_losses_finite": true
+    },
+    {
+      "id": "fixed_delay_seed44",
+      "variant": "fixed_delay",
+      "training_seed": 44,
+      "updates": 250,
+      "environment_transitions": 2048000,
+      "first_nonmissing_episode_return_update": 16,
+      "last_10_update_mean_return": 22.881187519073485,
+      "last_50_update_mean_return": 22.596037561416626,
+      "all_logged_losses_finite": true
+    }
+  ],
+  "training_milestone_statistics": {
+    "baseline": [
+      {
+        "update": 25,
+        "environment_transitions": 204800,
+        "window_first_update": 16,
+        "window_last_update": 25,
+        "mean_episode_return": {
+          "mean": 5.711354874769847,
+          "sample_sd_across_training_seeds": 0.09774139538193333,
+          "seed_means": {
+            "42": 5.657059504985809,
+            "43": 5.652814812660218,
+            "44": 5.824190306663513
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0084181084514906,
+          "sample_sd_across_training_seeds": 0.000895914535696289,
+          "seed_means": {
+            "42": 0.008294414260890335,
+            "43": 0.00759046824183315,
+            "44": 0.009369442851748318
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 5.585205477078755,
+          "sample_sd_across_training_seeds": 0.04421283486242688,
+          "seed_means": {
+            "42": 5.551984796524048,
+            "43": 5.568244035243988,
+            "44": 5.635387599468231
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 50,
+        "environment_transitions": 409600,
+        "window_first_update": 41,
+        "window_last_update": 50,
+        "mean_episode_return": {
+          "mean": 11.029574659665426,
+          "sample_sd_across_training_seeds": 0.518853700072149,
+          "seed_means": {
+            "42": 11.428941886901855,
+            "43": 10.443124287605286,
+            "44": 11.216657804489136
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.004890679926223432,
+          "sample_sd_across_training_seeds": 0.0002377276797936467,
+          "seed_means": {
+            "42": 0.00484597631613724,
+            "43": 0.00514758586185053,
+            "44": 0.004678477600682527
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 4.98901858329773,
+          "sample_sd_across_training_seeds": 0.18228441865887599,
+          "seed_means": {
+            "42": 4.793049297332764,
+            "43": 5.020485270023346,
+            "44": 5.153521182537079
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 100,
+        "environment_transitions": 819200,
+        "window_first_update": 91,
+        "window_last_update": 100,
+        "mean_episode_return": {
+          "mean": 17.14099826780955,
+          "sample_sd_across_training_seeds": 0.36380923009330207,
+          "seed_means": {
+            "42": 17.199427613258365,
+            "43": 16.751510553359985,
+            "44": 17.472056636810304
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.001989589989631592,
+          "sample_sd_across_training_seeds": 0.0005751184829853056,
+          "seed_means": {
+            "42": 0.0026439061676501296,
+            "43": 0.0017607376677915454,
+            "44": 0.0015641261334531009
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 3.5967905620733895,
+          "sample_sd_across_training_seeds": 0.17913293482542234,
+          "seed_means": {
+            "42": 3.3981803011894227,
+            "43": 3.646054893732071,
+            "44": 3.7461364912986754
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 150,
+        "environment_transitions": 1228800,
+        "window_first_update": 141,
+        "window_last_update": 150,
+        "mean_episode_return": {
+          "mean": 19.024904117584228,
+          "sample_sd_across_training_seeds": 0.7052286024932164,
+          "seed_means": {
+            "42": 18.676880741119383,
+            "43": 18.56133665084839,
+            "44": 19.83649496078491
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0015380058164494888,
+          "sample_sd_across_training_seeds": 0.000673835428524745,
+          "seed_means": {
+            "42": 0.002315352231526049,
+            "43": 0.0011785490077454597,
+            "44": 0.001120116210076958
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 2.3894202280044556,
+          "sample_sd_across_training_seeds": 0.03702071951766218,
+          "seed_means": {
+            "42": 2.3668140995502474,
+            "43": 2.432143920660019,
+            "44": 2.3693026638031007
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 200,
+        "environment_transitions": 1638400,
+        "window_first_update": 191,
+        "window_last_update": 200,
+        "mean_episode_return": {
+          "mean": 20.19411575317383,
+          "sample_sd_across_training_seeds": 0.8132910598252492,
+          "seed_means": {
+            "42": 19.96392074584961,
+            "43": 19.520733680725098,
+            "44": 21.097692832946777
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0010588793748077781,
+          "sample_sd_across_training_seeds": 0.0003377245647777753,
+          "seed_means": {
+            "42": 0.0014474843580683228,
+            "43": 0.0008363367186393589,
+            "44": 0.0008928170477156528
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 1.3612835150957108,
+          "sample_sd_across_training_seeds": 0.06615659987589995,
+          "seed_means": {
+            "42": 1.3388365745544433,
+            "43": 1.435743026137352,
+            "44": 1.309270944595337
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 250,
+        "environment_transitions": 2048000,
+        "window_first_update": 241,
+        "window_last_update": 250,
+        "mean_episode_return": {
+          "mean": 20.98841561714808,
+          "sample_sd_across_training_seeds": 0.7292082269004034,
+          "seed_means": {
+            "42": 20.55993442583084,
+            "43": 20.574924152374265,
+            "44": 21.830388273239134
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.000593924839728667,
+          "sample_sd_across_training_seeds": 0.00020014549195628302,
+          "seed_means": {
+            "42": 0.0003640359960263595,
+            "43": 0.0007294011296471581,
+            "44": 0.0006883373935124837
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 0.4806640326976776,
+          "sample_sd_across_training_seeds": 0.009353738844522763,
+          "seed_means": {
+            "42": 0.4846454149484634,
+            "43": 0.48736839056015013,
+            "44": 0.46997829258441925
+          },
+          "n_training_seeds": 3
+        }
+      }
+    ],
+    "full_dr": [
+      {
+        "update": 25,
+        "environment_transitions": 204800,
+        "window_first_update": 16,
+        "window_last_update": 25,
+        "mean_episode_return": {
+          "mean": 8.585815324783326,
+          "sample_sd_across_training_seeds": 0.04898498913657291,
+          "seed_means": {
+            "42": 8.606207952499389,
+            "43": 8.621309652328492,
+            "44": 8.529928369522095
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.009583210751879961,
+          "sample_sd_across_training_seeds": 0.001270994523095208,
+          "seed_means": {
+            "42": 0.010762184301856905,
+            "43": 0.00823679392458871,
+            "44": 0.009750654029194266
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 5.75903925259908,
+          "sample_sd_across_training_seeds": 0.022077884367214716,
+          "seed_means": {
+            "42": 5.733579134941101,
+            "43": 5.770642464160919,
+            "44": 5.772896158695221
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 50,
+        "environment_transitions": 409600,
+        "window_first_update": 41,
+        "window_last_update": 50,
+        "mean_episode_return": {
+          "mean": 14.015468636194864,
+          "sample_sd_across_training_seeds": 0.598888126122341,
+          "seed_means": {
+            "42": 14.684689332962035,
+            "43": 13.529945293426515,
+            "44": 13.831771282196044
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.004853143773507327,
+          "sample_sd_across_training_seeds": 0.0003655047684940971,
+          "seed_means": {
+            "42": 0.00525948419701308,
+            "43": 0.004551184235606342,
+            "44": 0.004748762887902558
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 5.361074185371399,
+          "sample_sd_across_training_seeds": 0.07604050260625389,
+          "seed_means": {
+            "42": 5.305211453437805,
+            "43": 5.330339765548706,
+            "44": 5.4476713371276855
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 100,
+        "environment_transitions": 819200,
+        "window_first_update": 91,
+        "window_last_update": 100,
+        "mean_episode_return": {
+          "mean": 19.494977797190348,
+          "sample_sd_across_training_seeds": 0.3200372392839277,
+          "seed_means": {
+            "42": 19.858087310791014,
+            "43": 19.37289946746826,
+            "44": 19.25394661331177
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.002866765739163384,
+          "sample_sd_across_training_seeds": 0.000154272564269733,
+          "seed_means": {
+            "42": 0.003031186580192298,
+            "43": 0.0027251889614854008,
+            "44": 0.002843921675812453
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 4.128414969841639,
+          "sample_sd_across_training_seeds": 0.11218157488857602,
+          "seed_means": {
+            "42": 3.999958657026291,
+            "43": 4.178188455104828,
+            "44": 4.207097797393799
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 150,
+        "environment_transitions": 1228800,
+        "window_first_update": 141,
+        "window_last_update": 150,
+        "mean_episode_return": {
+          "mean": 20.7876980082194,
+          "sample_sd_across_training_seeds": 0.19219109692598113,
+          "seed_means": {
+            "42": 20.736412506103516,
+            "43": 20.62635208129883,
+            "44": 21.00032943725586
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.002744467838589723,
+          "sample_sd_across_training_seeds": 0.0002161122654426739,
+          "seed_means": {
+            "42": 0.002505351031431928,
+            "43": 0.002802204921608791,
+            "44": 0.00292584756272845
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 3.2643326266606647,
+          "sample_sd_across_training_seeds": 0.19204601456325213,
+          "seed_means": {
+            "42": 3.0684224116802215,
+            "43": 3.452265856266022,
+            "44": 3.2723096120357513
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 200,
+        "environment_transitions": 1638400,
+        "window_first_update": 191,
+        "window_last_update": 200,
+        "mean_episode_return": {
+          "mean": 21.412718308766685,
+          "sample_sd_across_training_seeds": 0.2532754182100427,
+          "seed_means": {
+            "42": 21.69640064239502,
+            "43": 21.20930046081543,
+            "44": 21.3324538230896
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0023447209113510326,
+          "sample_sd_across_training_seeds": 0.00031988790423384485,
+          "seed_means": {
+            "42": 0.002155667715705931,
+            "43": 0.002714060969883576,
+            "44": 0.0021644340484635906
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 2.4429165160655977,
+          "sample_sd_across_training_seeds": 0.21305649651706593,
+          "seed_means": {
+            "42": 2.2493835628032683,
+            "43": 2.671219366788864,
+            "44": 2.4081466186046603
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 250,
+        "environment_transitions": 2048000,
+        "window_first_update": 241,
+        "window_last_update": 250,
+        "mean_episode_return": {
+          "mean": 21.830745316187542,
+          "sample_sd_across_training_seeds": 0.1511735436591922,
+          "seed_means": {
+            "42": 21.662138034820558,
+            "43": 21.954191373825072,
+            "44": 21.875906539916993
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.002146921636691938,
+          "sample_sd_across_training_seeds": 0.0003216032377445853,
+          "seed_means": {
+            "42": 0.0019669588730903344,
+            "43": 0.0025182190246414394,
+            "44": 0.00195558701234404
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 1.8411961156129837,
+          "sample_sd_across_training_seeds": 0.23391561439900962,
+          "seed_means": {
+            "42": 1.5865770554542542,
+            "43": 2.046565656661987,
+            "44": 1.8904456347227097
+          },
+          "n_training_seeds": 3
+        }
+      }
+    ],
+    "fixed_delay": [
+      {
+        "update": 25,
+        "environment_transitions": 204800,
+        "window_first_update": 16,
+        "window_last_update": 25,
+        "mean_episode_return": {
+          "mean": 8.837559855779013,
+          "sample_sd_across_training_seeds": 0.12710597018938763,
+          "seed_means": {
+            "42": 8.699381318092346,
+            "43": 8.86380117893219,
+            "44": 8.9494970703125
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.009815920031784723,
+          "sample_sd_across_training_seeds": 0.0018874487027036061,
+          "seed_means": {
+            "42": 0.011898963362909853,
+            "43": 0.008219276338350028,
+            "44": 0.009329520394094288
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 5.796261464754741,
+          "sample_sd_across_training_seeds": 0.015863395522795604,
+          "seed_means": {
+            "42": 5.811256809234619,
+            "43": 5.797874338626862,
+            "44": 5.779653246402741
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 50,
+        "environment_transitions": 409600,
+        "window_first_update": 41,
+        "window_last_update": 50,
+        "mean_episode_return": {
+          "mean": 14.69499488512675,
+          "sample_sd_across_training_seeds": 0.9774579444580431,
+          "seed_means": {
+            "42": 15.74580983543396,
+            "43": 13.812845222473145,
+            "44": 14.526329597473145
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.004826951275269191,
+          "sample_sd_across_training_seeds": 0.0005956954733275041,
+          "seed_means": {
+            "42": 0.004303570028860122,
+            "43": 0.005475174109451473,
+            "44": 0.004702109687495976
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 5.379938449859619,
+          "sample_sd_across_training_seeds": 0.2215577203052582,
+          "seed_means": {
+            "42": 5.141155893802643,
+            "43": 5.578859543800354,
+            "44": 5.41979991197586
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 100,
+        "environment_transitions": 819200,
+        "window_first_update": 91,
+        "window_last_update": 100,
+        "mean_episode_return": {
+          "mean": 20.29323335647583,
+          "sample_sd_across_training_seeds": 0.5887786915733946,
+          "seed_means": {
+            "42": 20.896765106201173,
+            "43": 19.720409521102905,
+            "44": 20.262525442123412
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0021963052868765468,
+          "sample_sd_across_training_seeds": 0.00042097857906881473,
+          "seed_means": {
+            "42": 0.0022391223954036834,
+            "43": 0.0017555544077185914,
+            "44": 0.002594239057507366
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 4.126754093170166,
+          "sample_sd_across_training_seeds": 0.4025841106082117,
+          "seed_means": {
+            "42": 3.6981982827186584,
+            "43": 4.497009253501892,
+            "44": 4.185054743289948
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 150,
+        "environment_transitions": 1228800,
+        "window_first_update": 141,
+        "window_last_update": 150,
+        "mean_episode_return": {
+          "mean": 21.72452803293864,
+          "sample_sd_across_training_seeds": 0.10563057211947142,
+          "seed_means": {
+            "42": 21.84176675796509,
+            "43": 21.636768856048583,
+            "44": 21.695048484802246
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0018976999850322802,
+          "sample_sd_across_training_seeds": 6.447951449825416e-05,
+          "seed_means": {
+            "42": 0.0018656462180661037,
+            "43": 0.0018555287172785028,
+            "44": 0.0019719250197522344
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 3.1861982560157776,
+          "sample_sd_across_training_seeds": 0.42429528954539364,
+          "seed_means": {
+            "42": 2.73831546664238,
+            "43": 3.5821200215816495,
+            "44": 3.238159279823303
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 200,
+        "environment_transitions": 1638400,
+        "window_first_update": 191,
+        "window_last_update": 200,
+        "mean_episode_return": {
+          "mean": 22.34505847295125,
+          "sample_sd_across_training_seeds": 0.2119845634899779,
+          "seed_means": {
+            "42": 22.589166717529295,
+            "43": 22.20732542037964,
+            "44": 22.238683280944823
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0018371467102163781,
+          "sample_sd_across_training_seeds": 0.0001767119873468871,
+          "seed_means": {
+            "42": 0.0020195582829182967,
+            "43": 0.0018251346109900623,
+            "44": 0.0016667472367407755
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 2.4132950031757354,
+          "sample_sd_across_training_seeds": 0.5242499071778235,
+          "seed_means": {
+            "42": 2.0032902455329893,
+            "43": 3.0039916121959687,
+            "44": 2.2326031517982483
+          },
+          "n_training_seeds": 3
+        }
+      },
+      {
+        "update": 250,
+        "environment_transitions": 2048000,
+        "window_first_update": 241,
+        "window_last_update": 250,
+        "mean_episode_return": {
+          "mean": 22.78590347925822,
+          "sample_sd_across_training_seeds": 0.11473907889103357,
+          "seed_means": {
+            "42": 22.658538375854494,
+            "43": 22.81798454284668,
+            "44": 22.881187519073485
+          },
+          "n_training_seeds": 3
+        },
+        "value_function": {
+          "mean": 0.0015817108849296346,
+          "sample_sd_across_training_seeds": 0.00018123202999352587,
+          "seed_means": {
+            "42": 0.0017408905585762113,
+            "43": 0.0016197706223465501,
+            "44": 0.0013844714738661423
+          },
+          "n_training_seeds": 3
+        },
+        "entropy": {
+          "mean": 1.8019123949607212,
+          "sample_sd_across_training_seeds": 0.61878988221013,
+          "seed_means": {
+            "42": 1.4604580098390578,
+            "43": 2.516199699640274,
+            "44": 1.429079475402832
+          },
+          "n_training_seeds": 3
+        }
+      }
+    ]
+  },
+  "late_training_return_change": {
+    "baseline": {
+      "update200_trailing10_mean": 20.19411575317383,
+      "update250_trailing10_mean": 20.98841561714808,
+      "change": 0.7942998639742491,
+      "relative_change_percent": 3.93332331894459
+    },
+    "full_dr": {
+      "update200_trailing10_mean": 21.412718308766685,
+      "update250_trailing10_mean": 21.830745316187542,
+      "change": 0.4180270074208572,
+      "relative_change_percent": 1.9522369901523
+    },
+    "fixed_delay": {
+      "update200_trailing10_mean": 22.34505847295125,
+      "update250_trailing10_mean": 22.78590347925822,
+      "change": 0.44084500630696866,
+      "relative_change_percent": 1.9728970807599928
+    }
+  },
+  "evaluation_primary_statistics": {
+    "name": "velocity_x_rmse_m_s",
+    "units": "m/s",
+    "definition": "Per-episode RMS instantaneous world-frame forward velocity error relative to 0.10 m/s, sampled at 50 Hz; then aggregated as described above.",
+    "seed_order": [
+      42,
+      43,
+      44
+    ],
+    "nominal": {
+      "baseline": {
+        "mean": 0.04835817965795286,
+        "sample_sd": 0.011409598136084763,
+        "seed_means": [
+          0.06117102375719696,
+          0.044607355317566544,
+          0.03929615989909507
+        ]
+      },
+      "full_dr": {
+        "mean": 0.062173450307454914,
+        "sample_sd": 0.003002126259048608,
+        "seed_means": [
+          0.058706921845441684,
+          0.06389457403565757,
+          0.06391885504126549
+        ]
+      },
+      "fixed_delay": {
+        "mean": 0.10036569179889436,
+        "sample_sd": 0.006137271856594512,
+        "seed_means": [
+          0.09340681839967147,
+          0.10500558814965189,
+          0.10268466884735972
+        ]
+      }
+    },
+    "randomized": {
+      "baseline": {
+        "mean": 0.06943441320133086,
+        "sample_sd": 0.005564758465484315,
+        "seed_means": [
+          0.07522793984389864,
+          0.06894447840750217,
+          0.06413082135259174
+        ]
+      },
+      "full_dr": {
+        "mean": 0.03747506906317236,
+        "sample_sd": 0.0017217166844990508,
+        "seed_means": [
+          0.0356678963144077,
+          0.03766108778654598,
+          0.03909622308856342
+        ]
+      },
+      "fixed_delay": {
+        "mean": 0.041718529173522256,
+        "sample_sd": 0.0023835781107161666,
+        "seed_means": [
+          0.04227266761881765,
+          0.0437762281508185,
+          0.03910669175093062
+        ]
+      }
+    }
+  },
+  "evaluation_primary_paired_differences": {
+    "definition": "full_dr minus comparator, paired by training seed in order [42,43,44]; negative favors full_dr.",
+    "nominal": {
+      "versus_baseline": {
+        "per_seed": [
+          -0.0024641019117552787,
+          0.019287218718091026,
+          0.024622695142170414
+        ],
+        "mean": 0.013815270649502054,
+        "sample_sd": 0.01434852972987617
+      },
+      "versus_fixed_delay": {
+        "per_seed": [
+          -0.03469989655422978,
+          -0.041111014113994315,
+          -0.03876581380609423
+        ],
+        "mean": -0.03819224149143944,
+        "sample_sd": 0.0032438165779501353
+      }
+    },
+    "randomized": {
+      "versus_baseline": {
+        "per_seed": [
+          -0.03956004352949094,
+          -0.0312833906209562,
+          -0.025034598264028318
+        ],
+        "mean": -0.031959344138158485,
+        "sample_sd": 0.007286276477601658
+      },
+      "versus_fixed_delay": {
+        "per_seed": [
+          -0.006604771304409951,
+          -0.00611514036427252,
+          -1.0468662367202342e-05
+        ],
+        "mean": -0.004243460110349891,
+        "sample_sd": 0.003674043693725743
+      }
+    }
+  },
+  "evaluation_summary_evidence": {
+    "cases": 18,
+    "episodes_per_case": 128,
+    "total_episodes": 2304,
+    "independent_training_seeds_per_variant": 3,
+    "zero_observed_falls": true,
+    "all_episodes_10_seconds": true,
+    "paired_initial_states_and_domains_verified": true,
+    "common_evaluation_variant": "full_dr for every policy",
+    "development_seed_excluded": 2042,
+    "evaluation_seeds": [
+      3042,
+      4042
+    ]
+  },
+  "captions_zh": {
+    "training_return": "训练回报：每个日志点为最近100个已完成回合的平均回报，再取10次更新的后向滑动平均。实线为三个训练种子的均值，阴影为样本标准差；各组训练动力学不同，不能用曲线高低直接判定泛化能力。前15次更新尚无完整回合，按缺失值处理。",
+    "training_timing": "三组在前100次更新（约0.819百万环境转移）提升明显，150次更新后增益放缓；200至250次更新仍有提升。本图说明学习进展，不能证明达到最优策略或给出严格收敛时间。",
+    "value_loss": "价值损失反映评论器对持续变化的回报目标的拟合误差。它整体下降，但跨训练分布的损失大小不能直接代表行走质量，也不要求单调下降。",
+    "entropy": "策略熵随训练下降，表示训练时采样动作的分布逐渐收窄。熵仍是训练诊断量，不能单独证明稳定性或鲁棒性；正式评测使用确定性均值动作。",
+    "evaluation_primary": "共同评测环境中的前向速度跟踪误差：每个最终策略先汇总128个配对回合，再计算三个训练种子的均值与样本标准差。点代表训练种子，误差条不是置信区间；数值越低越好。",
+    "randomized_benefit": "随机化条件下，完整DR的前向速度RMSE为0.03748±0.00172 m/s，基线为0.06943±0.00556 m/s，平均降低46.03%，三个训练种子均改善。",
+    "delay_ablation": "完整DR与固定时延DR比较：随机化条件下平均RMSE降低10.17%；种子42、43改善，种子44几乎持平。因此时延/响应随机变化的额外收益较小，三个种子并不支持强普遍性结论。",
+    "nominal_tradeoff": "完整DR存在标称性能取舍：标称RMSE由基线0.04836增加至0.06217 m/s，平均增加28.57%。训练随机化条件下更稳健，并不意味着在所有条件下都更优。",
+    "training_vs_evaluation": "末段训练回报排序为固定时延DR、完整DR、基线；随机化独立评测的速度RMSE排序则为完整DR、固定时延DR、基线。训练回报受采样策略和训练分布影响，最终比较应以共同条件下的独立评测为准。",
+    "smoothness": "平滑性使用50 Hz控制采样下的目标变化率、目标加速度和实际关节速度差分加速度RMS；这些是运动代理指标，不是抖动百分比或抖动事件率。它们包含正常步态运动，未分离高频抖动，也不是jerk。",
+    "smoothness_result": "随机化条件下，完整DR的目标变化率RMS从3.13升至4.19 rad/s，目标加速度RMS从109.62升至133.24 rad/s²，三个种子均上升。实际关节加速度平均略降，但种子43上升，因此不能称为整体更平滑。",
+    "falls": "全部2304个评测回合均运行10秒且未跌倒。此结果只能说明本次测试未观察到跌倒，不能证明跌倒风险为零，也不能据此宣称DR降低跌倒率。",
+    "distance": "任务目标是跟踪0.10 m/s，10秒对应1.00 m；前进更远不自动代表更好。位移与速度RMSE应同时解读。",
+    "scope": "结果来自本地参考仿真、训练范围内的新评测随机种子；不等同于官方评分，也未验证实机或范围外动力学。"
+  },
+  "key_findings_zh": [
+    "三组回报均持续学习；后期增益放缓，但训练预算结束时仍有提升，不能标注为已证明收敛。",
+    "末10次更新训练回报均值±种子标准差：基线20.988±0.729，完整DR21.831±0.151，固定时延DR22.786±0.115。此排序不是泛化排名。",
+    "完整DR在随机化独立评测中相对基线的主指标改善在三个种子方向一致；它同时牺牲部分标称条件的速度跟踪表现。",
+    "完整DR相对固定时延DR的额外收益由两个种子贡献，第三个种子基本持平，应作为有限规模的消融证据。",
+    "完整DR的目标变化率与目标加速度均增加；实际关节加速度改善并非跨种子一致。不能报告为全面降低抖动。",
+    "全组零跌倒构成指标的地板效应，不能支持方法间跌倒率改善结论。"
+  ],
+  "wording_to_avoid_zh": [
+    "已经收敛到最优策略",
+    "训练奖励最高所以最鲁棒",
+    "抖动率降低",
+    "三个训练种子都明显优于固定时延组",
+    "零跌倒证明风险为零",
+    "2304个独立训练重复",
+    "更远即任务更好",
+    "官方评分提高或实机性能已经验证"
+  ],
+  "limitations": [
+    "Only three independent training seeds per method; 2304 episodes are not 2304 independent training replicates.",
+    "Baseline versus full DR compares a package that includes broader initialization and changed mean actuator dynamics.",
+    "Full DR versus fixed-delay DR compares joint variation of lag and delay at matched parameter centers; it does not separately identify lag and delay effects.",
+    "Evaluation uses held-out seeds within training parameter ranges, not out-of-distribution dynamics.",
+    "This is a local reference simulation study; it is not the official course score and does not establish hardware performance.",
+    "The seed-42 baseline and full-DR training runs were reused as declared; development evaluation seed 2042 was excluded from this study's formal evaluation.",
+    "Derivative diagnostics are sampled at 50 Hz and do not characterize physics-rate peaks or mechanical energy efficiency.",
+    "训练回报已经包含最近100回合平均，绘图又进行10次更新平滑；时间点之间相关，平滑不能用于推断统计显著性。",
+    "训练回合使用随机采样动作，并可能跨越策略更新；正式评测固定最终检查点并使用确定性动作，二者数值不应视为相同评测。",
+    "本报告描述样本内的种子差异，未进行预先指定的显著性检验，不能把较小标准差解释为普遍稳定性证明。"
+  ]
+}

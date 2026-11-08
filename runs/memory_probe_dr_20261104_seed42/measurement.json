@@ -1,0 +1,194 @@
+{
+  "status": "completed",
+  "command": [
+    "/home/ubuntu/miniforge3/bin/conda",
+    "run",
+    "-n",
+    "env_isaaclab",
+    "--no-capture-output",
+    "/home/ubuntu/miniforge3/envs/env_isaaclab/bin/python",
+    "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42/profile_training.py",
+    "--num-envs",
+    "256",
+    "--iterations",
+    "20",
+    "--steps-per-env",
+    "32",
+    "--eval-episodes",
+    "1",
+    "--seed",
+    "42",
+    "--skip-baseline",
+    "--run-dir",
+    "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42"
+  ],
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "sample_interval_requested_s": 0.1,
+  "before": {
+    "device_used_bytes": 13086621696,
+    "device_total_bytes": 25757220864,
+    "processes": {
+      "1264663": {
+        "bytes": 11905531904,
+        "contexts": [
+          "compute"
+        ]
+      },
+      "703055": {
+        "bytes": 107692032,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "930742": {
+        "bytes": 326918144,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "931105": {
+        "bytes": 61882368,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "451456": {
+        "bytes": 44777472,
+        "contexts": [
+          "graphics"
+        ]
+      }
+    }
+  },
+  "started_at_unix": 1793788019.2034314,
+  "scope": "Headless domain-randomized PPO, 256 environments, 20 updates, 32 steps/env; separate post-training evaluation.",
+  "method": "NVML per-process total GPU memory; compute/graphics contexts deduplicated by PID using max, not sum.",
+  "files_sha256": {
+    "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42/measure.py": "8ace42dcebe3ef5440fad7ef512d4afebde2ff9f0e87f2e075ca63b0f1f6c7f7",
+    "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42/profile_training.py": "aab691fbe1b006f0d8e5cffc3cca34fe99dd3e8ec9da8b8e87f34f3110e4fbe5",
+    "/home/ywwang/sesame/scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01"
+  },
+  "exit_code": 0,
+  "training_status": "completed",
+  "training_pid": [
+    2394912
+  ],
+  "samples": 701,
+  "effective_mean_sample_interval_s": 0.100116446018219,
+  "maximum_sample_gap_s": 0.10019850730895996,
+  "peaks": {
+    "overall": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788042.5329263,
+      "phase": "training",
+      "pid": 2394912
+    },
+    "initialization": {
+      "bytes": 2698514432,
+      "MiB": 2573.50390625,
+      "GiB": 2.5131874084472656,
+      "timestamp": 1793788025.6133156,
+      "phase": "initialization",
+      "pid": 2394912
+    },
+    "training": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788042.5329263,
+      "phase": "training",
+      "pid": 2394912
+    },
+    "checkpoint_and_reload": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788044.2350407,
+      "phase": "checkpoint_and_reload",
+      "pid": 2394912
+    },
+    "evaluation_nominal_zero_residual": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788044.4352818,
+      "phase": "evaluation_nominal_zero_residual",
+      "pid": 2394912
+    },
+    "evaluation_nominal_dr_ppo": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788054.1460357,
+      "phase": "evaluation_nominal_dr_ppo",
+      "pid": 2394912
+    },
+    "evaluation_randomized_zero_residual": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788066.1597424,
+      "phase": "evaluation_randomized_zero_residual",
+      "pid": 2394912
+    },
+    "evaluation_randomized_dr_ppo": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793788076.371306,
+      "phase": "evaluation_randomized_dr_ppo",
+      "pid": 2394912
+    }
+  },
+  "after": {
+    "device_used_bytes": 13086621696,
+    "device_total_bytes": 25757220864,
+    "processes": {
+      "1264663": {
+        "bytes": 11905531904,
+        "contexts": [
+          "compute"
+        ]
+      },
+      "703055": {
+        "bytes": 107692032,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "930742": {
+        "bytes": 326918144,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "931105": {
+        "bytes": 61882368,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "451456": {
+        "bytes": 44777472,
+        "contexts": [
+          "graphics"
+        ]
+      }
+    }
+  },
+  "finished_at_unix": 1793788089.2873182,
+  "completed_training_iterations": 20,
+  "environment_transitions_total": 163840,
+  "limits": "Sampled maximum of this short run, not the historical 250-update peak. Sub-interval spikes may be missed.",
+  "pytorch": {
+    "pid": 2394912,
+    "phase": "training",
+    "seconds": 18.102866373956203,
+    "peak_allocated_bytes": 35018752,
+    "peak_reserved_bytes": 39845888,
+    "final_allocated_bytes": 21377536,
+    "final_reserved_bytes": 39845888
+  }
+}

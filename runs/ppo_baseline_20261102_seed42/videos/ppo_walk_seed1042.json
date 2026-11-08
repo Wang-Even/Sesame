@@ -1,0 +1,118 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-11-02T10:16:22.486990+00:00",
+  "checkpoint": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/final.pt",
+  "checkpoint_sha256": "d1a35e95e7bf14458b10c8f324b24e6a65f6382bc51c2bb5fc0c3e88e9cca636",
+  "environment_sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+  "seed": 1042,
+  "num_envs": 1,
+  "fps": 25,
+  "resolution": [
+    1280,
+    720
+  ],
+  "device": "cuda:0",
+  "policy": "deterministic mean action with trained observation normalizers",
+  "scope": "Full unselected live-policy episode; actual Isaac RTX render, not a replay or generated illustration.",
+  "camera": "world-aligned oblique translation-follow camera; does not rotate with body yaw",
+  "visual_only_changes": "non-colliding 0.1m floor grid, world +X arrows, camera and HUD",
+  "comparison_note": "Single rendered environment may differ slightly from the original 256-environment evaluation; no task, robot physics, or policy change.",
+  "training_environment_source_unchanged": true,
+  "initial_root_state_w": [
+    0.0,
+    0.0,
+    0.04899999871850014,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initial_joint_pos_rad": [
+    0.7929110527038574,
+    2.343438148498535,
+    2.3425660133361816,
+    0.7924826145172119,
+    0.013413731940090656,
+    3.139360189437866,
+    3.1415927410125732,
+    0.0
+  ],
+  "video": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/videos/ppo_walk_seed1042.mp4",
+  "thumbnail": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/videos/thumbnail.png",
+  "frames": 250,
+  "video_duration_s": 10.0,
+  "episode": {
+    "env_id": 0,
+    "distance_x_m": 1.2931733131408691,
+    "duration_s": 10.0,
+    "avg_speed_m_s": 0.12931732833385468,
+    "return": 21.813312530517578,
+    "fell": false,
+    "timeout": true,
+    "out_of_bounds": false,
+    "invalid_state": false,
+    "terminal_root_state_w": [
+      1.2931733131408691,
+      0.036496274173259735,
+      0.04773220792412758,
+      0.7357450127601624,
+      0.014787415973842144,
+      -0.013978511095046997,
+      -0.6769527792930603,
+      0.16460956633090973,
+      0.026125013828277588,
+      -0.04860152676701546,
+      -0.06812240928411484,
+      2.4020164012908936,
+      0.04369109496474266
+    ],
+    "terminal_joint_pos": [
+      1.025842308998108,
+      1.8081185817718506,
+      2.9005844593048096,
+      0.200561061501503,
+      0.0005627357750199735,
+      3.1413862705230713,
+      3.139204502105713,
+      -5.1891125622205436e-05
+    ]
+  },
+  "encoder": "h264_nvenc",
+  "wall_seconds_before_shutdown": 176.23372250050306,
+  "finished_at_utc": "2026-11-02T10:19:18.750701+00:00",
+  "terminal_heading_deg": -85.23442561521794,
+  "video_sha256": "d180fbfa2d1291602c018cf4847207b01ce5496388c532948c21f711a954c67e",
+  "validation": {
+    "process_exit_code": 0,
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "25/1",
+          "duration": "10.000000",
+          "nb_frames": "250"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "5145802"
+      }
+    },
+    "visually_inspected": [
+      "frame_0000.png",
+      "thumbnail.png",
+      "last_frame.png"
+    ],
+    "visual_result": "Robot fully visible; actual rendered mesh, floor grid and HUD readable; turning remains visible with world-aligned camera.",
+    "remaining_gpu_processes": "493250, 6576 MiB"
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "downloaded_at_utc": "2026-11-02T08:22:26.750778+00:00",
+  "repository_url": "https://github.com/dorianborian/sesame-robot",
+  "archive_url": "https://codeload.github.com/dorianborian/sesame-robot/zip/refs/heads/main",
+  "archive_revision_comment": "f328ed35f5cbcbdd44a5e16e3ec679d2caa00d92",
+  "archive_path": "downloads/sesame-robot-main.zip",
+  "archive_sha256": "df25066d456d81883b5a7f97406901278b19bcbb7643a2059bc507e63ffbdc85",
+  "archive_bytes": 87884909,
+  "destination": "assets/upstream/sesame-robot",
+  "license": "Apache-2.0; see preserved upstream LICENSE",
+  "file_count": 123,
+  "total_extracted_bytes": 118282459,
+  "extension_counts": {
+    ".csv": 4,
+    ".f3z": 1,
+    ".h": 3,
+    ".ino": 2,
+    ".json": 3,
+    ".md": 14,
+    ".png": 75,
+    ".step": 1,
+    ".stl": 15,
+    ".zip": 3,
+    "<none>": 2
+  },
+  "simulation_model_candidates": [],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 50,
+      "sha256": "495b683cd0ce5e26a872e402c6c6d46a4af9bfabc00c4efa941780a3acfee793"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8402,
+      "sha256": "6fc32f731dc47d383ee95b63ebbe9bf3a9ad07f4dc054e46af3ce7dac22c5a10"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 185,
+      "sha256": "2ccd0e751a98b448e27948337761adb688a391b134a9f223960f2f6b156ea9f3"
+    },
+    {
+      "path": "docs/build-guide/README.md",
+      "bytes": 17507,
+      "sha256": "d3480200c6deded78a5a76bff603aec5782b5568894dfa65b6bc2c481694db10"
+    },
+    {
+      "path": "docs/build-guide/assets/all-hardware.png",
+      "bytes": 279040,
+      "sha256": "3bc8c5b52a9f45b4a746ab267e3283b109d2a82be4c9db2692413df825c82c35"
+    },
+    {
+      "path": "docs/build-guide/assets/battery-connector-solder.png",
+      "bytes": 1485060,
+      "sha256": "eae2f872afce5d2f7afb181b517d1a075798bbc9befbefaf9a1189e506d3dbb9"
+    },
+    {
+      "path": "docs/build-guide/assets/display-soldering.png",
+      "bytes": 1577710,
+      "sha256": "5f3559a0ca53863655ef410831f65193f79e13fcf154d8aaf3a59f780cc67d09"
+    },
+    {
+      "path": "docs/build-guide/assets/display-wires.png",
+      "bytes": 123421,
+      "sha256": "a782ef0801e6bba45f6774e523b168d969bb0443960afdf114da04d883a5ef2b"
+    },
+    {
+      "path": "docs/build-guide/assets/dont-mount.png",
+      "bytes": 362292,
+      "sha256": "931e6294c9471046abf41d5614c86d4d0ab800152d074e05f24328d821dae1e0"
+    },
+    {
+      "path": "docs/build-guide/assets/femur-joints.png",
+      "bytes": 433106,
+      "sha256": "c9be8078fcad2600b69b7d219347ae0d38d361472f5278c5638ecd4f49ab9917"
+    },
+    {
+      "path": "docs/build-guide/assets/foot-joints.png",
+      "bytes": 245742,
+      "sha256": "8338b3aaca7079ddb16305a650b84b05e855dde3b618aaae8dfb2f0d007dae8f"
+    },
+    {
+      "path": "docs/build-guide/assets/insert-battery.png",
+      "bytes": 615938,
+      "sha256": "306d09d7fcac4c95752aeebe78beabdff0d595b70431cddb73fab52dfb0a9d62"
+    },
+    {
+      "path": "docs/build-guide/assets/insert-display-enclosed.png",
+      "bytes": 202681,
+      "sha256": "c14523b0eaae723afb181ede1c078bb4878966cb6735f1712cf094e0ef3b5424"
+    },
+    {
+      "path": "docs/build-guide/assets/insert-display.png",
+      "bytes": 385620,
+      "sha256": "7988bea47efead22988a6a761164eb103d992e6f2f65bf7268cef050606a497e"
+    },
+    {
+      "path": "docs/build-guide/assets/insert-frame.png",
+      "bytes": 229712,
+      "sha256": "4b60803a63e408f2f004735e5a739feff085aca48d0eeb2854eee59ea18edc20"
+    },
+    {
+      "path": "docs/build-guide/assets/install-frame-motors.png",
+      "bytes": 324519,
+      "sha256": "2b50991c153b33a6f61d860773a4a0de6692c967bb91854569f49b11bd10c1f2"
+    },
+    {
+      "path": "docs/build-guide/assets/joint-horn-install-2.png",
+      "bytes": 289692,
+      "sha256": "22d068770c4fa12c3811f27da0432e7ee07d92a174b106d84fbf1bfd762af43b"
+    },
+    {
+      "path": "docs/build-guide/assets/joint-horn-install.png",
+      "bytes": 207592,
+      "sha256": "734a1757af86b97c818caec864e70cce48f7335179571d44fecd4792926d3002"
+    },
+    {
+      "path": "docs/build-guide/assets/joints-preassem.png",
+      "bytes": 272880,
+      "sha256": "d763edffae059535faf19db8f971437358fa1a706cb4a8138eb8c9b43c4a2a30"
+    },
+    {
+      "path": "docs/build-guide/assets/press-on-bottom-cover.png",
+      "bytes": 466511,
+      "sha256": "3db31ad27bfb4861753169dbed5014617a6d605cd2ac847c92b420d8d6e2c68c"
+    },
+    {
+      "path": "docs/build-guide/assets/push-on-top-cover.png",
+      "bytes": 662703,
+      "sha256": "c79ebfc3ba815948d63281d144297a68f6749d258dc3efa38f020d503377dd4f"
+    },
+    {
+      "path": "docs/build-guide/assets/reference-configuration.png",
+      "bytes": 344778,
+      "sha256": "ebb22c3adb879e753b7d78abc35b88a6f83976a43c27d65b4db8a9b8bfbbbef6"
+    },
+    {
+      "path": "docs/build-guide/assets/remove-headers.png",
+      "bytes": 501220,
+      "sha256": "c7bd5f7ce621b7338c95c547177e73e6b98093b67028ae5d073d01ecb7bbb119"
+    },
+    {
+      "path": "docs/build-guide/assets/rotate-motor.png",
+      "bytes": 495916,
+      "sha256": "306e4497e189000a7b12cf2d25efb04bc96038cc1d82aaee76ec944d308dd150"
+    },
+    {
+      "path": "docs/build-guide/assets/screw-on-bottom-cover.png",
+      "bytes": 302534,
+      "sha256": "efd8aa639e83d18cdfb5cd91a7ca35988521aacf979a726cad1b7fe506f22bdc"
+    },
+    {
+      "path": "docs/build-guide/assets/secure-distro-board.png",
+      "bytes": 416137,
+      "sha256": "2c140d88d2f6f63fd4ebc5b3c5fe461d4a7d569b7f16b39493feb802d5a7679f"
+    },
+    {
+      "path": "docs/build-guide/assets/secure-distro-boardv2.png",
+      "bytes": 1850117,
+      "sha256": "d6e7b3542183070aecc19767eec9ab2939ef65e6c448a3c999a599a447c1e160"
+    },
+    {
+      "path": "docs/build-guide/assets/secure-electronics.png",
+      "bytes": 597633,
+      "sha256": "2e15ebcfbdc0fa3b5c94c3211469c64f1408991092e7705494793c6dca00d3a0"
+    },
+    {
+      "path": "docs/build-guide/assets/secure-top-cover.png",
+      "bytes": 394630,
+      "sha256": "3f7740315712d7188393eb9f6918fc8e0a93c14e286e493cef473bc9d1e32dad"
+    },
+    {
+      "path": "docs/build-guide/assets/securing-display-enclosed.png",
+      "bytes": 117531,
+      "sha256": "da18cb128028214cebeda13140e9a01ccb78f0bfac723199b14cfb4ce0491353"
+    },
+    {
+      "path": "docs/build-guide/assets/securing-display.png",
+      "bytes": 272300,
+      "sha256": "f2d30de8bc7feac2801d393864c8d62c6be1310d4355aadb828a4641f8433177"
+    },
+    {
+      "path": "docs/build-guide/assets/servo-install-leg.png",
+      "bytes": 412758,
+      "sha256": "81c5ca76c839545ea3d01d471fcc9f97adc0e99717732625ff1469d842e4199b"
+    },
+    {
+      "path": "docs/build-guide/assets/sesame-angle-guide.png",
+      "bytes": 2916391,
+      "sha256": "8360600e5e626ec3d5322b3884468785fa16c218545311e5f803721823cffe98"
+    },
+    {
+      "path": "docs/build-guide/assets/sesame-done.png",
+      "bytes": 2169955,
+      "sha256": "5d72d49683ae4e68434e015b6efc204e1408824707f50765f99163e8ef9278ba"
+    },
+    {
+      "path": "docs/build-guide/assets/switch-insert.png",
+      "bytes": 128104,
+      "sha256": "56aee0b514b6b37d48901443b10120d19e4aa6441650c69953f477b5a874a8bd"
+    },
+    {
+      "path": "docs/build-guide/assets/top-cover-wiring.png",
+      "bytes": 1128271,
+      "sha256": "5495da25eaf2cee5af9c108a479b4c283bb266a695fc779473df2288a8a9dc1d"
+    },
+    {
+      "path": "docs/build-guide/assets/wire-routing.png",
+      "bytes": 1834065,
+      "sha256": "2e7eefceb94a7cfb8b86d3d1dfc9f4f94a63475d3edcdca202b2ff5d2251ca08"
+    },
+    {
+      "path": "docs/build-guide/assets/wire-spot.png",
+      "bytes": 489382,
+      "sha256": "e3c36b887f6c9885b36a204ea7623edfb1d424db2367891943475a121d8d78f6"
+    },
+    {
+      "path": "docs/build-guide/assets/zip-tie-bundles.png",
+      "bytes": 1512903,
+      "sha256": "ea9d1a80a4a085be817fb8f92d1c1b8547c81b4a2d6d66635d3def1bc44bec1b"
+    },
+    {
+      "path": "docs/images/README.md",
+      "bytes": 65,
+      "sha256": "60a4617732f7b020e02efd1f300a239a9216a57f58c6867032d326f58016ee40"
+    },
+    {
+      "path": "docs/images/sesame-topdown.png",
+      "bytes": 4347832,
+      "sha256": "2ad2916eb6724f7bad866921719c745680a57c566968366d3211a0922f6b63d4"
+    },
+    {
+      "path": "docs/images/sesamefaces/bow.png",
+      "bytes": 1776,
+      "sha256": "668c27733f7dff755ce6922469e7f784e336e24f0806bc8a4b1e96f585106f2d"
+    },
+    {
+      "path": "docs/images/sesamefaces/crab.png",
+      "bytes": 1857,
+      "sha256": "fc50fa3b34b9e0644a3ed9d715f3955afd1045d8870c2fa61a0a2cd63b165b82"
+    },
+    {
+      "path": "docs/images/sesamefaces/cute.png",
+      "bytes": 1709,
+      "sha256": "de334978533ceb37a360353c9bfecfb2e6553f6a4b2cb7e2d0148c38cf770cd2"
+    },
+    {
+      "path": "docs/images/sesamefaces/dance.png",
+      "bytes": 1548,
+      "sha256": "a70e55ee9fb010e0c6a3bb8e141d4b38795fc6ff9e1165bae1585e70144aa544"
+    },
+    {
+      "path": "docs/images/sesamefaces/dead.png",
+      "bytes": 1647,
+      "sha256": "acb305ecb9adf779b641398bae9386325a15541f4cd0d8828421eccca9e864b0"
+    },
+    {
+      "path": "docs/images/sesamefaces/defualt.png",
+      "bytes": 1179,
+      "sha256": "dff91ab51639024ef5a62905a6d72ff48f3fc0d3ceab33ffbb3d7fd357b3a381"
+    },
+    {
+      "path": "docs/images/sesamefaces/freaky.png",
+      "bytes": 1704,
+      "sha256": "09c56fee780a60a0964f39ac85c6d6785aab6cd24b2c62ddb3c8fbed439b19c5"
+    },
+    {
+      "path": "docs/images/sesamefaces/point.png",
+      "bytes": 1915,
+      "sha256": "b6b3af15213fdd96d64fd6eab539ab71b51c1240cf29e955cbbae79ec6275b66"
+    },
+    {
+      "path": "docs/images/sesamefaces/pushup.png",
+      "bytes": 1638,
+      "sha256": "9cc6386906f03855c37646980976568b94799af71ab293ec522aa132597974ea"
+    },
+    {
+      "path": "docs/images/sesamefaces/rest.png",
+      "bytes": 1160,
+      "sha256": "fdb233e93e818b61c8720e5c5fbacb8b94d8f1c24cfc3978a56e4b1968d4c639"
+    },
+    {
+      "path": "docs/images/sesamefaces/shake.png",
+      "bytes": 1612,
+      "sha256": "5e7405071a504f0d688410b2f4b7a5e3857bc828d718762ec15e53ac166be8b3"
+    },
+    {
+      "path": "docs/images/sesamefaces/shrug.png",
+      "bytes": 1459,
+      "sha256": "8da003eb75ca1e45d2c5b6eb9fd02c7c8bed0286df3577e512fba2048bfdcbab"
+    },
+    {
+      "path": "docs/images/sesamefaces/stand.png",
+      "bytes": 1665,
+      "sha256": "49e44c3c2dc6a37c96622f6ad16578dfa02ae5b3f0121106939ae3827d930883"
+    },
+    {
+      "path": "docs/images/sesamefaces/stand2.png",
+      "bytes": 1510,
+      "sha256": "47a5b5d573e09569a6d613db84430c3ba53a75e2a2a0c9adcda2fe3d99f0a79a"
+    },
+    {
+      "path": "docs/images/sesamefaces/swim.png",
+      "bytes": 2142,
+      "sha256": "baebdf0bf916bb9a8d02e660d1def712d2fe33cfeaffb640e164f3d75e311f98"
+    },
+    {
+      "path": "docs/images/sesamefaces/walk.png",
+      "bytes": 1861,
+      "sha256": "75c5cd688329088f2b34d9b258b98939905d37520e42a66ea3236576ef59f75e"
+    },
+    {
+      "path": "docs/images/sesamefaces/walk2.png",
+      "bytes": 1444,
+      "sha256": "fd891e0940ea96225af50897fa81f9691457db4dfbfeb944829fc42b2a1485f2"
+    },
+    {
+      "path": "docs/images/sesamefaces/wave.png",
+      "bytes": 1844,
+      "sha256": "94f5f788a3ae2d2f4e36b38cef9d29a17c1fce7d90c7589141c14641c395fa12"
+    },
+    {
+      "path": "docs/images/sesamefaces/worm.png",
+      "bytes": 1673,
+      "sha256": "452f56829ce45c74c99bcbcee827038b982235c09d893b2f80017f58f68cbbbd"
+    },
+    {
+      "path": "docs/wiring-guide/README.md",
+      "bytes": 7412,
+      "sha256": "f31f399ae3b42a782c55cf1dad3e646a9d17066bd557158eabc7abebf5d20fda"
+    },
+    {
+      "path": "docs/wiring-guide/assets/proto-datalines.png",
+      "bytes": 425213,
+      "sha256": "c2fd3c7e639435e086827a6c80b6a9a5f0620b681c309a5772fde9047095d46f"
+    },
+    {
+      "path": "docs/wiring-guide/assets/proto-headers.png",
+      "bytes": 601508,
+      "sha256": "f5278ecdd9fa3f75519d8e88d916fab90bbf6486e3fca953407fc0e3873f1d5a"
+    },
+    {
+      "path": "docs/wiring-guide/assets/proto-power-rails.png",
+      "bytes": 844879,
+      "sha256": "06070696f9ea852520a235b7aaadb5774b91dce260ccaa2173307c8418c85dfa"
+    },
+    {
+      "path": "docs/wiring-guide/assets/wire-managment.png",
+      "bytes": 896291,
+      "sha256": "227311e9347d256b55dd82569dbbcebd47e11546ca9c9bb140cc7ebbce17af6e"
+    },
+    {
+      "path": "docs/wiring-guide/distro-board-wiring-guide.png",
+      "bytes": 293144,
+      "sha256": "bb4a5a515804a2fa0f7aec0704d240fe97596b85b636d4831833f0e10af8d03e"
+    },
+    {
+      "path": "docs/wiring-guide/s2-mini-wiring-guide-new.png",
+      "bytes": 932485,
+      "sha256": "b16fd70d80f6c1aaafaba4db8dde2a0700d890c19bd01e5a99c53425c029a793"
+    },
+    {
+      "path": "firmware/README.md",
+      "bytes": 37336,
+      "sha256": "d7232999c065f38adfeda932fadd0bf277d0f191c768463adb318b7e1b997fd6"
+    },
+    {
+      "path": "firmware/captive-portal.h",
+      "bytes": 33710,
+      "sha256": "f28273df29c4f38cce3005604f883ad161f920ae25168b1a62aa986886a5e8a4"
+    },
+    {
+      "path": "firmware/debugging-firmware/sesame-motor-tester.ino",
+      "bytes": 4227,
+      "sha256": "04f7043de7ba6b24d8346b635720f1d557e3134a8ff8d674e18377c90b974f18"
+    },
+    {
+      "path": "firmware/face-bitmaps.h",
+      "bytes": 297211,
+      "sha256": "722692894402d9eccf5c022ed7b4eb090c2de6b171b7872cedce55609dac1f06"
+    },
+    {
+      "path": "firmware/movement-sequences.h",
+      "bytes": 13903,
+      "sha256": "f77d713703e361dff2458f4fd02356ed397b8f47d83bd7a87587e8f6e899d2f1"
+    },
+    {
+      "path": "firmware/sesame-firmware-main.ino",
+      "bytes": 39969,
+      "sha256": "24a00b44091c686e1a6803028ce3108c95bcf8cc738061ebdb249fe4add96982"
+    },
+    {
+      "path": "hardware/README.md",
+      "bytes": 3105,
+      "sha256": "5f185d45b0ec9facef60f96e253ee175b8e905d1efa8cb5b866e1f79859b90cc"
+    },
+    {
+      "path": "hardware/bom/README.md",
+      "bytes": 7807,
+      "sha256": "04a3a816e0d9891ee0cbb8519f3d5758d8c031685ae472c0a819943adeba6f55"
+    },
+    {
+      "path": "hardware/cad/README.md",
+      "bytes": 1603,
+      "sha256": "65d953b6fe3fb5704de67dd5c983d965a94a62417feae4b0b1a40d65cdab7c97"
+    },
+    {
+      "path": "hardware/cad/Sesame-ESP32-v122.f3z",
+      "bytes": 41557195,
+      "sha256": "0fc4b5190d7a42bdfcd329b09cc6ff7b6b112bdf8f88d1dd67506189fa0f1024"
+    },
+    {
+      "path": "hardware/cad/Sesame-ESP32-v122.step",
+      "bytes": 30977899,
+      "sha256": "b6ae8936df90d85d4d6f6b24ea53bd387bd0508da2090fdbc535227d5feb9be0"
+    },
+    {
+      "path": "hardware/pcb/README.md",
+      "bytes": 11744,
+      "sha256": "19eacc2b57e181a6c5a78c0858d07eefc9a4f85fe4b2d8b0a28fe0190b0e8b4d"
+    },
+    {
+      "path": "hardware/pcb/SDB-layout.png",
+      "bytes": 128044,
+      "sha256": "f6114c830f8ae45cbf0e090219b64b4b6ed71631d9ef094b2f77cf2cba0f5572"
+    },
+    {
+      "path": "hardware/pcb/distro-v1/Gerber_Sesame-Distro-Board_PCB_Sesame-Distro-Board_V1.zip",
+      "bytes": 55328,
+      "sha256": "f36a5163d4f549e06139f6cd00404fa8b38da94682bd7f9896c5d4411ac97d4d"
+    },
+    {
+      "path": "hardware/pcb/distro-v1/Schematic_Sesame-Distro-Board.png",
+      "bytes": 324113,
+      "sha256": "658242236b023bbe72472b8cef429c1338351740e6ee4be32023432d713a23fe"
+    },
+    {
+      "path": "hardware/pcb/distro-v2/BOM_Sesame-Distro-V2.csv",
+      "bytes": 4774,
+      "sha256": "6c693ec1e33f4e63e49074ec61aa23bf91783cc53676a982a8aeaebc7c57e93d"
+    },
+    {
+      "path": "hardware/pcb/distro-v2/Gerber_Sesame-Distro-V2_PCB.zip",
+      "bytes": 84041,
+      "sha256": "cea635b45571f4e14dcf9bb1741be6080f80956660c001f43287ccf7642076e1"
+    },
+    {
+      "path": "hardware/pcb/distro-v2/PickAndPlace_PCB_Sesame-Distro-V2.csv",
+      "bytes": 8604,
+      "sha256": "a4023587be3f64c360dc6f0f01380bfe956e59163290fca8b1d1b09ac39f1341"
+    },
+    {
+      "path": "hardware/pcb/distro-v2/SCH_Sesame-Distro-Board-V2_2026-03-06.json",
+      "bytes": 109711,
+      "sha256": "4f744d8d68de27c541132b04c593d908f88d1318691578dd8901451bce12608a"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/BOM_Sesame-Distro-Board-V3.1.csv",
+      "bytes": 7634,
+      "sha256": "6d5402799bf9796ecd1e932baefc5cfddbd2577f68037855b8b1a341e21b91c6"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/Gerber_Sesame-Distro-Board-V3.1.zip",
+      "bytes": 100889,
+      "sha256": "27c1430f1984e6e8df4cbe888208b15b2216912aa32ff6c1886d7f4eb942fec1"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/PCB_PCB_Sesame-Distro-Board-V3.1.json",
+      "bytes": 792466,
+      "sha256": "34d77ecb9f882948126c3a535145033a2a3d26c252df27720353eb37b8c2665a"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/PickAndPlace_PCB_Sesame-Distro-Board-V3.1.csv",
+      "bytes": 12768,
+      "sha256": "a96ea138f8f17ea8db211ed3bd362e43fed9aea4bed236721d50da1bd02567d0"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/SCH_Sesame-Distro-Board-V3.1.json",
+      "bytes": 148326,
+      "sha256": "bab5c6aab26ffd663532222ff2f87eb81a8f3b60ec00d023db09c31feea89cad"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/assets/PCB_Sesame-Distro-Board-V3.1.png",
+      "bytes": 232490,
+      "sha256": "17f4fcf25d4b07b542c554264d98258e2b1fcdb34fba1bf32e788471cf7a3e85"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/assets/Schematic_Sesame-Distro-Board-V3.1.png",
+      "bytes": 652697,
+      "sha256": "d4952eaf3ba512f493cae5b0044621cf0cb093d771100d71ff4bab5d9d553445"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/assets/Schematic_Sesame-Distro-Board-V3_2026-05-30.png",
+      "bytes": 602078,
+      "sha256": "e2e99bd55a1baa803dae0856e7c45cd29b344718ef7e60e52eac5bc3cf990559"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/assets/pcb-v3.1-close.png",
+      "bytes": 252078,
+      "sha256": "808b3573493de499e4879664eddc76f7863243ee0ae5d20f31ed63b16b959ffb"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/assets/pcb-v3.1.png",
+      "bytes": 250945,
+      "sha256": "1da69f5f38682b9e24e02f78bcedc4a32059bc46b43ac084fff5e9ff6674ecaf"
+    },
+    {
+      "path": "hardware/pcb/distro-v3.1/assets/pcbv3-fix.png",
+      "bytes": 496222,
+      "sha256": "faa927f62884942916fe852f5c07e6d0d9eb6256b6125508be7c46b3df41bea6"
+    },
+    {
+      "path": "hardware/pcb/pcbs.png",
+      "bytes": 4573277,
+      "sha256": "a59eb385c5ca12730a2963d301137380548ae70ec244c5424b83c6518bf6edda"
+    },
+    {
+      "path": "hardware/printing/README.md",
+      "bytes": 2705,
+      "sha256": "f5f1a3ba9f93b391ad42a7726165a4e44535dfc07865f5fb8248d9f62c25152d"
+    },
+    {
+      "path": "hardware/printing/assets/joints-orientation.png",
+      "bytes": 203465,
+      "sha256": "47196e823811bafefaeb3b31cc435c47c075c443b0815456ba0e6bc96ffae43e"
+    },
+    {
+      "path": "hardware/printing/assets/sliced-topcover.png",
+      "bytes": 308614,
+      "sha256": "4fc08913bacf93ce03f21ce947076c4b956cc5b679c5ffb674ae416080973377"
+    },
+    {
+      "path": "hardware/printing/assets/topcover-supports1.png",
+      "bytes": 69300,
+      "sha256": "f29c8152185e8a642d00aef6fd376e692f4f364814d2fff1cc2bd11351e505e5"
+    },
+    {
+      "path": "hardware/printing/assets/topcover-supports2.png",
+      "bytes": 76588,
+      "sha256": "ee9a6cdd4f513965c38d0da43f290a9d55f6486af767db98773a741a48459b14"
+    },
+    {
+      "path": "hardware/printing/stl/Bottom-Cover-v121.stl",
+      "bytes": 85184,
+      "sha256": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7"
+    },
+    {
+      "path": "hardware/printing/stl/Internal-Frame-v121.stl",
+      "bytes": 389084,
+      "sha256": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916"
+    },
+    {
+      "path": "hardware/printing/stl/L1-v117.stl",
+      "bytes": 359384,
+      "sha256": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558"
+    },
+    {
+      "path": "hardware/printing/stl/L2-v117.stl",
+      "bytes": 383384,
+      "sha256": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf"
+    },
+    {
+      "path": "hardware/printing/stl/L3-v117.stl",
+      "bytes": 102684,
+      "sha256": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3"
+    },
+    {
+      "path": "hardware/printing/stl/L4-v117.stl",
+      "bytes": 91384,
+      "sha256": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470"
+    },
+    {
+      "path": "hardware/printing/stl/R1-v117.stl",
+      "bytes": 379784,
+      "sha256": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871"
+    },
+    {
+      "path": "hardware/printing/stl/R2-v117.stl",
+      "bytes": 378984,
+      "sha256": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c"
+    },
+    {
+      "path": "hardware/printing/stl/R3-v117.stl",
+      "bytes": 105884,
+      "sha256": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e"
+    },
+    {
+      "path": "hardware/printing/stl/R4-v117.stl",
+      "bytes": 94584,
+      "sha256": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a"
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/README.md",
+      "bytes": 615,
+      "sha256": "3020adc7408463721757e6d575fb087db1e69d3c70277de16e66518f1295a498"
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/Top-Cover-Cat-v100.stl",
+      "bytes": 195884,
+      "sha256": "a39dd37f19252db9206afe08d3284c33a3f2fdeea7cfc4ebb1731aae4a231296"
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/Top-Cover-Enclosed-v117.stl",
+      "bytes": 184184,
+      "sha256": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26"
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/Top-Cover-No-Ears-v100.stl",
+      "bytes": 143284,
+      "sha256": "70a7235d26dc84995b86ff701ae40cdaa83eedf0592de8027239995f595c7f16"
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/hats/magnetic-chainsaw-hat.stl",
+      "bytes": 55484,
+      "sha256": "63893f2010ff33bbfda0b8cb384c7b8be067bf80fee1cee03f23f4917107c961"
+    },
+    {
+      "path": "hardware/printing/stl/top-covers/hats/magnetic-modular-mount-hat.stl",
+      "bytes": 87284,
+      "sha256": "562f8246784666ea26f0a12b69ecff1e3d97d72603a7687ab778f58ebe2de3a6"
+    },
+    {
+      "path": "motor-testing/README.md",
+      "bytes": 1751,
+      "sha256": "7e41e7fd9fd5c383a34a79f9a1d0eb955afa7ead2758f22407412aa6d8884336"
+    },
+    {
+      "path": "motor-testing/how to open searial monitor arudinoide.png",
+      "bytes": 292587,
+      "sha256": "28d6546b518bd102d5a4c40fafcdbf0e5e64604a92207822fd8981f2fc1f6b7c"
+    },
+    {
+      "path": "software/README.md",
+      "bytes": 1663,
+      "sha256": "b0ee2c96a32c56036f2a6355206aeb148516197b5994345b582f1d9b94002b2c"
+    }
+  ]
+}

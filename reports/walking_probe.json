@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "scope": "GPU standing contact and action/reset integration; no learned policy",
+  "contact_setup": {
+    "deinstanced_collision_groups": [
+      "/World/envs/env_0/Robot/base/collisions",
+      "/World/envs/env_0/Robot/l1_link/collisions",
+      "/World/envs/env_0/Robot/l3_link/collisions",
+      "/World/envs/env_0/Robot/l2_link/collisions",
+      "/World/envs/env_0/Robot/l4_link/collisions",
+      "/World/envs/env_0/Robot/r1_link/collisions",
+      "/World/envs/env_0/Robot/r3_link/collisions",
+      "/World/envs/env_0/Robot/r2_link/collisions",
+      "/World/envs/env_0/Robot/r4_link/collisions"
+    ],
+    "robot_colliders": [
+      {
+        "path": "/World/envs/env_0/Robot/base/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/l1_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/l3_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/l2_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/l4_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/r1_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/r3_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/r2_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      },
+      {
+        "path": "/World/envs/env_0/Robot/r4_link/collisions",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0,
+        "physics_material": "/World/RobotContactMaterial"
+      }
+    ],
+    "ground_colliders": [
+      {
+        "path": "/World/Ground/geometry/mesh",
+        "contact_offset": 0.0010000000474974513,
+        "rest_offset": 0.0
+      }
+    ],
+    "visual_instances_preserved": true
+  },
+  "standing": {
+    "steps": 500,
+    "num_envs": 16,
+    "fall_terminations": 0,
+    "timeout_terminations": 16,
+    "min_height_m": 0.04693226516246796,
+    "max_height_m": 0.04899999871850014,
+    "min_upright": 1.0,
+    "mean_return": 9.010948181152344,
+    "snapshots": [
+      {
+        "step": 1,
+        "base_xyz_first_env": [
+          3.750006675720215,
+          -3.74996280670166,
+          0.046932291239500046
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 0
+      },
+      {
+        "step": 25,
+        "base_xyz_first_env": [
+          3.750011682510376,
+          -3.749957323074341,
+          0.04694432020187378
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 0
+      },
+      {
+        "step": 50,
+        "base_xyz_first_env": [
+          3.750011444091797,
+          -3.749957799911499,
+          0.046944305300712585
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 0
+      },
+      {
+        "step": 100,
+        "base_xyz_first_env": [
+          3.750011682510376,
+          -3.7499582767486572,
+          0.04694431275129318
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 0
+      },
+      {
+        "step": 250,
+        "base_xyz_first_env": [
+          3.7500112056732178,
+          -3.749958038330078,
+          0.046944305300712585
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 0
+      },
+      {
+        "step": 499,
+        "base_xyz_first_env": [
+          3.750011444091797,
+          -3.7499582767486572,
+          0.04694431647658348
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 0
+      },
+      {
+        "step": 500,
+        "base_xyz_first_env": [
+          3.75,
+          -3.75,
+          0.04899999871850014
+        ],
+        "upright_first_env": 1.0,
+        "falls": 0,
+        "timeouts": 16
+      }
+    ]
+  },
+  "random_actions": {
+    "steps": 32,
+    "finite_states": true,
+    "fall_terminations": 0
+  },
+  "joint_order_isaac": [
+    "L1",
+    "L2",
+    "R1",
+    "R2",
+    "L3",
+    "L4",
+    "R3",
+    "R4"
+  ],
+  "observation_shape": {
+    "policy": [
+      16,
+      36
+    ]
+  }
+}

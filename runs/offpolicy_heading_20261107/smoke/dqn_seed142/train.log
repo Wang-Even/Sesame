@@ -1,0 +1,112 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[Info] [carb] Logging to file: /home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/isaac.log
+2026-11-06 18:14:33 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-06 18:14:33 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-06 18:14:33 [268ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-06 18:14:33 [367ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-06 18:14:33 [368ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-06 18:14:33 [368ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-06 18:14:33 [368ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-06 18:14:33 [368ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-06 18:14:33 [368ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-06 18:14:33 [368ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+2026-11-06 18:14:34 [488ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-11-06 18:14:34 [584ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.07    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090 D        | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2685      | 797f5e3a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 20.04.6 LTS (Focal Fossa) ubuntu, Version: 20.04.6, Kernel: 5.15.0-139-generic
+| Processor: 12th Gen Intel(R) Core(TM) i5-12600KF
+| Cores: 10 | Logical Cores: 10
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31876 | Free Memory: 4184
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 17592186044413
+|---------------------------------------------------------------------------------------------|
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-07_02-14-35.log
+[33m02:14:35 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 142
+	Physics step-size     : 0.002
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:14:35 [2,231ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO]: Time taken for scene creation : 0.302307 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 16
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m02:14:36 [articulation.py] WARNING: Spatial tendons are not supported in Isaac Sim < 5.0: patching spatial-tendon getter and setter to use dummy value[0m
+[INFO]: Time taken for simulation start : 0.460870 seconds
+[INFO]: Completed setting up the environment...
+dqn seed=142 transitions=512/16384 updates=0 return=None
+dqn seed=142 transitions=1024/16384 updates=64 return=None
+dqn seed=142 transitions=1536/16384 updates=128 return=None
+dqn seed=142 transitions=2048/16384 updates=192 return=None
+dqn seed=142 transitions=2560/16384 updates=256 return=None
+dqn seed=142 transitions=3072/16384 updates=320 return=None
+dqn seed=142 transitions=3584/16384 updates=384 return=None
+dqn seed=142 transitions=4096/16384 updates=448 return=None
+dqn seed=142 transitions=4608/16384 updates=512 return=None
+dqn seed=142 transitions=5120/16384 updates=576 return=None
+dqn seed=142 transitions=5632/16384 updates=640 return=None
+dqn seed=142 transitions=6144/16384 updates=704 return=None
+dqn seed=142 transitions=6656/16384 updates=768 return=None
+dqn seed=142 transitions=7168/16384 updates=832 return=None
+dqn seed=142 transitions=7680/16384 updates=896 return=None
+dqn seed=142 transitions=8192/16384 updates=960 return=6.6078676879405975
+dqn seed=142 transitions=8704/16384 updates=1024 return=6.6078676879405975
+dqn seed=142 transitions=9216/16384 updates=1088 return=6.6078676879405975
+dqn seed=142 transitions=9728/16384 updates=1152 return=6.6078676879405975
+dqn seed=142 transitions=10240/16384 updates=1216 return=6.6078676879405975
+dqn seed=142 transitions=10752/16384 updates=1280 return=6.6078676879405975
+dqn seed=142 transitions=11264/16384 updates=1344 return=6.6078676879405975
+dqn seed=142 transitions=11776/16384 updates=1408 return=6.6078676879405975
+dqn seed=142 transitions=12288/16384 updates=1472 return=6.6078676879405975
+dqn seed=142 transitions=12800/16384 updates=1536 return=6.6078676879405975
+dqn seed=142 transitions=13312/16384 updates=1600 return=6.6078676879405975
+dqn seed=142 transitions=13824/16384 updates=1664 return=6.6078676879405975
+dqn seed=142 transitions=14336/16384 updates=1728 return=6.6078676879405975
+dqn seed=142 transitions=14848/16384 updates=1792 return=6.6078676879405975
+dqn seed=142 transitions=15360/16384 updates=1856 return=6.6078676879405975
+dqn seed=142 transitions=15872/16384 updates=1920 return=6.6078676879405975
+dqn seed=142 transitions=16384/16384 updates=1984 return=6.870054975152016
+SESAME_OFFPOLICY_RESULT={"status": "completed", "pid": 3344433, "variant": "dqn", "algorithm": "BranchingDoubleDQN", "train_seed": 142, "seed": 142, "smoke": true, "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142", "args": {"algorithm": "dqn", "seed": 142, "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142", "num_envs": 16, "total_transitions": 16384, "warmup_transitions": 512, "batch_size": 256, "replay_capacity": 32768, "updates_per_vector_step": 2, "smoke": true}, "reward_version": "absolute_heading_v1", "heading_penalty_scale": 0.5, "domain_randomization": true, "fresh_from_scratch": true, "checkpoint_selection": "final only", "reward_scale": 1.0, "git_operations": "disabled", "started_at_utc": "2026-11-06T18:14:32.721548+00:00", "sources": [{"path": "sesame_rl/environment.py", "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "bytes": 20862}, {"path": "sesame_rl/dr_environment.py", "sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476", "bytes": 22356}, {"path": "sesame_rl/study_environment.py", "sha256": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a", "bytes": 11420}, {"path": "sesame_rl/heading_environment.py", "sha256": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a", "bytes": 6185}, {"path": "scripts/train_ppo.py", "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "bytes": 23496}, {"path": "scripts/train_ppo_dr.py", "sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01", "bytes": 26265}, {"path": "scripts/train_ppo_study.py", "sha256": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d", "bytes": 17419}, {"path": "scripts/train_heading_ppo.py", "sha256": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736", "bytes": 21126}, {"path": "scripts/run_heading_ppo_queue.py", "sha256": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73", "bytes": 5985}, {"path": "scripts/probe_heading_reward.py", "sha256": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6", "bytes": 12600}, {"path": "sesame_rl/offpolicy.py", "sha256": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03", "bytes": 26624}, {"path": "sesame_rl/offpolicy_environment.py", "sha256": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8", "bytes": 1135}, {"path": "scripts/train_offpolicy.py", "sha256": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad", "bytes": 18914}], "frozen_sources": {"sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476", "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a", "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a", "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01", "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d", "scripts/train_heading_ppo.py": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736", "scripts/run_heading_ppo_queue.py": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73", "scripts/probe_heading_reward.py": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6"}, "robot_asset_sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7", "reward_config": {"reward_version": "absolute_heading_v1", "base_reward": "All frozen SesameWalkEnv reward components retained unchanged", "new_term": "heading", "heading_penalty_scale": 0.5, "reward_rate_formula": "-scale * (1 - cos(world_yaw - atan2(command_world_y, command_world_x)))", "step_reward_formula": "heading_reward_rate * control_dt_s", "control_dt_s": 0.02, "zero_planar_command": "heading term is exactly zero", "nonfinite_rate": "mapped to zero, consistent with the frozen base reward handling", "target_heading": "world XY velocity-command direction; zero radians for the original +X command", "accounting": "Added once to returned reward, episode return and RewardRate/heading accumulator", "observation_dimension": 36, "action_dimension": 8, "training_physics": "Full domain randomization, unchanged from DR-PPO", "metric_reference": "Inherited study heading metrics remain relative to world +X, matching this fixed +X task"}, "gpu": "NVIDIA GeForce RTX 4090 D", "versions": {"torch": "2.7.0+cu128", "isaaclab": "0.49.0", "isaaclab-rl": "0.4.4", "gymnasium": "1.2.1"}, "training_wall_seconds": 37.72705798409879, "training_torch_memory": {"peak_allocated_bytes": 31271424, "peak_reserved_bytes": 48234496, "scope": "Torch only, includes replay; excludes non-Torch simulator allocations"}, "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/final.pt", "checkpoint_sha256": "38a29a89c154e05e8eca719c98b6bdc218e7220d9484bbc0fcfc97b8454563ab", "environment_transitions_total": 16384, "optimizer_updates": 1984, "reload_max_abs_action_error": 0.0, "transition_validation": {"completed_episodes": 32, "true_terminations": 0, "timeouts": 32, "timeout_action_snapshot_checks": 32, "nonterminal_snapshot_checks": 16352}, "completed_training_episodes": 32, "wall_seconds_before_shutdown": 42.18501686863601, "finished_at_utc": "2026-11-06T18:15:14.906733+00:00"}

@@ -1,0 +1,17 @@
+[Info] [carb] Logging to file: /home/ywwang/sesame/.runtime/kit.log
+2026-11-02 08:23:44 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-02 08:23:44 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-02 08:23:44 [221ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-02 08:23:44 [317ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-02 08:23:44 [317ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-02 08:23:44 [317ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-02 08:23:44 [317ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-02 08:23:44 [317ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-02 08:23:44 [317ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-02 08:23:44 [317ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-02_16-23-46.log
+[33m16:23:46 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+ISAAC_SMOKE_RESULT={"checked_at_utc": "2026-11-02T08:23:43.812005+00:00", "python": "/home/ubuntu/miniforge3/envs/env_isaaclab/bin/python", "requested_device": "cuda:0", "scope": "generic Isaac Lab GPU rigid-body simulation and synthetic CUDA optimizer smoke", "sesame_robot_tested": false, "passed": true, "cuda": {"torch_version": "2.7.0+cu128", "compiled_cuda": "12.8", "gpu": "NVIDIA GeForce RTX 4090 D"}, "app_started": true, "physics": {"simulation_device": "cuda:0", "state_device": "cuda:0", "objects": 16, "steps": 32, "dt": 0.008333333333333333, "initial_mean_height_m": 1.9979562759399414, "final_mean_height_m": 1.594656229019165, "finite_states": true, "gravity_response": true}, "optimizer": {"device": "cuda:0", "loss": 0.3963962197303772, "finite_cuda_gradients": true, "parameters_updated": true, "updates": 1, "data": "synthetic tensors, independent of simulator"}}
+ISAAC_SHUTDOWN_TIMEOUT: check results were saved; exiting this process only

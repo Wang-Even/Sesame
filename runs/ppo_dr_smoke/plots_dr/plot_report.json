@@ -1,0 +1,498 @@
+{
+  "created_at_utc": "2026-11-02T13:20:06.183223+00:00",
+  "run_dir": "/home/ywwang/sesame/runs/ppo_dr_smoke",
+  "run_status_at_read": "completed",
+  "method": "Saved JSON metadata only; no checkpoint loading, model execution, physics or Git.",
+  "training_rows": {
+    "dr_ppo": 1,
+    "baseline_ppo": 250
+  },
+  "evaluation_complete": true,
+  "evaluation": {
+    "nominal": {
+      "matching_initial_states_and_domains": {
+        "zero_residual": true,
+        "baseline_ppo": true,
+        "dr_ppo": true
+      },
+      "metrics": {
+        "zero_residual": {
+          "policy": "zero_residual",
+          "condition": "nominal",
+          "episodes": 16,
+          "seed": 2042,
+          "all_actions_observations_rewards_finite": true,
+          "max_abs_raw_action": 0.0,
+          "raw_action_clipped_fraction": 0.0,
+          "fall_rate": 0.0,
+          "timeout_rate": 1.0,
+          "invalid_state_rate": 0.0,
+          "out_of_bounds_rate": 0.0,
+          "final_heading_gt45deg_fraction": 0,
+          "distance_x_m": {
+            "mean": 2.384185791015625e-07,
+            "std": 1.7720882910839813e-05,
+            "min": -5.0067901611328125e-05,
+            "max": 2.3126602172851562e-05
+          },
+          "avg_speed_m_s": {
+            "mean": 2.3841859153606038e-08,
+            "std": 1.7720882920112736e-06,
+            "min": -5.0067901611328125e-06,
+            "max": 2.312660171810421e-06
+          },
+          "duration_s": {
+            "mean": 10.0,
+            "std": 0.0,
+            "min": 10.0,
+            "max": 10.0
+          },
+          "return": {
+            "mean": 9.013686537742615,
+            "std": 0.012807504085339944,
+            "min": 8.988285064697266,
+            "max": 9.031891822814941
+          },
+          "final_heading_yaw_deg": {
+            "mean": -0.01922037516069242,
+            "std": 0.05721320513961346,
+            "min": -0.1133918657536427,
+            "max": 0.10975390956653822
+          },
+          "max_abs_heading_yaw_deg": {
+            "mean": 0.05174306595243315,
+            "std": 0.03311018065328345,
+            "min": 0.004162299104165255,
+            "max": 0.1138996876503905
+          },
+          "heading_gt45deg_time_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "abs_final_heading_yaw_deg": {
+            "mean": 0.050257442161037884,
+            "std": 0.033420998954178285,
+            "min": 0.0031263154458808593,
+            "max": 0.1133918657536427
+          },
+          "lateral_displacement_m": {
+            "mean": 1.5348196029663086e-06,
+            "std": 2.0960542423501822e-05,
+            "min": -3.0279159545898438e-05,
+            "max": 4.8160552978515625e-05
+          }
+        },
+        "baseline_ppo": {
+          "policy": "baseline_ppo",
+          "condition": "nominal",
+          "episodes": 16,
+          "seed": 2042,
+          "all_actions_observations_rewards_finite": true,
+          "max_abs_raw_action": 3.645294666290283,
+          "raw_action_clipped_fraction": 0.318828125,
+          "fall_rate": 0.0,
+          "timeout_rate": 1.0,
+          "invalid_state_rate": 0.0,
+          "out_of_bounds_rate": 0.0,
+          "final_heading_gt45deg_fraction": 1,
+          "distance_x_m": {
+            "mean": 1.2716593742370605,
+            "std": 0.02857286881003139,
+            "min": 1.2051199674606323,
+            "max": 1.345109224319458
+          },
+          "avg_speed_m_s": {
+            "mean": 0.12716593826189637,
+            "std": 0.002857287471975256,
+            "min": 0.120511993765831,
+            "max": 0.13451091945171356
+          },
+          "duration_s": {
+            "mean": 10.0,
+            "std": 0.0,
+            "min": 10.0,
+            "max": 10.0
+          },
+          "return": {
+            "mean": 21.623094081878662,
+            "std": 0.3613822489439978,
+            "min": 20.85323143005371,
+            "max": 22.27216911315918
+          },
+          "final_heading_yaw_deg": {
+            "mean": -87.19307009760384,
+            "std": 2.6919984212781287,
+            "min": -92.58174570885129,
+            "max": -82.68729462054986
+          },
+          "max_abs_heading_yaw_deg": {
+            "mean": 94.50369263940118,
+            "std": 2.7180471474069092,
+            "min": 91.68822036163021,
+            "max": 103.37026855950738
+          },
+          "heading_gt45deg_time_fraction": {
+            "mean": 0.9063749983906746,
+            "std": 0.03549097095788015,
+            "min": 0.828000009059906,
+            "max": 0.9480000138282776
+          },
+          "abs_final_heading_yaw_deg": {
+            "mean": 87.19307009760384,
+            "std": 2.6919984212781287,
+            "min": 82.68729462054986,
+            "max": 92.58174570885129
+          },
+          "lateral_displacement_m": {
+            "mean": 0.02317572385072708,
+            "std": 0.02050976415588916,
+            "min": -0.011380434036254883,
+            "max": 0.06176650524139404
+          }
+        },
+        "dr_ppo": {
+          "policy": "dr_ppo",
+          "condition": "nominal",
+          "episodes": 16,
+          "seed": 2042,
+          "all_actions_observations_rewards_finite": true,
+          "max_abs_raw_action": 0.19660407304763794,
+          "raw_action_clipped_fraction": 0.0,
+          "fall_rate": 0.0,
+          "timeout_rate": 1.0,
+          "invalid_state_rate": 0.0,
+          "out_of_bounds_rate": 0.0,
+          "final_heading_gt45deg_fraction": 0,
+          "distance_x_m": {
+            "mean": -0.0003811940550804138,
+            "std": 0.0005338300328185466,
+            "min": -0.0015180110931396484,
+            "max": 0.00043714046478271484
+          },
+          "avg_speed_m_s": {
+            "mean": -3.811940549525161e-05,
+            "std": 5.3383004129784114e-05,
+            "min": -0.0001518011122243479,
+            "max": 4.371404793346301e-05
+          },
+          "duration_s": {
+            "mean": 10.0,
+            "std": 0.0,
+            "min": 10.0,
+            "max": 10.0
+          },
+          "return": {
+            "mean": 9.02387934923172,
+            "std": 0.03573197290392966,
+            "min": 8.943949699401855,
+            "max": 9.072972297668457
+          },
+          "final_heading_yaw_deg": {
+            "mean": -1.1805266377979242,
+            "std": 0.8876405347212913,
+            "min": -3.1955360197022,
+            "max": -0.3071282072094974
+          },
+          "max_abs_heading_yaw_deg": {
+            "mean": 1.3491773352785486,
+            "std": 0.8320221544475104,
+            "min": 0.5484577870496771,
+            "max": 3.227434070343217
+          },
+          "heading_gt45deg_time_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "abs_final_heading_yaw_deg": {
+            "mean": 1.1805266377979242,
+            "std": 0.8876405347212913,
+            "min": 0.3071282072094974,
+            "max": 3.1955360197022
+          },
+          "lateral_displacement_m": {
+            "mean": -0.00067177414894104,
+            "std": 0.0009486684891652296,
+            "min": -0.0027098655700683594,
+            "max": 0.0006462335586547852
+          }
+        }
+      },
+      "paired_dr_minus_baseline_distance_m": {
+        "mean": -1.272040568292141,
+        "std_across_paired_episodes": 0.028311133679153867,
+        "pairs": 16
+      }
+    },
+    "randomized": {
+      "matching_initial_states_and_domains": {
+        "zero_residual": true,
+        "baseline_ppo": true,
+        "dr_ppo": true
+      },
+      "metrics": {
+        "zero_residual": {
+          "policy": "zero_residual",
+          "condition": "randomized",
+          "episodes": 16,
+          "seed": 2042,
+          "all_actions_observations_rewards_finite": true,
+          "max_abs_raw_action": 0.0,
+          "raw_action_clipped_fraction": 0.0,
+          "fall_rate": 0.0,
+          "timeout_rate": 1.0,
+          "invalid_state_rate": 0.0,
+          "out_of_bounds_rate": 0.0,
+          "final_heading_gt45deg_fraction": 0,
+          "distance_x_m": {
+            "mean": 0.00023490935564041138,
+            "std": 0.00029085543812237277,
+            "min": -0.0004438161849975586,
+            "max": 0.0007028579711914062
+          },
+          "avg_speed_m_s": {
+            "mean": 2.3490935324943507e-05,
+            "std": 2.9085543070163458e-05,
+            "min": -4.4381617044564337e-05,
+            "max": 7.028579420875758e-05
+          },
+          "duration_s": {
+            "mean": 10.0,
+            "std": 0.0,
+            "min": 10.0,
+            "max": 10.0
+          },
+          "return": {
+            "mean": 9.015370190143585,
+            "std": 0.014343482001474263,
+            "min": 8.994954109191895,
+            "max": 9.039365768432617
+          },
+          "final_heading_yaw_deg": {
+            "mean": 0.10370535475536707,
+            "std": 2.408024156521093,
+            "min": -5.25427883272275,
+            "max": 4.33225537496345
+          },
+          "max_abs_heading_yaw_deg": {
+            "mean": 2.091123824403448,
+            "std": 1.3860206591166033,
+            "min": 0.22739033768294717,
+            "max": 5.254511486041353
+          },
+          "heading_gt45deg_time_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "abs_final_heading_yaw_deg": {
+            "mean": 1.9751665026618328,
+            "std": 1.381322708767463,
+            "min": 0.05033508575851558,
+            "max": 5.25427883272275
+          },
+          "lateral_displacement_m": {
+            "mean": 0.00017559528350830078,
+            "std": 0.0005458213878508411,
+            "min": -0.0009281635284423828,
+            "max": 0.0011751651763916016
+          }
+        },
+        "baseline_ppo": {
+          "policy": "baseline_ppo",
+          "condition": "randomized",
+          "episodes": 16,
+          "seed": 2042,
+          "all_actions_observations_rewards_finite": true,
+          "max_abs_raw_action": 3.5640244483947754,
+          "raw_action_clipped_fraction": 0.234921875,
+          "fall_rate": 0.0,
+          "timeout_rate": 1.0,
+          "invalid_state_rate": 0.0,
+          "out_of_bounds_rate": 0.0,
+          "final_heading_gt45deg_fraction": 1,
+          "distance_x_m": {
+            "mean": 0.5918833762407303,
+            "std": 0.165805692181256,
+            "min": 0.39923250675201416,
+            "max": 1.08099365234375
+          },
+          "avg_speed_m_s": {
+            "mean": 0.05918833729811013,
+            "std": 0.01658056918032912,
+            "min": 0.039923250675201416,
+            "max": 0.10809936374425888
+          },
+          "duration_s": {
+            "mean": 10.0,
+            "std": 0.0,
+            "min": 10.0,
+            "max": 10.0
+          },
+          "return": {
+            "mean": 15.262090802192688,
+            "std": 2.2164073062524796,
+            "min": 12.219074249267578,
+            "max": 20.963613510131836
+          },
+          "final_heading_yaw_deg": {
+            "mean": -82.76943276796115,
+            "std": 10.015023566780313,
+            "min": -111.10922805896867,
+            "max": -66.23439343836465
+          },
+          "max_abs_heading_yaw_deg": {
+            "mean": 88.98860730208972,
+            "std": 9.460080556426707,
+            "min": 67.68244818392071,
+            "max": 111.37102920985525
+          },
+          "heading_gt45deg_time_fraction": {
+            "mean": 0.806999996304512,
+            "std": 0.06404685828196659,
+            "min": 0.6779999732971191,
+            "max": 0.8899999856948853
+          },
+          "abs_final_heading_yaw_deg": {
+            "mean": 82.76943276796115,
+            "std": 10.015023566780313,
+            "min": 66.23439343836465,
+            "max": 111.10922805896867
+          },
+          "lateral_displacement_m": {
+            "mean": -0.051999591290950775,
+            "std": 0.04529305606811381,
+            "min": -0.16595005989074707,
+            "max": 0.03182971477508545
+          }
+        },
+        "dr_ppo": {
+          "policy": "dr_ppo",
+          "condition": "randomized",
+          "episodes": 16,
+          "seed": 2042,
+          "all_actions_observations_rewards_finite": true,
+          "max_abs_raw_action": 0.1781938076019287,
+          "raw_action_clipped_fraction": 0.0,
+          "fall_rate": 0.0,
+          "timeout_rate": 1.0,
+          "invalid_state_rate": 0.0,
+          "out_of_bounds_rate": 0.0,
+          "final_heading_gt45deg_fraction": 0,
+          "distance_x_m": {
+            "mean": 8.093565702438354e-05,
+            "std": 0.00028233008752579,
+            "min": -0.0005904436111450195,
+            "max": 0.0006253719329833984
+          },
+          "avg_speed_m_s": {
+            "mean": 8.093565384115209e-06,
+            "std": 2.8233008250124493e-05,
+            "min": -5.904435965931043e-05,
+            "max": 6.25371903879568e-05
+          },
+          "duration_s": {
+            "mean": 10.0,
+            "std": 0.0,
+            "min": 10.0,
+            "max": 10.0
+          },
+          "return": {
+            "mean": 9.054271221160889,
+            "std": 0.01940346091098021,
+            "min": 9.014134407043457,
+            "max": 9.082295417785645
+          },
+          "final_heading_yaw_deg": {
+            "mean": -0.41810648071184997,
+            "std": 2.2727408541438567,
+            "min": -5.57857279942037,
+            "max": 3.608489683807994
+          },
+          "max_abs_heading_yaw_deg": {
+            "mean": 2.2000734875328503,
+            "std": 1.4182505357345354,
+            "min": 0.2539298647962515,
+            "max": 5.591285489013056
+          },
+          "heading_gt45deg_time_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "abs_final_heading_yaw_deg": {
+            "mean": 1.8244946644223488,
+            "std": 1.4182324346883963,
+            "min": 0.022270725583112494,
+            "max": 5.57857279942037
+          },
+          "lateral_displacement_m": {
+            "mean": 4.1775405406951904e-05,
+            "std": 0.0004004665886883929,
+            "min": -0.0010532140731811523,
+            "max": 0.0007064342498779297
+          }
+        }
+      },
+      "paired_dr_minus_baseline_distance_m": {
+        "mean": -0.5918024405837059,
+        "std_across_paired_episodes": 0.1657831606014901,
+        "pairs": 16
+      }
+    }
+  },
+  "artifacts": [
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/plots_dr/dr_learning_curves.png",
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/plots_dr/dr_learning_curves.pdf",
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/plots_dr/dr_evaluation_comparison.png",
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/plots_dr/dr_evaluation_comparison.pdf"
+  ],
+  "source_files": {
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/result.json": {
+      "sha256": "09d3000bbc9332bb28ff74f3f032926f83b6a43e92c2db946fc60345ffc266ca",
+      "bytes": 19556
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/training.jsonl": {
+      "sha256": "f74b1e39568d3cf101a40ff83d19d3dd8df86e0aacbdd10d0065b86fd65bedbb",
+      "bytes": 359
+    },
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/training.jsonl": {
+      "sha256": "862072c72195b11c5645d8c43ad462ad4f711a77bc211072735433ba0d486347",
+      "bytes": 109873
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/evaluation/nominal/zero_residual.json": {
+      "sha256": "503fae9aec831d39764f504c2fd1fed9b64bb6f8b8d5e967210d5699b11b5949",
+      "bytes": 197970
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/evaluation/nominal/baseline_ppo.json": {
+      "sha256": "7fc00fdaf8402b5f4bbc31a703dc8f4086bcf367fc34d6d3a14322b73f02f3f8",
+      "bytes": 197911
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/evaluation/nominal/dr_ppo.json": {
+      "sha256": "64c7888516c82fc66e3f2b88e0bca86b1dfb231a11e9cbf45d57282cc8d6a429",
+      "bytes": 197761
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/evaluation/randomized/zero_residual.json": {
+      "sha256": "54ff0bfa95999e08c1d9c8b9c48be2fdf7578d411d30c8304895f746bebd46e6",
+      "bytes": 205008
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/evaluation/randomized/baseline_ppo.json": {
+      "sha256": "f1fc7925a43bcb51f88d40eb59c2d7ec43ecfbc8119da7137dbd695e2a3e986f",
+      "bytes": 205114
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_smoke/evaluation/randomized/dr_ppo.json": {
+      "sha256": "180d4c4ff6c7c76be2c3b5e827603336a6ae06c61d16bcac6f8625bca8e35af7",
+      "bytes": 204928
+    }
+  },
+  "limitations": [
+    "Episode SD is not training-seed uncertainty or a confidence interval.",
+    "Training curves use different domains; compare paired held-out tests for policy effects.",
+    "The unchanged reward does not require a forward-facing body; heading diagnostics are shown."
+  ]
+}

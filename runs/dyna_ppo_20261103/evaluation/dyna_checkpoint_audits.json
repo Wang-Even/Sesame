@@ -1,0 +1,65 @@
+{
+  "dyna_ppo_seed42": {
+    "verified": true,
+    "imagined_optimizer_steps": 734,
+    "verified_training_counters": {
+      "real_transitions_seen": 2048000,
+      "real_updates": 250,
+      "real_optimizer_steps": 5000,
+      "model_optimizer_steps": 6000,
+      "model_member_optimizer_steps": 18000,
+      "model_fit_calls": 250,
+      "imagined_generated": 107520,
+      "imagined_accepted": 97123,
+      "imagined_optimizer_steps": 734,
+      "imagined_update_calls": 210
+    },
+    "world_model_fit_calls": 250,
+    "world_model_state_path": "dyna_state_dict.world_model",
+    "world_model_parameter_count": 119511,
+    "auxiliary_parameters_finite_cuda": true,
+    "world_model_forward_executed": false
+  },
+  "dyna_ppo_seed43": {
+    "verified": true,
+    "imagined_optimizer_steps": 736,
+    "verified_training_counters": {
+      "real_transitions_seen": 2048000,
+      "real_updates": 250,
+      "real_optimizer_steps": 5000,
+      "model_optimizer_steps": 6000,
+      "model_member_optimizer_steps": 18000,
+      "model_fit_calls": 250,
+      "imagined_generated": 107520,
+      "imagined_accepted": 95676,
+      "imagined_optimizer_steps": 736,
+      "imagined_update_calls": 210
+    },
+    "world_model_fit_calls": 250,
+    "world_model_state_path": "dyna_state_dict.world_model",
+    "world_model_parameter_count": 119511,
+    "auxiliary_parameters_finite_cuda": true,
+    "world_model_forward_executed": false
+  },
+  "dyna_ppo_seed44": {
+    "verified": true,
+    "imagined_optimizer_steps": 742,
+    "verified_training_counters": {
+      "real_transitions_seen": 2048000,
+      "real_updates": 250,
+      "real_optimizer_steps": 5000,
+      "model_optimizer_steps": 6000,
+      "model_member_optimizer_steps": 18000,
+      "model_fit_calls": 250,
+      "imagined_generated": 107520,
+      "imagined_accepted": 96310,
+      "imagined_optimizer_steps": 742,
+      "imagined_update_calls": 210
+    },
+    "world_model_fit_calls": 250,
+    "world_model_state_path": "dyna_state_dict.world_model",
+    "world_model_parameter_count": 119511,
+    "auxiliary_parameters_finite_cuda": true,
+    "world_model_forward_executed": false
+  }
+}

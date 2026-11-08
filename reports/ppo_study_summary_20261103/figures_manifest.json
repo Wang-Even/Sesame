@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-03T11:08:19.302166+00:00",
+  "title": "Sesame PPO 三组实验：训练曲线与正式评测",
+  "study_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103",
+  "output_dir": "/home/ywwang/sesame/reports/ppo_study_summary_20261103",
+  "protocol_sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+  "sourcehashes": {
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/protocol.json": {
+      "sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+      "bytes": 6542
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/summary.json": {
+      "sha256": "71fec6735445f9c2aef1a501ab59ec680aeecf1db7593b381dd5cedb25a828e3",
+      "bytes": 76852
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/result.json": {
+      "sha256": "b1818bc0f39d8d440f295d27d0e5cf1cef81b05062cc70a44ec431618ef843ff",
+      "bytes": 4080
+    },
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/training.jsonl": {
+      "sha256": "862072c72195b11c5645d8c43ad462ad4f711a77bc211072735433ba0d486347",
+      "bytes": 109873
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/training.jsonl": {
+      "sha256": "57976f7c5946f8e16fc2268868bf4a4e12d282e0cae0f0b5b2b9017e3bbab78d",
+      "bytes": 109903
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/training.jsonl": {
+      "sha256": "fabe4234147876b97d1abc1393df7907e911ccf14ee59d0784853148e47a5c08",
+      "bytes": 109903
+    },
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/training.jsonl": {
+      "sha256": "5e256179908e4ac6a3cbb6f9f044985a131824cce533e67d44bbe9cc98fac50b",
+      "bytes": 109898
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/training.jsonl": {
+      "sha256": "8b2582d033637b576d340b2e06d5b7afd861a1d9a2d57ecb83145551d1b8c49d",
+      "bytes": 109856
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/training.jsonl": {
+      "sha256": "b2d1645f315791a3a20d816d1ab2d893592ac9621789602c345e839c3bf6a499",
+      "bytes": 109836
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed42/training.jsonl": {
+      "sha256": "b14bee37c5594519e308345e26c553e1ce26b64ab4989a9ecd3633da644ec28f",
+      "bytes": 109958
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed43/training.jsonl": {
+      "sha256": "3991b85e91109897bb45ea249624f1aa9422fddf202a3885230ee362154e3a46",
+      "bytes": 109895
+    },
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed44/training.jsonl": {
+      "sha256": "f0fb53507462c28bd9de92867a6f7069cb6441e297d02664e2085e168b9713c1",
+      "bytes": 109894
+    },
+    "/home/ywwang/sesame/scripts/plot_study_report.py": {
+      "sha256": "4636fd8b8621419bed4b1b6690e962ce25d492090ad1abe27f7e30033f95725f"
+    },
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc": {
+      "sha256": "5dcd1c336cc9344cb77c03a0cd8982ca8a7dc97d620fd6c9c434e02dcb1ceeb3"
+    }
+  },
+  "verified_upstream_analysis_inputs_sha256": {
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/protocol.json": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed42/nominal.json": "0ee6e790af0c26d667937667e32578a94042f3e147ef8996ab4552b97422cbf1",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed42/randomized.json": "7427e515736b6980d0e2b941780f7a6cae6a23f096149f9a89f0c1efa30f015b",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed43/nominal.json": "a0e3398a3a314c6eca9d38ff0c0a9398d73a8b3bca39696b19e200461d689976",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed43/randomized.json": "c731707e50404469b47d85814d36bcd0995a708d26aa4a6b3120d599596d37f1",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed44/nominal.json": "cb0900ec349949c1104a7ec3a3d0356ae658285f49eba962952735409b1dbb50",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/baseline_seed44/randomized.json": "a5f96529b5b32229d4b4944a84dad16fafc6ffcb6c2e131c72938649c5041a2a",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed42/nominal.json": "3eef0b1d8a803c645309734591af08a5a9fcce0862e5df058a177834c1fa4620",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed42/randomized.json": "7ab4b2f75d5a8638fc8f2e072ae844090ffe6c6cc78d90f2f39d1ef8d6e0b551",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed43/nominal.json": "d12437691d7275362fb304e7b7082eca8243352b6de1a2eb3bbf86eb67494e9d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed43/randomized.json": "6c94dee0c4896a3dec64fb4bafb75eca14ede1bc76562ba812572c940da38358",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed44/nominal.json": "2fcca5c0596526af662aeae302fcce8d3d2ffdbd40b0c25b3cf3704f703dfdba",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/full_dr_seed44/randomized.json": "cc5d9291bffc117d681dfdf4c4f8f13170342a4f267835dc72705b5cc1d1c772",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed42/nominal.json": "5dba8e01370cd0b226962dbd0092d4ff574d0209731418770b9c91191340047e",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed42/randomized.json": "31e59371de5be76006100b596e497af94121ba26b50654e3c7a6a6f45b49b4bd",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed43/nominal.json": "ac5161f8622f3d778a9eb5f7e5d27180615d87dd637107d1ae54083d4ed678a1",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed43/randomized.json": "a44b7a6ef281dede229817f274904a6bd8f6b394f66bd2b56fcd8a06b0e57c24",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed44/nominal.json": "449744fac4c1fa90fb1ec5ebd1544726fc4f8c8a914fb7da30bdf5078ca94f2a",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/evaluation/cases/fixed_delay_seed44/randomized.json": "33f9d7c48d1f7710c2ee122be7c297f4077dc04a2e02686a97b9660df4b5cab7"
+  },
+  "counts": {
+    "training_runs": 9,
+    "training_seeds_per_group": 3,
+    "updates_per_run": 250,
+    "environment_transitions_per_run": 2048000,
+    "evaluation_cases": 18,
+    "episodes_per_case": 128,
+    "total_evaluation_episodes": 2304,
+    "observed_falls": 0
+  },
+  "preprocessing": {
+    "training_smoothing": "先在每个种子内，对当前及之前9个更新中的有效值求均值；再对3个种子求均值±样本SD（ddof=1）。",
+    "training_missing_values": "不补零、不插值；位移仅在有原始日志的16个更新点显示，连线仅为阅读引导。",
+    "training_return": "RSL-RL记录的最近100个已完成回合缓冲均值，再作10更新尾随平滑。",
+    "training_duration": "mean_episode_length_steps / 50 Hz，随后作10更新尾随平滑。",
+    "training_value_loss": "losses.value_function，尾随均值后以对数纵轴呈现。",
+    "evaluation": "每个策略/条件先平均128个回合，再以3个训练种子为独立单位，计算均值和样本SD；不是回合SEM或置信区间。",
+    "milestone_iterations": [
+      64,
+      125,
+      188,
+      250
+    ],
+    "milestone_transitions": [
+      524288,
+      1024000,
+      1540096,
+      2048000
+    ],
+    "training_velocity_rmse_curve": "未生成：已保存训练日志不含该指标。"
+  },
+  "style": {
+    "colors": {
+      "baseline": "#2563EB",
+      "full_dr": "#E07A1F",
+      "fixed_delay": "#17825D"
+    },
+    "variant_labels": {
+      "baseline": "固定参数基线",
+      "full_dr": "完整域随机化",
+      "fixed_delay": "固定延迟消融"
+    },
+    "font": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+    "png_dpi": 180,
+    "pdf": "vector plot elements with embedded Type3 CJK glyph outlines",
+    "seed_markers": {
+      "42": "42",
+      "43": "43",
+      "44": "44"
+    }
+  },
+  "limitations": [
+    "baseline vs full_dr compares the entire training protocol including changed initialization and mean actuator dynamics",
+    "full_dr vs fixed_delay isolates tau/delay variation with matched parameter centers and other training settings",
+    "local reference simulation; official course scoring environment unchanged and unavailable; no hardware claim",
+    "randomized evaluation within training parameter ranges, not out-of-distribution"
+  ],
+  "figures": [
+    {
+      "id": "01_training_overview",
+      "title": "训练过程总览",
+      "caption": "三组各 3 个训练种子的训练曲线。每个种子先计算过去 10 次更新内有效日志值的均值，再计算种子均值及样本标准差（ddof=1）。回报为 RSL-RL 最近 100 个已完成回合缓冲均值；回合时长由该缓冲步数除以 50 得到；位移仅在已完成回合的更新点记录（16 点），连线不代表新增观测；价值函数损失使用对数纵轴。三组训练分布不同，跨组训练回报和损失不等价于同条件评测。没有训练过程中的瞬时速度 RMSE 记录，因此未生成此类曲线。",
+      "artifacts": {
+        "png": {
+          "path": "figures/01_training_overview.png",
+          "sha256": "fdfc5e8756d61b2bef136ad840ffc1d737da69bae79cc0d809b910e6a4af4478",
+          "bytes": 362740
+        },
+        "pdf": {
+          "path": "figures/01_training_overview.pdf",
+          "sha256": "6aa35be8b30846369e0ce7b942e6222b82f4d41a0cf79bd524a756e6b768e08a",
+          "bytes": 113034
+        }
+      },
+      "recorded_plot_points": {
+        "baseline/return": 235,
+        "full_dr/return": 235,
+        "fixed_delay/return": 235,
+        "baseline/distance": 16,
+        "full_dr/distance": 16,
+        "fixed_delay/distance": 16,
+        "baseline/duration": 235,
+        "full_dr/duration": 235,
+        "fixed_delay/duration": 235,
+        "baseline/value_loss": 250,
+        "full_dr/value_loss": 250,
+        "fixed_delay/value_loss": 250
+      }
+    },
+    {
+      "id": "02_primary_comparison",
+      "title": "主要指标对照",
+      "caption": "以每回合 50 Hz 世界 x 速度相对于 0.10 m/s 的 RMSE 为主要指标。每个策略/条件先平均 128 个回合，再对 3 个训练种子汇总均值和样本标准差；数值标记对应种子 42、43、44。全部 2304 回合记录跌倒 0 次，不能据此证明真实跌倒概率为零。",
+      "artifacts": {
+        "png": {
+          "path": "figures/02_primary_comparison.png",
+          "sha256": "13a95d3cffc763656302c34688cc4402e923350cc9eb0f28ed1bea372b59a43e",
+          "bytes": 199668
+        },
+        "pdf": {
+          "path": "figures/02_primary_comparison.pdf",
+          "sha256": "5129d136a6cb27ad40bf1bb296a6eb910586e7e49d8081ca8b52d778dd17cbc1",
+          "bytes": 78368
+        }
+      }
+    },
+    {
+      "id": "03_delay_ablation",
+      "title": "延迟随机化配对消融",
+      "caption": "随机条件下，同编号训练种子从固定延迟消融到完整域随机化的主要指标变化。种子 42、43 改善，种子 44 的完整随机化仅降低约 0.00001047 m/s，近乎持平。配对展示训练种子差异，不代表统计显著性检验。",
+      "artifacts": {
+        "png": {
+          "path": "figures/03_delay_ablation.png",
+          "sha256": "524e80aff6ee189ce0bfc21874247ac05dc25b29a0ce25ee775f9af7c75d30fd",
+          "bytes": 239908
+        },
+        "pdf": {
+          "path": "figures/03_delay_ablation.pdf",
+          "sha256": "5e81277bb05b8d123749693f038262bfe8bdd5d160f0db0c9380493d3644b9f9",
+          "bytes": 75468
+        }
+      },
+      "full_dr_minus_fixed_delay_m_s": {
+        "42": -0.006604771304409951,
+        "43": -0.00611514036427252,
+        "44": -1.0468662367202342e-05
+      }
+    },
+    {
+      "id": "04_motion_quality",
+      "title": "运动表现：位移、方向与本地回报",
+      "caption": "世界 x 位移、末端航向角绝对值、末端横向位移绝对值与未修改的本地奖励回报。每个条件/策略组报告 3 个训练种子均值±样本标准差。位移中的 1 m 参考线为目标速度乘以 10 s，位移越大不必然越好。航向未增加纠正奖励，不能宣称已消除侧行；本地回报不是官方课程评分。",
+      "artifacts": {
+        "png": {
+          "path": "figures/04_motion_quality.png",
+          "sha256": "d51649b0cd99b584bc2b1c12a1090da3f705a15ad686c2ed78ae4600bd14fd35",
+          "bytes": 205898
+        },
+        "pdf": {
+          "path": "figures/04_motion_quality.pdf",
+          "sha256": "5fe79729355d4c9cc5cf174f8e55a9340a19292ccb7ce9128d16a4a5c97d6519",
+          "bytes": 75445
+        }
+      }
+    },
+    {
+      "id": "05_smoothness",
+      "title": "平滑性诊断：控制目标与关节响应",
+      "caption": "施加目标角的一阶/二阶差分 RMS、实际关节速度在 50 Hz 控制采样下的一阶差分 RMS，以及原始动作限幅比例。这些指标不等同于抖动频率、机械功率或 500 Hz 物理加速度峰值。原始动作比例在包装器裁剪前计算，图中转换为百分数。各组误差线为 3 个训练种子均值的样本标准差。",
+      "artifacts": {
+        "png": {
+          "path": "figures/05_smoothness.png",
+          "sha256": "994d509ebcec8e63dc50e2a89fd8689c1cba0f9ea355a08e08be4ab289759dbd",
+          "bytes": 213157
+        },
+        "pdf": {
+          "path": "figures/05_smoothness.pdf",
+          "sha256": "9b11c3af03229598261ceaafafa36ba4e2d21846edf620d96ddc9b99d6fea2a8",
+          "bytes": 78001
+        }
+      }
+    }
+  ],
+  "tables": [
+    {
+      "path": "tables/01_evaluation_summary_zh.csv",
+      "sha256": "3992afb5797d79597823f03f4096e23097526a91a706a252e7227af5d8742a62",
+      "rows": 78,
+      "encoding": "UTF-8 with BOM",
+      "caption": "每个条件、策略组和指标的种子均值 ± 样本标准差；比例转换为百分数。"
+    },
+    {
+      "path": "tables/02_primary_per_seed_zh.csv",
+      "sha256": "41eda7ad0c1d24e20bea88ae0847588dd9e106edd2db7b0b4077b7bf578f652d",
+      "rows": 18,
+      "encoding": "UTF-8 with BOM",
+      "caption": "各训练种子的主要指标及平面速度 RMSE；每个结果平均 128 个评测回合。"
+    },
+    {
+      "path": "tables/03_training_milestones_zh.csv",
+      "sha256": "cecc7313501d913be2029a29fe1ebb180cf6e43354e681437fba704b0df8d4b4",
+      "rows": 48,
+      "encoding": "UTF-8 with BOM",
+      "caption": "更新 64/125/188/250 对应的实际环境步数；每种子先取过去 10 个更新内有效值，再对种子聚合。"
+    },
+    {
+      "path": "tables/04_training_milestones_per_seed_zh.csv",
+      "sha256": "dd626db12935b5995e7bf7d5436b2f69b619586d173d4c77e5dff7cc0dd4a2f6",
+      "rows": 144,
+      "encoding": "UTF-8 with BOM",
+      "caption": "训练里程碑逐种子明细，记录构成窗口均值的原始更新编号；缺失值未插值或补零。"
+    }
+  ]
+}

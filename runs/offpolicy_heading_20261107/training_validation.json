@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "sac_seed42",
+      "environment_equals_ppo_except_seed": true,
+      "reward_equals_ppo": true,
+      "transitions": 2048000,
+      "updates": 15488,
+      "reload_max_abs_action_error": 0,
+      "timeout_capture_checks": 4096,
+      "training_wall_seconds": 209.7584505006671,
+      "peak_torch_allocated_MiB": 107.3134765625
+    },
+    {
+      "id": "sac_seed43",
+      "environment_equals_ppo_except_seed": true,
+      "reward_equals_ppo": true,
+      "transitions": 2048000,
+      "updates": 15488,
+      "reload_max_abs_action_error": 0,
+      "timeout_capture_checks": 4096,
+      "training_wall_seconds": 205.62225500121713,
+      "peak_torch_allocated_MiB": 107.3134765625
+    },
+    {
+      "id": "sac_seed44",
+      "environment_equals_ppo_except_seed": true,
+      "reward_equals_ppo": true,
+      "transitions": 2048000,
+      "updates": 15488,
+      "reload_max_abs_action_error": 0,
+      "timeout_capture_checks": 4096,
+      "training_wall_seconds": 206.907260235399,
+      "peak_torch_allocated_MiB": 107.3134765625
+    },
+    {
+      "id": "dqn_seed42",
+      "environment_equals_ppo_except_seed": true,
+      "reward_equals_ppo": true,
+      "transitions": 2048000,
+      "updates": 15488,
+      "reload_max_abs_action_error": 0,
+      "timeout_capture_checks": 4096,
+      "training_wall_seconds": 170.15010716579854,
+      "peak_torch_allocated_MiB": 102.72314453125
+    },
+    {
+      "id": "dqn_seed43",
+      "environment_equals_ppo_except_seed": true,
+      "reward_equals_ppo": true,
+      "transitions": 2048000,
+      "updates": 15488,
+      "reload_max_abs_action_error": 0,
+      "timeout_capture_checks": 4096,
+      "training_wall_seconds": 171.34296426177025,
+      "peak_torch_allocated_MiB": 102.72314453125
+    },
+    {
+      "id": "dqn_seed44",
+      "environment_equals_ppo_except_seed": true,
+      "reward_equals_ppo": true,
+      "transitions": 2048000,
+      "updates": 15488,
+      "reload_max_abs_action_error": 0,
+      "timeout_capture_checks": 4096,
+      "training_wall_seconds": 171.13494133204222,
+      "peak_torch_allocated_MiB": 102.72314453125
+    }
+  ],
+  "scope": "Metadata/hash validation; no model computation"
+}

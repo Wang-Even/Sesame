@@ -1,0 +1,6 @@
+RECORD_START full_dr_seed42
+RECORD_VERIFIED full_dr_seed42 {"distance_x_m": 0.9368304014205933, "fell": false, "duration_s": 10.0}
+RECORD_START heading_seed42
+RECORD_VERIFIED heading_seed42 {"distance_x_m": 1.0647433996200562, "fell": false, "duration_s": 10.0}
+ASSEMBLE_START
+COMPARISON_COMPLETED /home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/ppo_heading_comparison_seed15042.mp4

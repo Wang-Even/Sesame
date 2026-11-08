@@ -1,0 +1,577 @@
+{
+  "manifest_signature": "960ff9690887ffd96e648cbace96d4898eda6d1478018a99ae8899716322d099",
+  "core": {
+    "schema_version": 1,
+    "study_id": "offpolicy_heading_20261107",
+    "protocol_sha256": "8e48ca0f7343086ef1e9b73647b52a777455e19e99c21b6facd1c606949a46a9",
+    "effective_evaluation": {
+      "num_envs": 256,
+      "episodes_per_seed": 64,
+      "seeds": [
+        25042,
+        26042
+      ],
+      "conditions": [
+        "nominal",
+        "randomized"
+      ],
+      "episode_length_s": 10.0,
+      "environment_variant": "heading_full_dr_for_all_policies",
+      "pairing": "Exact initial root/joint states and actual domain parameters across all nine policies.",
+      "checkpoint_selection": "final only",
+      "policy_action": "PPO saved-normalizer mean; SAC tanh mean; branching DQN greedy per-branch bins.",
+      "primary_metric": "Forward velocity RMSE; report heading, falls, displacement and smoothness jointly.",
+      "return_semantics": "Common heading_v1 reward, coefficient 0.5, for all training/evaluation methods."
+    },
+    "smoke": false,
+    "reward_version": "absolute_heading_v1",
+    "heading_penalty_scale": 0.5,
+    "evaluation_sources": {
+      "scripts/evaluate_offpolicy.py": "2d1549ad16bc133fae36484f691c2cf077b26fefb3af18cb5f0e5b9c37e5d812",
+      "scripts/evaluate_heading_ppo.py": "ae81c7899c35061a25fec92f787ee59e6dc190d83b9fa15dca8d0bad361e6f8b",
+      "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+      "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+      "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad",
+      "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+      "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+      "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+      "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+      "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+      "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a"
+    },
+    "resolved_checkpoints": [
+      {
+        "id": "ppo_seed42",
+        "variant": "ppo",
+        "train_seed": 42,
+        "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42",
+        "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+        "sha256": "6056155ff2189a9a25490844f4eddda3ca5450392a5b3f5d18f3f2553e51fdbc",
+        "config": {
+          "seed": 42,
+          "num_steps_per_env": 32,
+          "save_interval": 50,
+          "logger": "tensorboard",
+          "obs_groups": {
+            "policy": [
+              "policy"
+            ],
+            "critic": [
+              "policy"
+            ]
+          },
+          "policy": {
+            "class_name": "ActorCritic",
+            "actor_hidden_dims": [
+              128,
+              128,
+              64
+            ],
+            "critic_hidden_dims": [
+              128,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "actor_obs_normalization": true,
+            "critic_obs_normalization": true,
+            "init_noise_std": 0.5,
+            "noise_std_type": "log"
+          },
+          "algorithm": {
+            "class_name": "PPO",
+            "clip_param": 0.2,
+            "gamma": 0.99,
+            "lam": 0.95,
+            "learning_rate": 0.0003,
+            "num_learning_epochs": 5,
+            "num_mini_batches": 4,
+            "value_loss_coef": 1.0,
+            "entropy_coef": 0.005,
+            "max_grad_norm": 1.0,
+            "use_clipped_value_loss": true,
+            "schedule": "adaptive",
+            "desired_kl": 0.01,
+            "normalize_advantage_per_mini_batch": false
+          }
+        },
+        "config_sha256": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+        "training_result_sha256": "ea701f1beaf4bcf05f8bbc5ed564465237cddeffb175676fcb6de5713e3fb11c",
+        "environment_config_sha256": "d9f0fb0387be8b77c294be1d79c2380e0bb006c4d7312c66ba2e89d9fed7fac1",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+          "assets/isaac/sesame/.asset_hash": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+          "assets/isaac/sesame/config.yaml": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+          "assets/isaac/sesame/configuration/sesame_base.usd": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+          "assets/isaac/sesame/configuration/sesame_physics.usd": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+          "assets/isaac/sesame/configuration/sesame_sensor.usd": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+          "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+          "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+          "assets/isaac/sesame/import_source/meshes/L1_v117.stl": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+          "assets/isaac/sesame/import_source/meshes/L2_v117.stl": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+          "assets/isaac/sesame/import_source/meshes/L3_v117.stl": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+          "assets/isaac/sesame/import_source/meshes/L4_v117.stl": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+          "assets/isaac/sesame/import_source/meshes/R1_v117.stl": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+          "assets/isaac/sesame/import_source/meshes/R2_v117.stl": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+          "assets/isaac/sesame/import_source/meshes/R3_v117.stl": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+          "assets/isaac/sesame/import_source/meshes/R4_v117.stl": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+          "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+          "assets/isaac/sesame/import_source/sesame.urdf": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+          "assets/isaac/sesame/sesame.usd": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "ppo_seed43",
+        "variant": "ppo",
+        "train_seed": 43,
+        "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43",
+        "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+        "sha256": "3c8b525d64f4df55d56c9ec43b8963283caa6561ac8f32711290f5fc86670dcd",
+        "config": {
+          "seed": 43,
+          "num_steps_per_env": 32,
+          "save_interval": 50,
+          "logger": "tensorboard",
+          "obs_groups": {
+            "policy": [
+              "policy"
+            ],
+            "critic": [
+              "policy"
+            ]
+          },
+          "policy": {
+            "class_name": "ActorCritic",
+            "actor_hidden_dims": [
+              128,
+              128,
+              64
+            ],
+            "critic_hidden_dims": [
+              128,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "actor_obs_normalization": true,
+            "critic_obs_normalization": true,
+            "init_noise_std": 0.5,
+            "noise_std_type": "log"
+          },
+          "algorithm": {
+            "class_name": "PPO",
+            "clip_param": 0.2,
+            "gamma": 0.99,
+            "lam": 0.95,
+            "learning_rate": 0.0003,
+            "num_learning_epochs": 5,
+            "num_mini_batches": 4,
+            "value_loss_coef": 1.0,
+            "entropy_coef": 0.005,
+            "max_grad_norm": 1.0,
+            "use_clipped_value_loss": true,
+            "schedule": "adaptive",
+            "desired_kl": 0.01,
+            "normalize_advantage_per_mini_batch": false
+          }
+        },
+        "config_sha256": "f0c131c89d784986c20c46ac362894aa1e9a4e29af5844a26e9ef362dc1a6b1c",
+        "training_result_sha256": "1fe28c1867694b79dc70a21d210807008e32ed79fba88c6470b8abc8aca82aad",
+        "environment_config_sha256": "9f6c8340020d02dfc2d4ba6cac7739ff3f2c4798592cc8636459d58e1009367e",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+          "assets/isaac/sesame/.asset_hash": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+          "assets/isaac/sesame/config.yaml": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+          "assets/isaac/sesame/configuration/sesame_base.usd": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+          "assets/isaac/sesame/configuration/sesame_physics.usd": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+          "assets/isaac/sesame/configuration/sesame_sensor.usd": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+          "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+          "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+          "assets/isaac/sesame/import_source/meshes/L1_v117.stl": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+          "assets/isaac/sesame/import_source/meshes/L2_v117.stl": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+          "assets/isaac/sesame/import_source/meshes/L3_v117.stl": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+          "assets/isaac/sesame/import_source/meshes/L4_v117.stl": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+          "assets/isaac/sesame/import_source/meshes/R1_v117.stl": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+          "assets/isaac/sesame/import_source/meshes/R2_v117.stl": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+          "assets/isaac/sesame/import_source/meshes/R3_v117.stl": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+          "assets/isaac/sesame/import_source/meshes/R4_v117.stl": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+          "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+          "assets/isaac/sesame/import_source/sesame.urdf": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+          "assets/isaac/sesame/sesame.usd": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "ppo_seed44",
+        "variant": "ppo",
+        "train_seed": 44,
+        "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+        "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+        "sha256": "622f2e095db92eb25fc7a59688863437ff43e981f2f6404e32549e1253b4e7c6",
+        "config": {
+          "seed": 44,
+          "num_steps_per_env": 32,
+          "save_interval": 50,
+          "logger": "tensorboard",
+          "obs_groups": {
+            "policy": [
+              "policy"
+            ],
+            "critic": [
+              "policy"
+            ]
+          },
+          "policy": {
+            "class_name": "ActorCritic",
+            "actor_hidden_dims": [
+              128,
+              128,
+              64
+            ],
+            "critic_hidden_dims": [
+              128,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "actor_obs_normalization": true,
+            "critic_obs_normalization": true,
+            "init_noise_std": 0.5,
+            "noise_std_type": "log"
+          },
+          "algorithm": {
+            "class_name": "PPO",
+            "clip_param": 0.2,
+            "gamma": 0.99,
+            "lam": 0.95,
+            "learning_rate": 0.0003,
+            "num_learning_epochs": 5,
+            "num_mini_batches": 4,
+            "value_loss_coef": 1.0,
+            "entropy_coef": 0.005,
+            "max_grad_norm": 1.0,
+            "use_clipped_value_loss": true,
+            "schedule": "adaptive",
+            "desired_kl": 0.01,
+            "normalize_advantage_per_mini_batch": false
+          }
+        },
+        "config_sha256": "4b5349559e9e04e057a3cf03e7e4e6f122af1fe64914ff19227312fbefe590a1",
+        "training_result_sha256": "a6ce34568becd601a857ef94c6e98c427e452a9b38c3d11e98f5247df138af2f",
+        "environment_config_sha256": "74a469855cf8d137f84e2f479a34779acea0b4ec39aed4eb8c49dec075158e84",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+          "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+          "assets/isaac/sesame/.asset_hash": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+          "assets/isaac/sesame/config.yaml": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+          "assets/isaac/sesame/configuration/sesame_base.usd": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+          "assets/isaac/sesame/configuration/sesame_physics.usd": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+          "assets/isaac/sesame/configuration/sesame_sensor.usd": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+          "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+          "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+          "assets/isaac/sesame/import_source/meshes/L1_v117.stl": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+          "assets/isaac/sesame/import_source/meshes/L2_v117.stl": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+          "assets/isaac/sesame/import_source/meshes/L3_v117.stl": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+          "assets/isaac/sesame/import_source/meshes/L4_v117.stl": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+          "assets/isaac/sesame/import_source/meshes/R1_v117.stl": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+          "assets/isaac/sesame/import_source/meshes/R2_v117.stl": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+          "assets/isaac/sesame/import_source/meshes/R3_v117.stl": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+          "assets/isaac/sesame/import_source/meshes/R4_v117.stl": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+          "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+          "assets/isaac/sesame/import_source/sesame.urdf": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+          "assets/isaac/sesame/sesame.usd": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "sac_seed42",
+        "variant": "sac",
+        "train_seed": 42,
+        "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42",
+        "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+        "sha256": "3d0fcdb8df7583e206c30f0b71538a319789907160a475765d70a66a504d7122",
+        "config": {
+          "seed": 42,
+          "observation_dim": 36,
+          "action_dim": 8,
+          "hidden_dims": [
+            256,
+            256
+          ],
+          "gamma": 0.99,
+          "learning_rate": 0.0003,
+          "target_tau": 0.005,
+          "max_grad_norm": 10.0,
+          "reward_scale": 1.0,
+          "initial_temperature": 0.02,
+          "target_entropy": -8.0,
+          "log_std_min": -5.0,
+          "log_std_max": 2.0,
+          "initial_log_std": -1.0
+        },
+        "config_sha256": "071bf8d58f9742fe0abac6e579360c089a2ab7a1c0eb723ef2a04d9d0c4e33b1",
+        "training_result_sha256": "b6992b5be32c27b4d43dc54b005259f060226f16fcea56f2f806c5e804fc2507",
+        "environment_config_sha256": "d9f0fb0387be8b77c294be1d79c2380e0bb006c4d7312c66ba2e89d9fed7fac1",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+          "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+          "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+          "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "sac_seed43",
+        "variant": "sac",
+        "train_seed": 43,
+        "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43",
+        "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+        "sha256": "5284a35d1d640e8b1e1f8ac52b45d5241d6e3dad3c3ac95fed484082ca5fa9cc",
+        "config": {
+          "seed": 43,
+          "observation_dim": 36,
+          "action_dim": 8,
+          "hidden_dims": [
+            256,
+            256
+          ],
+          "gamma": 0.99,
+          "learning_rate": 0.0003,
+          "target_tau": 0.005,
+          "max_grad_norm": 10.0,
+          "reward_scale": 1.0,
+          "initial_temperature": 0.02,
+          "target_entropy": -8.0,
+          "log_std_min": -5.0,
+          "log_std_max": 2.0,
+          "initial_log_std": -1.0
+        },
+        "config_sha256": "cadc10dd958a4214dfc71b1765e67cd25875f178d89e5c5f05c3466fb0fc995e",
+        "training_result_sha256": "b01e794520cf76587be24ee7714098fbaa6a721ad4c299afa7e97aa18c610cc1",
+        "environment_config_sha256": "9f6c8340020d02dfc2d4ba6cac7739ff3f2c4798592cc8636459d58e1009367e",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+          "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+          "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+          "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "sac_seed44",
+        "variant": "sac",
+        "train_seed": 44,
+        "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44",
+        "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+        "sha256": "244d25462d1062dc289188a69f30f8ff00bfa56198266a8078e3ff7e04638622",
+        "config": {
+          "seed": 44,
+          "observation_dim": 36,
+          "action_dim": 8,
+          "hidden_dims": [
+            256,
+            256
+          ],
+          "gamma": 0.99,
+          "learning_rate": 0.0003,
+          "target_tau": 0.005,
+          "max_grad_norm": 10.0,
+          "reward_scale": 1.0,
+          "initial_temperature": 0.02,
+          "target_entropy": -8.0,
+          "log_std_min": -5.0,
+          "log_std_max": 2.0,
+          "initial_log_std": -1.0
+        },
+        "config_sha256": "8e592aa6b42b3f72907730aa1a3ff7d5aac4d23f3fe7aa72cffdc566fcff0f0d",
+        "training_result_sha256": "7d25e597ca35377ec0b6078706670eee743cad3db57beed00818fcd984cb52fa",
+        "environment_config_sha256": "74a469855cf8d137f84e2f479a34779acea0b4ec39aed4eb8c49dec075158e84",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+          "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+          "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+          "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "dqn_seed42",
+        "variant": "dqn",
+        "train_seed": 42,
+        "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42",
+        "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+        "sha256": "d356bf36d0d7f2d65a601c480ad9b0a6769840d0575f095af4b06a3e6cb00373",
+        "config": {
+          "seed": 42,
+          "observation_dim": 36,
+          "action_dim": 8,
+          "hidden_dims": [
+            256,
+            256
+          ],
+          "gamma": 0.99,
+          "learning_rate": 0.0003,
+          "target_tau": 0.005,
+          "max_grad_norm": 10.0,
+          "reward_scale": 1.0,
+          "action_bins": [
+            -1.0,
+            -0.5,
+            0.0,
+            0.5,
+            1.0
+          ],
+          "td_loss": "smooth_l1",
+          "branch_target_aggregation": "mean"
+        },
+        "config_sha256": "a0b4a973f7920f8c15bcad22651a6b85abbffedeb961670f01d0dbdcdaca3530",
+        "training_result_sha256": "24dbb9b6bdee61b1f50f5126c6bf2ad53db46d6ce49a8106eb8390dccfbbb4b7",
+        "environment_config_sha256": "d9f0fb0387be8b77c294be1d79c2380e0bb006c4d7312c66ba2e89d9fed7fac1",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+          "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+          "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+          "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "dqn_seed43",
+        "variant": "dqn",
+        "train_seed": 43,
+        "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43",
+        "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+        "sha256": "346943f85d875ba4032d7fce2bdffdd3be8c6083cba9e766366c5c7bfdc4d5fd",
+        "config": {
+          "seed": 43,
+          "observation_dim": 36,
+          "action_dim": 8,
+          "hidden_dims": [
+            256,
+            256
+          ],
+          "gamma": 0.99,
+          "learning_rate": 0.0003,
+          "target_tau": 0.005,
+          "max_grad_norm": 10.0,
+          "reward_scale": 1.0,
+          "action_bins": [
+            -1.0,
+            -0.5,
+            0.0,
+            0.5,
+            1.0
+          ],
+          "td_loss": "smooth_l1",
+          "branch_target_aggregation": "mean"
+        },
+        "config_sha256": "579b827d399cf218ebf4ef7aec4b60dd6e200a8455fd7f543e748fee2d3bef2f",
+        "training_result_sha256": "7370bf3e677a7d76f6ff03c202c602894abe4f709f9d624fe01f0964ff9c0dea",
+        "environment_config_sha256": "9f6c8340020d02dfc2d4ba6cac7739ff3f2c4798592cc8636459d58e1009367e",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+          "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+          "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+          "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      },
+      {
+        "id": "dqn_seed44",
+        "variant": "dqn",
+        "train_seed": 44,
+        "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44",
+        "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+        "sha256": "06764c50ff38f40a0047abe316525c7a71cf7711fd5f1eaf33045ba34b4b3453",
+        "config": {
+          "seed": 44,
+          "observation_dim": 36,
+          "action_dim": 8,
+          "hidden_dims": [
+            256,
+            256
+          ],
+          "gamma": 0.99,
+          "learning_rate": 0.0003,
+          "target_tau": 0.005,
+          "max_grad_norm": 10.0,
+          "reward_scale": 1.0,
+          "action_bins": [
+            -1.0,
+            -0.5,
+            0.0,
+            0.5,
+            1.0
+          ],
+          "td_loss": "smooth_l1",
+          "branch_target_aggregation": "mean"
+        },
+        "config_sha256": "698078118245ea90675401c7fe1aa03cde136734dfa7c38e24b8da08806223c9",
+        "training_result_sha256": "e4ba5fa6f10c63a0a00fd1dc78da6c59044fba300bbaca412d38f7b277976f36",
+        "environment_config_sha256": "74a469855cf8d137f84e2f479a34779acea0b4ec39aed4eb8c49dec075158e84",
+        "source_checks": {
+          "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+          "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+          "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+          "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+          "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+          "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+          "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad"
+        },
+        "environment_transitions_total": 2048000,
+        "reward_version": "absolute_heading_v1",
+        "heading_penalty_scale": 0.5
+      }
+    ]
+  },
+  "created_at_utc": "2026-11-06T18:36:25.533556+00:00"
+}

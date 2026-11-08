@@ -1,0 +1,177 @@
+{
+  "status": "completed",
+  "command": [
+    "/home/ubuntu/miniforge3/bin/conda",
+    "run",
+    "-n",
+    "env_isaaclab",
+    "--no-capture-output",
+    "/home/ubuntu/miniforge3/envs/env_isaaclab/bin/python",
+    "/home/ywwang/sesame/runs/memory_probe_20261104_seed42/profile_training.py",
+    "--num-envs",
+    "256",
+    "--iterations",
+    "20",
+    "--steps-per-env",
+    "32",
+    "--eval-episodes",
+    "1",
+    "--seed",
+    "42",
+    "--run-dir",
+    "/home/ywwang/sesame/runs/memory_probe_20261104_seed42"
+  ],
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "sample_interval_requested_s": 0.1,
+  "before": {
+    "device_used_bytes": 13086621696,
+    "device_total_bytes": 25757220864,
+    "processes": {
+      "1264663": {
+        "bytes": 11905531904,
+        "contexts": [
+          "compute"
+        ]
+      },
+      "703055": {
+        "bytes": 107692032,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "930742": {
+        "bytes": 326918144,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "931105": {
+        "bytes": 61882368,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "451456": {
+        "bytes": 44777472,
+        "contexts": [
+          "graphics"
+        ]
+      }
+    }
+  },
+  "started_at_unix": 1793787918.5248482,
+  "scope": "Headless baseline PPO, 256 environments, 20 updates, 32 steps/env; separate post-training evaluation.",
+  "method": "NVML per-process total GPU memory; compute/graphics contexts deduplicated by PID using max, not sum.",
+  "files_sha256": {
+    "/home/ywwang/sesame/runs/memory_probe_20261104_seed42/measure.py": "0d6fc9ed0dbc87ac7ef0f2ee7bb6d2c64f14f91eefa0e61dba008b78503a135e",
+    "/home/ywwang/sesame/runs/memory_probe_20261104_seed42/profile_training.py": "2942e3d1b0907d5d17150ff91290da53b61655f9d046e263e1db2229c748789a",
+    "/home/ywwang/sesame/scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1"
+  },
+  "exit_code": 0,
+  "training_status": "completed",
+  "training_pid": [
+    2394184
+  ],
+  "samples": 506,
+  "effective_mean_sample_interval_s": 0.10012060203174554,
+  "maximum_sample_gap_s": 0.10022282600402832,
+  "peaks": {
+    "overall": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793787934.5478868,
+      "phase": "training",
+      "pid": 2394184
+    },
+    "initialization": {
+      "bytes": 2698514432,
+      "MiB": 2573.50390625,
+      "GiB": 2.5131874084472656,
+      "timestamp": 1793787928.240331,
+      "phase": "initialization",
+      "pid": 2394184
+    },
+    "training": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793787934.5478868,
+      "phase": "training",
+      "pid": 2394184
+    },
+    "checkpoint_and_reload": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793787946.5618412,
+      "phase": "checkpoint_and_reload",
+      "pid": 2394184
+    },
+    "evaluation_zero_residual": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793787946.662041,
+      "phase": "evaluation_zero_residual",
+      "pid": 2394184
+    },
+    "evaluation_ppo": {
+      "bytes": 5781327872,
+      "MiB": 5513.50390625,
+      "GiB": 5.384281158447266,
+      "timestamp": 1793787958.0752413,
+      "phase": "evaluation_ppo",
+      "pid": 2394184
+    }
+  },
+  "after": {
+    "device_used_bytes": 13086621696,
+    "device_total_bytes": 25757220864,
+    "processes": {
+      "1264663": {
+        "bytes": 11905531904,
+        "contexts": [
+          "compute"
+        ]
+      },
+      "703055": {
+        "bytes": 107692032,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "930742": {
+        "bytes": 326918144,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "931105": {
+        "bytes": 61882368,
+        "contexts": [
+          "graphics"
+        ]
+      },
+      "451456": {
+        "bytes": 44777472,
+        "contexts": [
+          "graphics"
+        ]
+      }
+    }
+  },
+  "finished_at_unix": 1793787969.0885148,
+  "completed_training_iterations": 20,
+  "environment_transitions_total": 163840,
+  "limits": "Sampled maximum of this short run, not the historical 250-update peak. Sub-interval spikes may be missed.",
+  "pytorch": {
+    "pid": 2394184,
+    "phase": "training",
+    "seconds": 17.687488596886396,
+    "peak_allocated_bytes": 34555392,
+    "peak_reserved_bytes": 39845888,
+    "final_allocated_bytes": 20914176,
+    "final_reserved_bytes": 39845888
+  }
+}

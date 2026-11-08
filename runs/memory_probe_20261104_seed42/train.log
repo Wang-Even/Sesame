@@ -1,0 +1,428 @@
+[Info] [carb] Logging to file: /home/ywwang/sesame/runs/memory_probe_20261104_seed42/isaac.log
+2026-11-04 10:25:22 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-04 10:25:22 [31ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-04 10:25:23 [735ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-04 10:25:23 [986ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-04 10:25:23 [987ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-04 10:25:23 [987ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-04 10:25:23 [987ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-04 10:25:23 [987ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-04 10:25:23 [987ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-04 10:25:23 [987ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-04_18-25-27.log
+[33m18:25:27 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+2026-11-04 10:25:23 [1,229ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-11-04 10:25:24 [1,375ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.07    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090 D        | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2685      | 797f5e3a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 20.04.6 LTS (Focal Fossa) ubuntu, Version: 20.04.6, Kernel: 5.15.0-139-generic
+| Processor: 12th Gen Intel(R) Core(TM) i5-12600KF
+| Cores: 10 | Logical Cores: 10
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31876 | Free Memory: 2346
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 17592186044413
+|---------------------------------------------------------------------------------------------|
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,987ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,988ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,988ms] [Warning] [omni.usd] Warning: in G[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.002
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 0.558967 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 256
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m18:25:28 [articulation.py] WARNING: Spatial tendons are not supported in Isaac Sim < 5.0: patching spatial-tendon getter and setter to use dummy value[0m
+[INFO]: Time taken for simulation start : 0.664028 seconds
+[INFO]: Completed setting up the environment...
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+################################################################################
+                       [1m Learning iteration 0/20 [0m                        
+
+                       Computation: 6802 steps/s (collection: 0.824s, learning 0.381s)
+             Mean action noise std: 0.50
+                    value_function: 0.0076
+                         surrogate: -0.0142
+                           entropy: 5.7960
+--------------------------------------------------------------------------------
+                   Total timesteps: 8192
+                    Iteration time: 1.20s
+                      Time elapsed: 00:00:01
+                               ETA: 00:00:24
+
+################################################################################
+                       [1m Learning iteration 1/20 [0m                        
+
+                       Computation: 9601 steps/s (collection: 0.744s, learning 0.109s)
+             Mean action noise std: 0.50
+                    value_function: 0.0065
+                         surrogate: -0.0128
+                           entropy: 5.7654
+--------------------------------------------------------------------------------
+                   Total timesteps: 16384
+                    Iteration time: 0.85s
+                      Time elapsed: 00:00:02
+                               ETA: 00:00:19
+
+################################################################################
+                       [1m Learning iteration 2/20 [0m                        
+
+                       Computation: 5093 steps/s (collection: 1.554s, learning 0.054s)
+             Mean action noise std: 0.50
+                    value_function: 0.0077
+                         surrogate: -0.0099
+                           entropy: 5.7473
+--------------------------------------------------------------------------------
+                   Total timesteps: 24576
+                    Iteration time: 1.61s
+                      Time elapsed: 00:00:03
+                               ETA: 00:00:21
+
+################################################################################
+                       [1m Learning iteration 3/20 [0m                        
+
+                       Computation: 13164 steps/s (collection: 0.554s, learning 0.068s)
+             Mean action noise std: 0.50
+                    value_function: 0.0079
+                         surrogate: -0.0068
+                           entropy: 5.7368
+--------------------------------------------------------------------------------
+                   Total timesteps: 32768
+                    Iteration time: 0.62s
+                      Time elapsed: 00:00:04
+                               ETA: 00:00:18
+
+################################################################################
+                       [1m Learning iteration 4/20 [0m                        
+
+                       Computation: 14123 steps/s (collection: 0.530s, learning 0.050s)
+             Mean action noise std: 0.49
+                    value_function: 0.0081
+                         surrogate: -0.0087
+                           entropy: 5.7273
+--------------------------------------------------------------------------------
+                   Total timesteps: 40960
+                    Iteration time: 0.58s
+                      Time elapsed: 00:00:04
+                               ETA: 00:00:15
+
+################################################################################
+                       [1m Learning iteration 5/20 [0m                        
+
+                       Computation: 13794 steps/s (collection: 0.546s, learning 0.048s)
+             Mean action noise std: 0.49
+                    value_function: 0.0081
+                         surrogate: -0.0092
+                           entropy: 5.7156
+--------------------------------------------------------------------------------
+                   Total timesteps: 49152
+                    Iteration time: 0.59s
+                      Time elapsed: 00:00:05
+                               ETA: 00:00:13
+
+################################################################################
+                       [1m Learning iteration 6/20 [0m                        
+
+                       Computation: 10035 steps/s (collection: 0.740s, learning 0.076s)
+             Mean action noise std: 0.49
+                    value_function: 0.0079
+                         surrogate: -0.0094
+                           entropy: 5.7034
+--------------------------------------------------------------------------------
+                   Total timesteps: 57344
+                    Iteration time: 0.82s
+                      Time elapsed: 00:00:06
+                               ETA: 00:00:12
+
+################################################################################
+                       [1m Learning iteration 7/20 [0m                        
+
+                       Computation: 5042 steps/s (collection: 1.576s, learning 0.049s)
+             Mean action noise std: 0.49
+                    value_function: 0.0076
+                         surrogate: -0.0092
+                           entropy: 5.6950
+--------------------------------------------------------------------------------
+                   Total timesteps: 65536
+                    Iteration time: 1.62s
+                      Time elapsed: 00:00:07
+                               ETA: 00:00:12
+
+################################################################################
+                       [1m Learning iteration 8/20 [0m                        
+
+                       Computation: 13424 steps/s (collection: 0.561s, learning 0.049s)
+             Mean action noise std: 0.49
+                    value_function: 0.0077
+                         surrogate: -0.0092
+                           entropy: 5.6815
+--------------------------------------------------------------------------------
+                   Total timesteps: 73728
+                    Iteration time: 0.61s
+                      Time elapsed: 00:00:08
+                               ETA: 00:00:11
+
+################################################################################
+                       [1m Learning iteration 9/20 [0m                        
+
+                       Computation: 13996 steps/s (collection: 0.534s, learning 0.051s)
+             Mean action noise std: 0.49
+                    value_function: 0.0083
+                         surrogate: -0.0071
+                           entropy: 5.6729
+--------------------------------------------------------------------------------
+                   Total timesteps: 81920
+                    Iteration time: 0.59s
+                      Time elapsed: 00:00:09
+                               ETA: 00:00:10
+
+################################################################################
+                       [1m Learning iteration 10/20 [0m                       
+
+                       Computation: 14030 steps/s (collection: 0.533s, learning 0.051s)
+             Mean action noise std: 0.49
+                    value_function: 0.0085
+                         surrogate: -0.0090
+                           entropy: 5.6697
+--------------------------------------------------------------------------------
+                   Total timesteps: 90112
+                    Iteration time: 0.58s
+                      Time elapsed: 00:00:09
+                               ETA: 00:00:08
+
+################################################################################
+                       [1m Learning iteration 11/20 [0m                       
+
+                       Computation: 10477 steps/s (collection: 0.723s, learning 0.059s)
+             Mean action noise std: 0.49
+                    value_function: 0.0089
+                         surrogate: -0.0075
+                           entropy: 5.6701
+--------------------------------------------------------------------------------
+                   Total timesteps: 98304
+                    Iteration time: 0.78s
+                      Time elapsed: 00:00:10
+                               ETA: 00:00:07
+
+################################################################################
+                       [1m Learning iteration 12/20 [0m                       
+
+                       Computation: 5002 steps/s (collection: 1.589s, learning 0.048s)
+             Mean action noise std: 0.49
+                    value_function: 0.0095
+                         surrogate: -0.0067
+                           entropy: 5.6638
+--------------------------------------------------------------------------------
+                   Total timesteps: 106496
+                    Iteration time: 1.64s
+                      Time elapsed: 00:00:12
+                               ETA: 00:00:07
+
+################################################################################
+                       [1m Learning iteration 13/20 [0m                       
+
+                       Computation: 13498 steps/s (collection: 0.555s, learning 0.052s)
+             Mean action noise std: 0.49
+                    value_function: 0.0086
+                         surrogate: -0.0092
+                           entropy: 5.6504
+--------------------------------------------------------------------------------
+                   Total timesteps: 114688
+                    Iteration time: 0.61s
+                      Time elapsed: 00:00:12
+                               ETA: 00:00:06
+
+################################################################################
+                       [1m Learning iteration 14/20 [0m                       
+
+                       Computation: 13953 steps/s (collection: 0.537s, learning 0.051s)
+             Mean action noise std: 0.49
+                    value_function: 0.0079
+                         surrogate: -0.0083
+                           entropy: 5.6347
+--------------------------------------------------------------------------------
+                   Total timesteps: 122880
+                    Iteration time: 0.59s
+                      Time elapsed: 00:00:13
+                               ETA: 00:00:05
+
+################################################################################
+                       [1m Learning iteration 15/20 [0m                       
+
+                       Computation: 14048 steps/s (collection: 0.534s, learning 0.049s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0063
+               Mean surrogate loss: -0.0071
+                 Mean entropy loss: 5.6271
+                       Mean reward: 5.66
+               Mean episode length: 500.00
+              Episode/distance_x_m: 0.1518
+                Episode/duration_s: 10.0000
+             Episode/avg_speed_m_s: 0.0152
+                    Episode/return: 5.6280
+             Episode/fall_fraction: 0.0000
+          Episode/timeout_fraction: 1.0000
+               RewardRate/tracking: 0.4402
+                RewardRate/forward: 0.1110
+                RewardRate/upright: 0.3500
+                RewardRate/lateral: -0.0844
+                    RewardRate/yaw: -0.1996
+        RewardRate/roll_pitch_rate: -0.0063
+      RewardRate/vertical_velocity: -0.0011
+                 RewardRate/torque: -0.0066
+            RewardRate/action_rate: -0.0378
+                   RewardRate/pose: -0.0026
+            RewardRate/termination: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 131072
+                    Iteration time: 0.58s
+                      Time elapsed: 00:00:13
+                               ETA: 00:00:04
+
+################################################################################
+                       [1m Learning iteration 16/20 [0m                       
+
+                       Computation: 14074 steps/s (collection: 0.532s, learning 0.050s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0083
+               Mean surrogate loss: -0.0086
+                 Mean entropy loss: 5.6164
+                       Mean reward: 5.66
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 139264
+                    Iteration time: 0.58s
+                      Time elapsed: 00:00:14
+                               ETA: 00:00:03
+
+################################################################################
+                       [1m Learning iteration 17/20 [0m                       
+
+                       Computation: 4430 steps/s (collection: 1.798s, learning 0.051s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0098
+               Mean surrogate loss: -0.0065
+                 Mean entropy loss: 5.6078
+                       Mean reward: 5.66
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 147456
+                    Iteration time: 1.85s
+                      Time elapsed: 00:00:16
+                               ETA: 00:00:02
+
+################################################################################
+                       [1m Learning iteration 18/20 [0m                       
+
+                       Computation: 13380 steps/s (collection: 0.563s, learning 0.049s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0087
+               Mean surrogate loss: -0.0086
+                 Mean entropy loss: 5.5987
+                       Mean reward: 5.66
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 155648
+                    Iteration time: 0.61s
+                      Time elapsed: 00:00:16
+                               ETA: 00:00:01
+
+################################################################################
+                       [1m Learning iteration 19/20 [0m                       
+
+                       Computation: 14064 steps/s (collection: 0.532s, learning 0.050s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0091
+               Mean surrogate loss: -0.0091
+                 Mean entropy loss: 5.5820
+                       Mean reward: 5.66
+               Mean episode length: 500.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 163840
+                    Iteration time: 0.58s
+                      Time elapsed: 00:00:17
+                               ETA: 00:00:00
+
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+SESAME_PPO_RESULT={"started_at_utc": "2026-11-04T10:25:21.743946+00:00", "status": "completed", "scope": "local Sesame PPO baseline; not official course evaluation", "run_dir": "/home/ywwang/sesame/runs/memory_probe_20261104_seed42", "args": {"num_envs": 256, "iterations": 20, "steps_per_env": 32, "run_dir": "/home/ywwang/sesame/runs/memory_probe_20261104_seed42", "seed": 42, "eval_seed": 1042, "eval_episodes": 1, "episode_length_s": 10.0, "resume": null, "eval_only": false, "device": "cuda:0", "save_interval": 50, "learning_rate": 0.0003, "hidden_dims": [128, 128, 64]}, "git_operations": "disabled", "sources": [{"path": "scripts/train_ppo.py", "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1", "bytes": 23496}, {"path": "sesame_rl/environment.py", "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c", "bytes": 20862}, {"path": "scripts/import_sesame_isaac.py", "sha256": "98686160862bef42a74163729a4ef887f42e3f7f5ea0707e81fcda98b1230989", "bytes": 13980}, {"path": "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf", "sha256": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076", "bytes": 16174}, {"path": "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml", "sha256": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a", "bytes": 12500}, {"path": "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml", "sha256": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b", "bytes": 628}, {"path": "assets/isaac/sesame/.asset_hash", "sha256": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c", "bytes": 32}, {"path": "assets/isaac/sesame/config.yaml", "sha256": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6", "bytes": 856}, {"path": "assets/isaac/sesame/configuration/sesame_base.usd", "sha256": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937", "bytes": 3689591}, {"path": "assets/isaac/sesame/configuration/sesame_physics.usd", "sha256": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc", "bytes": 4006}, {"path": "assets/isaac/sesame/configuration/sesame_sensor.usd", "sha256": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e", "bytes": 656}, {"path": "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl", "sha256": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7", "bytes": 85184}, {"path": "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl", "sha256": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916", "bytes": 389084}, {"path": "assets/isaac/sesame/import_source/meshes/L1_v117.stl", "sha256": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558", "bytes": 359384}, {"path": "assets/isaac/sesame/import_source/meshes/L2_v117.stl", "sha256": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf", "bytes": 383384}, {"path": "assets/isaac/sesame/import_source/meshes/L3_v117.stl", "sha256": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3", "bytes": 102684}, {"path": "assets/isaac/sesame/import_source/meshes/L4_v117.stl", "sha256": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470", "bytes": 91384}, {"path": "assets/isaac/sesame/import_source/meshes/R1_v117.stl", "sha256": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871", "bytes": 379784}, {"path": "assets/isaac/sesame/import_source/meshes/R2_v117.stl", "sha256": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c", "bytes": 378984}, {"path": "assets/isaac/sesame/import_source/meshes/R3_v117.stl", "sha256": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e", "bytes": 105884}, {"path": "assets/isaac/sesame/import_source/meshes/R4_v117.stl", "sha256": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a", "bytes": 94584}, {"path": "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl", "sha256": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26", "bytes": 184184}, {"path": "assets/isaac/sesame/import_source/sesame.urdf", "sha256": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7", "bytes": 15018}, {"path": "assets/isaac/sesame/sesame.usd", "sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7", "bytes": 1602}], "versions": {"torch": "2.7.0+cu128", "rsl-rl-lib": "3.1.2", "isaaclab": "0.49.0", "isaaclab-rl": "0.4.4", "isaacsim": "not in distribution metadata", "gymnasium": "1.2.1"}, "gpu": "NVIDIA GeForce RTX 4090 D", "observation_shape": [256, 36], "action_count": 8, "checkpoint": "/home/ywwang/sesame/runs/memory_probe_20261104_seed42/final.pt", "checkpoint_sha256": "eb2aaafbeba9b9e5783866bcf9f340a15d1d318e8d7928d32125ee5633d7de50", "environment_transitions_total": 163840, "training_iterations_this_run": 20, "reload_max_abs_action_error": 0.0, "evaluation": {"identical_initial_conditions": true, "zero_residual": {"policy": "zero_residual", "episodes": 1, "seed": 1042, "all_actions_observations_rewards_finite": true, "max_abs_raw_action": 0.0, "fall_rate": 0.0, "timeout_rate": 1.0, "distance_x_m": {"mean": 7.62939453125e-06, "std": 0.0, "min": 7.62939453125e-06, "max": 7.62939453125e-06}, "avg_speed_m_s": {"mean": 7.629394644936838e-07, "std": 0.0, "min": 7.629394644936838e-07, "max": 7.629394644936838e-07}, "duration_s": {"mean": 10.0, "std": 0.0, "min": 10.0, "max": 10.0}, "return": {"mean": 9.016484260559082, "std": 0.0, "min": 9.016484260559082, "max": 9.016484260559082}}, "ppo": {"policy": "ppo", "episodes": 1, "seed": 1042, "all_actions_observations_rewards_finite": true, "max_abs_raw_action": 0.787407636642456, "fall_rate": 0.0, "timeout_rate": 1.0, "distance_x_m": {"mean": 0.21440505981445312, "std": 0.0, "min": 0.21440505981445312, "max": 0.21440505981445312}, "avg_speed_m_s": {"mean": 0.021440505981445312, "std": 0.0, "min": 0.021440505981445312, "max": 0.021440505981445312}, "duration_s": {"mean": 10.0, "std": 0.0, "min": 10.0, "max": 10.0}, "return": {"mean": 11.063163757324219, "std": 0.0, "min": 11.063163757324219, "max": 11.063163757324219}}}, "wall_seconds_before_shutdown": 46.58833483979106, "finished_at_utc": "2026-11-04T10:26:08.332563+00:00"}
+etNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,988ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,988ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,988ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-04 10:25:27 [4,988ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+

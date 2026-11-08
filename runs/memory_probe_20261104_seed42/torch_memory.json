@@ -1,0 +1,9 @@
+{
+  "pid": 2394184,
+  "phase": "training",
+  "seconds": 17.687488596886396,
+  "peak_allocated_bytes": 34555392,
+  "peak_reserved_bytes": 39845888,
+  "final_allocated_bytes": 20914176,
+  "final_reserved_bytes": 39845888
+}

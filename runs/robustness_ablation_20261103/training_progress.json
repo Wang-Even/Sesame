@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "protocol_sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+  "started_at_utc": "2026-11-02T21:03:23.051347+00:00",
+  "completed": [
+    {
+      "id": "baseline_seed42",
+      "variant": "baseline",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/final.pt",
+      "sha256": "d1a35e95e7bf14458b10c8f324b24e6a65f6382bc51c2bb5fc0c3e88e9cca636",
+      "reused_training": true
+    },
+    {
+      "id": "baseline_seed43",
+      "variant": "baseline",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/final.pt",
+      "sha256": "49b953cb06a976c5da15f53a904eea37eddc53ce87a656a2342e9a958572d0ef",
+      "reused_training": false
+    },
+    {
+      "id": "full_dr_seed42",
+      "variant": "full_dr",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/final.pt",
+      "sha256": "70fdc8e10290f46aaec694bcc877078af4e7368dde424cb9adda3dac320e2b96",
+      "reused_training": true
+    },
+    {
+      "id": "baseline_seed44",
+      "variant": "baseline",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/final.pt",
+      "sha256": "32e711f7bd73db7c19c8b51b711e972b9bc6310b31a3937cc4ee83a252fcfd28",
+      "reused_training": false
+    },
+    {
+      "id": "full_dr_seed43",
+      "variant": "full_dr",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/final.pt",
+      "sha256": "aaccc879886314524887997b13dd3c797145d6e695e89a484ea5de44bc0f8430",
+      "reused_training": false
+    },
+    {
+      "id": "full_dr_seed44",
+      "variant": "full_dr",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/final.pt",
+      "sha256": "69bf388bd91b6203b0c7b3f99dce1ad5d1c350fcc9c00bdd49c6054c35546486",
+      "reused_training": false
+    },
+    {
+      "id": "fixed_delay_seed42",
+      "variant": "fixed_delay",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed42/final.pt",
+      "sha256": "7e55fc97bde9320f975b7d8d537a86ea0e47fa16c618964e4c4b3e4952a8186d",
+      "reused_training": false
+    },
+    {
+      "id": "fixed_delay_seed43",
+      "variant": "fixed_delay",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed43/final.pt",
+      "sha256": "97aea9ff34c092cf3bb43b466714966add1bae68a20188dbfc22c68b1d155867",
+      "reused_training": false
+    },
+    {
+      "id": "fixed_delay_seed44",
+      "variant": "fixed_delay",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed44/final.pt",
+      "sha256": "d73a707c75449e5b044c822d60610e147de38531af300efd81c85513e44396b8",
+      "reused_training": false
+    }
+  ],
+  "active": null,
+  "finished_at_utc": "2026-11-02T21:29:59.222094+00:00"
+}

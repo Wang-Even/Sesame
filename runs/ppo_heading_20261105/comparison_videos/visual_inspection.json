@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-05T09:10:58.647892+00:00",
+  "method": "Agent visual inspection of actual images with view_image; ffprobe and SHA256 validation",
+  "inspected_frames": [
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/comparison_thumbnail.png",
+      "sha256": "fa0e498b2c50c67ebda6c82e43a6c44e4f1e1e15969bce0770a14e794311596a"
+    },
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/full_dr_seed42/frame_0000.png",
+      "sha256": "c17cb66f962549da83106224b4ff5eac365379e16ecf5c092ea61392e27369e1"
+    },
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/full_dr_seed42/thumbnail.png",
+      "sha256": "8295e14e448723b0dcf6ea6b3b6b18c89e09ff76ad92da5669fbedb94f3f7b7d"
+    },
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/full_dr_seed42/last_frame.png",
+      "sha256": "73df44de8c3c1d941322b87cff9086de2204b794cc5b00678103764e4be3e431"
+    },
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/heading_seed42/frame_0000.png",
+      "sha256": "ec2a7bbf60af99c1ea7c48e9b671934323e6844e7fbaed3750eedfe5a6bc6b30"
+    },
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/heading_seed42/thumbnail.png",
+      "sha256": "15c1718fd5ceb1d6948daaf76281c5c22bbccfcdd907c87d62c0d79b0043147b"
+    },
+    {
+      "path": "/home/ywwang/sesame/runs/ppo_heading_20261105/comparison_videos/heading_seed42/last_frame.png",
+      "sha256": "767dba25e0fa422704ec2022621d45c705da942df97c2bfe3380c2c1c222caf5"
+    }
+  ],
+  "findings": [
+    "Both models, all legs and floor grid visible; no blank frames or major cropping at inspected start/mid/end frames.",
+    "Comparison labels identify old PPO + DR on left and PPO + DR + heading on right; time, displacement and world-frame heading HUD readable.",
+    "Both first episodes run 10 seconds at real-time playback and finish by timeout with no fall.",
+    "Exact initial root/joint state and random physical parameter snapshots match across both policies."
+  ],
+  "limitations": "Single preselected seed42 live-policy episode is an illustration; conclusions must use the separate multi-seed evaluation."
+}

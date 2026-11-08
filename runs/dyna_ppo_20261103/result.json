@@ -1,0 +1,351 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-11-03T15:50:26.408896+00:00",
+  "protocol_sha256": "dd1bf152b1bf670ac9b4e4663a2b984cbc960f22cef8e8261448c748a5b099e8",
+  "training": [
+    {
+      "id": "baseline_seed42",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "d1a35e95e7bf14458b10c8f324b24e6a65f6382bc51c2bb5fc0c3e88e9cca636",
+      "reused_training": true,
+      "actor_reload_error": 0
+    },
+    {
+      "id": "baseline_seed43",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "49b953cb06a976c5da15f53a904eea37eddc53ce87a656a2342e9a958572d0ef",
+      "reused_training": true,
+      "actor_reload_error": 0
+    },
+    {
+      "id": "baseline_seed44",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "32e711f7bd73db7c19c8b51b711e972b9bc6310b31a3937cc4ee83a252fcfd28",
+      "reused_training": true,
+      "actor_reload_error": 0
+    },
+    {
+      "id": "full_dr_seed42",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "70fdc8e10290f46aaec694bcc877078af4e7368dde424cb9adda3dac320e2b96",
+      "reused_training": true,
+      "actor_reload_error": 0
+    },
+    {
+      "id": "full_dr_seed43",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "aaccc879886314524887997b13dd3c797145d6e695e89a484ea5de44bc0f8430",
+      "reused_training": true,
+      "actor_reload_error": 0
+    },
+    {
+      "id": "full_dr_seed44",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "69bf388bd91b6203b0c7b3f99dce1ad5d1c350fcc9c00bdd49c6054c35546486",
+      "reused_training": true,
+      "actor_reload_error": 0
+    },
+    {
+      "id": "dyna_ppo_seed42",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "68e3081dd83ee69345c0cfcf093a8b8dc9d9e9b75d87438ec9edc871f79105f7",
+      "reused_training": false,
+      "actor_reload_error": 0,
+      "dyna": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "imagined_generated": 107520,
+        "imagined_accepted": 97123,
+        "imagined_optimizer_steps": 734,
+        "imagined_update_calls": 210,
+        "model_fit_calls": 250,
+        "imagined_horizon": 1,
+        "history_frames": 4,
+        "replay_saved": false
+      },
+      "world_model_reload_error": 0
+    },
+    {
+      "id": "dyna_ppo_seed43",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "75a3d3c43d4216822625de33571e4754432f03d457f01f7bb399f58d457cd051",
+      "reused_training": false,
+      "actor_reload_error": 0,
+      "dyna": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "imagined_generated": 107520,
+        "imagined_accepted": 95676,
+        "imagined_optimizer_steps": 736,
+        "imagined_update_calls": 210,
+        "model_fit_calls": 250,
+        "imagined_horizon": 1,
+        "history_frames": 4,
+        "replay_saved": false
+      },
+      "world_model_reload_error": 0
+    },
+    {
+      "id": "dyna_ppo_seed44",
+      "real_steps": 2048000,
+      "checkpoint_sha256": "3ab5427f342e38ff3712741a9558a450c28dbe0cc77a3d8379f43e0179391fb5",
+      "reused_training": false,
+      "actor_reload_error": 0,
+      "dyna": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "imagined_generated": 107520,
+        "imagined_accepted": 96310,
+        "imagined_optimizer_steps": 742,
+        "imagined_update_calls": 210,
+        "model_fit_calls": 250,
+        "imagined_horizon": 1,
+        "history_frames": 4,
+        "replay_saved": false
+      },
+      "world_model_reload_error": 0
+    }
+  ],
+  "pre_imagination_control_comparison": [
+    {
+      "seed": 42,
+      "updates": 40,
+      "maximum_absolute_log_differences": {
+        "value_function": 0.0,
+        "surrogate": 0.0,
+        "entropy": 0.0,
+        "logged_episode_return": 0.0
+      }
+    },
+    {
+      "seed": 43,
+      "updates": 40,
+      "maximum_absolute_log_differences": {
+        "value_function": 0.0,
+        "surrogate": 0.0,
+        "entropy": 0.0,
+        "logged_episode_return": 0.0
+      }
+    },
+    {
+      "seed": 44,
+      "updates": 40,
+      "maximum_absolute_log_differences": {
+        "value_function": 0.0,
+        "surrogate": 0.0,
+        "entropy": 0.0,
+        "logged_episode_return": 0.0
+      }
+    }
+  ],
+  "evaluation": {
+    "cases": 18,
+    "episodes": 2304,
+    "exact_initial_state_and_domain_pairing": true
+  },
+  "primary_results": {
+    "nominal": {
+      "baseline": {
+        "mean": 0.04835817965795286,
+        "sd": 0.011409598136084763,
+        "count": 3,
+        "seed_means": {
+          "42": 0.06117102375719696,
+          "43": 0.044607355317566544,
+          "44": 0.03929615989909507
+        }
+      },
+      "full_dr": {
+        "mean": 0.062173450307454914,
+        "sd": 0.003002126259048608,
+        "count": 3,
+        "seed_means": {
+          "42": 0.058706921845441684,
+          "43": 0.06389457403565757,
+          "44": 0.06391885504126549
+        }
+      },
+      "dyna_ppo": {
+        "mean": 0.0617270891671069,
+        "sd": 0.01135453334698012,
+        "count": 3,
+        "seed_means": {
+          "42": 0.0487686485867016,
+          "43": 0.06647872709436342,
+          "44": 0.06993389182025567
+        }
+      }
+    },
+    "randomized": {
+      "baseline": {
+        "mean": 0.06943441320133086,
+        "sd": 0.005564758465484315,
+        "count": 3,
+        "seed_means": {
+          "42": 0.07522793984389864,
+          "43": 0.06894447840750217,
+          "44": 0.06413082135259174
+        }
+      },
+      "full_dr": {
+        "mean": 0.03747506906317236,
+        "sd": 0.0017217166844990508,
+        "count": 3,
+        "seed_means": {
+          "42": 0.0356678963144077,
+          "43": 0.03766108778654598,
+          "44": 0.03909622308856342
+        }
+      },
+      "dyna_ppo": {
+        "mean": 0.042264929608791135,
+        "sd": 0.005728398632491232,
+        "count": 3,
+        "seed_means": {
+          "42": 0.03565036218788009,
+          "43": 0.045559012243757024,
+          "44": 0.04558541439473629
+        }
+      }
+    }
+  },
+  "source_checks_sha256": {
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/result.json": "b77f400505d3e0b93b5c6a0a3130f0b23e849f460fcbf904cefb637211a4b65c",
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/training.jsonl": "862072c72195b11c5645d8c43ad462ad4f711a77bc211072735433ba0d486347",
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/final.pt": "d1a35e95e7bf14458b10c8f324b24e6a65f6382bc51c2bb5fc0c3e88e9cca636",
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/ppo_config.json": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/result.json": "6b75ea4691e1424fb071d045a2b5e93796cfaa354fc7122125f7b68645846f97",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/training.jsonl": "57976f7c5946f8e16fc2268868bf4a4e12d282e0cae0f0b5b2b9017e3bbab78d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/final.pt": "49b953cb06a976c5da15f53a904eea37eddc53ce87a656a2342e9a958572d0ef",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/ppo_config.json": "f0c131c89d784986c20c46ac362894aa1e9a4e29af5844a26e9ef362dc1a6b1c",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/result.json": "770a89a573cbf37564bd804d9e74abe88f3ae6713dd7d026767e1de19a7f873d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/training.jsonl": "fabe4234147876b97d1abc1393df7907e911ccf14ee59d0784853148e47a5c08",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/final.pt": "32e711f7bd73db7c19c8b51b711e972b9bc6310b31a3937cc4ee83a252fcfd28",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/ppo_config.json": "4b5349559e9e04e057a3cf03e7e4e6f122af1fe64914ff19227312fbefe590a1",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/result.json": "046ea5f98d01ed4d7826670a04491f9d636c60a873b36e9ccc185b90133ab272",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/training.jsonl": "5e256179908e4ac6a3cbb6f9f044985a131824cce533e67d44bbe9cc98fac50b",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/final.pt": "70fdc8e10290f46aaec694bcc877078af4e7368dde424cb9adda3dac320e2b96",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/ppo_config.json": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/result.json": "db799eb0763cb269fe0384635bee88cbec230cf396ea14113f6193ee1e1e5d45",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/training.jsonl": "8b2582d033637b576d340b2e06d5b7afd861a1d9a2d57ecb83145551d1b8c49d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/final.pt": "aaccc879886314524887997b13dd3c797145d6e695e89a484ea5de44bc0f8430",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/ppo_config.json": "f0c131c89d784986c20c46ac362894aa1e9a4e29af5844a26e9ef362dc1a6b1c",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/result.json": "9ff39c1e2622cf951e727ef8ca1a809b0c1274a0185b5ba713f36747ab27e358",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/training.jsonl": "b2d1645f315791a3a20d816d1ab2d893592ac9621789602c345e839c3bf6a499",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/final.pt": "69bf388bd91b6203b0c7b3f99dce1ad5d1c350fcc9c00bdd49c6054c35546486",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/ppo_config.json": "4b5349559e9e04e057a3cf03e7e4e6f122af1fe64914ff19227312fbefe590a1",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/result.json": "9c20aaf407e785b1820b95fabe0cbbdac2296ada67643d7f7475f802deca671f",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/training.jsonl": "14e5b3dfd86ae802126bc771e3b3c4045da2dc0fb9abcb09c67d7f6a3b2f9df1",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt": "68e3081dd83ee69345c0cfcf093a8b8dc9d9e9b75d87438ec9edc871f79105f7",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/ppo_config.json": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/result.json": "572511c158f4cc0a894f35ff615883afcdccdd9739c55ef9ece66cf08d8ab293",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/training.jsonl": "e355882bde2230e8118523ad0e5d590651348f98348daec3f3ed2dafa8e519df",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt": "75a3d3c43d4216822625de33571e4754432f03d457f01f7bb399f58d457cd051",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/ppo_config.json": "f0c131c89d784986c20c46ac362894aa1e9a4e29af5844a26e9ef362dc1a6b1c",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/result.json": "bcd8aeeafecd04f1bc31cd7c083913630251b85974bc795439a2e995230d6d61",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/training.jsonl": "986467a55ac37fccc4b12bbb38083996dbcef7b1cc4bd25ac784c779a5be2664",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt": "3ab5427f342e38ff3712741a9558a450c28dbe0cc77a3d8379f43e0179391fb5",
+    "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/ppo_config.json": "4b5349559e9e04e057a3cf03e7e4e6f122af1fe64914ff19227312fbefe590a1"
+  },
+  "previous_study_preserved": true,
+  "scope": "Local Dyna-style PPO, 3 seeds, extra model/imagination compute, fixed previously observed evaluation scenarios; no hardware or official-score claim",
+  "artifacts": {
+    "runs/dyna_ppo_20261103/protocol.json": {
+      "sha256": "dd1bf152b1bf670ac9b4e4663a2b984cbc960f22cef8e8261448c748a5b099e8",
+      "bytes": 8322
+    },
+    "runs/dyna_ppo_20261103/dyna_config.json": {
+      "sha256": "eeaa6e9d51027328b97d5fbaa82bd693b87a086b1b92c08d4b4c4e49abdabb17",
+      "bytes": 891
+    },
+    "runs/dyna_ppo_20261103/analysis/report.md": {
+      "sha256": "8aedbdf0769370525e2670fcf98a6590d3e5a0de81f2b10c23109e0efa272d33",
+      "bytes": 6315
+    },
+    "runs/dyna_ppo_20261103/analysis/summary.json": {
+      "sha256": "13e69c546706f4d5e4353cd37e6b8f9139ac04fea7c2584130354126b92cfd70",
+      "bytes": 93262
+    },
+    "runs/dyna_ppo_20261103/training_audit.json": {
+      "sha256": "6c59b63df86c637d7f0a561ce563781b7e3b5bce5d5b0d068159ee88495c8618",
+      "bytes": 40472
+    },
+    "runs/dyna_ppo_20261103/evaluation_audit.json": {
+      "sha256": "da8cce63ffe6ac8b056aca807fa1424222fffded6d8d8820901a681aa989488a",
+      "bytes": 58757
+    },
+    "runs/dyna_ppo_20261103/videos/comparison_validation.json": {
+      "sha256": "a41d9902476aff0ef20d6992420e57d741fc7483894622e94026c6c351226579",
+      "bytes": 60526
+    },
+    "runs/dyna_ppo_20261103/videos/ppo_study_comparison_seed3042.mp4": {
+      "sha256": "40e9c05af6fc8b76fb2473969d215822a32dd556a782ad9ac83352adc04fbb4a",
+      "bytes": 5538569
+    },
+    "docs/DYNA_PPO_STUDY.md": {
+      "sha256": "5a3f62fbcee5765ceec32b4cbfb3e2b13f5ed49d0e7670b35d9f5a0fed36678d",
+      "bytes": 4438
+    },
+    "runs/dyna_ppo_20261103/analysis/evaluation_comparison.png": {
+      "sha256": "2e3a52b15918a79fb68ed9c4bae8937caca917934a530cab59d7b2d10f7e090f",
+      "bytes": 235442
+    },
+    "runs/dyna_ppo_20261103/analysis/imagination_budget.png": {
+      "sha256": "18fb2c9af7314e4534b53e6c2b96495919957c07b96003ea321025c4440d3fc9",
+      "bytes": 267109
+    },
+    "runs/dyna_ppo_20261103/analysis/world_model_diagnostics.png": {
+      "sha256": "c4a5f671f370f30b1ddd1cb88e14baf45343beae4363ea64035939563f8d2a88",
+      "bytes": 819375
+    },
+    "runs/dyna_ppo_20261103/analysis/learning_curves.png": {
+      "sha256": "9079b6e3f418eccf7841b1698bb6e33505c8873ed8e714880876fe7aa0b165f3",
+      "bytes": 458686
+    },
+    "runs/dyna_ppo_20261103/analysis/imagination_budget.pdf": {
+      "sha256": "d522b3d13f91b2e9cfe345266c26e238be6260d422c5e10591967c501d9a839d",
+      "bytes": 53243
+    },
+    "runs/dyna_ppo_20261103/analysis/world_model_diagnostics.pdf": {
+      "sha256": "d0af05dd84a32d28aa26b47a902bc441452ca5993c2645e7bc7d172e1f6914e3",
+      "bytes": 92723
+    },
+    "runs/dyna_ppo_20261103/analysis/learning_curves.pdf": {
+      "sha256": "7170dcc85478d03618a7981efd295d2e265cb30e703ca73f875468784fa3b2c3",
+      "bytes": 107097
+    },
+    "runs/dyna_ppo_20261103/analysis/evaluation_comparison.pdf": {
+      "sha256": "87f1a6733dc37deb82662a9fd956d09edad5260ded726590c5cdcf9ac78459ec",
+      "bytes": 83397
+    },
+    "runs/dyna_ppo_20261103/analysis/group_summary.csv": {
+      "sha256": "de4253a9b049001ac861680cb7503401829f02919e06be316bbfd9ee5d99adaf",
+      "bytes": 6181
+    },
+    "runs/dyna_ppo_20261103/analysis/per_training_seed.csv": {
+      "sha256": "c4c7e806c6588c001ea04d81721d28d8e21022377a115b512b778ef9045e3678",
+      "bytes": 6420
+    },
+    "runs/dyna_ppo_20261103/analysis/world_model_diagnostics.csv": {
+      "sha256": "1a72b2ffc2ba60d294a023d0a4a33f72ad3c1a33c3af50d89a550ef8f2bc3c5e",
+      "bytes": 532532
+    },
+    "runs/dyna_ppo_20261103/analysis/paired_seed_differences.csv": {
+      "sha256": "1d3dbec800262607565cc43609d66cc67fa25faa800d19cfd361b3bb4052d5c7",
+      "bytes": 7435
+    },
+    "runs/dyna_ppo_20261103/analysis/compute_accounting.csv": {
+      "sha256": "24f72f09b68710b838bfae456788fcee76a6ec83d3f0d65a09e0845184be21e8",
+      "bytes": 1509
+    }
+  }
+}

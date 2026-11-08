@@ -1,0 +1,753 @@
+{
+  "status": "completed",
+  "smoke": true,
+  "protocol_sha256": "46aeef518b929051f022d2f55e3864fa473951c0ddebca9dfcac28ac7b0799bf",
+  "manifest_signature": "69064b1d8a3a528b6e4391d13f44710c8f559d1c6ec42b37dda27e9e2d05da5f",
+  "analysis_source_sha256": "bbce5a64745a79579adedfad9321f3caa4ff3f8d29af8be887ccf94022fd2f15",
+  "analysis_helper_sha256": "71be67088a3810297845d24c69080827d2a931f1fdea94da95e364ee8302652a",
+  "reward_version": "absolute_heading_v1",
+  "heading_penalty_scale": 0.5,
+  "total_episodes": 16,
+  "total_falls": 0,
+  "pairing_verified_all_cases": true,
+  "aggregation": "4 episodes per policy/condition; mean and sample SD across 1 training-seed means",
+  "metric_definitions": {
+    "heading_rms_deg": [
+      "Heading RMS (degrees)",
+      "航向 RMS（°）"
+    ],
+    "velocity_x_rmse_m_s": [
+      "Forward velocity RMSE (m/s)",
+      "前向速度 RMSE（m/s）"
+    ],
+    "velocity_xy_tracking_rmse_m_s": [
+      "Planar velocity RMSE (m/s)",
+      "平面速度 RMSE（m/s）"
+    ],
+    "distance_x_m": [
+      "Forward displacement (m)",
+      "前向位移（m）"
+    ],
+    "abs_final_heading_yaw_deg": [
+      "Absolute final heading (degrees)",
+      "终点绝对航向（°）"
+    ],
+    "abs_lateral_displacement_m": [
+      "Absolute final lateral displacement (m)",
+      "终点绝对侧移（m）"
+    ],
+    "fall_rate": [
+      "Observed fall fraction",
+      "跌倒率"
+    ],
+    "applied_target_rate_rms_rad_s": [
+      "Applied target rate RMS (rad/s)",
+      "执行目标变化率 RMS（rad/s）"
+    ],
+    "applied_target_acceleration_rms_rad_s2": [
+      "Applied target acceleration RMS (rad/s²)",
+      "执行目标加速度 RMS（rad/s²）"
+    ],
+    "actual_joint_acceleration_rms_rad_s2": [
+      "Joint acceleration RMS at 50 Hz (rad/s²)",
+      "实际关节加速度 RMS，50 Hz（rad/s²）"
+    ],
+    "raw_action_clipped_fraction": [
+      "Raw action clipping fraction",
+      "原始动作裁剪比例"
+    ],
+    "return": [
+      "Common heading reward return",
+      "共同奖励回报"
+    ],
+    "duration_s": [
+      "Episode duration (s)",
+      "回合时长（s）"
+    ]
+  },
+  "inputs_sha256": {
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation_protocol.json": "46aeef518b929051f022d2f55e3864fa473951c0ddebca9dfcac28ac7b0799bf",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/evaluation_manifest.json": "f490ed3d9c3c878b1f3d278f9655fb6e9232c101ec88b433cf7632645ee37fe5",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142/final.pt": "7353cee4fbb13b04293d166067f601da73b468b48c9c922ea20e1485c45f5ebc",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142/result.json": "c6b9a31cae9aaf508d26ed35ed50b36c0903d4a122cba9d697322b057718d73f",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142/training.jsonl": "4178c166ed440e686e6e9c0f296631b1e55242c10b6213a525bd5a40242b419f",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/sac_seed142/nominal.json": "15f5f62f02b47c48330d2b028a9b97127246b48e4f7d0fc75d3366324420bfd1",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/paired_initial_conditions/nominal_seed19042.json": "c43138ee12acd3948129d009adfaef1824bf111e5c4584eae6b0230598c1217a",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/trajectories/sac_seed142_nominal_seed19042.json": "b1d2f263015e43be1731e442cae2fede70f8efe45887e3af04bde2c3546e4b03",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/sac_seed142/randomized.json": "5d712c13768df4795f8b8ef11bc24310e78da233eaf87e7e970216042add9ad8",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/paired_initial_conditions/randomized_seed19042.json": "23c947ab5d81db97352a64fd55dfcc94168614b36bac59c5e64428d858058748",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/trajectories/sac_seed142_randomized_seed19042.json": "0689b6024cc10def889dc242137970247acad3c6913a96fb6931d3ee3cb99dd9",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/final.pt": "38a29a89c154e05e8eca719c98b6bdc218e7220d9484bbc0fcfc97b8454563ab",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/result.json": "9c6a956b8628875f59b0a65a43c6a8eb3b4cdb5402dfe744ce6036d84e716d6f",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/training.jsonl": "897a882b7a93de853d420b8a9d7fec650e31a838fe1841d40c0b08576ca01c84",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/dqn_seed142/nominal.json": "f0779249e48c12f5a57a018af9d8860f5f76dbd424a85fe2f084c84c68dd3fdc",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/trajectories/dqn_seed142_nominal_seed19042.json": "36ff15763c77feedc440607aac429e2be001a505d9240a3eb5116b602970552f",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/dqn_seed142/randomized.json": "76abd6dea46b2c3cb2b547bebd10507a29a96cfbea37cc6beee595c1827dbb11",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/trajectories/dqn_seed142_randomized_seed19042.json": "928a3ea8750df7aff88c16c23f9320b7707a904a411f3b65f7a14481f9e10588"
+  },
+  "per_seed": [
+    {
+      "variant": "sac",
+      "train_seed": 142,
+      "condition": "nominal",
+      "episodes": 4,
+      "falls": 0,
+      "heading_rms_deg": 0.590415750845351,
+      "heading_rms_deg_valid_episodes": 4,
+      "velocity_x_rmse_m_s": 0.09983937814831734,
+      "velocity_x_rmse_m_s_valid_episodes": 4,
+      "velocity_xy_tracking_rmse_m_s": 0.0998956672847271,
+      "velocity_xy_tracking_rmse_m_s_valid_episodes": 4,
+      "distance_x_m": 0.0006434321403503418,
+      "distance_x_m_valid_episodes": 4,
+      "abs_final_heading_yaw_deg": 0.6637103857642589,
+      "abs_final_heading_yaw_deg_valid_episodes": 4,
+      "abs_lateral_displacement_m": 0.0011933445930480957,
+      "abs_lateral_displacement_m_valid_episodes": 4,
+      "fall_rate": 0.0,
+      "fall_rate_valid_episodes": 4,
+      "applied_target_rate_rms_rad_s": 0.18333175778388977,
+      "applied_target_rate_rms_rad_s_valid_episodes": 4,
+      "applied_target_acceleration_rms_rad_s2": 13.828709125518799,
+      "applied_target_acceleration_rms_rad_s2_valid_episodes": 4,
+      "actual_joint_acceleration_rms_rad_s2": 17.024722814559937,
+      "actual_joint_acceleration_rms_rad_s2_valid_episodes": 4,
+      "raw_action_clipped_fraction": 0.0,
+      "raw_action_clipped_fraction_valid_episodes": 4,
+      "return": 9.051620483398438,
+      "return_valid_episodes": 4,
+      "duration_s": 10.0,
+      "duration_s_valid_episodes": 4
+    },
+    {
+      "variant": "sac",
+      "train_seed": 142,
+      "condition": "randomized",
+      "episodes": 4,
+      "falls": 0,
+      "heading_rms_deg": 6.860427064468739,
+      "heading_rms_deg_valid_episodes": 4,
+      "velocity_x_rmse_m_s": 0.09921418875455856,
+      "velocity_x_rmse_m_s_valid_episodes": 4,
+      "velocity_xy_tracking_rmse_m_s": 0.10005329549312592,
+      "velocity_xy_tracking_rmse_m_s_valid_episodes": 4,
+      "distance_x_m": -0.001261591911315918,
+      "distance_x_m_valid_episodes": 4,
+      "abs_final_heading_yaw_deg": 11.007230670542416,
+      "abs_final_heading_yaw_deg_valid_episodes": 4,
+      "abs_lateral_displacement_m": 0.005082488059997559,
+      "abs_lateral_displacement_m_valid_episodes": 4,
+      "fall_rate": 0.0,
+      "fall_rate_valid_episodes": 4,
+      "applied_target_rate_rms_rad_s": 0.1150895282626152,
+      "applied_target_rate_rms_rad_s_valid_episodes": 4,
+      "applied_target_acceleration_rms_rad_s2": 8.184705406427383,
+      "applied_target_acceleration_rms_rad_s2_valid_episodes": 4,
+      "actual_joint_acceleration_rms_rad_s2": 25.52951955795288,
+      "actual_joint_acceleration_rms_rad_s2_valid_episodes": 4,
+      "raw_action_clipped_fraction": 0.0,
+      "raw_action_clipped_fraction_valid_episodes": 4,
+      "return": 8.997769355773926,
+      "return_valid_episodes": 4,
+      "duration_s": 10.0,
+      "duration_s_valid_episodes": 4
+    },
+    {
+      "variant": "dqn",
+      "train_seed": 142,
+      "condition": "nominal",
+      "episodes": 4,
+      "falls": 0,
+      "heading_rms_deg": 38.03882570253159,
+      "heading_rms_deg_valid_episodes": 4,
+      "velocity_x_rmse_m_s": 0.13750438019633293,
+      "velocity_x_rmse_m_s_valid_episodes": 4,
+      "velocity_xy_tracking_rmse_m_s": 0.17962023615837097,
+      "velocity_xy_tracking_rmse_m_s_valid_episodes": 4,
+      "distance_x_m": 0.07463109493255615,
+      "distance_x_m_valid_episodes": 4,
+      "abs_final_heading_yaw_deg": 59.880307300202695,
+      "abs_final_heading_yaw_deg_valid_episodes": 4,
+      "abs_lateral_displacement_m": 0.10335132479667664,
+      "abs_lateral_displacement_m_valid_episodes": 4,
+      "fall_rate": 0.0,
+      "fall_rate_valid_episodes": 4,
+      "applied_target_rate_rms_rad_s": 8.671000719070435,
+      "applied_target_rate_rms_rad_s_valid_episodes": 4,
+      "applied_target_acceleration_rms_rad_s2": 667.3302459716797,
+      "applied_target_acceleration_rms_rad_s2_valid_episodes": 4,
+      "actual_joint_acceleration_rms_rad_s2": 587.003662109375,
+      "actual_joint_acceleration_rms_rad_s2_valid_episodes": 4,
+      "raw_action_clipped_fraction": 0.0,
+      "raw_action_clipped_fraction_valid_episodes": 4,
+      "return": 1.6616435945034027,
+      "return_valid_episodes": 4,
+      "duration_s": 10.0,
+      "duration_s_valid_episodes": 4
+    },
+    {
+      "variant": "dqn",
+      "train_seed": 142,
+      "condition": "randomized",
+      "episodes": 4,
+      "falls": 0,
+      "heading_rms_deg": 3.034575808402106,
+      "heading_rms_deg_valid_episodes": 4,
+      "velocity_x_rmse_m_s": 0.10112658515572548,
+      "velocity_x_rmse_m_s_valid_episodes": 4,
+      "velocity_xy_tracking_rmse_m_s": 0.10293271765112877,
+      "velocity_xy_tracking_rmse_m_s_valid_episodes": 4,
+      "distance_x_m": 0.01989692449569702,
+      "distance_x_m_valid_episodes": 4,
+      "abs_final_heading_yaw_deg": 2.482315503630063,
+      "abs_final_heading_yaw_deg_valid_episodes": 4,
+      "abs_lateral_displacement_m": 0.027827560901641846,
+      "abs_lateral_displacement_m_valid_episodes": 4,
+      "fall_rate": 0.0,
+      "fall_rate_valid_episodes": 4,
+      "applied_target_rate_rms_rad_s": 0.984899029135704,
+      "applied_target_rate_rms_rad_s_valid_episodes": 4,
+      "applied_target_acceleration_rms_rad_s2": 56.579039573669434,
+      "applied_target_acceleration_rms_rad_s2_valid_episodes": 4,
+      "actual_joint_acceleration_rms_rad_s2": 77.55615854263306,
+      "actual_joint_acceleration_rms_rad_s2_valid_episodes": 4,
+      "raw_action_clipped_fraction": 0.0,
+      "raw_action_clipped_fraction_valid_episodes": 4,
+      "return": 8.67815351486206,
+      "return_valid_episodes": 4,
+      "duration_s": 10.0,
+      "duration_s_valid_episodes": 4
+    }
+  ],
+  "groups": {
+    "nominal": {
+      "sac": {
+        "heading_rms_deg": {
+          "mean": 0.590415750845351,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.590415750845351
+          }
+        },
+        "velocity_x_rmse_m_s": {
+          "mean": 0.09983937814831734,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.09983937814831734
+          }
+        },
+        "velocity_xy_tracking_rmse_m_s": {
+          "mean": 0.0998956672847271,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0998956672847271
+          }
+        },
+        "distance_x_m": {
+          "mean": 0.0006434321403503418,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0006434321403503418
+          }
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 0.6637103857642589,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.6637103857642589
+          }
+        },
+        "abs_lateral_displacement_m": {
+          "mean": 0.0011933445930480957,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0011933445930480957
+          }
+        },
+        "fall_rate": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "applied_target_rate_rms_rad_s": {
+          "mean": 0.18333175778388977,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.18333175778388977
+          }
+        },
+        "applied_target_acceleration_rms_rad_s2": {
+          "mean": 13.828709125518799,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 13.828709125518799
+          }
+        },
+        "actual_joint_acceleration_rms_rad_s2": {
+          "mean": 17.024722814559937,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 17.024722814559937
+          }
+        },
+        "raw_action_clipped_fraction": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "return": {
+          "mean": 9.051620483398438,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 9.051620483398438
+          }
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 10.0
+          }
+        }
+      },
+      "dqn": {
+        "heading_rms_deg": {
+          "mean": 38.03882570253159,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 38.03882570253159
+          }
+        },
+        "velocity_x_rmse_m_s": {
+          "mean": 0.13750438019633293,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.13750438019633293
+          }
+        },
+        "velocity_xy_tracking_rmse_m_s": {
+          "mean": 0.17962023615837097,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.17962023615837097
+          }
+        },
+        "distance_x_m": {
+          "mean": 0.07463109493255615,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.07463109493255615
+          }
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 59.880307300202695,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 59.880307300202695
+          }
+        },
+        "abs_lateral_displacement_m": {
+          "mean": 0.10335132479667664,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.10335132479667664
+          }
+        },
+        "fall_rate": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "applied_target_rate_rms_rad_s": {
+          "mean": 8.671000719070435,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 8.671000719070435
+          }
+        },
+        "applied_target_acceleration_rms_rad_s2": {
+          "mean": 667.3302459716797,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 667.3302459716797
+          }
+        },
+        "actual_joint_acceleration_rms_rad_s2": {
+          "mean": 587.003662109375,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 587.003662109375
+          }
+        },
+        "raw_action_clipped_fraction": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "return": {
+          "mean": 1.6616435945034027,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 1.6616435945034027
+          }
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 10.0
+          }
+        }
+      }
+    },
+    "randomized": {
+      "sac": {
+        "heading_rms_deg": {
+          "mean": 6.860427064468739,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 6.860427064468739
+          }
+        },
+        "velocity_x_rmse_m_s": {
+          "mean": 0.09921418875455856,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.09921418875455856
+          }
+        },
+        "velocity_xy_tracking_rmse_m_s": {
+          "mean": 0.10005329549312592,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.10005329549312592
+          }
+        },
+        "distance_x_m": {
+          "mean": -0.001261591911315918,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": -0.001261591911315918
+          }
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 11.007230670542416,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 11.007230670542416
+          }
+        },
+        "abs_lateral_displacement_m": {
+          "mean": 0.005082488059997559,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.005082488059997559
+          }
+        },
+        "fall_rate": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "applied_target_rate_rms_rad_s": {
+          "mean": 0.1150895282626152,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.1150895282626152
+          }
+        },
+        "applied_target_acceleration_rms_rad_s2": {
+          "mean": 8.184705406427383,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 8.184705406427383
+          }
+        },
+        "actual_joint_acceleration_rms_rad_s2": {
+          "mean": 25.52951955795288,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 25.52951955795288
+          }
+        },
+        "raw_action_clipped_fraction": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "return": {
+          "mean": 8.997769355773926,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 8.997769355773926
+          }
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 10.0
+          }
+        }
+      },
+      "dqn": {
+        "heading_rms_deg": {
+          "mean": 3.034575808402106,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 3.034575808402106
+          }
+        },
+        "velocity_x_rmse_m_s": {
+          "mean": 0.10112658515572548,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.10112658515572548
+          }
+        },
+        "velocity_xy_tracking_rmse_m_s": {
+          "mean": 0.10293271765112877,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.10293271765112877
+          }
+        },
+        "distance_x_m": {
+          "mean": 0.01989692449569702,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.01989692449569702
+          }
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 2.482315503630063,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 2.482315503630063
+          }
+        },
+        "abs_lateral_displacement_m": {
+          "mean": 0.027827560901641846,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.027827560901641846
+          }
+        },
+        "fall_rate": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "applied_target_rate_rms_rad_s": {
+          "mean": 0.984899029135704,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.984899029135704
+          }
+        },
+        "applied_target_acceleration_rms_rad_s2": {
+          "mean": 56.579039573669434,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 56.579039573669434
+          }
+        },
+        "actual_joint_acceleration_rms_rad_s2": {
+          "mean": 77.55615854263306,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 77.55615854263306
+          }
+        },
+        "raw_action_clipped_fraction": {
+          "mean": 0.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 0.0
+          }
+        },
+        "return": {
+          "mean": 8.67815351486206,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 8.67815351486206
+          }
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "sd_across_training_seeds": null,
+          "n_training_seeds": 1,
+          "n_valid_training_seeds": 1,
+          "seed_means": {
+            "142": 10.0
+          }
+        }
+      }
+    }
+  },
+  "paired_seed_differences": [],
+  "compute_accounting": [
+    {
+      "variant": "sac",
+      "train_seed": 142,
+      "environment_transitions_total": 16384,
+      "wall_seconds_before_shutdown": 52.141274427995086,
+      "training_wall_seconds": 44.94052652642131,
+      "optimizer_updates": 1984,
+      "torch_peak_allocated_bytes": 35008000,
+      "torch_peak_reserved_bytes": 52428800
+    },
+    {
+      "variant": "dqn",
+      "train_seed": 142,
+      "environment_transitions_total": 16384,
+      "wall_seconds_before_shutdown": 42.18501686863601,
+      "training_wall_seconds": 37.72705798409879,
+      "optimizer_updates": 1984,
+      "torch_peak_allocated_bytes": 31271424,
+      "torch_peak_reserved_bytes": 48234496
+    }
+  ],
+  "limitations": [
+    "这是开发 smoke，不是正式效果实验；不得据此给出算法性能结论。",
+    "PPO 与 SAC 使用 8 维连续动作；DQN 为每关节 5 档的 branching dueling Double-DQN，带有动作离散化和分支近似，不是标准单离散动作 DQN。",
+    "三种方法使用相同 heading_v1 奖励、完整域随机化和真实仿真步预算；优化次数、网络结构、探索与观察归一化实现不同，计算量不等同。",
+    "PPO 复用已有最终模型；SAC 与 DQN 从头训练。仅使用最终检查点，未按测试结果挑选模型。",
+    "逐模型先平均首回合指标，再报告独立训练种子均值及样本标准差；不宣称统计显著性。",
+    "相同训练种子编号用于描述差值，不意味着不同算法的训练轨迹配对。评估初态和实际物理参数已逐项配对。",
+    "随机测试限于训练随机化范围、平地和固定 +X 方向 0.10 m/s 指令，不能代表真机或分布外效果。",
+    "目标/关节加速度是 50 Hz 差分 RMS，排除重置跳变，不是物理瞬时峰值或抖动频率。",
+    "低抖动须同时检查位移和速度误差，静止策略不能视为高质量行走；10 秒目标位移约 1 m。",
+    "零跌倒仅表示本次样本未观察到跌倒，不证明跌倒概率为零。",
+    "训练曲线只作优化诊断：PPO 回报使用最近 100 回合，SAC/DQN 使用最近 256 回合；PPO 物理诊断取当次 rollout 完成回合，SAC/DQN 取最近 256 回合，探索策略也不同，不替代共同确定性评估。"
+  ],
+  "artifacts_sha256": {
+    "per_episode.csv": "67d4ffabc206d30abb0f443910ea28cd47cf0516882c2b4818c6559f5b0d62ce",
+    "per_training_seed.csv": "5ea6c24ea69370b2072053cedac21adad407647acf69b134995d65b2e6506ca0",
+    "group_summary.csv": "c74a2d0df369c5bc3bc4bc9167e5a395c679be2b7129a23103ff18e4fbb9e34f",
+    "training_compute.csv": "500473608d2ee45c19a3c1ff2452d7c665aa0bf6399d043adcf17861738b6010",
+    "training_curve_data.csv": "4efcfc4d4b972b5741d194d5a80c1577bddd8f25d8bf28303f94b6e7647208a5",
+    "performance.png": "e09e081408889708e0ab9ddc1bc71035c0223ef4fc9ff46fb4cdb3dcda71cf44",
+    "performance.pdf": "e78979c90a1dfe1ba519f17c2fb12305e6485a061a2d5c269fd8f1451c59ec17",
+    "training_curves.png": "3d403ba9d63399318d148234ac2aeebdeb920666f3bd10d060b4afc757a611d1",
+    "training_curves.pdf": "d278959a77fac362bf48699d2d7e079910375abe95ce6b3931a4c175e5144abf",
+    "summary.md": "0fcd361713830a4c7b4bd5cb56bdd1dd71baedfa0ef3d78b15d0a75b161c8538",
+    "summary.html": "5939eedd266cf551a8bd31f9a07f828c2a2db7b69c76c1e1a594fdca3d1519dc"
+  }
+}

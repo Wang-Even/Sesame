@@ -1,0 +1,10 @@
+﻿variant,train_seed,real_transitions,recorded_rollout_plus_update_seconds,collection_seconds_sum,update_seconds_sum,dyna.real_transitions_seen,dyna.real_updates,dyna.real_optimizer_steps,dyna.model_optimizer_steps,dyna.model_member_optimizer_steps,dyna.imagined_generated,dyna.imagined_accepted,dyna.imagined_optimizer_steps,dyna.imagined_update_calls,dyna.model_fit_calls,dyna.imagined_horizon,dyna.history_frames,wm_fit_seconds_sum,wm_fit_seconds_logged_updates,imagined_update_seconds_sum,imagined_update_seconds_logged_updates
+baseline,42,2048000,307.4756784439087,290.39795446395874,17.07772397994995,,,,,,,,,,,,,,,,
+baseline,43,2048000,257.2734110355377,240.5477364063263,16.725674629211426,,,,,,,,,,,,,,,,
+baseline,44,2048000,259.6224708557129,243.33660531044006,16.285865545272827,,,,,,,,,,,,,,,,
+full_dr,42,2048000,261.65589809417725,245.35131764411926,16.304580450057983,,,,,,,,,,,,,,,,
+full_dr,43,2048000,254.98970293998718,240.01644921302795,14.973253726959229,,,,,,,,,,,,,,,,
+full_dr,44,2048000,247.4833745956421,232.44161701202393,15.041757583618164,,,,,,,,,,,,,,,,
+dyna_ppo,42,2048000,252.08781957626343,221.8475890159607,30.240230560302734,2048000,250,5000,6000,18000,107520,97123,734,210,250,1,4,,0,,0
+dyna_ppo,43,2048000,251.94703698158264,220.4895520210266,31.45748496055603,2048000,250,5000,6000,18000,107520,95676,736,210,250,1,4,,0,,0
+dyna_ppo,44,2048000,251.94114327430725,221.88944220542908,30.051701068878174,2048000,250,5000,6000,18000,107520,96310,742,210,250,1,4,,0,,0

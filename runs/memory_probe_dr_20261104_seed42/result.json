@@ -1,0 +1,470 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-11-04T10:27:01.443394+00:00",
+  "scope": "PPO domain randomization ablation with unchanged fixed-baseline reward and algorithm",
+  "args": {
+    "num_envs": 256,
+    "iterations": 20,
+    "steps_per_env": 32,
+    "run_dir": "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42",
+    "seed": 42,
+    "eval_seed": 2042,
+    "eval_episodes": 1,
+    "episode_length_s": 10.0,
+    "device": "cuda:0",
+    "save_interval": 50,
+    "baseline_checkpoint": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/final.pt",
+    "skip_baseline": true,
+    "eval_only": false,
+    "checkpoint": null,
+    "learning_rate": 0.0003,
+    "hidden_dims": [
+      128,
+      128,
+      64
+    ]
+  },
+  "run_dir": "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42",
+  "git_operations": "disabled",
+  "fresh_from_scratch": true,
+  "heading_reward_changed": false,
+  "sources": [
+    {
+      "path": "scripts/train_ppo.py",
+      "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+      "bytes": 23496
+    },
+    {
+      "path": "sesame_rl/environment.py",
+      "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+      "bytes": 20862
+    },
+    {
+      "path": "scripts/import_sesame_isaac.py",
+      "sha256": "98686160862bef42a74163729a4ef887f42e3f7f5ea0707e81fcda98b1230989",
+      "bytes": 13980
+    },
+    {
+      "path": "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf",
+      "sha256": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+      "bytes": 16174
+    },
+    {
+      "path": "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml",
+      "sha256": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+      "bytes": 12500
+    },
+    {
+      "path": "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml",
+      "sha256": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+      "bytes": 628
+    },
+    {
+      "path": "assets/isaac/sesame/.asset_hash",
+      "sha256": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+      "bytes": 32
+    },
+    {
+      "path": "assets/isaac/sesame/config.yaml",
+      "sha256": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+      "bytes": 856
+    },
+    {
+      "path": "assets/isaac/sesame/configuration/sesame_base.usd",
+      "sha256": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+      "bytes": 3689591
+    },
+    {
+      "path": "assets/isaac/sesame/configuration/sesame_physics.usd",
+      "sha256": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+      "bytes": 4006
+    },
+    {
+      "path": "assets/isaac/sesame/configuration/sesame_sensor.usd",
+      "sha256": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+      "bytes": 656
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl",
+      "sha256": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+      "bytes": 85184
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl",
+      "sha256": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+      "bytes": 389084
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/L1_v117.stl",
+      "sha256": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+      "bytes": 359384
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/L2_v117.stl",
+      "sha256": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+      "bytes": 383384
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/L3_v117.stl",
+      "sha256": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+      "bytes": 102684
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/L4_v117.stl",
+      "sha256": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+      "bytes": 91384
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/R1_v117.stl",
+      "sha256": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+      "bytes": 379784
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/R2_v117.stl",
+      "sha256": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+      "bytes": 378984
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/R3_v117.stl",
+      "sha256": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+      "bytes": 105884
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/R4_v117.stl",
+      "sha256": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+      "bytes": 94584
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl",
+      "sha256": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+      "bytes": 184184
+    },
+    {
+      "path": "assets/isaac/sesame/import_source/sesame.urdf",
+      "sha256": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+      "bytes": 15018
+    },
+    {
+      "path": "assets/isaac/sesame/sesame.usd",
+      "sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+      "bytes": 1602
+    },
+    {
+      "path": "scripts/train_ppo_dr.py",
+      "sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+      "bytes": 26265
+    },
+    {
+      "path": "sesame_rl/dr_environment.py",
+      "sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+      "bytes": 22356
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "rsl-rl-lib": "3.1.2",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "isaacsim": "not in distribution metadata",
+    "gymnasium": "1.2.1"
+  },
+  "observation_shape": [
+    256,
+    36
+  ],
+  "action_count": 8,
+  "checkpoint": "/home/ywwang/sesame/runs/memory_probe_dr_20261104_seed42/final.pt",
+  "checkpoint_sha256": "8bcad6b9adfdcd9e9bd7161105125a13241137e1d1121e0630225e976f3b3f71",
+  "environment_transitions_total": 163840,
+  "training_iterations_this_run": 20,
+  "reload_max_abs_action_error": 0.0,
+  "evaluations": {
+    "nominal": {
+      "zero_residual": {
+        "policy": "zero_residual",
+        "condition": "nominal",
+        "episodes": 1,
+        "seed": 2042,
+        "all_actions_observations_rewards_finite": true,
+        "max_abs_raw_action": 0.0,
+        "raw_action_clipped_fraction": 0.0,
+        "fall_rate": 0.0,
+        "timeout_rate": 1.0,
+        "invalid_state_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "final_heading_gt45deg_fraction": 0,
+        "distance_x_m": {
+          "mean": 1.9073486328125e-05,
+          "std": 0.0,
+          "min": 1.9073486328125e-05,
+          "max": 1.9073486328125e-05
+        },
+        "avg_speed_m_s": {
+          "mean": 1.9073486328125e-06,
+          "std": 0.0,
+          "min": 1.9073486328125e-06,
+          "max": 1.9073486328125e-06
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "std": 0.0,
+          "min": 10.0,
+          "max": 10.0
+        },
+        "return": {
+          "mean": 9.011616706848145,
+          "std": 0.0,
+          "min": 9.011616706848145,
+          "max": 9.011616706848145
+        },
+        "final_heading_yaw_deg": {
+          "mean": -0.033874316518571625,
+          "std": 0.0,
+          "min": -0.033874316518571625,
+          "max": -0.033874316518571625
+        },
+        "max_abs_heading_yaw_deg": {
+          "mean": 0.037956108269701326,
+          "std": 0.0,
+          "min": 0.037956108269701326,
+          "max": 0.037956108269701326
+        },
+        "heading_gt45deg_time_fraction": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 0.033874316518571625,
+          "std": 0.0,
+          "min": 0.033874316518571625,
+          "max": 0.033874316518571625
+        },
+        "lateral_displacement_m": {
+          "mean": -2.09808349609375e-05,
+          "std": 0.0,
+          "min": -2.09808349609375e-05,
+          "max": -2.09808349609375e-05
+        }
+      },
+      "dr_ppo": {
+        "policy": "dr_ppo",
+        "condition": "nominal",
+        "episodes": 1,
+        "seed": 2042,
+        "all_actions_observations_rewards_finite": true,
+        "max_abs_raw_action": 1.3584614992141724,
+        "raw_action_clipped_fraction": 0.0045,
+        "fall_rate": 0.0,
+        "timeout_rate": 1.0,
+        "invalid_state_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "final_heading_gt45deg_fraction": 1,
+        "distance_x_m": {
+          "mean": 0.44286346435546875,
+          "std": 0.0,
+          "min": 0.44286346435546875,
+          "max": 0.44286346435546875
+        },
+        "avg_speed_m_s": {
+          "mean": 0.044286347925662994,
+          "std": 0.0,
+          "min": 0.044286347925662994,
+          "max": 0.044286347925662994
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "std": 0.0,
+          "min": 10.0,
+          "max": 10.0
+        },
+        "return": {
+          "mean": 11.268999099731445,
+          "std": 0.0,
+          "min": 11.268999099731445,
+          "max": 11.268999099731445
+        },
+        "final_heading_yaw_deg": {
+          "mean": 51.84471140442728,
+          "std": 0.0,
+          "min": 51.84471140442728,
+          "max": 51.84471140442728
+        },
+        "max_abs_heading_yaw_deg": {
+          "mean": 55.63492680883993,
+          "std": 0.0,
+          "min": 55.63492680883993,
+          "max": 55.63492680883993
+        },
+        "heading_gt45deg_time_fraction": {
+          "mean": 0.335999995470047,
+          "std": 0.0,
+          "min": 0.335999995470047,
+          "max": 0.335999995470047
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 51.84471140442728,
+          "std": 0.0,
+          "min": 51.84471140442728,
+          "max": 51.84471140442728
+        },
+        "lateral_displacement_m": {
+          "mean": 0.282989501953125,
+          "std": 0.0,
+          "min": 0.282989501953125,
+          "max": 0.282989501953125
+        }
+      },
+      "paired_initial_states_and_domains_equal": {
+        "zero_residual": true,
+        "dr_ppo": true
+      }
+    },
+    "randomized": {
+      "zero_residual": {
+        "policy": "zero_residual",
+        "condition": "randomized",
+        "episodes": 1,
+        "seed": 2042,
+        "all_actions_observations_rewards_finite": true,
+        "max_abs_raw_action": 0.0,
+        "raw_action_clipped_fraction": 0.0,
+        "fall_rate": 0.0,
+        "timeout_rate": 1.0,
+        "invalid_state_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "final_heading_gt45deg_fraction": 0,
+        "distance_x_m": {
+          "mean": 0.00066375732421875,
+          "std": 0.0,
+          "min": 0.00066375732421875,
+          "max": 0.00066375732421875
+        },
+        "avg_speed_m_s": {
+          "mean": 6.637573096668348e-05,
+          "std": 0.0,
+          "min": 6.637573096668348e-05,
+          "max": 6.637573096668348e-05
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "std": 0.0,
+          "min": 10.0,
+          "max": 10.0
+        },
+        "return": {
+          "mean": 9.009024620056152,
+          "std": 0.0,
+          "min": 9.009024620056152,
+          "max": 9.009024620056152
+        },
+        "final_heading_yaw_deg": {
+          "mean": -5.263197352231494,
+          "std": 0.0,
+          "min": -5.263197352231494,
+          "max": -5.263197352231494
+        },
+        "max_abs_heading_yaw_deg": {
+          "mean": 5.263803104633509,
+          "std": 0.0,
+          "min": 5.263803104633509,
+          "max": 5.263803104633509
+        },
+        "heading_gt45deg_time_fraction": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 5.263197352231494,
+          "std": 0.0,
+          "min": 5.263197352231494,
+          "max": 5.263197352231494
+        },
+        "lateral_displacement_m": {
+          "mean": -0.0001201629638671875,
+          "std": 0.0,
+          "min": -0.0001201629638671875,
+          "max": -0.0001201629638671875
+        }
+      },
+      "dr_ppo": {
+        "policy": "dr_ppo",
+        "condition": "randomized",
+        "episodes": 1,
+        "seed": 2042,
+        "all_actions_observations_rewards_finite": true,
+        "max_abs_raw_action": 1.3418726921081543,
+        "raw_action_clipped_fraction": 0.00775,
+        "fall_rate": 0.0,
+        "timeout_rate": 1.0,
+        "invalid_state_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "final_heading_gt45deg_fraction": 0,
+        "distance_x_m": {
+          "mean": 0.4006805419921875,
+          "std": 0.0,
+          "min": 0.4006805419921875,
+          "max": 0.4006805419921875
+        },
+        "avg_speed_m_s": {
+          "mean": 0.04006805270910263,
+          "std": 0.0,
+          "min": 0.04006805270910263,
+          "max": 0.04006805270910263
+        },
+        "duration_s": {
+          "mean": 10.0,
+          "std": 0.0,
+          "min": 10.0,
+          "max": 10.0
+        },
+        "return": {
+          "mean": 12.801497459411621,
+          "std": 0.0,
+          "min": 12.801497459411621,
+          "max": 12.801497459411621
+        },
+        "final_heading_yaw_deg": {
+          "mean": 36.944441994180195,
+          "std": 0.0,
+          "min": 36.944441994180195,
+          "max": 36.944441994180195
+        },
+        "max_abs_heading_yaw_deg": {
+          "mean": 38.76648716283489,
+          "std": 0.0,
+          "min": 38.76648716283489,
+          "max": 38.76648716283489
+        },
+        "heading_gt45deg_time_fraction": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "abs_final_heading_yaw_deg": {
+          "mean": 36.944441994180195,
+          "std": 0.0,
+          "min": 36.944441994180195,
+          "max": 36.944441994180195
+        },
+        "lateral_displacement_m": {
+          "mean": 0.13306808471679688,
+          "std": 0.0,
+          "min": 0.13306808471679688,
+          "max": 0.13306808471679688
+        }
+      },
+      "paired_initial_states_and_domains_equal": {
+        "zero_residual": true,
+        "dr_ppo": true
+      }
+    }
+  },
+  "wall_seconds_before_shutdown": 67.05190067179501,
+  "finished_at_utc": "2026-11-04T10:28:08.495631+00:00"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "pid": 2677651,
+  "study_id": "ppo_heading_20261105_comparison",
+  "protocol_sha256": "be2c4eaa0d802674907f479ca40c6bf7808b7c172a9275e3cc1cfa37fd03237f",
+  "manifest_signature": "7e6a64894859a3897b47f13917d696dfc46fa07bef039db97b7faef6ce440203",
+  "smoke": false,
+  "evaluation": {
+    "num_envs": 256,
+    "seeds": [
+      15042,
+      16042
+    ],
+    "episodes_per_seed": 64,
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "full_dr_for_all_policies",
+    "pairing": "Exact initial root/joint states and actual PhysX/randomized parameters matched across all six policies per condition/seed",
+    "checkpoint_selection": "final only",
+    "policy_action": "deterministic mean with saved observation normalizers",
+    "primary_metric": "per-episode heading RMS radians converted to degrees; mean across episodes then mean and sample SD across 3 training seeds",
+    "secondary_metrics": [
+      "velocity tracking RMSE",
+      "fall rate",
+      "joint target smoothness",
+      "forward displacement"
+    ],
+    "return_semantics": "Common original evaluation reward, not either policy training return; conclusions use physical metrics"
+  },
+  "started_at_utc": "2026-11-05T08:58:04.452284+00:00",
+  "git_operations": "disabled",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "rsl-rl-lib": "3.1.2",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "isaacsim": "not in distribution metadata"
+  },
+  "case_paths": [
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed44/randomized.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed44/randomized.json"
+  ],
+  "cases_completed": 12,
+  "pairing_verified_all_cases": true,
+  "wall_seconds_before_shutdown": 458.4535321909934,
+  "finished_at_utc": "2026-11-05T09:05:42.906053+00:00"
+}

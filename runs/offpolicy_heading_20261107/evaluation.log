@@ -1,0 +1,152 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[Info] [carb] Logging to file: /home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/isaac.log
+2026-11-06 18:36:26 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-06 18:36:26 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-06 18:36:26 [216ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-06 18:36:26 [318ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-06 18:36:26 [318ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-06 18:36:26 [318ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-06 18:36:26 [318ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-06 18:36:26 [318ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-06 18:36:26 [318ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-06 18:36:26 [318ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+2026-11-06 18:36:26 [421ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-11-06 18:36:26 [505ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.07    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090 D        | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2685      | 797f5e3a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 20.04.6 LTS (Focal Fossa) ubuntu, Version: 20.04.6, Kernel: 5.15.0-139-generic
+| Processor: 12th Gen Intel(R) Core(TM) i5-12600KF
+| Cores: 10 | Logical Cores: 10
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31876 | Free Memory: 10002
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 17592186044413
+|---------------------------------------------------------------------------------------------|
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-07_02-36-28.log
+[33m02:36:28 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 25042
+	Physics step-size     : 0.002
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2026-11-06 18:36:28 [2,649ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,649ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,649ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,649ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,649ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,649ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-06 18:36:28 [2,650ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO]: Time taken for scene creation : 0.310337 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 256
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m02:36:29 [articulation.py] WARNING: Spatial tendons are not supported in Isaac Sim < 5.0: patching spatial-tendon getter and setter to use dummy value[0m
+[INFO]: Time taken for simulation start : 0.404967 seconds
+[INFO]: Completed setting up the environment...
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+OFFPOLICY_CASE_COMPLETED={"case": "ppo_seed42/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06350569176720455}
+OFFPOLICY_CASE_COMPLETED={"case": "ppo_seed42/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.03560641189687885}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+OFFPOLICY_CASE_COMPLETED={"case": "ppo_seed43/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06854944775113836}
+OFFPOLICY_CASE_COMPLETED={"case": "ppo_seed43/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.03756292491743807}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+OFFPOLICY_CASE_COMPLETED={"case": "ppo_seed44/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.0650397383433301}
+OFFPOLICY_CASE_COMPLETED={"case": "ppo_seed44/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.03513167529308703}
+OFFPOLICY_CASE_COMPLETED={"case": "sac_seed42/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.0416179571475368}
+OFFPOLICY_CASE_COMPLETED={"case": "sac_seed42/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.04299355635885149}
+OFFPOLICY_CASE_COMPLETED={"case": "sac_seed43/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.052388988551683724}
+OFFPOLICY_CASE_COMPLETED={"case": "sac_seed43/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.043420367801445536}
+OFFPOLICY_CASE_COMPLETED={"case": "sac_seed44/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.045834560762159526}
+OFFPOLICY_CASE_COMPLETED={"case": "sac_seed44/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.045548843903816305}
+OFFPOLICY_CASE_COMPLETED={"case": "dqn_seed42/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.07372321863658726}
+OFFPOLICY_CASE_COMPLETED={"case": "dqn_seed42/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06561254034750164}
+OFFPOLICY_CASE_COMPLETED={"case": "dqn_seed43/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.07716235925909132}
+OFFPOLICY_CASE_COMPLETED={"case": "dqn_seed43/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.056365318479947746}
+OFFPOLICY_CASE_COMPLETED={"case": "dqn_seed44/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.07488219195511192}
+OFFPOLICY_CASE_COMPLETED={"case": "dqn_seed44/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06106861139414832}
+SESAME_OFFPOLICY_EVALUATION_RESULT={"status": "completed", "pid": 3358956, "study_id": "offpolicy_heading_20261107", "protocol_sha256": "8e48ca0f7343086ef1e9b73647b52a777455e19e99c21b6facd1c606949a46a9", "manifest_signature": "960ff9690887ffd96e648cbace96d4898eda6d1478018a99ae8899716322d099", "smoke": false, "evaluation": {"num_envs": 256, "episodes_per_seed": 64, "seeds": [25042, 26042], "conditions": ["nominal", "randomized"], "episode_length_s": 10.0, "environment_variant": "heading_full_dr_for_all_policies", "pairing": "Exact initial root/joint states and actual domain parameters across all nine policies.", "checkpoint_selection": "final only", "policy_action": "PPO saved-normalizer mean; SAC tanh mean; branching DQN greedy per-branch bins.", "primary_metric": "Forward velocity RMSE; report heading, falls, displacement and smoothness jointly.", "return_semantics": "Common heading_v1 reward, coefficient 0.5, for all training/evaluation methods."}, "reward_version": "absolute_heading_v1", "heading_penalty_scale": 0.5, "started_at_utc": "2026-11-06T18:36:25.534936+00:00", "git_operations": "disabled", "gpu": "NVIDIA GeForce RTX 4090 D", "versions": {"torch": "2.7.0+cu128", "rsl-rl-lib": "3.1.2", "isaaclab": "0.49.0", "isaaclab-rl": "0.4.4", "isaacsim": "not in distribution metadata"}, "case_paths": ["/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed42/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed42/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed43/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed43/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed44/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed44/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed42/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed42/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed43/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed43/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed44/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed44/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed42/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed42/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed43/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed43/randomized.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed44/nominal.json", "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed44/randomized.json"], "cases_completed": 18, "pairing_verified_all_cases": true, "wall_seconds_before_shutdown": 296.90076960995793, "finished_at_utc": "2026-11-06T18:41:22.435845+00:00"}

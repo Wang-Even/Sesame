@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "study_id": "ppo_heading_20261105_comparison",
+  "created_at_utc": "2026-11-05T08:58:00.845055+00:00",
+  "training_protocol": "/home/ywwang/sesame/runs/ppo_heading_20261105/protocol.json",
+  "training_protocol_sha256": "33d5652c07c507417707c6ac81d927ef150f1a54849c7662ea8a8cb04510ad94",
+  "research_question": "Does adding an absolute-heading penalty reduce sideways-facing walking without degrading velocity tracking or stability?",
+  "training": {
+    "num_envs": 256,
+    "steps_per_env": 32,
+    "iterations": 250,
+    "transitions_per_run": 2048000,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "episode_length_s": 10.0,
+    "control_dt_s": 0.02,
+    "heading_penalty_scale": 0.5,
+    "domain_randomization": "full_dr unchanged",
+    "observation_dimension": 36,
+    "action_dimension": 8,
+    "initialization": "fresh from scratch",
+    "checkpoint_selection": "final only",
+    "ppo_config_reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/ppo_config.json"
+  },
+  "evaluation": {
+    "num_envs": 256,
+    "seeds": [
+      15042,
+      16042
+    ],
+    "episodes_per_seed": 64,
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "full_dr_for_all_policies",
+    "pairing": "Exact initial root/joint states and actual PhysX/randomized parameters matched across all six policies per condition/seed",
+    "checkpoint_selection": "final only",
+    "policy_action": "deterministic mean with saved observation normalizers",
+    "primary_metric": "per-episode heading RMS radians converted to degrees; mean across episodes then mean and sample SD across 3 training seeds",
+    "secondary_metrics": [
+      "velocity tracking RMSE",
+      "fall rate",
+      "joint target smoothness",
+      "forward displacement"
+    ],
+    "return_semantics": "Common original evaluation reward, not either policy training return; conclusions use physical metrics"
+  },
+  "checkpoints": [
+    {
+      "id": "full_dr_seed42",
+      "variant": "full_dr",
+      "train_seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/final.pt",
+      "sha256": "70fdc8e10290f46aaec694bcc877078af4e7368dde424cb9adda3dac320e2b96"
+    },
+    {
+      "id": "full_dr_seed43",
+      "variant": "full_dr",
+      "train_seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/final.pt",
+      "sha256": "aaccc879886314524887997b13dd3c797145d6e695e89a484ea5de44bc0f8430"
+    },
+    {
+      "id": "full_dr_seed44",
+      "variant": "full_dr",
+      "train_seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/final.pt",
+      "sha256": "69bf388bd91b6203b0c7b3f99dce1ad5d1c350fcc9c00bdd49c6054c35546486"
+    },
+    {
+      "id": "heading_seed42",
+      "variant": "heading_v1",
+      "train_seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+      "sha256": "6056155ff2189a9a25490844f4eddda3ca5450392a5b3f5d18f3f2553e51fdbc"
+    },
+    {
+      "id": "heading_seed43",
+      "variant": "heading_v1",
+      "train_seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+      "sha256": "3c8b525d64f4df55d56c9ec43b8963283caa6561ac8f32711290f5fc86670dcd"
+    },
+    {
+      "id": "heading_seed44",
+      "variant": "heading_v1",
+      "train_seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+      "sha256": "622f2e095db92eb25fc7a59688863437ff43e981f2f6404e32549e1253b4e7c6"
+    }
+  ],
+  "representative_videos": {
+    "train_seed": 42,
+    "evaluation_seed": 15042,
+    "condition": "randomized",
+    "selection": "first episode env0, chosen before evaluating results; no cherry-picking",
+    "note": "Rendered sample evaluated separately; metadata must state whether replay or fresh physics"
+  },
+  "limitations": [
+    "Three independent training seeds; descriptive means and sample SD, no strong significance claim.",
+    "Randomized evaluation stays within training randomization ranges.",
+    "Nominal uses original physical parameters and zero added lag/delay.",
+    "No hardware validation; flat ground, fixed world +X command 0.10 m/s.",
+    "Joint acceleration metrics are control-rate 50 Hz differences, not 500 Hz peaks.",
+    "Only the heading penalty changed; other reward terms remain original."
+  ],
+  "frozen_sources": {
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+    "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+    "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+    "scripts/train_heading_ppo.py": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736",
+    "scripts/run_heading_ppo_queue.py": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73",
+    "scripts/probe_heading_reward.py": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6",
+    "scripts/evaluate_heading_ppo.py": "ae81c7899c35061a25fec92f787ee59e6dc190d83b9fa15dca8d0bad361e6f8b"
+  }
+}

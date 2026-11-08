@@ -1,0 +1,11 @@
+{
+  "queue_pid": 3345985,
+  "command": [
+    "/home/ubuntu/miniforge3/envs/metaworld_v010/bin/python",
+    "-s",
+    "-u",
+    "/home/ywwang/sesame/scripts/run_offpolicy_queue.py",
+    "--study-dir",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107"
+  ]
+}

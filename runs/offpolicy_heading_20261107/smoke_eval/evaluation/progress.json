@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "protocol_sha256": "46aeef518b929051f022d2f55e3864fa473951c0ddebca9dfcac28ac7b0799bf",
+  "manifest_signature": "69064b1d8a3a528b6e4391d13f44710c8f559d1c6ec42b37dda27e9e2d05da5f",
+  "total_cases": 4,
+  "completed_cases": {
+    "sac_seed142/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/sac_seed142/nominal.json",
+      "sha256": "15f5f62f02b47c48330d2b028a9b97127246b48e4f7d0fc75d3366324420bfd1",
+      "policy_id": "sac_seed142",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "sac_seed142/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/sac_seed142/randomized.json",
+      "sha256": "5d712c13768df4795f8b8ef11bc24310e78da233eaf87e7e970216042add9ad8",
+      "policy_id": "sac_seed142",
+      "condition": "randomized",
+      "resumed": false
+    },
+    "dqn_seed142/nominal": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/dqn_seed142/nominal.json",
+      "sha256": "f0779249e48c12f5a57a018af9d8860f5f76dbd424a85fe2f084c84c68dd3fdc",
+      "policy_id": "dqn_seed142",
+      "condition": "nominal",
+      "resumed": false
+    },
+    "dqn_seed142/randomized": {
+      "path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke_eval/evaluation/cases/dqn_seed142/randomized.json",
+      "sha256": "76abd6dea46b2c3cb2b547bebd10507a29a96cfbea37cc6beee595c1827dbb11",
+      "policy_id": "dqn_seed142",
+      "condition": "randomized",
+      "resumed": false
+    }
+  }
+}

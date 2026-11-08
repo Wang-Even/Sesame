@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "study_id": "dyna_ppo_20261103",
+  "status": "preregistered_before_formal_training",
+  "research_question": "At the same real simulator interaction budget, does one-step model-generated PPO augmentation of full-domain-randomized PPO improve the fixed common velocity-tracking evaluation?",
+  "training": {
+    "num_envs": 256,
+    "steps_per_env": 32,
+    "iterations": 250,
+    "transitions_per_run": 2048000,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "variants": [
+      "baseline",
+      "full_dr",
+      "dyna_ppo"
+    ],
+    "episode_length_s": 10.0,
+    "ppo_config_reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/ppo_config.json",
+    "dyna_config_reference": "/home/ywwang/sesame/runs/dyna_ppo_20261103/dyna_config.json",
+    "dyna_config_sha256": "eeaa6e9d51027328b97d5fbaa82bd693b87a086b1b92c08d4b4c4e49abdabb17",
+    "actual_dyna_algorithm": "DynaPPO; base PPO settings saved separately for inference compatibility"
+  },
+  "evaluation": {
+    "num_envs": 256,
+    "seeds": [
+      3042,
+      4042
+    ],
+    "episodes_per_seed": 64,
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "full_dr_for_all_policies",
+    "pairing": "exact initial states and actual physical parameters for every policy within each condition and seed",
+    "policy_action": "deterministic mean using saved observation normalizers",
+    "checkpoint_selection": "final only; no test-guided checkpoint selection",
+    "primary_metric": "per-episode instantaneous world-vx tracking RMSE versus 0.10m/s at 50Hz, then mean over episodes for each training seed",
+    "secondary_metrics": [
+      "xy velocity tracking RMSE",
+      "forward displacement",
+      "episode average speed error",
+      "absolute terminal heading",
+      "absolute terminal lateral displacement",
+      "falls",
+      "episode duration",
+      "applied joint-target change RMS rad/s",
+      "applied joint-target second-difference RMS rad/s^2",
+      "actual joint acceleration RMS at control sampling rate",
+      "raw action clipping fraction"
+    ],
+    "statistics": "n=3 independent training seeds per arm; report each seed and sample SD across seed means, not episode SEM as training variability",
+    "development_seed_excluded": 2042,
+    "scenario_status": "3042/4042 unused in policy training but previously observed in the DR study; fixed common re-evaluation, not a new blind test"
+  },
+  "limitations": [
+    "Local Dyna-style implementation, not a paper-specific reproduction.",
+    "Dyna and full_dr share training physics and real interaction budgets; Dyna adds model and imagined optimization compute, so this is not compute-matched.",
+    "Learned history model is approximate; nonterminal one-step model with no learned termination, discarded terminal transitions and uncertainty gating introduce selection and model bias.",
+    "Only three independent training seeds; do not interpret evaluation episodes as independent training replicates.",
+    "Common evaluation scenarios already observed in prior DR work; no tuning or checkpoint selection against this formal evaluation.",
+    "Local reference simulator and in-range randomization only; no official or hardware claims."
+  ],
+  "representative_videos": {
+    "train_seed": 42,
+    "evaluation_seed": 3042,
+    "condition": "randomized",
+    "selection": "first complete episode, no performance selection; single-rendered-env samples documented separately"
+  },
+  "checkpoints": [
+    {
+      "id": "baseline_seed42",
+      "variant": "baseline",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42",
+      "reused_training": true,
+      "sha256": "d1a35e95e7bf14458b10c8f324b24e6a65f6382bc51c2bb5fc0c3e88e9cca636"
+    },
+    {
+      "id": "baseline_seed43",
+      "variant": "baseline",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43",
+      "reused_training": true,
+      "sha256": "49b953cb06a976c5da15f53a904eea37eddc53ce87a656a2342e9a958572d0ef"
+    },
+    {
+      "id": "baseline_seed44",
+      "variant": "baseline",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44",
+      "reused_training": true,
+      "sha256": "32e711f7bd73db7c19c8b51b711e972b9bc6310b31a3937cc4ee83a252fcfd28"
+    },
+    {
+      "id": "full_dr_seed42",
+      "variant": "full_dr",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42",
+      "reused_training": true,
+      "sha256": "70fdc8e10290f46aaec694bcc877078af4e7368dde424cb9adda3dac320e2b96"
+    },
+    {
+      "id": "full_dr_seed43",
+      "variant": "full_dr",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43",
+      "reused_training": true,
+      "sha256": "aaccc879886314524887997b13dd3c797145d6e695e89a484ea5de44bc0f8430"
+    },
+    {
+      "id": "full_dr_seed44",
+      "variant": "full_dr",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44",
+      "reused_training": true,
+      "sha256": "69bf388bd91b6203b0c7b3f99dce1ad5d1c350fcc9c00bdd49c6054c35546486"
+    },
+    {
+      "id": "dyna_ppo_seed42",
+      "variant": "dyna_ppo",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42",
+      "reused_training": false
+    },
+    {
+      "id": "dyna_ppo_seed43",
+      "variant": "dyna_ppo",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43",
+      "reused_training": false
+    },
+    {
+      "id": "dyna_ppo_seed44",
+      "variant": "dyna_ppo",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44",
+      "reused_training": false
+    }
+  ],
+  "frozen_sources": {
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+    "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+    "sesame_rl/dyna_world_model.py": "68d83478f73443b0a58b3fe97658d3ea208670c220a3e62b1b2e8302e323d015",
+    "sesame_rl/dyna_ppo.py": "4ca2081b3bddeb05190b40fa01c6d64ecf010c1a499d2cbe5798850407db6a17",
+    "scripts/train_dyna_ppo.py": "daa8044a47a42493bd093cdc85b9784bea01b1fd18f2d0d8352fc9f01668fe9b",
+    "scripts/run_dyna_ppo_queue.py": "6887f24475e8ea029ddb9408425e21c173a6e0a1f7ed816313615446ad6d3163"
+  },
+  "created_at_utc": "2026-11-03T15:22:43.410180+00:00",
+  "method_references": [
+    "https://doi.org/10.1145/122344.122377",
+    "https://arxiv.org/abs/1906.08253"
+  ],
+  "development_validation": {
+    "world_model_probe": "/home/ywwang/sesame/reports/dyna_world_model_probe.json",
+    "isaac_smoke_result": "/home/ywwang/sesame/runs/dyna_ppo_20261103/smoke/seed42/result.json",
+    "smoke_training_seed": 42,
+    "smoke_updates": 45,
+    "formal_training_starts_from_scratch": true
+  }
+}

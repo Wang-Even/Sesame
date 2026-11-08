@@ -1,0 +1,42 @@
+{
+  "vector_step": 1024,
+  "environment_transitions": 16384,
+  "optimizer_updates": 1984,
+  "replay_size": 16384,
+  "mean_episode_return": 6.870054975152016,
+  "mean_episode_length_steps": 500.0,
+  "recent_fall_rate": 0.0,
+  "losses": {
+    "q_loss": 0.00018153530118070194,
+    "q_mean": 0.24481112067587674,
+    "target_q_mean": 0.24490036978386343,
+    "td_absolute_error": 0.014715525830979459,
+    "grad_norm": 0.0050135524179495405,
+    "updates": 1952.5
+  },
+  "diagnostics": {
+    "velocity_x_rmse_m_s": 0.11123402859084308,
+    "velocity_xy_tracking_rmse_m_s": 0.1265069437213242,
+    "heading_rms_rad": 0.23056812305003405,
+    "heading_max_abs_rad": 0.4733110759407282,
+    "lateral_mean_abs_m": 0.03256277726904955,
+    "lateral_rms_m": 0.03795954346423969,
+    "applied_target_rate_rms_rad_s": 3.096544712781906,
+    "applied_target_acceleration_rms_rad_s2": 180.61343622207642,
+    "actual_joint_acceleration_rms_rad_s2": 226.04750776290894,
+    "samples": 500.0,
+    "target_rate_samples": 500.0,
+    "target_acceleration_samples": 499.0,
+    "actual_joint_acceleration_samples": 500.0,
+    "control_dt_s": 0.02,
+    "target_joint_count": 8.0
+  },
+  "epsilon": 0.05,
+  "window_wall_seconds": 1.2335182279348373,
+  "training_wall_seconds": 37.72663422115147,
+  "completed_episodes": 32,
+  "true_terminations": 0,
+  "timeouts": 32,
+  "timeout_action_snapshot_checks": 32,
+  "nonterminal_snapshot_checks": 16352
+}

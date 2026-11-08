@@ -1,0 +1,645 @@
+{
+  "passed": true,
+  "date": "2026-11-08",
+  "edition": "ppo_sac_dqn_metrics_and_dyna_history",
+  "source": "/home/ywwang/sesame/docs/HANDOVER_20261106.md",
+  "source_sha256": "e7154309246e63359fc362e14ad2da9beb62fe0ca0ba8ed98623711310b0143b",
+  "html": "/home/ywwang/sesame/docs/HANDOVER_20261106.html",
+  "html_sha256": "122736e99d0d4f0469d31ecf36a70697556782009859d5c9f4c3a98016b38ecf",
+  "local_link_count": 39,
+  "local_links": [
+    {
+      "target": "../sesame_rl/environment.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/environment.py"
+    },
+    {
+      "target": "../sesame_rl/dr_environment.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/dr_environment.py"
+    },
+    {
+      "target": "../sesame_rl/study_environment.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/study_environment.py"
+    },
+    {
+      "target": "../sesame_rl/heading_environment.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/heading_environment.py"
+    },
+    {
+      "target": "../scripts/train_heading_ppo.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/train_heading_ppo.py"
+    },
+    {
+      "target": "../sesame_rl/offpolicy.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/offpolicy.py"
+    },
+    {
+      "target": "../scripts/train_offpolicy.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/train_offpolicy.py"
+    },
+    {
+      "target": "../sesame_rl/dyna_ppo.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/dyna_ppo.py"
+    },
+    {
+      "target": "../sesame_rl/dyna_world_model.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/sesame_rl/dyna_world_model.py"
+    },
+    {
+      "target": "../scripts/train_dyna_ppo.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/train_dyna_ppo.py"
+    },
+    {
+      "target": "../scripts/evaluate_offpolicy.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/evaluate_offpolicy.py"
+    },
+    {
+      "target": "../scripts/analyze_offpolicy.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/analyze_offpolicy.py"
+    },
+    {
+      "target": "../scripts/evaluate_dyna_ppo.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/evaluate_dyna_ppo.py"
+    },
+    {
+      "target": "../scripts/analyze_dyna_ppo.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/analyze_dyna_ppo.py"
+    },
+    {
+      "target": "../scripts/record_offpolicy_video.py",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/scripts/record_offpolicy_video.py"
+    },
+    {
+      "target": "../runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt"
+    },
+    {
+      "target": "../runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt"
+    },
+    {
+      "target": "../runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt"
+    },
+    {
+      "target": "../runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/final.pt"
+    },
+    {
+      "target": "../runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/final.pt"
+    },
+    {
+      "target": "../runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/final.pt"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/evaluation_protocol.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation_protocol.json"
+    },
+    {
+      "target": "../reports/model_cleanup_20261108.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/reports/model_cleanup_20261108.json"
+    },
+    {
+      "target": "OFFPOLICY_STUDY_20261107.md",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.md"
+    },
+    {
+      "target": "DYNA_PPO_STUDY.md",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/docs/DYNA_PPO_STUDY.md"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/summary.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/performance.png",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/performance.png"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/analysis/training_curves.png",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/training_curves.png"
+    },
+    {
+      "target": "../runs/dyna_ppo_20261103/analysis/summary.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4"
+    },
+    {
+      "target": "../runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4"
+    },
+    {
+      "target": "../runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4"
+    }
+  ],
+  "bash_blocks_syntax_checked": 5,
+  "cli_options_verified_from_ast": {
+    "train_heading_ppo.py": [
+      "--device",
+      "--heading-penalty-scale",
+      "--iterations",
+      "--num-envs",
+      "--run-dir",
+      "--seed",
+      "--smoke",
+      "--steps-per-env"
+    ],
+    "train_offpolicy.py": [
+      "--algorithm",
+      "--batch-size",
+      "--num-envs",
+      "--replay-capacity",
+      "--run-dir",
+      "--seed",
+      "--smoke",
+      "--total-transitions",
+      "--updates-per-vector-step",
+      "--warmup-transitions"
+    ],
+    "evaluate_offpolicy.py": [
+      "--device",
+      "--episodes-per-seed",
+      "--eval-seeds",
+      "--num-envs",
+      "--output-dir",
+      "--protocol",
+      "--resume",
+      "--smoke"
+    ],
+    "record_offpolicy_video.py": [
+      "--encoder",
+      "--fps",
+      "--height",
+      "--output-dir",
+      "--policy-id",
+      "--protocol",
+      "--width"
+    ]
+  },
+  "frozen_training_sources_unchanged": true,
+  "frozen_source_checks": {
+    "sesame_rl/environment.py": true,
+    "sesame_rl/dr_environment.py": true,
+    "sesame_rl/study_environment.py": true,
+    "sesame_rl/heading_environment.py": true,
+    "scripts/train_ppo.py": true,
+    "scripts/train_ppo_dr.py": true,
+    "scripts/train_ppo_study.py": true,
+    "scripts/train_heading_ppo.py": true,
+    "scripts/run_heading_ppo_queue.py": true,
+    "scripts/probe_heading_reward.py": true,
+    "sesame_rl/offpolicy.py": true,
+    "sesame_rl/offpolicy_environment.py": true,
+    "scripts/train_offpolicy.py": true,
+    "scripts/run_offpolicy_queue.py": true
+  },
+  "model_or_simulator_execution": false,
+  "main_section_count": 4,
+  "new_markdown_bytes": 18315,
+  "results_tables": {
+    "source_sha256": {
+      "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json": "e13897fbe8a1823f8d17343a088711ed623241c340bd5e6be8670db6913ab65e",
+      "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json": "13e69c546706f4d5e4353cd37e6b8f9139ac04fea7c2584130354126b92cfd70"
+    },
+    "table_rows": 14,
+    "numeric_cells_verified": 44,
+    "numeric_cells": [
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "ppo",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.06570 ± 0.00259"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "ppo",
+        "metric": "heading_rms_deg",
+        "scale": 1,
+        "display": "6.68 ± 1.50"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "ppo",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "13.04 ± 9.45"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "ppo",
+        "metric": "distance_x_m",
+        "scale": 1,
+        "display": "1.357 ± 0.012"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "ppo",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "479.74 ± 20.59"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "ppo",
+        "metric": "actual_joint_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "500.74 ± 14.74"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "sac",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.04661 ± 0.00543"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "sac",
+        "metric": "heading_rms_deg",
+        "scale": 1,
+        "display": "8.58 ± 0.70"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "sac",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "5.00 ± 0.85"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "sac",
+        "metric": "distance_x_m",
+        "scale": 1,
+        "display": "1.139 ± 0.162"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "sac",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "532.16 ± 23.20"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "sac",
+        "metric": "actual_joint_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "499.05 ± 30.46"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dqn",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.07526 ± 0.00175"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dqn",
+        "metric": "heading_rms_deg",
+        "scale": 1,
+        "display": "14.76 ± 3.31"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dqn",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "11.84 ± 5.35"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dqn",
+        "metric": "distance_x_m",
+        "scale": 1,
+        "display": "1.177 ± 0.140"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dqn",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "485.57 ± 49.87"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dqn",
+        "metric": "actual_joint_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "511.11 ± 37.96"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dyna_ppo",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.06173 ± 0.01135"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dyna_ppo",
+        "metric": "abs_final_heading_yaw_deg",
+        "scale": 1,
+        "display": "26.06 ± 34.04"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dyna_ppo",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "9.22 ± 6.40"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "nominal",
+        "method": "dyna_ppo",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "371.16 ± 77.36"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "ppo",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.03610 ± 0.00129"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "ppo",
+        "metric": "heading_rms_deg",
+        "scale": 1,
+        "display": "4.80 ± 0.09"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "ppo",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "3.73 ± 0.66"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "ppo",
+        "metric": "distance_x_m",
+        "scale": 1,
+        "display": "1.187 ± 0.036"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "ppo",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "136.35 ± 7.88"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "ppo",
+        "metric": "actual_joint_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "284.21 ± 11.08"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "sac",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.04399 ± 0.00137"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "sac",
+        "metric": "heading_rms_deg",
+        "scale": 1,
+        "display": "6.55 ± 0.97"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "sac",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "2.85 ± 0.43"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "sac",
+        "metric": "distance_x_m",
+        "scale": 1,
+        "display": "1.089 ± 0.026"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "sac",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "135.73 ± 1.68"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "sac",
+        "metric": "actual_joint_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "302.09 ± 3.89"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dqn",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.06102 ± 0.00462"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dqn",
+        "metric": "heading_rms_deg",
+        "scale": 1,
+        "display": "14.87 ± 4.06"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dqn",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "13.04 ± 2.17"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dqn",
+        "metric": "distance_x_m",
+        "scale": 1,
+        "display": "0.969 ± 0.095"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dqn",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "128.31 ± 4.21"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dqn",
+        "metric": "actual_joint_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "305.33 ± 34.06"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dyna_ppo",
+        "metric": "velocity_x_rmse_m_s",
+        "scale": 1,
+        "display": "0.04226 ± 0.00573"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dyna_ppo",
+        "metric": "abs_final_heading_yaw_deg",
+        "scale": 1,
+        "display": "28.45 ± 34.73"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dyna_ppo",
+        "metric": "abs_lateral_displacement_m",
+        "scale": 100,
+        "display": "7.73 ± 4.30"
+      },
+      {
+        "source": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json",
+        "condition": "randomized",
+        "method": "dyna_ppo",
+        "metric": "applied_target_acceleration_rms_rad_s2",
+        "scale": 1,
+        "display": "112.99 ± 26.27"
+      }
+    ],
+    "common_reward_methods": [
+      "PPO",
+      "SAC",
+      "DQN"
+    ],
+    "dyna_history_separate": true,
+    "dyna_directly_comparable": false
+  },
+  "metric_definitions_included": true,
+  "terminology": "Names retained from the report; implementation differences explained separately.",
+  "weight_links_verified": 12,
+  "retained_weight_sha256_unchanged": true,
+  "cleanup_record": "/home/ywwang/sesame/reports/model_cleanup_20261108.json"
+}

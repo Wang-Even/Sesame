@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "study_id": "offpolicy_heading_20261107_smoke_eval",
+  "scope": "Developer smoke only, no performance claim",
+  "training": {
+    "seeds": [
+      142
+    ],
+    "num_envs": 16,
+    "transitions_per_run": 16384,
+    "episode_length_s": 10.0,
+    "heading_penalty_scale": 0.5,
+    "reward_version": "absolute_heading_v1"
+  },
+  "evaluation": {
+    "num_envs": 16,
+    "episodes_per_seed": 4,
+    "seeds": [
+      19042
+    ],
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "heading_full_dr_for_all_policies"
+  },
+  "checkpoints": [
+    {
+      "id": "sac_seed142",
+      "variant": "sac",
+      "train_seed": 142,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142/final.pt"
+    },
+    {
+      "id": "dqn_seed142",
+      "variant": "dqn",
+      "train_seed": 142,
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/dqn_seed142/final.pt"
+    }
+  ],
+  "checkpoint_resolution": "Completed-run final hashes are resolved and frozen into evaluation_manifest before any inference.",
+  "frozen_sources": {
+    "scripts/evaluate_offpolicy.py": "2d1549ad16bc133fae36484f691c2cf077b26fefb3af18cb5f0e5b9c37e5d812",
+    "scripts/evaluate_heading_ppo.py": "ae81c7899c35061a25fec92f787ee59e6dc190d83b9fa15dca8d0bad361e6f8b",
+    "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_offpolicy.py": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad",
+    "sesame_rl/offpolicy.py": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+    "sesame_rl/offpolicy_environment.py": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+    "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a"
+  }
+}

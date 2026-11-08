@@ -1,0 +1,1073 @@
+{
+  "created_at_utc": "2026-11-02T08:30:41.836107+00:00",
+  "inspection_method": "Python stdlib XML parsing, filesystem checks, source text inspection and SHA256 checks only. No simulator execution, forward kinematics, model computations or upstream tests.",
+  "repository_url": "https://github.com/lukehollis/sesame-ml",
+  "revision": "a3910f67b4aeb9ca9080a1ba1ffa971e53e35a18",
+  "urdf": {
+    "path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf",
+    "name": "sesame_quadruped",
+    "link_count": 15,
+    "joint_count": 14,
+    "active_dof": 8,
+    "fixed_joint_count": 6,
+    "active_joint_order": [
+      "R1",
+      "R2",
+      "L1",
+      "L2",
+      "R4",
+      "R3",
+      "L3",
+      "L4"
+    ],
+    "firmware_order_match": true,
+    "root_links": [
+      "base"
+    ],
+    "total_mass_kg": 0.384,
+    "links": [
+      {
+        "name": "base",
+        "inertial_present": true,
+        "mass_kg": 0.28,
+        "inertia": {
+          "ixx": "0.000143",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.000178",
+          "iyz": "0",
+          "izz": "0.000264"
+        },
+        "inertial_origin": {
+          "xyz": "0 0 0.006",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/Internal-Frame-v121.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/Internal-Frame-v121.stl",
+            "exists": true,
+            "bytes": 389084
+          },
+          {
+            "filename": "../meshes/Bottom-Cover-v121.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/Bottom-Cover-v121.stl",
+            "exists": true,
+            "bytes": 85184
+          },
+          {
+            "filename": "../meshes/Top-Cover-Enclosed-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/Top-Cover-Enclosed-v117.stl",
+            "exists": true,
+            "bytes": 184184
+          }
+        ],
+        "collision_shapes": [
+          "box"
+        ],
+        "collision_count": 1
+      },
+      {
+        "name": "r1_link",
+        "inertial_present": true,
+        "mass_kg": 0.02,
+        "inertia": {
+          "ixx": "0.0000022",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.0000048",
+          "iyz": "0",
+          "izz": "0.0000057"
+        },
+        "inertial_origin": {
+          "xyz": "-0.010 -0.016 0.005",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/R1-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R1-v117.stl",
+            "exists": true,
+            "bytes": 379784
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "r2_link",
+        "inertial_present": true,
+        "mass_kg": 0.02,
+        "inertia": {
+          "ixx": "0.0000022",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.0000048",
+          "iyz": "0",
+          "izz": "0.0000057"
+        },
+        "inertial_origin": {
+          "xyz": "-0.010 0.016 0.005",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/R2-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R2-v117.stl",
+            "exists": true,
+            "bytes": 378984
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "l1_link",
+        "inertial_present": true,
+        "mass_kg": 0.02,
+        "inertia": {
+          "ixx": "0.0000022",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.0000048",
+          "iyz": "0",
+          "izz": "0.0000057"
+        },
+        "inertial_origin": {
+          "xyz": "-0.010 0.016 0.005",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/L1-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L1-v117.stl",
+            "exists": true,
+            "bytes": 359384
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "l2_link",
+        "inertial_present": true,
+        "mass_kg": 0.02,
+        "inertia": {
+          "ixx": "0.0000022",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.0000048",
+          "iyz": "0",
+          "izz": "0.0000057"
+        },
+        "inertial_origin": {
+          "xyz": "-0.010 -0.016 0.005",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/L2-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L2-v117.stl",
+            "exists": true,
+            "bytes": 383384
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "r4_link",
+        "inertial_present": true,
+        "mass_kg": 0.006,
+        "inertia": {
+          "ixx": "0.00000023",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.00000175",
+          "iyz": "0",
+          "izz": "0.00000186"
+        },
+        "inertial_origin": {
+          "xyz": "-0.002 0.024 -0.016",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/R4-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R4-v117.stl",
+            "exists": true,
+            "bytes": 94584
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "r3_link",
+        "inertial_present": true,
+        "mass_kg": 0.006,
+        "inertia": {
+          "ixx": "0.00000023",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.00000175",
+          "iyz": "0",
+          "izz": "0.00000186"
+        },
+        "inertial_origin": {
+          "xyz": "-0.002 -0.024 -0.016",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/R3-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R3-v117.stl",
+            "exists": true,
+            "bytes": 105884
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "l3_link",
+        "inertial_present": true,
+        "mass_kg": 0.006,
+        "inertia": {
+          "ixx": "0.00000023",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.00000175",
+          "iyz": "0",
+          "izz": "0.00000186"
+        },
+        "inertial_origin": {
+          "xyz": "-0.002 0.024 -0.016",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/L3-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L3-v117.stl",
+            "exists": true,
+            "bytes": 102684
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "l4_link",
+        "inertial_present": true,
+        "mass_kg": 0.006,
+        "inertia": {
+          "ixx": "0.00000023",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.00000175",
+          "iyz": "0",
+          "izz": "0.00000186"
+        },
+        "inertial_origin": {
+          "xyz": "-0.002 -0.024 -0.016",
+          "rpy": "0 0 0"
+        },
+        "visual_meshes": [
+          {
+            "filename": "../meshes/L4-v117.stl",
+            "scale": "0.001 0.001 0.001",
+            "resolved_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L4-v117.stl",
+            "exists": true,
+            "bytes": 91384
+          }
+        ],
+        "collision_shapes": [
+          "cylinder",
+          "sphere",
+          "sphere"
+        ],
+        "collision_count": 3
+      },
+      {
+        "name": "r3_foot",
+        "inertial_present": false,
+        "mass_kg": null,
+        "inertia": null,
+        "inertial_origin": null,
+        "visual_meshes": [],
+        "collision_shapes": [],
+        "collision_count": 0
+      },
+      {
+        "name": "r4_foot",
+        "inertial_present": false,
+        "mass_kg": null,
+        "inertia": null,
+        "inertial_origin": null,
+        "visual_meshes": [],
+        "collision_shapes": [],
+        "collision_count": 0
+      },
+      {
+        "name": "l3_foot",
+        "inertial_present": false,
+        "mass_kg": null,
+        "inertia": null,
+        "inertial_origin": null,
+        "visual_meshes": [],
+        "collision_shapes": [],
+        "collision_count": 0
+      },
+      {
+        "name": "l4_foot",
+        "inertial_present": false,
+        "mass_kg": null,
+        "inertia": null,
+        "inertial_origin": null,
+        "visual_meshes": [],
+        "collision_shapes": [],
+        "collision_count": 0
+      },
+      {
+        "name": "imu",
+        "inertial_present": false,
+        "mass_kg": null,
+        "inertia": null,
+        "inertial_origin": null,
+        "visual_meshes": [],
+        "collision_shapes": [],
+        "collision_count": 0
+      },
+      {
+        "name": "front_camera",
+        "inertial_present": false,
+        "mass_kg": null,
+        "inertia": null,
+        "inertial_origin": null,
+        "visual_meshes": [],
+        "collision_shapes": [],
+        "collision_count": 0
+      }
+    ],
+    "joints": [
+      {
+        "name": "R1",
+        "type": "revolute",
+        "parent": "base",
+        "child": "r1_link",
+        "origin": {
+          "xyz": "0.0240966 -0.0206276 0.0179057",
+          "rpy": "3.14159265359 0 0.785398163397"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0.785398163",
+          "upper": "3.141592654",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "R2",
+        "type": "revolute",
+        "parent": "base",
+        "child": "r2_link",
+        "origin": {
+          "xyz": "-0.0243034 -0.0206276 0.0179057",
+          "rpy": "3.14159265359 0 -0.785398163397"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0",
+          "upper": "2.356194490",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "L1",
+        "type": "revolute",
+        "parent": "base",
+        "child": "l1_link",
+        "origin": {
+          "xyz": "0.0240966 0.0301724 0.0179057",
+          "rpy": "3.14159265359 0 2.35619449019"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0",
+          "upper": "2.356194490",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "L2",
+        "type": "revolute",
+        "parent": "base",
+        "child": "l2_link",
+        "origin": {
+          "xyz": "-0.0243034 0.0301724 0.0179057",
+          "rpy": "3.14159265359 0 -2.35619449019"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0.785398163",
+          "upper": "3.141592654",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "R4",
+        "type": "revolute",
+        "parent": "r2_link",
+        "child": "r4_link",
+        "origin": {
+          "xyz": "-0.0207104 0.0313751 0.01779",
+          "rpy": "1.57079632557 0 2.35619448904"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0",
+          "upper": "3.141592654",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "R3",
+        "type": "revolute",
+        "parent": "r1_link",
+        "child": "r3_link",
+        "origin": {
+          "xyz": "-0.0207104 -0.0313751 0.01779",
+          "rpy": "1.57079632557 0 0.785398164546"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0",
+          "upper": "3.141592654",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "L3",
+        "type": "revolute",
+        "parent": "l1_link",
+        "child": "l3_link",
+        "origin": {
+          "xyz": "-0.0207104 0.0313751 0.01779",
+          "rpy": "1.57079632557 0 2.35619448904"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0",
+          "upper": "3.141592654",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "L4",
+        "type": "revolute",
+        "parent": "l2_link",
+        "child": "l4_link",
+        "origin": {
+          "xyz": "-0.0207104 -0.0313751 0.01779",
+          "rpy": "1.57079632557 0 0.785398164546"
+        },
+        "axis": {
+          "xyz": "0 0 -1"
+        },
+        "limit": {
+          "lower": "0",
+          "upper": "3.141592654",
+          "effort": "0.18",
+          "velocity": "10.471975512"
+        },
+        "dynamics": {
+          "damping": "0.0025",
+          "friction": "0.002"
+        },
+        "safety_controller": null
+      },
+      {
+        "name": "r3_foot_fixed",
+        "type": "fixed",
+        "parent": "r3_link",
+        "child": "r3_foot",
+        "origin": {
+          "xyz": "-0.0016 -0.04006 -0.016",
+          "rpy": "0 0 0"
+        },
+        "axis": null,
+        "limit": null,
+        "dynamics": null,
+        "safety_controller": null
+      },
+      {
+        "name": "r4_foot_fixed",
+        "type": "fixed",
+        "parent": "r4_link",
+        "child": "r4_foot",
+        "origin": {
+          "xyz": "-0.0016 0.04006 -0.016",
+          "rpy": "0 0 0"
+        },
+        "axis": null,
+        "limit": null,
+        "dynamics": null,
+        "safety_controller": null
+      },
+      {
+        "name": "l3_foot_fixed",
+        "type": "fixed",
+        "parent": "l3_link",
+        "child": "l3_foot",
+        "origin": {
+          "xyz": "-0.0016 0.04006 -0.016",
+          "rpy": "0 0 0"
+        },
+        "axis": null,
+        "limit": null,
+        "dynamics": null,
+        "safety_controller": null
+      },
+      {
+        "name": "l4_foot_fixed",
+        "type": "fixed",
+        "parent": "l4_link",
+        "child": "l4_foot",
+        "origin": {
+          "xyz": "-0.0016 -0.04006 -0.016",
+          "rpy": "0 0 0"
+        },
+        "axis": null,
+        "limit": null,
+        "dynamics": null,
+        "safety_controller": null
+      },
+      {
+        "name": "imu_fixed",
+        "type": "fixed",
+        "parent": "base",
+        "child": "imu",
+        "origin": {
+          "xyz": "0 0 0.025",
+          "rpy": "0 0 0"
+        },
+        "axis": null,
+        "limit": null,
+        "dynamics": null,
+        "safety_controller": null
+      },
+      {
+        "name": "front_camera_fixed",
+        "type": "fixed",
+        "parent": "base",
+        "child": "front_camera",
+        "origin": {
+          "xyz": "0.048 0 0.030",
+          "rpy": "1.22185449984 0 -1.57079632679"
+        },
+        "axis": null,
+        "limit": null,
+        "dynamics": null,
+        "safety_controller": null
+      }
+    ],
+    "schema_checks": {
+      "unique_link_names": true,
+      "unique_joint_names": true,
+      "all_references_exist": true,
+      "single_root": true,
+      "all_links_reachable": true,
+      "one_parent_per_nonroot_link": true,
+      "all_meshes_exist": true,
+      "all_active_joints_have_limits": true,
+      "all_active_child_links_have_inertial": true
+    }
+  },
+  "mjcf": {
+    "path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml",
+    "compiler": {
+      "angle": "radian",
+      "coordinate": "local",
+      "autolimits": "true",
+      "inertiafromgeom": "false"
+    },
+    "option": {
+      "timestep": "0.002",
+      "integrator": "implicitfast",
+      "cone": "elliptic",
+      "iterations": "50",
+      "ls_iterations": "10",
+      "gravity": "0 0 -9.81"
+    },
+    "defaults": "<default>\n    <default class=\"visual\">\n      <geom type=\"mesh\" contype=\"0\" conaffinity=\"0\" group=\"2\" density=\"0\" />\n    </default>\n    <default class=\"collision\">\n      <geom contype=\"1\" conaffinity=\"1\" group=\"3\" condim=\"4\" friction=\"0.9 0.02 0.002\" solref=\"0.004 1\" solimp=\"0.95 0.99 0.001\" density=\"0\" rgba=\"0 0 0 0\" />\n    </default>\n    <default class=\"servo\">\n      <joint type=\"hinge\" axis=\"0 0 -1\" limited=\"true\" damping=\"0.0025\" armature=\"0.00002\" frictionloss=\"0.002\" />\n    </default>\n    <default class=\"foot\">\n      <geom type=\"sphere\" size=\"0.007\" contype=\"1\" conaffinity=\"1\" group=\"3\" condim=\"6\" friction=\"1.1 0.003 0.0002\" solref=\"0.004 1\" solimp=\"0.95 0.99 0.001\" density=\"0\" rgba=\"0.12 0.12 0.12 1\" />\n      <site type=\"sphere\" size=\"0.008\" rgba=\"0 0 0 0\" group=\"4\" />\n    </default>\n  </default>\n\n  \n  ",
+    "joint_document_order": [
+      "R1",
+      "R3",
+      "R2",
+      "R4",
+      "L1",
+      "L3",
+      "L2",
+      "L4"
+    ],
+    "free_joints": [
+      {
+        "name": "root"
+      }
+    ],
+    "joints": [
+      {
+        "name": "R1",
+        "class": "servo",
+        "range": "0.785398163 3.141592654",
+        "ref": "2.356194490"
+      },
+      {
+        "name": "R3",
+        "class": "servo",
+        "range": "-0.087266463 3.228859116",
+        "ref": "3.141592654"
+      },
+      {
+        "name": "R2",
+        "class": "servo",
+        "range": "0 2.356194490",
+        "ref": "0.785398163"
+      },
+      {
+        "name": "R4",
+        "class": "servo",
+        "range": "-0.087266463 3.228859116",
+        "ref": "0"
+      },
+      {
+        "name": "L1",
+        "class": "servo",
+        "range": "0 2.356194490",
+        "ref": "0.785398163"
+      },
+      {
+        "name": "L3",
+        "class": "servo",
+        "range": "-0.087266463 3.228859116",
+        "ref": "0"
+      },
+      {
+        "name": "L2",
+        "class": "servo",
+        "range": "0.785398163 3.141592654",
+        "ref": "2.356194490"
+      },
+      {
+        "name": "L4",
+        "class": "servo",
+        "range": "-0.087266463 3.228859116",
+        "ref": "3.141592654"
+      }
+    ],
+    "actuators": [
+      {
+        "name": "R1_servo",
+        "joint": "R1",
+        "kp": "5",
+        "ctrlrange": "0.785398163 3.141592654",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "R2_servo",
+        "joint": "R2",
+        "kp": "5",
+        "ctrlrange": "0 2.356194490",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "L1_servo",
+        "joint": "L1",
+        "kp": "5",
+        "ctrlrange": "0 2.356194490",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "L2_servo",
+        "joint": "L2",
+        "kp": "5",
+        "ctrlrange": "0.785398163 3.141592654",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "R4_servo",
+        "joint": "R4",
+        "kp": "5",
+        "ctrlrange": "0 3.141592654",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "R3_servo",
+        "joint": "R3",
+        "kp": "5",
+        "ctrlrange": "0 3.141592654",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "L3_servo",
+        "joint": "L3",
+        "kp": "5",
+        "ctrlrange": "0 3.141592654",
+        "forcerange": "-0.18 0.18"
+      },
+      {
+        "name": "L4_servo",
+        "joint": "L4",
+        "kp": "5",
+        "ctrlrange": "0 3.141592654",
+        "forcerange": "-0.18 0.18"
+      }
+    ],
+    "actuator_order": [
+      "R1",
+      "R2",
+      "L1",
+      "L2",
+      "R4",
+      "R3",
+      "L3",
+      "L4"
+    ],
+    "bodies_with_inertia": [
+      {
+        "body": "base",
+        "inertial": {
+          "pos": "0 0 0.006",
+          "mass": "0.280",
+          "diaginertia": "0.000143 0.000178 0.000264"
+        }
+      },
+      {
+        "body": "r1_link",
+        "inertial": {
+          "pos": "-0.010 -0.016 0.005",
+          "mass": "0.020",
+          "diaginertia": "0.0000022 0.0000048 0.0000057"
+        }
+      },
+      {
+        "body": "r3_link",
+        "inertial": {
+          "pos": "-0.002 -0.024 -0.016",
+          "mass": "0.006",
+          "diaginertia": "0.00000023 0.00000175 0.00000186"
+        }
+      },
+      {
+        "body": "r2_link",
+        "inertial": {
+          "pos": "-0.010 0.016 0.005",
+          "mass": "0.020",
+          "diaginertia": "0.0000022 0.0000048 0.0000057"
+        }
+      },
+      {
+        "body": "r4_link",
+        "inertial": {
+          "pos": "-0.002 0.024 -0.016",
+          "mass": "0.006",
+          "diaginertia": "0.00000023 0.00000175 0.00000186"
+        }
+      },
+      {
+        "body": "l1_link",
+        "inertial": {
+          "pos": "-0.010 0.016 0.005",
+          "mass": "0.020",
+          "diaginertia": "0.0000022 0.0000048 0.0000057"
+        }
+      },
+      {
+        "body": "l3_link",
+        "inertial": {
+          "pos": "-0.002 0.024 -0.016",
+          "mass": "0.006",
+          "diaginertia": "0.00000023 0.00000175 0.00000186"
+        }
+      },
+      {
+        "body": "l2_link",
+        "inertial": {
+          "pos": "-0.010 -0.016 0.005",
+          "mass": "0.020",
+          "diaginertia": "0.0000022 0.0000048 0.0000057"
+        }
+      },
+      {
+        "body": "l4_link",
+        "inertial": {
+          "pos": "-0.002 -0.024 -0.016",
+          "mass": "0.006",
+          "diaginertia": "0.00000023 0.00000175 0.00000186"
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "internal_frame_mesh",
+        "file": "Internal-Frame-v121.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/Internal-Frame-v121.stl"
+      },
+      {
+        "name": "bottom_cover_mesh",
+        "file": "Bottom-Cover-v121.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/Bottom-Cover-v121.stl"
+      },
+      {
+        "name": "top_cover_mesh",
+        "file": "Top-Cover-Enclosed-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/Top-Cover-Enclosed-v117.stl"
+      },
+      {
+        "name": "l1_mesh",
+        "file": "L1-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L1-v117.stl"
+      },
+      {
+        "name": "l2_mesh",
+        "file": "L2-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L2-v117.stl"
+      },
+      {
+        "name": "l3_mesh",
+        "file": "L3-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L3-v117.stl"
+      },
+      {
+        "name": "l4_mesh",
+        "file": "L4-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/L4-v117.stl"
+      },
+      {
+        "name": "r1_mesh",
+        "file": "R1-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R1-v117.stl"
+      },
+      {
+        "name": "r2_mesh",
+        "file": "R2-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R2-v117.stl"
+      },
+      {
+        "name": "r3_mesh",
+        "file": "R3-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R3-v117.stl"
+      },
+      {
+        "name": "r4_mesh",
+        "file": "R4-v117.stl",
+        "scale": "0.001 0.001 0.001",
+        "exists_relative_to_xml": false,
+        "exists_in_packaged_meshes": true,
+        "resolved_package_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/src/sesame_ml/assets/meshes/R4-v117.stl"
+      }
+    ]
+  },
+  "mapping": {
+    "firmware_order": [
+      "R1",
+      "R2",
+      "L1",
+      "L2",
+      "R4",
+      "R3",
+      "L3",
+      "L4"
+    ],
+    "stand_servo_degrees": [
+      135,
+      45,
+      45,
+      135,
+      0,
+      180,
+      0,
+      180
+    ],
+    "urdf_joint_unit": "radians",
+    "urdf_joint_semantics": "absolute physical servo angle, not angle residual",
+    "robot_frame": "+x forward, +y left, +z up",
+    "joint_axis_in_joint_frame": "0 0 -1",
+    "leg_chains": {
+      "front_right": [
+        "R1",
+        "R3"
+      ],
+      "rear_right": [
+        "R2",
+        "R4"
+      ],
+      "front_left": [
+        "L1",
+        "L3"
+      ],
+      "rear_left": [
+        "L2",
+        "L4"
+      ]
+    },
+    "warnings": [
+      "MJCF kinematic XML joint order differs from firmware actuator order; map joints by name. Isaac may also reorder joints.",
+      "URDF origins already incorporate MJCF ref rotations; do not apply a second stand offset or reverse axis.",
+      "Original ESP32 firmware commands use degrees; URDF/ML wire values use radians.",
+      "Gym actions in this companion project are residuals around standing pose; absolute servo targets are a separate interface.",
+      "These are upstream defaults, not verified course action limits or calibrated physical robot settings."
+    ]
+  },
+  "source_attribution": {
+    "license_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/LICENSE",
+    "license_present": true,
+    "license_label": "Apache-2.0; see preserved upstream LICENSE",
+    "notice_link_in_readme": "NOTICE",
+    "notice_file_present": false,
+    "original_printable_mesh_source": "https://github.com/dorianborian/sesame-robot",
+    "docs_path": "/home/ywwang/sesame/assets/upstream/sesame-ml/docs/urdf.md"
+  },
+  "limitations": [
+    "Companion docs identify all masses and inertias as engineering estimates until measured on the assembled robot.",
+    "Upstream docs explicitly require Isaac Lab import/runtime validation on target Ubuntu/CUDA host; upstream native MuJoCo/yourdfpy claims were not rerun here.",
+    "Default calibration YAML says calibrated: false.",
+    "Fixed camera, IMU and foot links have no inertial properties; merging fixed joints is suitable for rigid-body import, while named frames may need preserving separately.",
+    "URDF contains camera frame but no camera sensor plugin; source camera FOV is 82 degrees.",
+    "MJCF bare mesh filenames do not resolve relative to its XML folder; source loader passes an explicit assets dictionary from ../meshes. Use URDF or supply meshdir/assets for direct MJCF import.",
+    "Companion software hardware assumptions include Orange Pi, IMU and camera, different from the course original ESP32 open-loop setup.",
+    "README links NOTICE but this downloaded upstream revision has no NOTICE file. LICENSE is present.",
+    "This metadata audit does not establish dynamic stability, sim-to-real calibration or course environment compatibility."
+  ],
+  "manifest_verification": {
+    "manifest": "/home/ywwang/sesame/reports/sesame_ml_manifest.json",
+    "files_checked": 124,
+    "mismatch_count": 0,
+    "mismatches": [],
+    "archive_sha256_matches": true
+  }
+}

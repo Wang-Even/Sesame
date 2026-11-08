@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "study_id": "robustness_ablation_20261103",
+  "status": "preregistered",
+  "research_question": "Does full dynamics randomization improve instantaneous forward velocity tracking under held-out dynamics, and does randomized command latency/response add benefit over fixed midpoint latency/response?",
+  "training": {
+    "num_envs": 256,
+    "steps_per_env": 32,
+    "iterations": 250,
+    "transitions_per_run": 2048000,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "variants": [
+      "baseline",
+      "full_dr",
+      "fixed_delay"
+    ],
+    "episode_length_s": 10.0,
+    "ppo_config_reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/ppo_config.json",
+    "fixed_delay_tau_s": 0.04,
+    "fixed_delay_control_steps": 1,
+    "fixed_delay_sampling": "consume identical full-DR random draws, overwrite only tau/delay; preserve other random parameters and initialization"
+  },
+  "evaluation": {
+    "num_envs": 256,
+    "seeds": [
+      3042,
+      4042
+    ],
+    "episodes_per_seed": 64,
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "full_dr_for_all_policies",
+    "pairing": "exact initial states and actual physical parameters for every policy within each condition and seed",
+    "policy_action": "deterministic mean using saved observation normalizers",
+    "checkpoint_selection": "final only; no test-guided checkpoint selection",
+    "primary_metric": "per-episode instantaneous world-vx tracking RMSE versus 0.10m/s at 50Hz, then mean over episodes for each training seed",
+    "secondary_metrics": [
+      "xy velocity tracking RMSE",
+      "forward displacement",
+      "episode average speed error",
+      "absolute terminal heading",
+      "absolute terminal lateral displacement",
+      "falls",
+      "episode duration",
+      "applied joint-target change RMS rad/s",
+      "applied joint-target second-difference RMS rad/s^2",
+      "actual joint acceleration RMS at control sampling rate",
+      "raw action clipping fraction"
+    ],
+    "statistics": "n=3 independent training seeds per arm; report each seed and sample SD across seed means, not episode SEM as training variability",
+    "development_seed_excluded": 2042
+  },
+  "limitations": [
+    "baseline vs full_dr compares the entire training protocol including changed initialization and mean actuator dynamics",
+    "full_dr vs fixed_delay isolates tau/delay variation with matched parameter centers and other training settings",
+    "local reference simulation; official course scoring environment unchanged and unavailable; no hardware claim",
+    "randomized evaluation within training parameter ranges, not out-of-distribution"
+  ],
+  "representative_videos": {
+    "train_seed": 42,
+    "evaluation_seed": 3042,
+    "condition": "randomized",
+    "selection": "first complete episode, no performance selection; single-rendered-env samples documented separately"
+  },
+  "checkpoints": [
+    {
+      "id": "baseline_seed42",
+      "variant": "baseline",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42",
+      "reused_training": true,
+      "sha256": "d1a35e95e7bf14458b10c8f324b24e6a65f6382bc51c2bb5fc0c3e88e9cca636"
+    },
+    {
+      "id": "baseline_seed43",
+      "variant": "baseline",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43",
+      "reused_training": false
+    },
+    {
+      "id": "baseline_seed44",
+      "variant": "baseline",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44",
+      "reused_training": false
+    },
+    {
+      "id": "full_dr_seed42",
+      "variant": "full_dr",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42",
+      "reused_training": true,
+      "sha256": "70fdc8e10290f46aaec694bcc877078af4e7368dde424cb9adda3dac320e2b96"
+    },
+    {
+      "id": "full_dr_seed43",
+      "variant": "full_dr",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43",
+      "reused_training": false
+    },
+    {
+      "id": "full_dr_seed44",
+      "variant": "full_dr",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44",
+      "reused_training": false
+    },
+    {
+      "id": "fixed_delay_seed42",
+      "variant": "fixed_delay",
+      "train_seed": 42,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed42/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed42",
+      "reused_training": false
+    },
+    {
+      "id": "fixed_delay_seed43",
+      "variant": "fixed_delay",
+      "train_seed": 43,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed43/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed43",
+      "reused_training": false
+    },
+    {
+      "id": "fixed_delay_seed44",
+      "variant": "fixed_delay",
+      "train_seed": 44,
+      "checkpoint": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed44/final.pt",
+      "run_dir": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed44",
+      "reused_training": false
+    }
+  ],
+  "frozen_sources": {
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01"
+  }
+}

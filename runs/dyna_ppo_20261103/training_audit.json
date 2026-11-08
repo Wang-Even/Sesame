@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "audit_type": "independent_read_only_training_metadata_and_source_provenance",
+  "created_at_utc": "2026-11-03T15:39:41.175641+00:00",
+  "official_score": false,
+  "no_gpu_model_or_simulator_execution": true,
+  "no_git_operations": true,
+  "runs": [
+    {
+      "seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42",
+      "training_status": "completed",
+      "budget": {
+        "updates": 250,
+        "real_environment_transitions": 2048000,
+        "real_optimizer_steps": 5000
+      },
+      "checkpoint_sha256": "68e3081dd83ee69345c0cfcf093a8b8dc9d9e9b75d87438ec9edc871f79105f7",
+      "input_metadata_sha256": {
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/result.json": "9c20aaf407e785b1820b95fabe0cbbdac2296ada67643d7f7475f802deca671f",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/training.jsonl": "14e5b3dfd86ae802126bc771e3b3c4045da2dc0fb9abcb09c67d7f6a3b2f9df1",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/ppo_config.json": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/dyna_config.json": "eeaa6e9d51027328b97d5fbaa82bd693b87a086b1b92c08d4b4c4e49abdabb17",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed42/effective_training_config.json": "de0944fb31173d4182d7fd3a601734ad848fe344094f0a89105a4c81c248f0ea"
+      },
+      "source_snapshot_count": 31,
+      "all_source_snapshots_and_current_sources_match": true,
+      "sources_sha256": {
+        "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+        "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+        "scripts/import_sesame_isaac.py": "98686160862bef42a74163729a4ef887f42e3f7f5ea0707e81fcda98b1230989",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+        "assets/isaac/sesame/.asset_hash": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+        "assets/isaac/sesame/config.yaml": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+        "assets/isaac/sesame/configuration/sesame_base.usd": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+        "assets/isaac/sesame/configuration/sesame_physics.usd": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+        "assets/isaac/sesame/configuration/sesame_sensor.usd": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+        "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+        "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+        "assets/isaac/sesame/import_source/meshes/L1_v117.stl": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+        "assets/isaac/sesame/import_source/meshes/L2_v117.stl": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+        "assets/isaac/sesame/import_source/meshes/L3_v117.stl": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+        "assets/isaac/sesame/import_source/meshes/L4_v117.stl": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+        "assets/isaac/sesame/import_source/meshes/R1_v117.stl": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+        "assets/isaac/sesame/import_source/meshes/R2_v117.stl": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+        "assets/isaac/sesame/import_source/meshes/R3_v117.stl": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+        "assets/isaac/sesame/import_source/meshes/R4_v117.stl": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+        "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+        "assets/isaac/sesame/import_source/sesame.urdf": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+        "assets/isaac/sesame/sesame.usd": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+        "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+        "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+        "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+        "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+        "scripts/train_dyna_ppo.py": "daa8044a47a42493bd093cdc85b9784bea01b1fd18f2d0d8352fc9f01668fe9b",
+        "sesame_rl/dyna_world_model.py": "68d83478f73443b0a58b3fe97658d3ea208670c220a3e62b1b2e8302e323d015",
+        "sesame_rl/dyna_ppo.py": "4ca2081b3bddeb05190b40fa01c6d64ecf010c1a499d2cbe5798850407db6a17"
+      },
+      "recorded_actor_reload_max_absolute_error": 0.0,
+      "recorded_world_model_reload_max_absolute_error": 0.0,
+      "reload_evidence_note": "Read from completed training result; this independent metadata audit did not deserialize checkpoints or rerun GPU inference.",
+      "pre_warmup_comparison": {
+        "reference_run": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42",
+        "reference_training_log_sha256": "5e256179908e4ac6a3cbb6f9f044985a131824cce533e67d44bbe9cc98fac50b",
+        "updates_compared": 40,
+        "scalar_or_null_policy_task_fields_compared": 274,
+        "exactly_equal": true,
+        "difference_count": 0,
+        "first_difference_update_over_full_training_logs": 42,
+        "included_fields": "learning_rate, value_function/surrogate/entropy losses, episode return/length, all episode_metrics",
+        "excluded_fields": "collection/update timing and added world-model/imagination diagnostics",
+        "interpretation": "Observed policy/task logs match exactly before auxiliary PPO starts; this is not a bitwise comparison of full simulator or optimizer state."
+      },
+      "dyna_counts": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "imagined_generated": 107520,
+        "imagined_accepted": 97123,
+        "imagined_optimizer_steps": 734,
+        "imagined_update_calls": 210,
+        "model_fit_calls": 250,
+        "imagined_horizon": 1,
+        "history_frames": 4,
+        "replay_saved": false,
+        "derived_imagined_samples_actually_processed_by_optimizer": 84831,
+        "derived_sample_count_basis": "For each active update: accepted//4 * actual_optimizer_steps + min(actual_optimizer_steps,accepted%4), using the frozen one-epoch torch.tensor_split loop.",
+        "acceptance_fraction_pooled": 0.9033017113095239,
+        "first_imagined_optimizer_update": 41,
+        "optimizer_steps_per_active_update_histogram": {
+          "2": 21,
+          "3": 64,
+          "4": 125
+        }
+      },
+      "world_model_readiness": {
+        "ready_update_count": 246,
+        "first_ready_update": 5,
+        "ready_all_post_warmup_updates": true,
+        "training_sample_count_final": 1836320,
+        "validation_sample_count_final": 207584,
+        "real_samples_excluded_from_world_model": 4096,
+        "normalizer_unchanged_in_imagination_all_updates": true
+      },
+      "world_model_validation_distributions": {
+        "all_250_updates": {
+          "wm_validation_to_persistence_mse_ratio": {
+            "count": 250,
+            "min": 0.27455541491508484,
+            "p10": 0.28652584850788115,
+            "median": 0.32668524980545044,
+            "p90": 0.4858481377363205,
+            "max": 0.8823391199111938,
+            "mean": 0.36217935156822206,
+            "sample_sd": 0.09243276108002434
+          },
+          "wm_validation_reward_mae": {
+            "count": 250,
+            "min": 0.005190137308090925,
+            "p10": 0.005679737823083997,
+            "median": 0.006334575125947595,
+            "p90": 0.0088231410831213,
+            "max": 0.009540099650621414,
+            "mean": 0.006796910805627704,
+            "sample_sd": 0.00112693789207825
+          },
+          "wm_validation_reward_mean_baseline_mae": {
+            "count": 250,
+            "min": 0.008912032470107079,
+            "p10": 0.009629823081195355,
+            "median": 0.01061679096892476,
+            "p90": 0.01304327305406332,
+            "max": 0.014625392854213715,
+            "mean": 0.010971246797591448,
+            "sample_sd": 0.0013143912522141634
+          },
+          "wm_validation_obs_rmse_raw": {
+            "count": 250,
+            "min": 0.1516548991203308,
+            "p10": 0.2003391683101654,
+            "median": 0.2126063108444214,
+            "p90": 0.22926087081432342,
+            "max": 0.24178214371204376,
+            "mean": 0.21116158866882323,
+            "sample_sd": 0.017520120314211823
+          },
+          "wm_uncertainty_threshold": {
+            "count": 250,
+            "min": 0.12133443355560303,
+            "p10": 0.12657739371061325,
+            "median": 0.13123928010463715,
+            "p90": 0.16320355534553527,
+            "max": 0.21291452646255493,
+            "mean": 0.13718340829014777,
+            "sample_sd": 0.015812407368624305
+          }
+        },
+        "after_40_update_warmup": {
+          "wm_validation_to_persistence_mse_ratio": {
+            "count": 210,
+            "min": 0.27455541491508484,
+            "p10": 0.28580031394958494,
+            "median": 0.3199384957551956,
+            "p90": 0.38191833198070524,
+            "max": 0.4301671087741852,
+            "mean": 0.32848005110309236,
+            "sample_sd": 0.03864226729345534
+          },
+          "wm_validation_reward_mae": {
+            "count": 210,
+            "min": 0.005190137308090925,
+            "p10": 0.0056238367687910795,
+            "median": 0.006241431925445795,
+            "p90": 0.007471004920080304,
+            "max": 0.00837193988263607,
+            "mean": 0.006396146994527607,
+            "sample_sd": 0.0006983897726373603
+          },
+          "wm_validation_reward_mean_baseline_mae": {
+            "count": 210,
+            "min": 0.009300482459366322,
+            "p10": 0.009629823081195355,
+            "median": 0.010445253923535347,
+            "p90": 0.012466481141746043,
+            "max": 0.013546336442232132,
+            "mean": 0.010810795572719403,
+            "sample_sd": 0.0011280067491139906
+          },
+          "wm_validation_obs_rmse_raw": {
+            "count": 210,
+            "min": 0.19987589120864868,
+            "p10": 0.2053818002343178,
+            "median": 0.2132045477628708,
+            "p90": 0.22965550422668457,
+            "max": 0.24178214371204376,
+            "mean": 0.2152231229203088,
+            "sample_sd": 0.009342960992074451
+          },
+          "wm_uncertainty_threshold": {
+            "count": 210,
+            "min": 0.12133443355560303,
+            "p10": 0.126279616355896,
+            "median": 0.13038740307092667,
+            "p90": 0.13659208118915558,
+            "max": 0.1492847502231598,
+            "mean": 0.13099484411733492,
+            "sample_sd": 0.004522456598383484
+          }
+        }
+      },
+      "same_batch_pre_post_fit_dynamics_mse_improved_updates": 201,
+      "same_batch_pre_post_fit_reward_mae_improved_updates": 156,
+      "final_world_model_validation": {
+        "wm_validation_to_persistence_mse_ratio": 0.28811901807785034,
+        "wm_validation_reward_mae": 0.005681618116796017,
+        "wm_validation_reward_mean_baseline_mae": 0.009663833305239677,
+        "wm_validation_obs_rmse_raw": 0.214421808719635,
+        "wm_uncertainty_threshold": 0.13149572908878326
+      },
+      "accepted_samples_per_post_warmup_update": {
+        "count": 210,
+        "min": 414.0,
+        "p10": 444.0,
+        "median": 465.0,
+        "p90": 476.0,
+        "max": 485.0,
+        "mean": 462.4904761904762,
+        "sample_sd": 13.130278560760333
+      },
+      "acceptance_fraction_per_post_warmup_update": {
+        "count": 210,
+        "min": 0.80859375,
+        "p10": 0.8671875,
+        "median": 0.908203125,
+        "p90": 0.9296875,
+        "max": 0.947265625,
+        "mean": 0.9033017113095239,
+        "sample_sd": 0.025645075313985025
+      }
+    },
+    {
+      "seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43",
+      "training_status": "completed",
+      "budget": {
+        "updates": 250,
+        "real_environment_transitions": 2048000,
+        "real_optimizer_steps": 5000
+      },
+      "checkpoint_sha256": "75a3d3c43d4216822625de33571e4754432f03d457f01f7bb399f58d457cd051",
+      "input_metadata_sha256": {
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/result.json": "572511c158f4cc0a894f35ff615883afcdccdd9739c55ef9ece66cf08d8ab293",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/training.jsonl": "e355882bde2230e8118523ad0e5d590651348f98348daec3f3ed2dafa8e519df",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/ppo_config.json": "f0c131c89d784986c20c46ac362894aa1e9a4e29af5844a26e9ef362dc1a6b1c",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/dyna_config.json": "eeaa6e9d51027328b97d5fbaa82bd693b87a086b1b92c08d4b4c4e49abdabb17",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed43/effective_training_config.json": "af08f46eeb60d3d1003084b9e85e6153f6f42e8524cc5bd605b91bb9820ea58f"
+      },
+      "source_snapshot_count": 31,
+      "all_source_snapshots_and_current_sources_match": true,
+      "sources_sha256": {
+        "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+        "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+        "scripts/import_sesame_isaac.py": "98686160862bef42a74163729a4ef887f42e3f7f5ea0707e81fcda98b1230989",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+        "assets/isaac/sesame/.asset_hash": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+        "assets/isaac/sesame/config.yaml": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+        "assets/isaac/sesame/configuration/sesame_base.usd": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+        "assets/isaac/sesame/configuration/sesame_physics.usd": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+        "assets/isaac/sesame/configuration/sesame_sensor.usd": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+        "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+        "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+        "assets/isaac/sesame/import_source/meshes/L1_v117.stl": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+        "assets/isaac/sesame/import_source/meshes/L2_v117.stl": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+        "assets/isaac/sesame/import_source/meshes/L3_v117.stl": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+        "assets/isaac/sesame/import_source/meshes/L4_v117.stl": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+        "assets/isaac/sesame/import_source/meshes/R1_v117.stl": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+        "assets/isaac/sesame/import_source/meshes/R2_v117.stl": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+        "assets/isaac/sesame/import_source/meshes/R3_v117.stl": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+        "assets/isaac/sesame/import_source/meshes/R4_v117.stl": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+        "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+        "assets/isaac/sesame/import_source/sesame.urdf": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+        "assets/isaac/sesame/sesame.usd": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+        "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+        "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+        "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+        "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+        "scripts/train_dyna_ppo.py": "daa8044a47a42493bd093cdc85b9784bea01b1fd18f2d0d8352fc9f01668fe9b",
+        "sesame_rl/dyna_world_model.py": "68d83478f73443b0a58b3fe97658d3ea208670c220a3e62b1b2e8302e323d015",
+        "sesame_rl/dyna_ppo.py": "4ca2081b3bddeb05190b40fa01c6d64ecf010c1a499d2cbe5798850407db6a17"
+      },
+      "recorded_actor_reload_max_absolute_error": 0.0,
+      "recorded_world_model_reload_max_absolute_error": 0.0,
+      "reload_evidence_note": "Read from completed training result; this independent metadata audit did not deserialize checkpoints or rerun GPU inference.",
+      "pre_warmup_comparison": {
+        "reference_run": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43",
+        "reference_training_log_sha256": "8b2582d033637b576d340b2e06d5b7afd861a1d9a2d57ecb83145551d1b8c49d",
+        "updates_compared": 40,
+        "scalar_or_null_policy_task_fields_compared": 274,
+        "exactly_equal": true,
+        "difference_count": 0,
+        "first_difference_update_over_full_training_logs": 42,
+        "included_fields": "learning_rate, value_function/surrogate/entropy losses, episode return/length, all episode_metrics",
+        "excluded_fields": "collection/update timing and added world-model/imagination diagnostics",
+        "interpretation": "Observed policy/task logs match exactly before auxiliary PPO starts; this is not a bitwise comparison of full simulator or optimizer state."
+      },
+      "dyna_counts": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "imagined_generated": 107520,
+        "imagined_accepted": 95676,
+        "imagined_optimizer_steps": 736,
+        "imagined_update_calls": 210,
+        "model_fit_calls": 250,
+        "imagined_horizon": 1,
+        "history_frames": 4,
+        "replay_saved": false,
+        "derived_imagined_samples_actually_processed_by_optimizer": 83773,
+        "derived_sample_count_basis": "For each active update: accepted//4 * actual_optimizer_steps + min(actual_optimizer_steps,accepted%4), using the frozen one-epoch torch.tensor_split loop.",
+        "acceptance_fraction_pooled": 0.88984375,
+        "first_imagined_optimizer_update": 41,
+        "optimizer_steps_per_active_update_histogram": {
+          "2": 20,
+          "3": 64,
+          "4": 126
+        }
+      },
+      "world_model_readiness": {
+        "ready_update_count": 246,
+        "first_ready_update": 5,
+        "ready_all_post_warmup_updates": true,
+        "training_sample_count_final": 1836320,
+        "validation_sample_count_final": 207584,
+        "real_samples_excluded_from_world_model": 4096,
+        "normalizer_unchanged_in_imagination_all_updates": true
+      },
+      "world_model_validation_distributions": {
+        "all_250_updates": {
+          "wm_validation_to_persistence_mse_ratio": {
+            "count": 250,
+            "min": 0.2636750638484955,
+            "p10": 0.2845941662788391,
+            "median": 0.3276127725839615,
+            "p90": 0.49845078587532043,
+            "max": 0.8795291185379028,
+            "mean": 0.36184835314750674,
+            "sample_sd": 0.09887625521119493
+          },
+          "wm_validation_reward_mae": {
+            "count": 250,
+            "min": 0.005317836068570614,
+            "p10": 0.005884773563593626,
+            "median": 0.0065259120892733335,
+            "p90": 0.008237386401742697,
+            "max": 0.009482702240347862,
+            "mean": 0.00684945322573185,
+            "sample_sd": 0.0010186076408012523
+          },
+          "wm_validation_reward_mean_baseline_mae": {
+            "count": 250,
+            "min": 0.008530286140739918,
+            "p10": 0.009562583453953267,
+            "median": 0.011200620327144861,
+            "p90": 0.013001696020364762,
+            "max": 0.014497455209493637,
+            "mean": 0.01115393153950572,
+            "sample_sd": 0.0013988224790886324
+          },
+          "wm_validation_obs_rmse_raw": {
+            "count": 250,
+            "min": 0.13606064021587372,
+            "p10": 0.20155404955148698,
+            "median": 0.2272292599081993,
+            "p90": 0.2409257858991623,
+            "max": 0.24901658296585083,
+            "mean": 0.22217948126792908,
+            "sample_sd": 0.023697228992483155
+          },
+          "wm_uncertainty_threshold": {
+            "count": 250,
+            "min": 0.1271439641714096,
+            "p10": 0.13138650357723236,
+            "median": 0.14064781367778778,
+            "p90": 0.16563925445079802,
+            "max": 0.2063857465982437,
+            "mean": 0.14593232065439224,
+            "sample_sd": 0.01601082666506717
+          }
+        },
+        "after_40_update_warmup": {
+          "wm_validation_to_persistence_mse_ratio": {
+            "count": 210,
+            "min": 0.2636750638484955,
+            "p10": 0.2834758073091507,
+            "median": 0.3104778528213501,
+            "p90": 0.39083321392536163,
+            "max": 0.44777974486351013,
+            "mean": 0.3251844190415882,
+            "sample_sd": 0.042580934286967104
+          },
+          "wm_validation_reward_mae": {
+            "count": 210,
+            "min": 0.005317836068570614,
+            "p10": 0.00583419380709529,
+            "median": 0.0062734694220125675,
+            "p90": 0.007736100954934955,
+            "max": 0.008220684714615345,
+            "mean": 0.006517351285687515,
+            "sample_sd": 0.0006965056461933541
+          },
+          "wm_validation_reward_mean_baseline_mae": {
+            "count": 210,
+            "min": 0.009301968850195408,
+            "p10": 0.009606229327619075,
+            "median": 0.011200620327144861,
+            "p90": 0.012861774768680334,
+            "max": 0.013458669185638428,
+            "mean": 0.011139023512424458,
+            "sample_sd": 0.0012139625002290837
+          },
+          "wm_validation_obs_rmse_raw": {
+            "count": 210,
+            "min": 0.21166524291038513,
+            "p10": 0.2191859930753708,
+            "median": 0.2300531044602394,
+            "p90": 0.2412656292319298,
+            "max": 0.24901658296585083,
+            "mean": 0.22999435975438073,
+            "sample_sd": 0.008814628543099313
+          },
+          "wm_uncertainty_threshold": {
+            "count": 210,
+            "min": 0.1271439641714096,
+            "p10": 0.1307383120059967,
+            "median": 0.13863740116357803,
+            "p90": 0.15282276272773743,
+            "max": 0.16339468955993652,
+            "mean": 0.14040384697062627,
+            "sample_sd": 0.008299262443322849
+          }
+        }
+      },
+      "same_batch_pre_post_fit_dynamics_mse_improved_updates": 210,
+      "same_batch_pre_post_fit_reward_mae_improved_updates": 148,
+      "final_world_model_validation": {
+        "wm_validation_to_persistence_mse_ratio": 0.27727511525154114,
+        "wm_validation_reward_mae": 0.006056030280888081,
+        "wm_validation_reward_mean_baseline_mae": 0.009548569098114967,
+        "wm_validation_obs_rmse_raw": 0.23379245400428772,
+        "wm_uncertainty_threshold": 0.15553613007068634
+      },
+      "accepted_samples_per_post_warmup_update": {
+        "count": 210,
+        "min": 415.0,
+        "p10": 440.0,
+        "median": 456.0,
+        "p90": 472.0,
+        "max": 485.0,
+        "mean": 455.6,
+        "sample_sd": 12.465531424059327
+      },
+      "acceptance_fraction_per_post_warmup_update": {
+        "count": 210,
+        "min": 0.810546875,
+        "p10": 0.859375,
+        "median": 0.890625,
+        "p90": 0.921875,
+        "max": 0.947265625,
+        "mean": 0.88984375,
+        "sample_sd": 0.024346741062615872
+      }
+    },
+    {
+      "seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44",
+      "training_status": "completed",
+      "budget": {
+        "updates": 250,
+        "real_environment_transitions": 2048000,
+        "real_optimizer_steps": 5000
+      },
+      "checkpoint_sha256": "3ab5427f342e38ff3712741a9558a450c28dbe0cc77a3d8379f43e0179391fb5",
+      "input_metadata_sha256": {
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/result.json": "bcd8aeeafecd04f1bc31cd7c083913630251b85974bc795439a2e995230d6d61",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/training.jsonl": "986467a55ac37fccc4b12bbb38083996dbcef7b1cc4bd25ac784c779a5be2664",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/ppo_config.json": "4b5349559e9e04e057a3cf03e7e4e6f122af1fe64914ff19227312fbefe590a1",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/dyna_config.json": "eeaa6e9d51027328b97d5fbaa82bd693b87a086b1b92c08d4b4c4e49abdabb17",
+        "/home/ywwang/sesame/runs/dyna_ppo_20261103/training/dyna_ppo_seed44/effective_training_config.json": "0c22a8623f2e4e280edb2fda757f229d4d47b39c56da8b1df5d89f4c71a45206"
+      },
+      "source_snapshot_count": 31,
+      "all_source_snapshots_and_current_sources_match": true,
+      "sources_sha256": {
+        "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+        "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+        "scripts/import_sesame_isaac.py": "98686160862bef42a74163729a4ef887f42e3f7f5ea0707e81fcda98b1230989",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/urdf/sesame.urdf": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/mjcf/sesame.xml": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a",
+        "assets/upstream/sesame-ml/src/sesame_ml/assets/calibration/default.yaml": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b",
+        "assets/isaac/sesame/.asset_hash": "6d3e651f0b9001f7173cf704af1002992845e18f2442772121f3da014a76665c",
+        "assets/isaac/sesame/config.yaml": "0a21e04728c13e46ec033a96291ba623223882a8ea1d35daa0efad44c93992b6",
+        "assets/isaac/sesame/configuration/sesame_base.usd": "a65039a5e6fb7a0232518287e416c7e27d886cefff6ae84ea6771ac937548937",
+        "assets/isaac/sesame/configuration/sesame_physics.usd": "057027137bf7bda81b29d7275def8a65a27253c027bf12c5c0de76fe8714e2fc",
+        "assets/isaac/sesame/configuration/sesame_sensor.usd": "3296c97b0997fedd729f4de2adb46b8d7c9323f9f8ca86dde625cc9aa792239e",
+        "assets/isaac/sesame/import_source/meshes/Bottom_Cover_v121.stl": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7",
+        "assets/isaac/sesame/import_source/meshes/Internal_Frame_v121.stl": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916",
+        "assets/isaac/sesame/import_source/meshes/L1_v117.stl": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558",
+        "assets/isaac/sesame/import_source/meshes/L2_v117.stl": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf",
+        "assets/isaac/sesame/import_source/meshes/L3_v117.stl": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3",
+        "assets/isaac/sesame/import_source/meshes/L4_v117.stl": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470",
+        "assets/isaac/sesame/import_source/meshes/R1_v117.stl": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871",
+        "assets/isaac/sesame/import_source/meshes/R2_v117.stl": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c",
+        "assets/isaac/sesame/import_source/meshes/R3_v117.stl": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e",
+        "assets/isaac/sesame/import_source/meshes/R4_v117.stl": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a",
+        "assets/isaac/sesame/import_source/meshes/Top_Cover_Enclosed_v117.stl": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26",
+        "assets/isaac/sesame/import_source/sesame.urdf": "98e91bd0e9276dc712be32937faf86fbd2e2e8e8a49e95cd4a014467947be1f7",
+        "assets/isaac/sesame/sesame.usd": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+        "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+        "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+        "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+        "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+        "scripts/train_dyna_ppo.py": "daa8044a47a42493bd093cdc85b9784bea01b1fd18f2d0d8352fc9f01668fe9b",
+        "sesame_rl/dyna_world_model.py": "68d83478f73443b0a58b3fe97658d3ea208670c220a3e62b1b2e8302e323d015",
+        "sesame_rl/dyna_ppo.py": "4ca2081b3bddeb05190b40fa01c6d64ecf010c1a499d2cbe5798850407db6a17"
+      },
+      "recorded_actor_reload_max_absolute_error": 0.0,
+      "recorded_world_model_reload_max_absolute_error": 0.0,
+      "reload_evidence_note": "Read from completed training result; this independent metadata audit did not deserialize checkpoints or rerun GPU inference.",
+      "pre_warmup_comparison": {
+        "reference_run": "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44",
+        "reference_training_log_sha256": "b2d1645f315791a3a20d816d1ab2d893592ac9621789602c345e839c3bf6a499",
+        "updates_compared": 40,
+        "scalar_or_null_policy_task_fields_compared": 274,
+        "exactly_equal": true,
+        "difference_count": 0,
+        "first_difference_update_over_full_training_logs": 42,
+        "included_fields": "learning_rate, value_function/surrogate/entropy losses, episode return/length, all episode_metrics",
+        "excluded_fields": "collection/update timing and added world-model/imagination diagnostics",
+        "interpretation": "Observed policy/task logs match exactly before auxiliary PPO starts; this is not a bitwise comparison of full simulator or optimizer state."
+      },
+      "dyna_counts": {
+        "real_transitions_seen": 2048000,
+        "real_updates": 250,
+        "real_optimizer_steps": 5000,
+        "model_optimizer_steps": 6000,
+        "model_member_optimizer_steps": 18000,
+        "imagined_generated": 107520,
+        "imagined_accepted": 96310,
+        "imagined_optimizer_steps": 742,
+        "imagined_update_calls": 210,
+        "model_fit_calls": 250,
+        "imagined_horizon": 1,
+        "history_frames": 4,
+        "replay_saved": false,
+        "derived_imagined_samples_actually_processed_by_optimizer": 84993,
+        "derived_sample_count_basis": "For each active update: accepted//4 * actual_optimizer_steps + min(actual_optimizer_steps,accepted%4), using the frozen one-epoch torch.tensor_split loop.",
+        "acceptance_fraction_pooled": 0.8957403273809523,
+        "first_imagined_optimizer_update": 41,
+        "optimizer_steps_per_active_update_histogram": {
+          "2": 24,
+          "3": 50,
+          "4": 136
+        }
+      },
+      "world_model_readiness": {
+        "ready_update_count": 246,
+        "first_ready_update": 5,
+        "ready_all_post_warmup_updates": true,
+        "training_sample_count_final": 1836320,
+        "validation_sample_count_final": 207584,
+        "real_samples_excluded_from_world_model": 4096,
+        "normalizer_unchanged_in_imagination_all_updates": true
+      },
+      "world_model_validation_distributions": {
+        "all_250_updates": {
+          "wm_validation_to_persistence_mse_ratio": {
+            "count": 250,
+            "min": 0.3162536919116974,
+            "p10": 0.3316640228033066,
+            "median": 0.34970806539058685,
+            "p90": 0.49494593441486356,
+            "max": 0.887118399143219,
+            "mean": 0.38740747368335726,
+            "sample_sd": 0.08370886827050168
+          },
+          "wm_validation_reward_mae": {
+            "count": 250,
+            "min": 0.005732786376029253,
+            "p10": 0.006186331296339631,
+            "median": 0.006774778012186289,
+            "p90": 0.008455444686114788,
+            "max": 0.00933244451880455,
+            "mean": 0.007043466666713357,
+            "sample_sd": 0.0008549778289467686
+          },
+          "wm_validation_reward_mean_baseline_mae": {
+            "count": 250,
+            "min": 0.009044991806149483,
+            "p10": 0.01048210058361292,
+            "median": 0.01199009595438838,
+            "p90": 0.012949729524552821,
+            "max": 0.013989841565489769,
+            "mean": 0.011821799889206886,
+            "sample_sd": 0.000973134038777637
+          },
+          "wm_validation_obs_rmse_raw": {
+            "count": 250,
+            "min": 0.14798681437969208,
+            "p10": 0.18057045042514802,
+            "median": 0.2033763974905014,
+            "p90": 0.22202995419502258,
+            "max": 0.23395630717277527,
+            "mean": 0.2014197392463684,
+            "sample_sd": 0.017883855692471192
+          },
+          "wm_uncertainty_threshold": {
+            "count": 250,
+            "min": 0.11841955035924911,
+            "p10": 0.12400479838252068,
+            "median": 0.13096663355827332,
+            "p90": 0.16463995426893235,
+            "max": 0.19710823893547058,
+            "mean": 0.13730144053697585,
+            "sample_sd": 0.01634241336007163
+          }
+        },
+        "after_40_update_warmup": {
+          "wm_validation_to_persistence_mse_ratio": {
+            "count": 210,
+            "min": 0.3162536919116974,
+            "p10": 0.3303081452846527,
+            "median": 0.3437047153711319,
+            "p90": 0.40147764682769777,
+            "max": 0.443734347820282,
+            "mean": 0.3566055539108458,
+            "sample_sd": 0.03001887011731311
+          },
+          "wm_validation_reward_mae": {
+            "count": 210,
+            "min": 0.005732786376029253,
+            "p10": 0.006154237454757095,
+            "median": 0.006591383367776871,
+            "p90": 0.007521899417042732,
+            "max": 0.008043899200856686,
+            "mean": 0.006744984007396159,
+            "sample_sd": 0.0005384028791135444
+          },
+          "wm_validation_reward_mean_baseline_mae": {
+            "count": 210,
+            "min": 0.01001136563718319,
+            "p10": 0.010944741498678922,
+            "median": 0.011986210942268372,
+            "p90": 0.012735596671700478,
+            "max": 0.013577506877481937,
+            "mean": 0.011875242770959934,
+            "sample_sd": 0.0007225599414024461
+          },
+          "wm_validation_obs_rmse_raw": {
+            "count": 210,
+            "min": 0.17519305646419525,
+            "p10": 0.18562214821577072,
+            "median": 0.20369136333465576,
+            "p90": 0.22247168719768523,
+            "max": 0.23395630717277527,
+            "mean": 0.20405940115451812,
+            "sample_sd": 0.01344755117937479
+          },
+          "wm_uncertainty_threshold": {
+            "count": 210,
+            "min": 0.11841955035924911,
+            "p10": 0.12359695360064507,
+            "median": 0.12958034873008728,
+            "p90": 0.1412840813398361,
+            "max": 0.1470133513212204,
+            "mean": 0.13118025355395815,
+            "sample_sd": 0.006621419713988623
+          }
+        }
+      },
+      "same_batch_pre_post_fit_dynamics_mse_improved_updates": 215,
+      "same_batch_pre_post_fit_reward_mae_improved_updates": 152,
+      "final_world_model_validation": {
+        "wm_validation_to_persistence_mse_ratio": 0.33930209279060364,
+        "wm_validation_reward_mae": 0.006210008170455694,
+        "wm_validation_reward_mean_baseline_mae": 0.010292857885360718,
+        "wm_validation_obs_rmse_raw": 0.18972773849964142,
+        "wm_uncertainty_threshold": 0.13267619907855988
+      },
+      "accepted_samples_per_post_warmup_update": {
+        "count": 210,
+        "min": 409.0,
+        "p10": 440.0,
+        "median": 460.0,
+        "p90": 474.0,
+        "max": 488.0,
+        "mean": 458.6190476190476,
+        "sample_sd": 13.94718743568547
+      },
+      "acceptance_fraction_per_post_warmup_update": {
+        "count": 210,
+        "min": 0.798828125,
+        "p10": 0.859375,
+        "median": 0.8984375,
+        "p90": 0.92578125,
+        "max": 0.953125,
+        "mean": 0.8957403273809523,
+        "sample_sd": 0.027240600460323183
+      }
+    }
+  ],
+  "protocol_sha256": "dd1bf152b1bf670ac9b4e4663a2b984cbc960f22cef8e8261448c748a5b099e8",
+  "declared_frozen_sources_match_current_files": true,
+  "aggregate_counts": {
+    "completed_training_seeds": 3,
+    "real_environment_transitions": 6144000,
+    "imagined_generated": 322560,
+    "imagined_accepted": 289109,
+    "actual_imagined_optimizer_steps": 2212,
+    "derived_imagined_samples_actually_processed_by_optimizer": 253597
+  },
+  "conclusions": [
+    "All three final runs completed the same 250-update/2,048,000-real-transition budget.",
+    "All runs performed positive actual imagined optimizer updates beginning at update 41; these are executed Dyna-PPO runs, not DR-PPO renamed.",
+    "The first 40 updates have exactly matching logged policy/task scalars versus corresponding prior full-DR PPO runs; the first logged policy/task divergence is update 42.",
+    "All three world models were ready from update 5 and throughout the post-warmup period, with validation dynamics error below persistence and reward MAE below the declared readiness threshold.",
+    "Accepted imagination candidates are distinct from optimizer-processed samples because minibatch KL early stopping can skip later chunks.",
+    "This audit verifies execution and metadata integrity, not comparative policy performance; formal policy evaluation is separate."
+  ],
+  "limitations": [
+    "World-model validation uses held-out environment IDs inside real training data, not a new external policy test set.",
+    "Raw observation prediction RMSE mixes environment-scaled observation dimensions and is not velocity RMSE in m/s.",
+    "Reload equality is recorded training evidence; this audit only checked hashes and scalar metadata and did not rerun GPU inference.",
+    "Exact warmup log equality is weaker than proving all internal states match byte for byte.",
+    "Dyna uses additional model-fitting and imagined optimizer computation; matching real environment transitions does not mean equal compute.",
+    "The model is one-step and nonterminal; no learned terminal prediction or multi-step reliability claim is supported."
+  ]
+}

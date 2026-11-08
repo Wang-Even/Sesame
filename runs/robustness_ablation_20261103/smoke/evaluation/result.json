@@ -1,0 +1,60 @@
+{
+  "status": "completed",
+  "study_id": "robustness_study_smoke",
+  "protocol_sha256": "985449cf39a6ae07378922bcb9508dfe517687864f8b33dcf2d777f076488a99",
+  "manifest_signature": "09d1e6cddaa9ac4411212a6a5565c14bcf16ade98286e4af01f0f9fb534e8070",
+  "smoke": true,
+  "evaluation": {
+    "num_envs": 16,
+    "seeds": [
+      9042,
+      9043
+    ],
+    "episodes_per_seed": 8,
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "full_dr_for_all_policies",
+    "pairing": "exact initial states and actual physical parameters for every policy within each condition and seed",
+    "policy_action": "deterministic mean using saved observation normalizers",
+    "checkpoint_selection": "final only; no test-guided checkpoint selection",
+    "primary_metric": "per-episode instantaneous world-vx tracking RMSE versus 0.10m/s at 50Hz, then mean over episodes for each training seed",
+    "secondary_metrics": [
+      "xy velocity tracking RMSE",
+      "forward displacement",
+      "episode average speed error",
+      "absolute terminal heading",
+      "absolute terminal lateral displacement",
+      "falls",
+      "episode duration",
+      "applied joint-target change RMS rad/s",
+      "applied joint-target second-difference RMS rad/s^2",
+      "actual joint acceleration RMS at control sampling rate",
+      "raw action clipping fraction"
+    ],
+    "statistics": "n=3 independent training seeds per arm; report each seed and sample SD across seed means, not episode SEM as training variability",
+    "development_seed_excluded": 2042
+  },
+  "started_at_utc": "2026-11-02T21:01:06.997356+00:00",
+  "git_operations": "disabled",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "rsl-rl-lib": "3.1.2",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "isaacsim": "not in distribution metadata"
+  },
+  "case_paths": [
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/baseline_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/baseline_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/fixed_delay_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/smoke/evaluation/cases/fixed_delay_seed42/randomized.json"
+  ],
+  "cases_completed": 4,
+  "pairing_verified_all_cases": true,
+  "wall_seconds_before_shutdown": 111.78182244114578,
+  "finished_at_utc": "2026-11-02T21:02:58.779400+00:00"
+}

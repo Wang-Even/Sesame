@@ -1,0 +1,83 @@
+{
+  "seed": 43,
+  "num_steps_per_env": 32,
+  "save_interval": 50,
+  "logger": "tensorboard",
+  "obs_groups": {
+    "policy": [
+      "policy"
+    ],
+    "critic": [
+      "policy"
+    ]
+  },
+  "policy": {
+    "class_name": "ActorCritic",
+    "actor_hidden_dims": [
+      128,
+      128,
+      64
+    ],
+    "critic_hidden_dims": [
+      128,
+      128,
+      64
+    ],
+    "activation": "elu",
+    "actor_obs_normalization": true,
+    "critic_obs_normalization": true,
+    "init_noise_std": 0.5,
+    "noise_std_type": "log"
+  },
+  "algorithm": {
+    "class_name": "DynaPPO",
+    "clip_param": 0.2,
+    "gamma": 0.99,
+    "lam": 0.95,
+    "learning_rate": 0.0003,
+    "num_learning_epochs": 5,
+    "num_mini_batches": 4,
+    "value_loss_coef": 1.0,
+    "entropy_coef": 0.005,
+    "max_grad_norm": 1.0,
+    "use_clipped_value_loss": true,
+    "schedule": "adaptive",
+    "desired_kl": 0.01,
+    "normalize_advantage_per_mini_batch": false,
+    "dyna_config": {
+      "warmup_updates": 40,
+      "imagined_batch_size": 512,
+      "imagined_weight": 0.1,
+      "imagined_epochs": 1,
+      "imagined_minibatches": 4,
+      "min_imagined_samples": 64,
+      "world_model": {
+        "members": 3,
+        "hidden_size": 128,
+        "capacity": 65536,
+        "batch_size": 512,
+        "fit_steps": 24,
+        "validation_batch_size": 2048,
+        "learning_rate": 0.001,
+        "grad_norm": 10.0,
+        "min_train_samples": 2048,
+        "min_validation_samples": 256,
+        "min_fit_calls": 5,
+        "input_std_floor": 0.05,
+        "delta_std_floor": 0.01,
+        "reward_std_floor": 0.005,
+        "max_validation_persistence_ratio": 0.95,
+        "max_validation_reward_mae": 0.01,
+        "input_max_sigma": 6.0,
+        "output_max_sigma": 8.0,
+        "uncertainty_quantile": 0.95,
+        "uncertainty_min": 0.05,
+        "uncertainty_max": 0.5,
+        "reward_max": 0.057,
+        "min_predicted_upright": 0.6,
+        "gravity_norm_tolerance": 0.15
+      }
+    },
+    "dyna_seed": 43
+  }
+}

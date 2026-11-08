@@ -1,0 +1,63 @@
+{
+  "status": "completed",
+  "pid": 3358956,
+  "study_id": "offpolicy_heading_20261107",
+  "protocol_sha256": "8e48ca0f7343086ef1e9b73647b52a777455e19e99c21b6facd1c606949a46a9",
+  "manifest_signature": "960ff9690887ffd96e648cbace96d4898eda6d1478018a99ae8899716322d099",
+  "smoke": false,
+  "evaluation": {
+    "num_envs": 256,
+    "episodes_per_seed": 64,
+    "seeds": [
+      25042,
+      26042
+    ],
+    "conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "episode_length_s": 10.0,
+    "environment_variant": "heading_full_dr_for_all_policies",
+    "pairing": "Exact initial root/joint states and actual domain parameters across all nine policies.",
+    "checkpoint_selection": "final only",
+    "policy_action": "PPO saved-normalizer mean; SAC tanh mean; branching DQN greedy per-branch bins.",
+    "primary_metric": "Forward velocity RMSE; report heading, falls, displacement and smoothness jointly.",
+    "return_semantics": "Common heading_v1 reward, coefficient 0.5, for all training/evaluation methods."
+  },
+  "reward_version": "absolute_heading_v1",
+  "heading_penalty_scale": 0.5,
+  "started_at_utc": "2026-11-06T18:36:25.534936+00:00",
+  "git_operations": "disabled",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "rsl-rl-lib": "3.1.2",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "isaacsim": "not in distribution metadata"
+  },
+  "case_paths": [
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/ppo_seed44/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/sac_seed44/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed42/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed42/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed43/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed43/randomized.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed44/nominal.json",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107/evaluation/cases/dqn_seed44/randomized.json"
+  ],
+  "cases_completed": 18,
+  "pairing_verified_all_cases": true,
+  "wall_seconds_before_shutdown": 296.90076960995793,
+  "finished_at_utc": "2026-11-06T18:41:22.435845+00:00"
+}

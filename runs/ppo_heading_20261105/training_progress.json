@@ -1,0 +1,54 @@
+{
+  "status": "completed",
+  "queue_pid": 2668874,
+  "protocol_sha256": "33d5652c07c507417707c6ac81d927ef150f1a54849c7662ea8a8cb04510ad94",
+  "started_at_utc": "2026-11-05T07:17:04.837461+00:00",
+  "completed": [
+    {
+      "id": "heading_seed42",
+      "seed": 42,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed42/final.pt",
+      "sha256": "6056155ff2189a9a25490844f4eddda3ca5450392a5b3f5d18f3f2553e51fdbc"
+    },
+    {
+      "id": "heading_seed43",
+      "seed": 43,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed43/final.pt",
+      "sha256": "3c8b525d64f4df55d56c9ec43b8963283caa6561ac8f32711290f5fc86670dcd"
+    },
+    {
+      "id": "heading_seed44",
+      "seed": 44,
+      "run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44/final.pt",
+      "sha256": "622f2e095db92eb25fc7a59688863437ff43e981f2f6404e32549e1253b4e7c6"
+    }
+  ],
+  "active": null,
+  "active_run_dir": "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+  "command": [
+    "/home/ubuntu/miniforge3/bin/conda",
+    "run",
+    "-n",
+    "env_isaaclab",
+    "--no-capture-output",
+    "/home/ubuntu/miniforge3/envs/env_isaaclab/bin/python",
+    "-u",
+    "/home/ywwang/sesame/scripts/train_heading_ppo.py",
+    "--seed",
+    "44",
+    "--run-dir",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/training/heading_seed44",
+    "--num-envs",
+    "256",
+    "--iterations",
+    "250",
+    "--steps-per-env",
+    "32",
+    "--heading-penalty-scale",
+    "0.5"
+  ],
+  "finished_at_utc": "2026-11-05T07:33:57.852224+00:00"
+}

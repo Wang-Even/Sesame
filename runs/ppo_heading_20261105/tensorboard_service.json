@@ -1,0 +1,19 @@
+{
+  "pid": 2669063,
+  "url": "http://127.0.0.1:6070",
+  "command": [
+    "/home/ubuntu/miniforge3/envs/metaworld_v010/bin/python",
+    "-s",
+    "-m",
+    "tensorboard.main",
+    "--logdir",
+    "/home/ywwang/sesame/runs/ppo_heading_20261105/training",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "6070",
+    "--reload_interval",
+    "15",
+    "--load_fast=false"
+  ]
+}

@@ -1,0 +1,12 @@
+2026-11-05 15:17:14.699460: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-05 15:17:14.729408: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2026-11-05 15:17:14.729433: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+/home/ubuntu/miniforge3/envs/metaworld_v010/lib/python3.10/site-packages/scipy/__init__.py:155: UserWarning: A NumPy version >=1.18.5 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+2026-11-05 15:17:16.009260: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2026-11-05 15:17:16.009297: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: ubun
+2026-11-05 15:17:16.009301: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: ubun
+2026-11-05 15:17:16.009366: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 570.133.7
+2026-11-05 15:17:16.009379: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 570.133.7
+2026-11-05 15:17:16.009383: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 570.133.7
+TensorBoard 2.9.0 at http://127.0.0.1:6070/ (Press CTRL+C to quit)

@@ -1,0 +1,318 @@
+{
+  "passed": true,
+  "scope": "16-env CUDA heading formula and real-physics episode accounting",
+  "source_sha256": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6",
+  "frozen_sources": {
+    "sesame_rl/environment.py": {
+      "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+      "reference": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/sources/sesame_rl/environment.py",
+      "matches": true
+    },
+    "sesame_rl/dr_environment.py": {
+      "sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+      "reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/sources/sesame_rl/dr_environment.py",
+      "matches": true
+    },
+    "scripts/train_ppo.py": {
+      "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+      "reference": "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/sources/scripts/train_ppo.py",
+      "matches": true
+    },
+    "scripts/train_ppo_dr.py": {
+      "sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+      "reference": "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/sources/scripts/train_ppo_dr.py",
+      "matches": true
+    }
+  },
+  "analytical_cuda_checks": {
+    "passed": true,
+    "yaw_rad": [
+      0.0,
+      1.5707963705062866,
+      -1.5707963705062866,
+      3.1415927410125732,
+      -3.1415927410125732,
+      3.141692638397217,
+      -3.1414926052093506,
+      7.8539814949035645
+    ],
+    "actual_reward_rates": [
+      -0.0,
+      -0.5,
+      -0.5,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -0.4999999403953552
+    ],
+    "expected_reward_rates": [
+      0.0,
+      -0.5,
+      -0.5,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -0.5
+    ],
+    "periodic_wrap_checked": true,
+    "rotated_command_direction_checked": true,
+    "zero_xy_command_disabled": true,
+    "zero_weight_disabled": true
+  },
+  "reward_specification": {
+    "reward_version": "absolute_heading_v1",
+    "base_reward": "All frozen SesameWalkEnv reward components retained unchanged",
+    "new_term": "heading",
+    "heading_penalty_scale": 0.5,
+    "reward_rate_formula": "-scale * (1 - cos(world_yaw - atan2(command_world_y, command_world_x)))",
+    "step_reward_formula": "heading_reward_rate * control_dt_s",
+    "control_dt_s": 0.02,
+    "zero_planar_command": "heading term is exactly zero",
+    "nonfinite_rate": "mapped to zero, consistent with the frozen base reward handling",
+    "target_heading": "world XY velocity-command direction; zero radians for the original +X command",
+    "accounting": "Added once to returned reward, episode return and RewardRate/heading accumulator",
+    "observation_dimension": 36,
+    "action_dimension": 8,
+    "training_physics": "Full domain randomization, unchanged from DR-PPO",
+    "metric_reference": "Inherited study heading metrics remain relative to world +X, matching this fixed +X task"
+  },
+  "environment_source_sha256": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+  "initial_domain_readback": {
+    "passed": true,
+    "env_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_abs_error": {
+      "masses": 1.4901161193847656e-08,
+      "inertias": 1.4551915228366852e-11,
+      "materials": 0.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort_limits": 0.0,
+      "velocity_limits": 0.0
+    },
+    "cpu_usage": "PhysX property transport only; sampling, comparison, physics and policy on CUDA",
+    "material_combine": {
+      "ground": {
+        "material_path": "/World/Ground/geometry/material",
+        "combine_mode": "average",
+        "static_friction": 0.8999999761581421,
+        "dynamic_friction": 0.8999999761581421
+      },
+      "robot": {
+        "material_path": "/World/RobotContactMaterial",
+        "combine_mode": "average",
+        "static_friction": 0.8999999761581421,
+        "dynamic_friction": 0.8999999761581421
+      }
+    },
+    "study_variant": "full_dr",
+    "control_parameters_verified": true
+  },
+  "physics_accounting": {
+    "passed": true,
+    "control_steps": 68,
+    "observation_shape": [
+      16,
+      36
+    ],
+    "action_shape": [
+      16,
+      8
+    ],
+    "full_dr_enabled": true,
+    "completed_episodes": [
+      {
+        "env_id": 0,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": -0.09738361090421677
+      },
+      {
+        "env_id": 1,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": -0.06032807007431984
+      },
+      {
+        "env_id": 2,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.06150061637163162
+      },
+      {
+        "env_id": 3,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.24013902246952057
+      },
+      {
+        "env_id": 4,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.45932042598724365
+      },
+      {
+        "env_id": 5,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.643162190914154
+      },
+      {
+        "env_id": 6,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.8033385276794434
+      },
+      {
+        "env_id": 7,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.8755655884742737
+      },
+      {
+        "env_id": 8,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.8883237838745117
+      },
+      {
+        "env_id": 9,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.8059645295143127
+      },
+      {
+        "env_id": 10,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.6507558226585388
+      },
+      {
+        "env_id": 11,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.4542504847049713
+      },
+      {
+        "env_id": 12,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.249008908867836
+      },
+      {
+        "env_id": 13,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": 0.053395867347717285
+      },
+      {
+        "env_id": 14,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": -0.05344998836517334
+      },
+      {
+        "env_id": 15,
+        "duration_s": 1.0,
+        "fell": false,
+        "timeout": true,
+        "return": -0.0927676409482956
+      },
+      {
+        "env_id": 0,
+        "duration_s": 0.3400000035762787,
+        "fell": true,
+        "timeout": false,
+        "return": -1.7178246974945068
+      }
+    ],
+    "heading_max_absolute_accounting_error": 3.166496753692627e-08,
+    "returned_reward_equals_sum_of_component_increments": true,
+    "episode_return_includes_heading_once": true,
+    "reward_rate_log_checked": true,
+    "timeout_and_failure_terminal_samples_checked": true,
+    "automatic_reset_clears_accumulators": true,
+    "subset_reset_preserves_other_accumulators": true,
+    "zero_scale_real_step_checked": true
+  },
+  "final_domain_readback": {
+    "passed": true,
+    "env_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_abs_error": {
+      "masses": 1.4901161193847656e-08,
+      "inertias": 1.4551915228366852e-11,
+      "materials": 0.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort_limits": 0.0,
+      "velocity_limits": 0.0
+    },
+    "cpu_usage": "PhysX property transport only; sampling, comparison, physics and policy on CUDA",
+    "material_combine": {
+      "ground": {
+        "material_path": "/World/Ground/geometry/material",
+        "combine_mode": "average",
+        "static_friction": 0.8999999761581421,
+        "dynamic_friction": 0.8999999761581421
+      },
+      "robot": {
+        "material_path": "/World/RobotContactMaterial",
+        "combine_mode": "average",
+        "static_friction": 0.8999999761581421,
+        "dynamic_friction": 0.8999999761581421
+      }
+    },
+    "study_variant": "full_dr",
+    "control_parameters_verified": true
+  }
+}

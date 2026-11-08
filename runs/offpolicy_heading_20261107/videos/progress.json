@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "pid": 3353235,
+  "completed": [
+    {
+      "policy_id": "ppo_seed42",
+      "report": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.json",
+      "video": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+      "video_sha256": "c2da537eebe5ea8cffac6231bfac250ec874ebe7eca954761c94046bba7a3b6c"
+    },
+    {
+      "policy_id": "sac_seed42",
+      "report": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.json",
+      "video": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4",
+      "video_sha256": "9a939d4af47a6fe258f6113dd8a7b0ca96b14a8c931da61c074885580c342a41"
+    },
+    {
+      "policy_id": "dqn_seed42",
+      "report": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.json",
+      "video": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4",
+      "video_sha256": "302577956b93a8246a424f1a1e6722d4917e44b508d9ec586abb533c812c21a2"
+    }
+  ],
+  "active": null,
+  "recording_script_sha256": "9871c8dabf2a44925ebabff72f74c7705e99b0a1194ff3a4a71323deda3ed916",
+  "started_at_utc": "2026-11-06T18:27:35.880242+00:00",
+  "finished_at_utc": "2026-11-06T18:44:55.718305+00:00"
+}

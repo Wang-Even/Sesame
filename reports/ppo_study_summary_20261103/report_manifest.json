@@ -1,0 +1,150 @@
+{
+  "status": "complete",
+  "created_at_utc": "2026-11-03T11:13:17.761285+00:00",
+  "scope": "Saved metadata report generation only; no training, inference, simulation or Git operations",
+  "report_pdf_pages": 8,
+  "official_score": false,
+  "independent_training_seeds_per_method": 3,
+  "training_runs": 9,
+  "evaluation_episodes": 2304,
+  "relative_rmse_changes_percent": {
+    "randomized_full_dr_vs_baseline": -46.028104314052044,
+    "randomized_full_dr_vs_fixed_delay": -10.171643618354398,
+    "nominal_full_dr_vs_baseline": 28.568632539976168
+  },
+  "source_inputs_sha256": {
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/protocol.json": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/summary.json": "71fec6735445f9c2aef1a501ab59ec680aeecf1db7593b381dd5cedb25a828e3",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/independent_review.json": "123dfcf15b3354227dc9ad8fb32a1d4c93598c90b1162724187e597825fa2711",
+    "/home/ywwang/sesame/runs/ppo_baseline_20261102_seed42/training.jsonl": "862072c72195b11c5645d8c43ad462ad4f711a77bc211072735433ba0d486347",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed43/training.jsonl": "57976f7c5946f8e16fc2268868bf4a4e12d282e0cae0f0b5b2b9017e3bbab78d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/baseline_seed44/training.jsonl": "fabe4234147876b97d1abc1393df7907e911ccf14ee59d0784853148e47a5c08",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/training.jsonl": "5e256179908e4ac6a3cbb6f9f044985a131824cce533e67d44bbe9cc98fac50b",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed43/training.jsonl": "8b2582d033637b576d340b2e06d5b7afd861a1d9a2d57ecb83145551d1b8c49d",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/full_dr_seed44/training.jsonl": "b2d1645f315791a3a20d816d1ab2d893592ac9621789602c345e839c3bf6a499",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed42/training.jsonl": "b14bee37c5594519e308345e26c553e1ce26b64ab4989a9ecd3633da644ec28f",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed43/training.jsonl": "3991b85e91109897bb45ea249624f1aa9422fddf202a3885230ee362154e3a46",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/training/fixed_delay_seed44/training.jsonl": "f0fb53507462c28bd9de92867a6f7069cb6441e297d02664e2085e168b9713c1",
+    "/home/ywwang/sesame/docs/ROBUSTNESS_STUDY.md": "7e21d227a95f42ec45b4b8ed91e85a622e0d1c56d8a8748721dfb145e6344d4f",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/summary.md": "e54b7607214d0484cb75dece39f45bd94e0acf5efd8b099d4c83304a11d7f075",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/performance.png": "ccc494d8cfee0db07bfbba20fe6f44fdfda3a709f366c3b34a375c16b929b336",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/smoothness.png": "757807b33e5b43375ce1cdd3b5ed6f4c534b2d178755d0b26a5ae308d387c3d7",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/analysis/learning_curves.png": "579b8fd0280c247c247bdc87c963408c7f6dbc71c45e47574b8fcc868d3ae670",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/resolved_training_checkpoints.json": "7f94fb94558705085ce3dc3214c34190880e538d6b10c20d8b51ab7c0451f8a8",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/videos/ppo_study_comparison_seed3042.mp4": "0ebe4b46df43985e92208e27f5f7df435dea595f6709f37ad426e808f2752032",
+    "/home/ywwang/sesame/runs/ppo_dr_20261102_seed42/ppo_config.json": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/videos/comparison_thumbnail.png": "7338be8f1025bd35297737a9d0ca3b91132d51de46c79e48e964fe88c6448bc4",
+    "/home/ywwang/sesame/runs/robustness_ablation_20261103/videos/comparison_validation.json": "c693223124a2f60ab1b63f351604462b362ca68dfe8e86155e3dced014e5e459",
+    "/home/ywwang/sesame/scripts/build_study_report.py": "ab092dfcbab210f038c676cf0346fee933b3524523ca855f5a75abd363edda2e",
+    "/home/ywwang/sesame/scripts/plot_study_report.py": "4636fd8b8621419bed4b1b6690e962ce25d492090ad1abe27f7e30033f95725f",
+    "/home/ywwang/sesame/reports/ppo_study_summary_20261103/figures_manifest.json": "6a745011e68ab981e5b3f38d482e9f661a9722fc833c9284c061d2550900f6eb",
+    "/home/ywwang/sesame/reports/ppo_study_summary_20261103/editorial_review.json": "95f8a5802009ef00e041d69383c63ededfada6e42f45e304768d6285c40f0079"
+  },
+  "previous_study_artifact_hashes_verified": true,
+  "artifacts": {
+    "README.txt": {
+      "sha256": "6b6d4b6fd3c89bab77d17c246cebca7ecbb1f9cbf34572e874fe4312cda30b15",
+      "bytes": 826
+    },
+    "data/evaluation_summary.json": {
+      "sha256": "71fec6735445f9c2aef1a501ab59ec680aeecf1db7593b381dd5cedb25a828e3",
+      "bytes": 76852
+    },
+    "data/ppo_config.json": {
+      "sha256": "8764e990bbf1a91f0566265e4c59ff27a1e46a60c26c4ba30701696c890cb5bb",
+      "bytes": 939
+    },
+    "data/protocol.json": {
+      "sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+      "bytes": 6542
+    },
+    "data/video_validation.json": {
+      "sha256": "c693223124a2f60ab1b63f351604462b362ca68dfe8e86155e3dced014e5e459",
+      "bytes": 61583
+    },
+    "editorial_review.json": {
+      "sha256": "95f8a5802009ef00e041d69383c63ededfada6e42f45e304768d6285c40f0079",
+      "bytes": 36788
+    },
+    "figures/01_training_overview.pdf": {
+      "sha256": "6aa35be8b30846369e0ce7b942e6222b82f4d41a0cf79bd524a756e6b768e08a",
+      "bytes": 113034
+    },
+    "figures/01_training_overview.png": {
+      "sha256": "fdfc5e8756d61b2bef136ad840ffc1d737da69bae79cc0d809b910e6a4af4478",
+      "bytes": 362740
+    },
+    "figures/02_primary_comparison.pdf": {
+      "sha256": "5129d136a6cb27ad40bf1bb296a6eb910586e7e49d8081ca8b52d778dd17cbc1",
+      "bytes": 78368
+    },
+    "figures/02_primary_comparison.png": {
+      "sha256": "13a95d3cffc763656302c34688cc4402e923350cc9eb0f28ed1bea372b59a43e",
+      "bytes": 199668
+    },
+    "figures/03_delay_ablation.pdf": {
+      "sha256": "5e81277bb05b8d123749693f038262bfe8bdd5d160f0db0c9380493d3644b9f9",
+      "bytes": 75468
+    },
+    "figures/03_delay_ablation.png": {
+      "sha256": "524e80aff6ee189ce0bfc21874247ac05dc25b29a0ce25ee775f9af7c75d30fd",
+      "bytes": 239908
+    },
+    "figures/04_motion_quality.pdf": {
+      "sha256": "5fe79729355d4c9cc5cf174f8e55a9340a19292ccb7ce9128d16a4a5c97d6519",
+      "bytes": 75445
+    },
+    "figures/04_motion_quality.png": {
+      "sha256": "d51649b0cd99b584bc2b1c12a1090da3f705a15ad686c2ed78ae4600bd14fd35",
+      "bytes": 205898
+    },
+    "figures/05_smoothness.pdf": {
+      "sha256": "9b11c3af03229598261ceaafafa36ba4e2d21846edf620d96ddc9b99d6fea2a8",
+      "bytes": 78001
+    },
+    "figures/05_smoothness.png": {
+      "sha256": "994d509ebcec8e63dc50e2a89fd8689c1cba0f9ea355a08e08be4ab289759dbd",
+      "bytes": 213157
+    },
+    "figures_manifest.json": {
+      "sha256": "6a745011e68ab981e5b3f38d482e9f661a9722fc833c9284c061d2550900f6eb",
+      "bytes": 15415
+    },
+    "media/comparison.mp4": {
+      "sha256": "0ebe4b46df43985e92208e27f5f7df435dea595f6709f37ad426e808f2752032",
+      "bytes": 5557140
+    },
+    "media/comparison_thumbnail.png": {
+      "sha256": "7338be8f1025bd35297737a9d0ca3b91132d51de46c79e48e964fe88c6448bc4",
+      "bytes": 331828
+    },
+    "overview.png": {
+      "sha256": "ddd7ddd1f699df506a5e07fbc620a9c9b54f7fc190e0ede2fed54143d592bd73",
+      "bytes": 271132
+    },
+    "report.html": {
+      "sha256": "546f4184b74a4f881c9814202879cf3b92c1f3dafc393164ec0c983f09c5d2ba",
+      "bytes": 1641764
+    },
+    "report.pdf": {
+      "sha256": "0604e1b0e85e8729547cba1cdcf420fba9245aead364fec967a864d432995e8e",
+      "bytes": 1921904
+    },
+    "tables/01_evaluation_summary_zh.csv": {
+      "sha256": "3992afb5797d79597823f03f4096e23097526a91a706a252e7227af5d8742a62",
+      "bytes": 11920
+    },
+    "tables/02_primary_per_seed_zh.csv": {
+      "sha256": "41eda7ad0c1d24e20bea88ae0847588dd9e106edd2db7b0b4077b7bf578f652d",
+      "bytes": 1834
+    },
+    "tables/03_training_milestones_zh.csv": {
+      "sha256": "cecc7313501d913be2029a29fe1ebb180cf6e43354e681437fba704b0df8d4b4",
+      "bytes": 6849
+    },
+    "tables/04_training_milestones_per_seed_zh.csv": {
+      "sha256": "dd626db12935b5995e7bf7d5436b2f69b619586d173d4c77e5dff7cc0dd4a2f6",
+      "bytes": 15818
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{"phase": "initialization", "pid": 2394912, "timestamp": 1793788021.442638}
+{"phase": "training", "pid": 2394912, "timestamp": 1793788026.0697415, "allocated_bytes": 11993088, "reserved_bytes": 25165824}
+{"phase": "checkpoint_and_reload", "pid": 2394912, "timestamp": 1793788044.1731975, "seconds": 18.102866373956203, "peak_allocated_bytes": 35018752, "peak_reserved_bytes": 39845888, "final_allocated_bytes": 21377536, "final_reserved_bytes": 39845888}
+{"phase": "evaluation_nominal_zero_residual", "pid": 2394912, "timestamp": 1793788044.3851712}
+{"phase": "evaluation_nominal_dr_ppo", "pid": 2394912, "timestamp": 1793788054.1308343}
+{"phase": "evaluation_randomized_zero_residual", "pid": 2394912, "timestamp": 1793788066.1258216}
+{"phase": "evaluation_randomized_dr_ppo", "pid": 2394912, "timestamp": 1793788076.3603494}

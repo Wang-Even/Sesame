@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_metadata_and_source_provenance_review",
+  "official_score": false,
+  "study_id": "robustness_ablation_20261103",
+  "reviewer": "/root/baseline_review",
+  "status": "passed",
+  "evidence_basis": "Previously completed independent read-only audit of saved training, evaluation and analysis artifacts. No model, simulator, GPU or Git operation was run for this review.",
+  "scope": {
+    "study_directory": "/home/ywwang/sesame/runs/robustness_ablation_20261103",
+    "final_checkpoints": 9,
+    "training_variants": [
+      "baseline",
+      "full_dr",
+      "fixed_delay"
+    ],
+    "training_seeds": [
+      42,
+      43,
+      44
+    ],
+    "updates_per_checkpoint": 250,
+    "environment_transitions_per_checkpoint": 2048000,
+    "evaluation_conditions": [
+      "nominal",
+      "randomized"
+    ],
+    "evaluation_seeds": [
+      3042,
+      4042
+    ],
+    "evaluation_environments": 256,
+    "selected_environment_ids": "0 through 63, first completed episode only",
+    "episodes_per_evaluation_seed_per_case": 64,
+    "episodes_per_case": 128,
+    "completed_cases": 18,
+    "total_evaluation_episodes": 2304
+  },
+  "provenance": {
+    "protocol_sha256": "096db8c98550dbd8706a3f7ce8613dc680b0d9e21b064d97d70fdde6ea61cb48",
+    "evaluation_manifest_signature": "f78b0982c2046b03b7b66afa7d34127a651523f0e506c4bd88e8ee602e05eb1e",
+    "frozen_protocol_and_snapshot_hashes_match": true,
+    "canonical_manifest_signature_recomputed": true,
+    "all_nine_final_checkpoint_hashes_match_training_results_and_manifest": true,
+    "all_training_source_snapshot_hashes_match": true,
+    "frozen_current_sources_and_evaluation_source_snapshots_match": true,
+    "all_case_hashes_match_completed_progress_manifest": true,
+    "all_saved_trajectory_hashes_match_cases": true,
+    "analysis_input_hashes_match": true,
+    "final_checkpoint_only_and_equal_training_budgets_verified": true,
+    "note": "These checks describe the artifacts inspected during the completed audit; this review is not an official course score or a new simulation test."
+  },
+  "pairing_and_runtime_evidence": {
+    "common_evaluation_environment_variant": "full_dr for every trained policy",
+    "condition_seed_reference_snapshots": 4,
+    "policies_checked_against_each_reference": 9,
+    "exact_initial_root_state_joint_position_joint_velocity_and_domain_snapshot_equality": true,
+    "unique_expected_seed_environment_episode_ids_verified_in_every_case": true,
+    "physical_parameter_readback_validations_passed": 36,
+    "finite_action_observation_and_reward_checks_passed_cases": 18
+  },
+  "episode_sample_and_outcome_checks": {
+    "episodes_with_duration_10_seconds": 2304,
+    "control_dt_seconds": 0.02,
+    "control_samples_per_episode": 500,
+    "applied_target_rate_samples_per_episode": 500,
+    "applied_target_acceleration_intervals_per_episode": 499,
+    "actual_joint_acceleration_samples_per_episode": 500,
+    "raw_action_scalars_per_episode": 4000,
+    "falls": 0,
+    "invalid_state_terminations": 0,
+    "out_of_bounds_terminations": 0,
+    "timeouts": 2304,
+    "episode_speed_displacement_duration_arithmetic_verified": true,
+    "heading_lateral_absolute_value_and_action_clip_arithmetic_verified": true,
+    "actual_joint_acceleration_definition": "RMS of finite differences of actual joint velocity across 8 joints at 50 Hz, including the first interval from known reset velocity. This does not measure 500 Hz acceleration peaks."
+  },
+  "independent_aggregation": {
+    "per_case_metric_summaries_recomputed": 216,
+    "case_means_population_sd_min_max_and_valid_counts_match_saved_cases": true,
+    "group_means_and_sample_sd_match_analysis_summary": true,
+    "method": "Compute the mean of per-episode metrics over 128 episodes for each trained checkpoint, then compute the mean and sample standard deviation over the three training-seed means.",
+    "independent_replicates_per_variant": 3,
+    "reported_plus_minus_is": "Sample standard deviation across training seeds, not a confidence interval.",
+    "episodes_are_not_independent_training_replicates": true
+  },
+  "primary_metric": {
+    "name": "velocity_x_rmse_m_s",
+    "units": "m/s",
+    "definition": "Per-episode RMS instantaneous world-frame forward velocity error relative to 0.10 m/s, sampled at 50 Hz; then aggregated as described above.",
+    "seed_order": [
+      42,
+      43,
+      44
+    ],
+    "nominal": {
+      "baseline": {
+        "mean": 0.04835817965795286,
+        "sample_sd": 0.011409598136084763,
+        "seed_means": [
+          0.06117102375719696,
+          0.044607355317566544,
+          0.03929615989909507
+        ]
+      },
+      "full_dr": {
+        "mean": 0.062173450307454914,
+        "sample_sd": 0.003002126259048608,
+        "seed_means": [
+          0.058706921845441684,
+          0.06389457403565757,
+          0.06391885504126549
+        ]
+      },
+      "fixed_delay": {
+        "mean": 0.10036569179889436,
+        "sample_sd": 0.006137271856594512,
+        "seed_means": [
+          0.09340681839967147,
+          0.10500558814965189,
+          0.10268466884735972
+        ]
+      }
+    },
+    "randomized": {
+      "baseline": {
+        "mean": 0.06943441320133086,
+        "sample_sd": 0.005564758465484315,
+        "seed_means": [
+          0.07522793984389864,
+          0.06894447840750217,
+          0.06413082135259174
+        ]
+      },
+      "full_dr": {
+        "mean": 0.03747506906317236,
+        "sample_sd": 0.0017217166844990508,
+        "seed_means": [
+          0.0356678963144077,
+          0.03766108778654598,
+          0.03909622308856342
+        ]
+      },
+      "fixed_delay": {
+        "mean": 0.041718529173522256,
+        "sample_sd": 0.0023835781107161666,
+        "seed_means": [
+          0.04227266761881765,
+          0.0437762281508185,
+          0.03910669175093062
+        ]
+      }
+    }
+  },
+  "paired_primary_differences": {
+    "definition": "full_dr minus comparator, paired by training seed in order [42,43,44]; negative favors full_dr.",
+    "nominal": {
+      "versus_baseline": {
+        "per_seed": [
+          -0.0024641019117552787,
+          0.019287218718091026,
+          0.024622695142170414
+        ],
+        "mean": 0.013815270649502054,
+        "sample_sd": 0.01434852972987617
+      },
+      "versus_fixed_delay": {
+        "per_seed": [
+          -0.03469989655422978,
+          -0.041111014113994315,
+          -0.03876581380609423
+        ],
+        "mean": -0.03819224149143944,
+        "sample_sd": 0.0032438165779501353
+      }
+    },
+    "randomized": {
+      "versus_baseline": {
+        "per_seed": [
+          -0.03956004352949094,
+          -0.0312833906209562,
+          -0.025034598264028318
+        ],
+        "mean": -0.031959344138158485,
+        "sample_sd": 0.007286276477601658
+      },
+      "versus_fixed_delay": {
+        "per_seed": [
+          -0.006604771304409951,
+          -0.00611514036427252,
+          -1.0468662367202342e-05
+        ],
+        "mean": -0.004243460110349891,
+        "sample_sd": 0.003674043693725743
+      }
+    }
+  },
+  "randomized_secondary_findings": {
+    "forward_displacement_m": {
+      "baseline": {
+        "mean": 0.6727162376046181,
+        "sample_sd": 0.08344139123864865
+      },
+      "full_dr": {
+        "mean": 1.1343270639578502,
+        "sample_sd": 0.03352987877261203
+      },
+      "fixed_delay": {
+        "mean": 1.164454499880473,
+        "sample_sd": 0.022758215245934105
+      }
+    },
+    "applied_target_rate_rms_rad_s": {
+      "baseline_mean": 3.131258086922268,
+      "full_dr_mean": 4.189482759684324,
+      "full_dr_increases_in_all_three_seeds": true
+    },
+    "applied_target_acceleration_rms_rad_s2": {
+      "baseline_mean": 109.62164702514808,
+      "full_dr_mean": 133.2398145198822,
+      "full_dr_increases_in_all_three_seeds": true
+    },
+    "actual_joint_acceleration_rms_rad_s2": {
+      "baseline_mean": 300.8667790691058,
+      "full_dr_mean": 284.7089219888051,
+      "full_dr_minus_baseline_per_seed": [
+        -46.618383049964905,
+        5.1753586530685425,
+        -7.030546844005585
+      ]
+    },
+    "raw_action_clipped_fraction": {
+      "baseline_mean": 0.352474609375,
+      "full_dr_mean": 0.43916015625
+    }
+  },
+  "conclusions": [
+    "Full DR reduces mean forward velocity RMSE under randomized evaluation by 46.02810431405205% versus baseline, with improvement in all three training seeds.",
+    "Full DR reduces randomized mean RMSE by 10.171643618354395% versus fixed-delay DR; seeds 42 and 43 improve while seed 44 is essentially tied.",
+    "Full DR increases nominal mean RMSE by 28.568632539976164% versus baseline; the robustness result has a nominal-condition tradeoff.",
+    "No fall-reduction claim is supported because every method had zero observed falls.",
+    "No overall smoothness-improvement claim is supported: applied-target rate and acceleration increase in all three seeds, and actual joint acceleration changes have mixed signs.",
+    "The strongest supported finding is improved forward-tracking robustness within the evaluated dynamics range."
+  ],
+  "limitations": [
+    "Only three independent training seeds per method; 2304 episodes are not 2304 independent training replicates.",
+    "Baseline versus full DR compares a package that includes broader initialization and changed mean actuator dynamics.",
+    "Full DR versus fixed-delay DR compares joint variation of lag and delay at matched parameter centers; it does not separately identify lag and delay effects.",
+    "Evaluation uses held-out seeds within training parameter ranges, not out-of-distribution dynamics.",
+    "This is a local reference simulation study; it is not the official course score and does not establish hardware performance.",
+    "The seed-42 baseline and full-DR training runs were reused as declared; development evaluation seed 2042 was excluded from this study's formal evaluation.",
+    "Derivative diagnostics are sampled at 50 Hz and do not characterize physics-rate peaks or mechanical energy efficiency."
+  ],
+  "review_artifact_created_at_utc": "2026-11-02T21:41:00.872148+00:00"
+}

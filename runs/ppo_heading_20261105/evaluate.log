@@ -1,0 +1,200 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/isaaclab.python.headless.kit
+[Info] [carb] Logging to file: /home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/isaac.log
+2026-11-05 08:58:05 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-05 08:58:05 [14ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes' or '/home/ubuntu/jrWork/IsaacLab/apps/isaacsim_4_5/rendering_modes/config'
+2026-11-05 08:58:06 [802ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-11-05 08:58:06 [1,094ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-05 08:58:06 [1,094ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 10 belongs to.
+2026-11-05 08:58:06 [1,094ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 11 belongs to.
+2026-11-05 08:58:06 [1,094ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 12 belongs to.
+2026-11-05 08:58:06 [1,094ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 13 belongs to.
+2026-11-05 08:58:06 [1,094ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 14 belongs to.
+2026-11-05 08:58:06 [1,094ms] [Error] [omni.platforminfo.plugin] failed to find the package that core 15 belongs to.
+2026-11-05 08:58:06 [1,424ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-11-05 08:58:06 [1,598ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.07    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090 D        | Yes: 0 |     | 24564   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2685      | 797f5e3a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 20.04.6 LTS (Focal Fossa) ubuntu, Version: 20.04.6, Kernel: 5.15.0-139-generic
+| Processor: 12th Gen Intel(R) Core(TM) i5-12600KF
+| Cores: 10 | Logical Cores: 10
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31876 | Free Memory: 2234
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 17592186044413
+|---------------------------------------------------------------------------------------------|
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-11-05_16-58-10.log
+[33m16:58:11 [stage.py] WARNING: [Compat] Isaac Sim < 5.0 does not support thread-local stage contexts. Skipping use_stage().[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 15042
+	Physics step-size     : 0.002
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2026-11-05 08:58:11 [5,979ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,979ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,979ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,979ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,979ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,979ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-11-05 08:58:11 [5,980ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO]: Time taken for scene creation : 0.602926 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 256
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m16:58:12 [articulation.py] WARNING: Spatial tendons are not supported in Isaac Sim < 5.0: patching spatial-tendon getter and setter to use dummy value[0m
+[INFO]: Time taken for simulation start : 0.970108 seconds
+[INFO]: Completed setting up the environment...
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+STUDY_CASE_COMPLETED={"case": "full_dr_seed42/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.058359524817205966}
+STUDY_CASE_COMPLETED={"case": "full_dr_seed42/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.03672806917165872}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+STUDY_CASE_COMPLETED={"case": "full_dr_seed43/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06441919860662892}
+STUDY_CASE_COMPLETED={"case": "full_dr_seed43/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.038605915557127446}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+STUDY_CASE_COMPLETED={"case": "full_dr_seed44/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06447621848201379}
+STUDY_CASE_COMPLETED={"case": "full_dr_seed44/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.039375774227664806}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+STUDY_CASE_COMPLETED={"case": "heading_seed42/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06335704118828289}
+STUDY_CASE_COMPLETED={"case": "heading_seed42/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.03538987984939013}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+STUDY_CASE_COMPLETED={"case": "heading_seed43/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06856686959508806}
+STUDY_CASE_COMPLETED={"case": "heading_seed43/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.03776963442214765}
+Actor MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=36, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+STUDY_CASE_COMPLETED={"case": "heading_seed44/nominal", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.06532392371445894}
+STUDY_CASE_COMPLETED={"case": "heading_seed44/randomized", "resumed": false, "episodes": 128, "velocity_x_rmse_m_s": 0.034688968560658395}
+SESAME_HEADING_EVALUATION_RESULT={"status": "completed", "pid": 2677651, "study_id": "ppo_heading_20261105_comparison", "protocol_sha256": "be2c4eaa0d802674907f479ca40c6bf7808b7c172a9275e3cc1cfa37fd03237f", "manifest_signature": "7e6a64894859a3897b47f13917d696dfc46fa07bef039db97b7faef6ce440203", "smoke": false, "evaluation": {"num_envs": 256, "seeds": [15042, 16042], "episodes_per_seed": 64, "conditions": ["nominal", "randomized"], "episode_length_s": 10.0, "environment_variant": "full_dr_for_all_policies", "pairing": "Exact initial root/joint states and actual PhysX/randomized parameters matched across all six policies per condition/seed", "checkpoint_selection": "final only", "policy_action": "deterministic mean with saved observation normalizers", "primary_metric": "per-episode heading RMS radians converted to degrees; mean across episodes then mean and sample SD across 3 training seeds", "secondary_metrics": ["velocity tracking RMSE", "fall rate", "joint target smoothness", "forward displacement"], "return_semantics": "Common original evaluation reward, not either policy training return; conclusions use physical metrics"}, "started_at_utc": "2026-11-05T08:58:04.452284+00:00", "git_operations": "disabled", "gpu": "NVIDIA GeForce RTX 4090 D", "versions": {"torch": "2.7.0+cu128", "rsl-rl-lib": "3.1.2", "isaaclab": "0.49.0", "isaaclab-rl": "0.4.4", "isaacsim": "not in distribution metadata"}, "case_paths": ["/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed42/nominal.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed42/randomized.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed43/nominal.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed43/randomized.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed44/nominal.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/full_dr_seed44/randomized.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed42/nominal.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed42/randomized.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed43/nominal.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed43/randomized.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed44/nominal.json", "/home/ywwang/sesame/runs/ppo_heading_20261105/evaluation/cases/heading_seed44/randomized.json"], "cases_completed": 12, "pairing_verified_all_cases": true, "wall_seconds_before_shutdown": 458.4535321909934, "finished_at_utc": "2026-11-05T09:05:42.906053+00:00"}

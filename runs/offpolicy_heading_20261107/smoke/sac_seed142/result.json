@@ -1,0 +1,155 @@
+{
+  "status": "completed",
+  "pid": 3343649,
+  "variant": "sac",
+  "algorithm": "SAC",
+  "train_seed": 142,
+  "seed": 142,
+  "smoke": true,
+  "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142",
+  "args": {
+    "algorithm": "sac",
+    "seed": 142,
+    "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142",
+    "num_envs": 16,
+    "total_transitions": 16384,
+    "warmup_transitions": 512,
+    "batch_size": 256,
+    "replay_capacity": 32768,
+    "updates_per_vector_step": 2,
+    "smoke": true
+  },
+  "reward_version": "absolute_heading_v1",
+  "heading_penalty_scale": 0.5,
+  "domain_randomization": true,
+  "fresh_from_scratch": true,
+  "checkpoint_selection": "final only",
+  "reward_scale": 1.0,
+  "git_operations": "disabled",
+  "started_at_utc": "2026-11-06T18:13:38.114733+00:00",
+  "sources": [
+    {
+      "path": "sesame_rl/environment.py",
+      "sha256": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+      "bytes": 20862
+    },
+    {
+      "path": "sesame_rl/dr_environment.py",
+      "sha256": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+      "bytes": 22356
+    },
+    {
+      "path": "sesame_rl/study_environment.py",
+      "sha256": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+      "bytes": 11420
+    },
+    {
+      "path": "sesame_rl/heading_environment.py",
+      "sha256": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+      "bytes": 6185
+    },
+    {
+      "path": "scripts/train_ppo.py",
+      "sha256": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+      "bytes": 23496
+    },
+    {
+      "path": "scripts/train_ppo_dr.py",
+      "sha256": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+      "bytes": 26265
+    },
+    {
+      "path": "scripts/train_ppo_study.py",
+      "sha256": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+      "bytes": 17419
+    },
+    {
+      "path": "scripts/train_heading_ppo.py",
+      "sha256": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736",
+      "bytes": 21126
+    },
+    {
+      "path": "scripts/run_heading_ppo_queue.py",
+      "sha256": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73",
+      "bytes": 5985
+    },
+    {
+      "path": "scripts/probe_heading_reward.py",
+      "sha256": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6",
+      "bytes": 12600
+    },
+    {
+      "path": "sesame_rl/offpolicy.py",
+      "sha256": "b06f1e4e17afca9bf51ea7169c5c74ce2e2fd507d78995929c99aa3e317b3e03",
+      "bytes": 26624
+    },
+    {
+      "path": "sesame_rl/offpolicy_environment.py",
+      "sha256": "c0527b73a67ce7b087cf43bca59078681f737ce091e6340917550926453495e8",
+      "bytes": 1135
+    },
+    {
+      "path": "scripts/train_offpolicy.py",
+      "sha256": "54d23be7d90b6c4f6ec432e55d2ae3f953c920bc56aeb22305e9bdb7475d28ad",
+      "bytes": 18914
+    }
+  ],
+  "frozen_sources": {
+    "sesame_rl/environment.py": "d72d7355158beae61db69ac436a71568a7d1c56c4a3845d5d77ba907afacef0c",
+    "sesame_rl/dr_environment.py": "45b0ee591d4e5eed987523e664ed295d08683af1e204b22ca9d13248df433476",
+    "sesame_rl/study_environment.py": "fac58669e8bfadd67761a8146362b2bf777e7d3f8af32bcd573891fd9eec3e9a",
+    "sesame_rl/heading_environment.py": "fdaf5ea0afc35e5a40003530047adb7c3dabf35bd3340677f3b6464d5650fd7a",
+    "scripts/train_ppo.py": "b94f592f61c011c964c0c245cd68f4f9ed7688b7d3ce54ce5d244310b2f5a9c1",
+    "scripts/train_ppo_dr.py": "7425cd8e1db6034f3dd58fa96e370968705da9c55e7dd4db0f06dba594688b01",
+    "scripts/train_ppo_study.py": "8f249ee0560dbab5942335bded787103883acd131ef1e2781d4e1b3f6072f67d",
+    "scripts/train_heading_ppo.py": "e1d31d2c4dc1d22c422a7f9365243254e3731b1be2d2a1de5e34653d96e42736",
+    "scripts/run_heading_ppo_queue.py": "59648e7b8559a20f0bb0dfffc258026fcf8890fbdcafb964b5352c507cabfa73",
+    "scripts/probe_heading_reward.py": "42bf3eb93b685cb668813fe3551c434dd6f7dad0d639f26f3774d8b29096ccd6"
+  },
+  "robot_asset_sha256": "76da5e3e87ad5246c11b895702e220f20d03c33d62aa807eb0ffbe3e9a563ce7",
+  "reward_config": {
+    "reward_version": "absolute_heading_v1",
+    "base_reward": "All frozen SesameWalkEnv reward components retained unchanged",
+    "new_term": "heading",
+    "heading_penalty_scale": 0.5,
+    "reward_rate_formula": "-scale * (1 - cos(world_yaw - atan2(command_world_y, command_world_x)))",
+    "step_reward_formula": "heading_reward_rate * control_dt_s",
+    "control_dt_s": 0.02,
+    "zero_planar_command": "heading term is exactly zero",
+    "nonfinite_rate": "mapped to zero, consistent with the frozen base reward handling",
+    "target_heading": "world XY velocity-command direction; zero radians for the original +X command",
+    "accounting": "Added once to returned reward, episode return and RewardRate/heading accumulator",
+    "observation_dimension": 36,
+    "action_dimension": 8,
+    "training_physics": "Full domain randomization, unchanged from DR-PPO",
+    "metric_reference": "Inherited study heading metrics remain relative to world +X, matching this fixed +X task"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "isaaclab": "0.49.0",
+    "isaaclab-rl": "0.4.4",
+    "gymnasium": "1.2.1"
+  },
+  "training_wall_seconds": 44.94052652642131,
+  "training_torch_memory": {
+    "peak_allocated_bytes": 35008000,
+    "peak_reserved_bytes": 52428800,
+    "scope": "Torch only, includes replay; excludes non-Torch simulator allocations"
+  },
+  "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/smoke/sac_seed142/final.pt",
+  "checkpoint_sha256": "7353cee4fbb13b04293d166067f601da73b468b48c9c922ea20e1485c45f5ebc",
+  "environment_transitions_total": 16384,
+  "optimizer_updates": 1984,
+  "reload_max_abs_action_error": 0.0,
+  "transition_validation": {
+    "completed_episodes": 32,
+    "true_terminations": 0,
+    "timeouts": 32,
+    "timeout_action_snapshot_checks": 32,
+    "nonterminal_snapshot_checks": 16352
+  },
+  "completed_training_episodes": 32,
+  "wall_seconds_before_shutdown": 52.141274427995086,
+  "finished_at_utc": "2026-11-06T18:14:30.256365+00:00"
+}

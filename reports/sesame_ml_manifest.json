@@ -1,0 +1,659 @@
+{
+  "downloaded_at_utc": "2026-11-02T08:25:39.712707+00:00",
+  "repository_url": "https://github.com/lukehollis/sesame-ml",
+  "archive_url": "https://codeload.github.com/lukehollis/sesame-ml/zip/refs/heads/main",
+  "archive_revision_comment": "a3910f67b4aeb9ca9080a1ba1ffa971e53e35a18",
+  "archive_path": "downloads/sesame-ml-main.zip",
+  "archive_sha256": "f216ec2ffa43369a58de1e672c61573a5e53f915f6bedb06f62887f6655a7bbe",
+  "archive_bytes": 9753275,
+  "destination": "assets/upstream/sesame-ml",
+  "license": "Apache-2.0; see preserved upstream LICENSE",
+  "file_count": 124,
+  "total_extracted_bytes": 12569010,
+  "extension_counts": {
+    ".cff": 1,
+    ".csv": 4,
+    ".gif": 4,
+    ".json": 6,
+    ".lock": 1,
+    ".md": 12,
+    ".mp4": 4,
+    ".py": 70,
+    ".stl": 11,
+    ".svg": 1,
+    ".toml": 1,
+    ".txt": 2,
+    ".urdf": 1,
+    ".xml": 1,
+    ".yaml": 1,
+    ".yml": 2,
+    "<none>": 2
+  },
+  "simulation_model_candidates": [
+    "src/sesame_ml/assets/mjcf/sesame.xml",
+    "src/sesame_ml/assets/urdf/sesame.urdf"
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 2177,
+      "sha256": "2a4e0bad87a8a182884de60236bc744c66a4cd21ad4a9f3371888cf9fe449ce0"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 1086,
+      "sha256": "e61974592cb43d923cb2da0e07346f3b6160882f24a97a0d11d1a2cd910ac176"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 810,
+      "sha256": "f67427bc90a8ec0bf59db94520932dcf1bbd251d2841e094bf5efc976e0883b9"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 648,
+      "sha256": "ca3fc6c0b3b713de6bb8e465e79201cef8baf49fe7b71bf02944a7bdd8ed522e"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2114,
+      "sha256": "3e997a586cfe95cebaaa2363c902501312e06c10f814dcc8db4d59756c572fed"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10463,
+      "sha256": "837ec8eb40db42be0f21c460c46febefdc157510f2210cd572577a1637d24b2b"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 6203,
+      "sha256": "b991cb23dcc53b1bbfd6e1b080fbe3b56561a6f1d53999ca963ab8d54fa72aff"
+    },
+    {
+      "path": "docs/getting-started.md",
+      "bytes": 3999,
+      "sha256": "2db80f87f4601308fac79e1b1822e6d91f4876f7a423496e16356568540e0a7c"
+    },
+    {
+      "path": "docs/hardware-reference.md",
+      "bytes": 17412,
+      "sha256": "da7f3cad9fe59384d160fa660b0d860b653737c6389ffb55d1699a4afa69d4d0"
+    },
+    {
+      "path": "docs/media/firmware-gait.gif",
+      "bytes": 2576209,
+      "sha256": "6c2d656558984d2e8d2beebef8de3097174d6344495c103a5f938c5ceb066d36"
+    },
+    {
+      "path": "docs/media/firmware-gait.mp4",
+      "bytes": 3328635,
+      "sha256": "f35bbee27ee11aa9fc22f1c376a84c402120dfaf065953b0fa4fe86af5073b4e"
+    },
+    {
+      "path": "docs/media/navigation-split.gif",
+      "bytes": 1371702,
+      "sha256": "2862cdf42b8bc9c93242a498fb04e1e58567dfa3e9e7611ddbe3b206df6165af"
+    },
+    {
+      "path": "docs/media/navigation-split.mp4",
+      "bytes": 906240,
+      "sha256": "37a5446d43f01a9c1061e67a437a9e77c3e12c1fc0f7f57df821a406290fd583"
+    },
+    {
+      "path": "docs/media/orange-pi-two-battery-wiring.svg",
+      "bytes": 9665,
+      "sha256": "ee2e50db0b7f4175723c9e8c33fe66f65ea836a7d081b6e8d041834338e47deb"
+    },
+    {
+      "path": "docs/media/recovery.gif",
+      "bytes": 228186,
+      "sha256": "c99ccbf38f24c9ded339b2e871d4a28befe09fe2d95347df92817cce53ae30fb"
+    },
+    {
+      "path": "docs/media/recovery.mp4",
+      "bytes": 227113,
+      "sha256": "e7e9b5210dbbc169d4703328cb9c7b348c8b8a70297bb5e52b80ddf5f1af4777"
+    },
+    {
+      "path": "docs/media/reports/firmware-gait/episodes.csv",
+      "bytes": 1281,
+      "sha256": "a84c43d5958e2c750686260ecfcd37c0b4a5eabd5c768cb0ae7a9deeb6bf0162"
+    },
+    {
+      "path": "docs/media/reports/firmware-gait/report.json",
+      "bytes": 3736,
+      "sha256": "e0f554687d8f98f04e6d6336128775489156d0fb7a7d69b80fc32a750024fdd2"
+    },
+    {
+      "path": "docs/media/reports/navigation-split/episodes.csv",
+      "bytes": 1305,
+      "sha256": "767e9051ab2f5b1cbcd7c3bd430f3e384504cda1b3d25743dbe592157de38f02"
+    },
+    {
+      "path": "docs/media/reports/navigation-split/report.json",
+      "bytes": 3753,
+      "sha256": "7100e3061d213660760d8a21fcf61a06d4083e9026f42559a605d55f8638f2e0"
+    },
+    {
+      "path": "docs/media/reports/recovery/episodes.csv",
+      "bytes": 1238,
+      "sha256": "73679666b0b269a148e8ebeb0ba66a948f62485651170d1ff840e627add9d6fd"
+    },
+    {
+      "path": "docs/media/reports/recovery/report.json",
+      "bytes": 3700,
+      "sha256": "f1099d96e38849ffe74bfbfa39490ad72ae3da44a006dc677b2a8355aab7394f"
+    },
+    {
+      "path": "docs/media/reports/stand/episodes.csv",
+      "bytes": 1239,
+      "sha256": "2e8746649f9166e2c8b1aa998c185bca8de4829ce129c91c1a87b2eaa120259d"
+    },
+    {
+      "path": "docs/media/reports/stand/report.json",
+      "bytes": 3696,
+      "sha256": "9f9ec415d50fe11ed1a362716ee80c42cfd129353c290a4d943cfe7972f51904"
+    },
+    {
+      "path": "docs/media/stand.gif",
+      "bytes": 91464,
+      "sha256": "f85b1104ea5a5789594016308e412daa34bdd321e4d19734813f15780adb7ece"
+    },
+    {
+      "path": "docs/media/stand.mp4",
+      "bytes": 123428,
+      "sha256": "1c2bda46e530de9054521622683a80ff4366b6c805d1b37a9650c6bd82a46bec"
+    },
+    {
+      "path": "docs/orange-pi.md",
+      "bytes": 4755,
+      "sha256": "e77b61b6526d2c9f00e36af6ae70d53cf3881f90025cd315af4e66a6cee215b4"
+    },
+    {
+      "path": "docs/safety.md",
+      "bytes": 5045,
+      "sha256": "ef4688aad8f141762b7f46d53b134fa87b2090ffd39eaeb7698deef7f3d951ac"
+    },
+    {
+      "path": "docs/simulation.md",
+      "bytes": 6422,
+      "sha256": "db753b2b49c4dd62e4e70a2f8b38aebbce83d3e232cec48ec497712b7d1c4fd5"
+    },
+    {
+      "path": "docs/urdf.md",
+      "bytes": 4832,
+      "sha256": "d2daf33572278df4e519fdf360a84d73119ba6d9096e00b6ed316a98abdb2ae7"
+    },
+    {
+      "path": "docs/vla-finetuning.md",
+      "bytes": 8579,
+      "sha256": "3c5802b22a6cbc9aebef700f6301dc363f9015d4a0798ad019a1deadc5a95a4a"
+    },
+    {
+      "path": "docs/vla-world-models.md",
+      "bytes": 7763,
+      "sha256": "33f757cbc05ade5f08d732959d4ff244b955ec1cca105c0e9892f5896dbf71e9"
+    },
+    {
+      "path": "integrations/README.md",
+      "bytes": 1370,
+      "sha256": "339ab9f4723219b03f05f8b024d146fcc08fd5b6bb5b83461364da7a82193806"
+    },
+    {
+      "path": "integrations/bridge-requirements.txt",
+      "bytes": 226,
+      "sha256": "798138b3ab0b2d4192f900851bb9dd81c1606d74b943765e8aaaaa77122dcce6"
+    },
+    {
+      "path": "integrations/groot/modality.json",
+      "bytes": 334,
+      "sha256": "12770a1bde1924d5fc9c2ad49500a3e6950e9de37280f8020eb11163a1dfe48b"
+    },
+    {
+      "path": "integrations/groot/sesame_config.py",
+      "bytes": 1251,
+      "sha256": "6df5526d7d875a5e0d85e3d8c37ddbabd1ba046575507e67636c9f97845b21de"
+    },
+    {
+      "path": "integrations/openpi/sesame_policy.py",
+      "bytes": 4650,
+      "sha256": "12aaa8939d4638fc55dd29bc6bfbfb00364bac62d9be23b0cecc0bde0e6333b6"
+    },
+    {
+      "path": "integrations/openpi/sesame_train_configs.py",
+      "bytes": 3652,
+      "sha256": "dd7434217d8270ad46b7e0f5dc441e4b39b7ae62751d0454cbfeef619f0d8c1a"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 2642,
+      "sha256": "ab5682ab9b06d5230075d6d54bb4771e1cf58909ab8a4b371b1e6a4c3a66a9af"
+    },
+    {
+      "path": "scripts/check_markdown_links.py",
+      "bytes": 2089,
+      "sha256": "211ec2461edb992b95d4a75632ad2202a74e8d7ce8ff37f0963bd4043cfb8330"
+    },
+    {
+      "path": "scripts/check_release_tag.py",
+      "bytes": 746,
+      "sha256": "410126948bf43d0c69d28bc9022f266753c75cb3f75acff11b11279fff91c304"
+    },
+    {
+      "path": "scripts/validate_urdf.py",
+      "bytes": 703,
+      "sha256": "9a3a08857e3ba2ab667d5f0f4184edb7324e0ea564dd09bc9faf9bf220497ccf"
+    },
+    {
+      "path": "src/sesame_ml/__init__.py",
+      "bytes": 380,
+      "sha256": "8c13851d282b987eab56a3473d93479e0961faf17fdf0bd37470ecec3d694dab"
+    },
+    {
+      "path": "src/sesame_ml/assets/calibration/default.yaml",
+      "bytes": 628,
+      "sha256": "a12b1a72f1137ec0224018406d7a80ead8fe183031651c83df0c745a2f9c155b"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/Bottom-Cover-v121.stl",
+      "bytes": 85184,
+      "sha256": "6c2cce125cea714c0e710ee904b82a9e51f02c815f523cc73b0b3b949d96f0c7"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/Internal-Frame-v121.stl",
+      "bytes": 389084,
+      "sha256": "6df1f1f0fc60da4498de36412be317fc953dc52c33a9933733e2c967c200c916"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/L1-v117.stl",
+      "bytes": 359384,
+      "sha256": "081896568cc9776393c038d05ecc8caf01090c6971efebe799d064def4c92558"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/L2-v117.stl",
+      "bytes": 383384,
+      "sha256": "4e47eef40bf523aa0d7b0ac285f3086b3e6c5ccd347525f5c93bbf0c5bcd1fbf"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/L3-v117.stl",
+      "bytes": 102684,
+      "sha256": "136b0f28814629c654a45da1ebed93f496399c0d97007c6c02e1df4422be56a3"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/L4-v117.stl",
+      "bytes": 91384,
+      "sha256": "731819f13cd34efb4ab1b9121e9fae835a463ae11f6689670f7800113ec7b470"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/R1-v117.stl",
+      "bytes": 379784,
+      "sha256": "443f956016ad416699d8d5e56ab2fb0e36b10d42f02ff47ea02ae5986180e871"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/R2-v117.stl",
+      "bytes": 378984,
+      "sha256": "fab2770d0d7f1384c4888e2b3a25cd7a6729c2b4230894b4771a177b73c6452c"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/R3-v117.stl",
+      "bytes": 105884,
+      "sha256": "c2c35b4c948849878649d99e512af6702b5fcbbd2b30578bbec87ab15b8ec99e"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/R4-v117.stl",
+      "bytes": 94584,
+      "sha256": "131348a19491edad32f29d7a64109fdfadc3a03e01feedbf08dc1769e050938a"
+    },
+    {
+      "path": "src/sesame_ml/assets/meshes/Top-Cover-Enclosed-v117.stl",
+      "bytes": 184184,
+      "sha256": "07bf63aefab29fdde65b706b0b5fd62e283c62c8381022089598e00f32870a26"
+    },
+    {
+      "path": "src/sesame_ml/assets/mjcf/sesame.xml",
+      "bytes": 12500,
+      "sha256": "8b752fa8d1e4e78bd044fc6be60186686b091db8c232ccf35877fa9c2e1c812a"
+    },
+    {
+      "path": "src/sesame_ml/assets/urdf/sesame.urdf",
+      "bytes": 16174,
+      "sha256": "4aa795c869cf7c81c8485c608e6b408e2ea4b24a84c82386adb30d16c6803076"
+    },
+    {
+      "path": "src/sesame_ml/bridge_cli.py",
+      "bytes": 4946,
+      "sha256": "4750c0bff2342954d72a1219e67d38bd6246344dd57990e944cea3ee6b349878"
+    },
+    {
+      "path": "src/sesame_ml/cli.py",
+      "bytes": 33784,
+      "sha256": "86e13ac20eadfb40ff2a2de8255032fcde62bc139897e220fd4471a766ba0a9e"
+    },
+    {
+      "path": "src/sesame_ml/constants.py",
+      "bytes": 2830,
+      "sha256": "e6f04efaf797451758de23b7018bae6b792ddba862c253b8aaba1be171c98470"
+    },
+    {
+      "path": "src/sesame_ml/data/__init__.py",
+      "bytes": 596,
+      "sha256": "51c7bda720aa7cccdd602c853f8c782057d536ec32bf2295dc28e167416f427e"
+    },
+    {
+      "path": "src/sesame_ml/data/episode.py",
+      "bytes": 27345,
+      "sha256": "8fc6478b89943cc4411ae4a7670e74c7810bee75098a3d07b26e961312d32aaf"
+    },
+    {
+      "path": "src/sesame_ml/data/lerobot.py",
+      "bytes": 11553,
+      "sha256": "06993d1b3291780066319adaee09353afa0a50af471aa29ccf1c6b7b6ae3a669"
+    },
+    {
+      "path": "src/sesame_ml/envs/__init__.py",
+      "bytes": 909,
+      "sha256": "4fd0a7cc0bee228c05f76087d23941912ef57cf8e7cc3f73ca6e3b0fdcbf66a0"
+    },
+    {
+      "path": "src/sesame_ml/evaluation.py",
+      "bytes": 26398,
+      "sha256": "6140571388d224e057ed6742e1f7d298feca1d9d0de47b2baff9258719cc8334"
+    },
+    {
+      "path": "src/sesame_ml/hardware/__init__.py",
+      "bytes": 449,
+      "sha256": "3410555c6f488001aa972a743d11d4b522aa837ed0a463a2b645615c12215373"
+    },
+    {
+      "path": "src/sesame_ml/hardware/orange_pi.py",
+      "bytes": 17807,
+      "sha256": "c159c19533576c2485c8a12f6b90ce43d25407fedb3574e8839a4ba0e15f32f6"
+    },
+    {
+      "path": "src/sesame_ml/integrations/__init__.py",
+      "bytes": 510,
+      "sha256": "c6a8f535edf985743fc2ec6806c9eba89c1fab2086004e51cb528995add3664b"
+    },
+    {
+      "path": "src/sesame_ml/integrations/base.py",
+      "bytes": 4826,
+      "sha256": "f3d675d0c5d452e175fbff770a741305c3efbc56662c403b0b39f970babb392f"
+    },
+    {
+      "path": "src/sesame_ml/integrations/groot.py",
+      "bytes": 5340,
+      "sha256": "22de518e493f33678c48138ca128bc38635d2741e473716dd41ff4818ae0c379"
+    },
+    {
+      "path": "src/sesame_ml/integrations/openpi.py",
+      "bytes": 5717,
+      "sha256": "d922ddcc63f1f8b5e91a3fd5b15728cd2693b81ec1393ccfd8411ced7d72d39e"
+    },
+    {
+      "path": "src/sesame_ml/integrations/transport_bridge.py",
+      "bytes": 5565,
+      "sha256": "079af5de6048fe3d2fb1154350839b2721884861a7ac9ba6e2d36694bff6971a"
+    },
+    {
+      "path": "src/sesame_ml/model.py",
+      "bytes": 3998,
+      "sha256": "ac8f2ad6a463fc0fcce0d2b77e15b39b9a61de294e405f102851e96be7108f1b"
+    },
+    {
+      "path": "src/sesame_ml/planning/__init__.py",
+      "bytes": 354,
+      "sha256": "bf13481ca308b08fc3d88039f89182195184ed1f4cbf44dcf7f3a0d16de3ef51"
+    },
+    {
+      "path": "src/sesame_ml/planning/cem.py",
+      "bytes": 10702,
+      "sha256": "e02f821a57a4958faa6547dcaadccb401fc66e0cef278152bd26acb63751c8e6"
+    },
+    {
+      "path": "src/sesame_ml/planning/waypoints.py",
+      "bytes": 5173,
+      "sha256": "9efb82e7917b13d032ccddcfba842f231845abc9b318715bdde185232c87dfa9"
+    },
+    {
+      "path": "src/sesame_ml/playground/__init__.py",
+      "bytes": 2545,
+      "sha256": "aa970a90a667edb669851cb7a71f65e2ec2ebe59b779825cdd017d8c7ac2c5e3"
+    },
+    {
+      "path": "src/sesame_ml/playground/environment.py",
+      "bytes": 19194,
+      "sha256": "1e65f165f04f49d007f454e998fc2531eb134cb6be0d028b3bf7fda7625823db"
+    },
+    {
+      "path": "src/sesame_ml/playground/randomize.py",
+      "bytes": 3849,
+      "sha256": "ec517b5d94334f54e4c12fa8a73a12142f1f41adf10f9609367be8efc7854a3d"
+    },
+    {
+      "path": "src/sesame_ml/playground/train.py",
+      "bytes": 8538,
+      "sha256": "3dda4305047cf087cd0aff4f6a19f2134e704ba342c059fbdc8254ca5dc92924"
+    },
+    {
+      "path": "src/sesame_ml/policies/__init__.py",
+      "bytes": 844,
+      "sha256": "2a4aa8d63acceb741e88e2164407a523fbe2e479d6654730fe840153b5d23250"
+    },
+    {
+      "path": "src/sesame_ml/policies/base.py",
+      "bytes": 3952,
+      "sha256": "cbbcbddc95e0c07af924f2184f4289a8547bca34ccf70a76d6fe57780897383f"
+    },
+    {
+      "path": "src/sesame_ml/policies/cpg.py",
+      "bytes": 5375,
+      "sha256": "cd201f6a4b7d5229e8ea9ccc61085f7bfd1b464bdf54183376e5540c19926f17"
+    },
+    {
+      "path": "src/sesame_ml/policies/firmware_sequence.py",
+      "bytes": 8797,
+      "sha256": "c3aa1a903713de32ac680cdd4e76c6635f975f822b905d7a6824f5c91e39ee39"
+    },
+    {
+      "path": "src/sesame_ml/policies/sb3.py",
+      "bytes": 6077,
+      "sha256": "69f4e90aee1fa2cf60f8534ea65be4b424e43918da589153aea34c468d7711f4"
+    },
+    {
+      "path": "src/sesame_ml/policies/stand.py",
+      "bytes": 2307,
+      "sha256": "dcca8c05879298472e45644cb374a53c5417f2f4c0c3f6185a366212b120a3bf"
+    },
+    {
+      "path": "src/sesame_ml/runtime/__init__.py",
+      "bytes": 174,
+      "sha256": "2ff0a8176274fbc1f4b57350c64d9a0c7ee9dc5edde0fbd836799a0f0561e0fc"
+    },
+    {
+      "path": "src/sesame_ml/runtime/sim_robot.py",
+      "bytes": 4439,
+      "sha256": "dd8e2a9d3d9a92340854a5659a19ac0287b9d98b6d5d03cb374b5c329409e244"
+    },
+    {
+      "path": "src/sesame_ml/training/__init__.py",
+      "bytes": 299,
+      "sha256": "c0afc8404feb040ffed3a0ec22be6c65e7815d6b702436f52cde5bc5b16b0642"
+    },
+    {
+      "path": "src/sesame_ml/training/ppo.py",
+      "bytes": 20934,
+      "sha256": "6556521038684a6b85f7a220b3518c90dde40f15e6cf1e797b2b5d90b730fb5c"
+    },
+    {
+      "path": "src/sesame_ml/transport/__init__.py",
+      "bytes": 1325,
+      "sha256": "03c8f282ecf9462e4d8e6dd6b44a276928c8421041f43e449ce4b32197a801b5"
+    },
+    {
+      "path": "src/sesame_ml/transport/action_buffer.py",
+      "bytes": 7836,
+      "sha256": "52bd084735cf10e2f80cc16f68967f4e2af77d81a0e75537ac3a711b74c4af67"
+    },
+    {
+      "path": "src/sesame_ml/transport/client.py",
+      "bytes": 15310,
+      "sha256": "7cb8cb23f08920c6c4d426abb3a2293d2cf404dbbc76f62b824d72d02f504b7a"
+    },
+    {
+      "path": "src/sesame_ml/transport/metrics.py",
+      "bytes": 4653,
+      "sha256": "7fe7a7b83054a24178cb7d47bb2340ab8897fef79ca0d4bb8df35c504e847ba4"
+    },
+    {
+      "path": "src/sesame_ml/transport/protocol.py",
+      "bytes": 17305,
+      "sha256": "8fe8fb378ccabdc7e6e11b1d3ee255f63dde465a3d80cdea8ce5116187809549"
+    },
+    {
+      "path": "src/sesame_ml/transport/server.py",
+      "bytes": 10127,
+      "sha256": "9c9b3dbcd32326e24311f7c422ad87a7942d60694f71b0ae4d21d0d884600845"
+    },
+    {
+      "path": "src/sesame_ml/urdf.py",
+      "bytes": 23620,
+      "sha256": "df6894c447afdff93c6c3e4b81410e7e6602d221e5ebc89fbf22980bbb10adc7"
+    },
+    {
+      "path": "src/sesame_ml/vendor_templates/__init__.py",
+      "bytes": 291,
+      "sha256": "13e12a05e77726b5e2754a1f8ea0f7b736f5b1b98999fd1900b1951da210b24b"
+    },
+    {
+      "path": "src/sesame_ml/vendor_templates/bridge-requirements.txt",
+      "bytes": 226,
+      "sha256": "798138b3ab0b2d4192f900851bb9dd81c1606d74b943765e8aaaaa77122dcce6"
+    },
+    {
+      "path": "src/sesame_ml/vendor_templates/groot/modality.json",
+      "bytes": 334,
+      "sha256": "12770a1bde1924d5fc9c2ad49500a3e6950e9de37280f8020eb11163a1dfe48b"
+    },
+    {
+      "path": "src/sesame_ml/vendor_templates/groot/sesame_config.py",
+      "bytes": 1251,
+      "sha256": "6df5526d7d875a5e0d85e3d8c37ddbabd1ba046575507e67636c9f97845b21de"
+    },
+    {
+      "path": "src/sesame_ml/vendor_templates/openpi/sesame_policy.py",
+      "bytes": 4650,
+      "sha256": "12aaa8939d4638fc55dd29bc6bfbfb00364bac62d9be23b0cecc0bde0e6333b6"
+    },
+    {
+      "path": "src/sesame_ml/vendor_templates/openpi/sesame_train_configs.py",
+      "bytes": 3652,
+      "sha256": "dd7434217d8270ad46b7e0f5dc441e4b39b7ae62751d0454cbfeef619f0d8c1a"
+    },
+    {
+      "path": "tests/test_action_buffer.py",
+      "bytes": 3215,
+      "sha256": "7ea0732366b325aa0fe26743f7f3869e56e9cd15bc0e6e14f1fa8eaaf174373f"
+    },
+    {
+      "path": "tests/test_bridge_cli.py",
+      "bytes": 2817,
+      "sha256": "540d4e3210941a698679bc8b33700e9c2335644902722893db3d391f3268dbd4"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "bytes": 2743,
+      "sha256": "007106fae04ffb21ed5710e7ac74c304d8801bec2221266ef3558c215a64bef0"
+    },
+    {
+      "path": "tests/test_envs.py",
+      "bytes": 7120,
+      "sha256": "0758217d54a7fb378336f5b7dbaf8de0b4f9ca62f42e8e56dfaaa2e3aec77063"
+    },
+    {
+      "path": "tests/test_episode_data.py",
+      "bytes": 4673,
+      "sha256": "8c5a4b1ae8ae5ae0399fbcb20213e2b3df5ca44b117655e1b82490311d268281"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "bytes": 4126,
+      "sha256": "f7789c3eb1c7a06f23f5285516799585452584bcc0dacfea28eb33d524b0cc4d"
+    },
+    {
+      "path": "tests/test_lerobot_export.py",
+      "bytes": 6292,
+      "sha256": "cd6d65408238c47de8335c985690616029afc316efbc668b7a1ba300d95787d1"
+    },
+    {
+      "path": "tests/test_model.py",
+      "bytes": 1590,
+      "sha256": "2cd7494391844fbc7fffbfd464e0bf4758102343d3da24bda4c041a9b577d7a9"
+    },
+    {
+      "path": "tests/test_orange_pi_hardware.py",
+      "bytes": 4293,
+      "sha256": "ad49de3bedb6db51de8325ba224f029433c1109a004b04d101040a86037422e5"
+    },
+    {
+      "path": "tests/test_planning.py",
+      "bytes": 1332,
+      "sha256": "51940d8df3f99beb8ada6cc157a2c72c2724651432fe6ebc8594b803f560b611"
+    },
+    {
+      "path": "tests/test_playground_optional.py",
+      "bytes": 5610,
+      "sha256": "d2e3f8a81064057e71642749a210ecc5bbd8291d0a8466971c1b2b87830eecc6"
+    },
+    {
+      "path": "tests/test_policies.py",
+      "bytes": 4309,
+      "sha256": "6495cebc18ec1d47efe6b1d3c4bd66cb921decf27f4b6bc2d216a98c46f2d0f0"
+    },
+    {
+      "path": "tests/test_sim_runtime.py",
+      "bytes": 1209,
+      "sha256": "1d100ec87ac143b5e10b2d1cf297ba0e26023ecbb2e7ee1d1bab783749c38668"
+    },
+    {
+      "path": "tests/test_training.py",
+      "bytes": 2142,
+      "sha256": "8fb713eb723a5b54334b77820107e5817e68cfd05147bbd963f11bf4fc35071a"
+    },
+    {
+      "path": "tests/test_transport_protocol.py",
+      "bytes": 3565,
+      "sha256": "01be473772170f54a34983318b44f59c42bcbe88470b43da5b57cce310c70982"
+    },
+    {
+      "path": "tests/test_urdf.py",
+      "bytes": 2266,
+      "sha256": "59f6eaed0f35aaf99fe0cecd82f9ed84fe7c50f72a91f2d9899c45ca425f11b0"
+    },
+    {
+      "path": "tests/test_vendor_templates.py",
+      "bytes": 654,
+      "sha256": "da38b7a427970dcc14f00555fe7dd5bc0707ee0ba39fd5c09d70827e6459c508"
+    },
+    {
+      "path": "tests/test_vla_integrations.py",
+      "bytes": 6758,
+      "sha256": "cad50c3a07622b1c0fadf1c6ae27d73007ba7d90e8df65112055348d3e04f6ac"
+    },
+    {
+      "path": "tests/test_websocket_transport.py",
+      "bytes": 5500,
+      "sha256": "6d6993d91f1d8b34db3fa2c726fdf476889dc79742d1262c993273acaf5274f2"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 573966,
+      "sha256": "5928606526d115c36adefad64e8a670bfc21d721bc9edadebefd5595a66f68bb"
+    }
+  ],
+  "download_transport_url": "https://codeload.github.com/lukehollis/sesame-ml/zip/main"
+}

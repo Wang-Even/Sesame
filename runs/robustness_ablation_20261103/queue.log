@@ -1,0 +1,13 @@
+START baseline_seed44
+COMPLETED baseline_seed44
+START full_dr_seed43
+COMPLETED full_dr_seed43
+START full_dr_seed44
+COMPLETED full_dr_seed44
+START fixed_delay_seed42
+COMPLETED fixed_delay_seed42
+START fixed_delay_seed43
+COMPLETED fixed_delay_seed43
+START fixed_delay_seed44
+COMPLETED fixed_delay_seed44
+ALL_TRAINING_COMPLETED

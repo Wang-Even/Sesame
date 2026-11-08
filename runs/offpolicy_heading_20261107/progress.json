@@ -1,0 +1,54 @@
+{
+  "status": "completed",
+  "phase": "completed",
+  "pid": 3345985,
+  "protocol_sha256": "4c77a3817cdd5e36e4e742122b041c0dcb9a2d5cee2918ebc5dc291383612589",
+  "started_at_utc": "2026-11-06T18:16:47.048549+00:00",
+  "completed": [
+    {
+      "id": "sac_seed42",
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed42/final.pt",
+      "sha256": "3d0fcdb8df7583e206c30f0b71538a319789907160a475765d70a66a504d7122"
+    },
+    {
+      "id": "dqn_seed42",
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed42/final.pt",
+      "sha256": "d356bf36d0d7f2d65a601c480ad9b0a6769840d0575f095af4b06a3e6cb00373"
+    },
+    {
+      "id": "sac_seed43",
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed43/final.pt",
+      "sha256": "5284a35d1d640e8b1e1f8ac52b45d5241d6e3dad3c3ac95fed484082ca5fa9cc"
+    },
+    {
+      "id": "dqn_seed43",
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed43/final.pt",
+      "sha256": "346943f85d875ba4032d7fce2bdffdd3be8c6083cba9e766366c5c7bfdc4d5fd"
+    },
+    {
+      "id": "sac_seed44",
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/sac_seed44/final.pt",
+      "sha256": "244d25462d1062dc289188a69f30f8ff00bfa56198266a8078e3ff7e04638622"
+    },
+    {
+      "id": "dqn_seed44",
+      "run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44",
+      "checkpoint": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44/final.pt",
+      "sha256": "06764c50ff38f40a0047abe316525c7a71cf7711fd5f1eaf33045ba34b4b3453"
+    }
+  ],
+  "active": null,
+  "active_run_dir": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/training/dqn_seed44",
+  "command": [
+    "/home/ubuntu/miniforge3/envs/metaworld_v010/bin/python",
+    "-s",
+    "/home/ywwang/sesame/scripts/analyze_offpolicy.py",
+    "/home/ywwang/sesame/runs/offpolicy_heading_20261107"
+  ],
+  "finished_at_utc": "2026-11-06T18:41:25.926457+00:00"
+}
