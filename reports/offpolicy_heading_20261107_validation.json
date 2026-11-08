@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "training_and_evaluation_complete": true,
   "training_models_new": 6,
   "evaluation_models": 9,
@@ -41,6 +41,16 @@
       "target": "HANDOVER_20261106.md#2-奖励函数设计",
       "exists": true,
       "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+    },
+    {
+      "target": "HANDOVER_20261106.md#训练时间",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+    },
+    {
+      "target": "../reports/training_times_20261109.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/reports/training_times_20261109.json"
     },
     {
       "target": "../runs/ppo_heading_20261105/training/heading_seed42/final.pt",
@@ -139,8 +149,8 @@
     }
   ],
   "artifacts_sha256": {
-    "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.md": "76c1deed0655b1bac1c7ec4b276119bbcead7de898866ed421858f13b2d1ff5b",
-    "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.html": "21b8e0f7864c49e93e49706cc4b7d8e5f5bb3d4f286cf504f1cd2ff4b664261f",
+    "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.md": "d76f4955c76c882254dbc458de2bb009668a69f555cc3770e31b85f95936dde7",
+    "/home/ywwang/sesame/docs/OFFPOLICY_STUDY_20261107.html": "5645590e6deb369859eca064a715b6be015734883329227aae88ef5d76231a4a",
     "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json": "e13897fbe8a1823f8d17343a088711ed623241c340bd5e6be8670db6913ab65e",
     "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/performance.png": "284e97d363b79c320bd1367b2655ee0c95a063b280582b2a934575594f68542f",
     "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/training_curves.png": "b92809b98f41e19223670dcc0f7dab7b14514c4e4a8a408a5ef28eed2b2ca9fb",
@@ -150,7 +160,8 @@
   },
   "independent_review": "Read-only audit verified per-episode statistics, source/asset hashes, training-curve points and compute metadata.",
   "metric_definitions_included": true,
-  "report_update_scope": "Metric definitions, display names and direct links to retained final weights; experiment numeric statistics and CSVs unchanged.",
+  "report_update_scope": "Document improvements, historical training times, metric definitions and final-weight links; original experiment data unchanged.",
   "weight_links_verified": 9,
-  "retained_weight_sha256_unchanged": true
+  "retained_weight_sha256_unchanged": true,
+  "training_time_rows_verified": 3
 }

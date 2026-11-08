@@ -1,18 +1,19 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>同奖励 PPO / SAC / DQN 实验</title><style>body{font:16px/1.75 system-ui,"Noto Sans CJK SC",sans-serif;color:#203047;max-width:1120px;margin:32px auto;padding:0 24px}h1{font-size:30px}h2{margin-top:2.5em;border-bottom:2px solid #dbe5f0;padding-bottom:.3em}h3{margin-top:1.7em}a{color:#1753b6}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow-x:auto}th,td{border:1px solid #dce4ed;padding:9px 12px;vertical-align:top}th{background:#edf3fa}tr:nth-child(even){background:#f8fafc}pre{background:#f1f5f9;padding:16px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.55}code{font-family:ui-monospace,Consolas,monospace}p code,td code{font-size:.9em;background:#f0f4f8;padding:1px 3px}img{max-width:100%;height:auto}.toc{background:#f6f9fc;border:1px solid #dce4ed;padding:16px 24px;border-radius:8px}.toc ul{margin:.2em 0}.notice{color:#5c6879;font-size:14px}@media print{body{max-width:none;margin:0;padding:0;font-size:10pt}h2,h3{break-after:avoid}pre,table{font-size:8pt}tr,img{break-inside:avoid}a{color:inherit}pre{white-space:pre-wrap}.toc{break-after:page}@page{size:A4;margin:16mm}} video{width:100%;border-radius:8px}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.video-card{padding:12px;background:#f6f9fc;border-radius:8px}</style></head><body><p class="notice"><a href="OFFPOLICY_STUDY_20261107.md">可编辑 Markdown</a> · 模型、代码、视频和数据链接指向本机项目文件。</p><nav aria-label="目录"><div class="toc">
 <ul>
 <li><a href="#_1">基线方法与训练设置</a></li>
-<li><a href="#_2">模型权重</a></li>
-<li><a href="#_3">测试设置</a></li>
-<li><a href="#_4">测评指标</a></li>
-<li><a href="#_5">结果</a><ul>
+<li><a href="#_2">训练时间</a></li>
+<li><a href="#_3">模型权重</a></li>
+<li><a href="#_4">测试设置</a></li>
+<li><a href="#_5">测评指标</a></li>
+<li><a href="#_6">结果</a><ul>
 <li><a href="#demo">Demo</a></li>
 </ul>
 </li>
-<li><a href="#_6">代码与运行</a></li>
+<li><a href="#_7">代码与运行</a></li>
 </ul>
 </div>
 </nav><h1 id="ppo-sac-dqn">同奖励 PPO / SAC / DQN 实验</h1>
-<p>更新：2026-11-08。</p>
+<p>更新：2026-11-09。</p>
 <p>本轮沿用奖励改进后的 PPO 任务：平地、世界 +X 指令 0.10 m/s、36 维观测、8 个关节动作、50 Hz 控制、10 秒回合，以及完整域随机化。所有奖励项、权重和终止条件与 <a href="HANDOVER_20261106.md#2-奖励函数设计">交接文档</a> 一致，包括 <code>-0.5 × (1-cos(航向误差))</code> 奖励率。环境奖励不缩放；SAC 的熵项属于算法优化目标。</p>
 <h2 id="_1">基线方法与训练设置</h2>
 <table>
@@ -44,7 +45,40 @@
 <p>DQN 使用分支网络和 Double DQN 更新，每个关节有 5 个离散动作，采用均匀经验回放。动作离散化是相对 PPO/SAC 的额外差异；本实现未包含参考论文的优先经验回放等全部设置。实现参考：<a href="https://arxiv.org/abs/1812.05905">SAC</a>、<a href="https://arxiv.org/abs/1711.08946">Action Branching</a>。</p>
 <p>每种算法使用 42/43/44 三个随机种子，每个随机种子使用 256 个环境、训练 204.8 万步。SAC/DQN 使用 256×256 ReLU 网络、学习率 3e-4、折扣 0.99、目标网络软更新 0.005；回放容量 262144、先收集 65536 条经验，之后每次并行环境交互后更新 2 次、批量 512，共 15488 次更新。DQN 的 ε 在训练的前 102.4 万步内由 1 降至 0.05。新算法直接使用环境物理缩放后的观测，不额外归一化。</p>
 <p>相同环境交互步数不代表相同计算量。仅评估最终模型，不按测试效果挑检查点或调参。本轮不包含使用旧奖励的 Dyna-PPO。</p>
-<h2 id="_2">模型权重</h2>
+<h2 id="_2">训练时间</h2>
+<p>相同 RTX 4090 D GPU、256 个并行环境、每种子 204.8 万步；表中为种子 42/43/44 的均值 ± 样本标准差。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>日志记录的训练阶段（秒）</th>
+<th>平均约（分钟）</th>
+<th>训练程序总时间（秒）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PPO</td>
+<td>327.00 ± 0.46</td>
+<td>5.45</td>
+<td>334.51 ± 1.64</td>
+</tr>
+<tr>
+<td>SAC</td>
+<td>207.43 ± 2.12</td>
+<td>3.46</td>
+<td>212.27 ± 2.63</td>
+</tr>
+<tr>
+<td>DQN</td>
+<td>170.88 ± 0.64</td>
+<td>2.85</td>
+<td>175.35 ± 0.68</td>
+</tr>
+</tbody>
+</table>
+<p>PPO 的训练阶段时间是日志中采样与更新计时之和，SAC/DQN 为整个训练循环的计时，范围不完全相同。程序总时间包含初始化、训练、最终保存和重载验证，不含退出、单独评估和录像。运行负载与诊断开销没有严格控制，因此这里只报告历史耗时，不据此认定算法加速或成功率提高。Dyna-PPO 的历史耗时及完整定义见<a href="HANDOVER_20261106.md#训练时间">简版报告</a>，逐种子数据见<a href="../reports/training_times_20261109.json">训练时间记录</a>。</p>
+<h2 id="_3">模型权重</h2>
 <p>下表是本轮结果和 Demo 使用的 <strong>9 个最终模型</strong>，均已保留；各列对应训练随机种子。</p>
 <table>
 <thead>
@@ -77,10 +111,10 @@
 </tbody>
 </table>
 <p>路径与哈希见<a href="../runs/offpolicy_heading_20261107/evaluation_protocol.json">评估配置</a>。包括 Dyna-PPO 在内的全部保留权重见<a href="HANDOVER_20261106.md#模型权重">简版报告</a>；Dyna-PPO 使用旧奖励，不纳入本轮同奖励对照。</p>
-<h2 id="_3">测试设置</h2>
+<h2 id="_4">测试设置</h2>
 <p>PPO、SAC、DQN 均在同一奖励环境中重新评估：标准参数/随机参数两种条件，测试种子 25042/26042，各取前 64 个环境的首回合；每模型每条件 128 回合。九个模型的初态与实际物理参数逐项配对。</p>
 <p>先计算每回合指标，再求每模型每条件 128 回合的均值，最后报告三个训练种子的均值 ± 样本标准差。每方法每条件共 384 回合。训练曲线仅作学习诊断，正式结论以共同测试结果为准。</p>
-<h2 id="_4">测评指标</h2>
+<h2 id="_5">测评指标</h2>
 <p>主指标是<strong>前向速度误差</strong>，同时检查航向、侧移、跌倒和平滑性。RMSE 表示均方根误差，RMS 表示均方根。下表的 <code>mean</code> 对该回合的采样点取平均。</p>
 <table>
 <thead>
@@ -141,7 +175,7 @@
 <p><code>vx、vy</code> 为世界坐标系速度。<code>q*</code> 是经过动作裁剪、关节约束及时延/滞后处理后的关节目标位置；加速度按 <strong>50 Hz（Δt=0.02 s）</strong>采样，对时间和 8 个关节取均方根，排除重置跳变。这两项用于观察抖动程度，不是抖动频率或物理瞬时峰值；不能用不走路换取较低加速度。</p>
 <p>跌倒判定为机身高度低于 <strong>0.023 m</strong>，或直立度低于 <strong>0.5</strong>（约整体倾斜超过 60°）。越界和无效状态另行记录，不自动计入跌倒。辅助记录关节目标变化率、动作裁剪比例、总回报和回合时长。</p>
 <p>六次新训练及九模型共同评估均已完成，共 2304 个测试回合。结果目录：<code>runs/offpolicy_heading_20261107/</code>；训练日志在 <code>training/&lt;方法&gt;_seed&lt;种子&gt;/training.jsonl</code>。</p>
-<h2 id="_5">结果</h2>
+<h2 id="_6">结果</h2>
 <p>以下为三个训练种子的均值 ± 样本标准差；误差越低越好，10 秒目标位移约 1 m。</p>
 <table>
 <thead>
@@ -183,7 +217,7 @@
 <h3 id="demo">Demo</h3>
 <p><a href="../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4">PPO 视频</a> · <a href="../runs/offpolicy_heading_20261107/videos/sac_seed42/offpolicy_sac_seed42_seed25042.mp4">SAC 视频</a> · <a href="../runs/offpolicy_heading_20261107/videos/dqn_seed42/offpolicy_dqn_seed42_seed25042.mp4">DQN 视频</a></p>
 <p>均为真实 Isaac RTX 录像，10 秒、720p、25 fps；固定训练种子 42、测试种子 25042，三段视频的实际初态和物理参数相同。单环境示例与批量统计分别采样，不能用这一回合替代上表。</p>
-<h2 id="_6">代码与运行</h2>
+<h2 id="_7">代码与运行</h2>
 <ul>
 <li><code>sesame_rl/offpolicy.py</code>：SAC、DQN、GPU 回放及模型保存/加载。</li>
 <li><code>sesame_rl/offpolicy_environment.py</code>：保存自动重置前的下一观测，奖励原样继承；超时继续 bootstrap，真实终止不 bootstrap。</li>

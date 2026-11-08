@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "date": "2026-11-09",
+  "training_time_sources_verified": 24,
+  "training_runs_verified": 12,
+  "training_time_methods": [
+    "PPO",
+    "SAC",
+    "DQN",
+    "Dyna-PPO"
+  ],
+  "main_section_count": 4,
+  "improvement_directions": 3,
+  "future_success_rate_not_reported_as_measured": true,
+  "readme_exact_text_preserved": true,
+  "retained_model_hashes_verified": 12,
+  "original_experiment_data_changed": false,
+  "model_or_simulator_execution": false,
+  "files_sha256": {
+    "docs/HANDOVER_20261106.md": "9d15045878cfdad491fede2401618061ce232e26bae6d0444f440fc180c47b7e",
+    "docs/HANDOVER_20261106.html": "06b4cb1e6c83897f54bf984d63d82361e2521e8b25ae9b80cbf8366a388df837",
+    "docs/OFFPOLICY_STUDY_20261107.md": "d76f4955c76c882254dbc458de2bb009668a69f555cc3770e31b85f95936dde7",
+    "docs/OFFPOLICY_STUDY_20261107.html": "5645590e6deb369859eca064a715b6be015734883329227aae88ef5d76231a4a",
+    "INTRODUCTION.md": "07fe1ce75e9f9b7d9f89c61c4d75a4a908d3c1c862d9902291bcd91464ccc31b",
+    "docs/DYNA_PPO_STUDY.md": "316f1f0a4259c47b7c04573ae458f315ab87e77dc5d9f504ef31e8969f555779",
+    "reports/training_times_20261109.json": "ab764261878fc12957cedbee177ff08dfbb3f5d127d067e65081d0ff6c380cad"
+  }
+}

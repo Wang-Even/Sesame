@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-09",
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "environment_transitions_per_run": 2048000,
+  "parallel_environments": 256,
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "statistic": "mean and sample standard deviation across three training seeds",
+  "training_stage_definitions": {
+    "PPO": "Sum of collection_seconds + update_seconds over 250 training.jsonl rows; excludes logging/checkpoint and other untimed gaps.",
+    "Dyna-PPO": "Sum of collection_seconds + update_seconds over 250 training.jsonl rows; includes model/imagined optimization within updates; excludes untimed gaps.",
+    "SAC": "result.json training_wall_seconds: whole training loop including warmup collection, optimization, in-loop diagnostics/logging/checkpoints.",
+    "DQN": "result.json training_wall_seconds: whole training loop including warmup collection, optimization, in-loop diagnostics/logging/checkpoints."
+  },
+  "program_total_definition": "result.json wall_seconds_before_shutdown: runtime setup/imports/Isaac and environment initialization, training, final checkpoint saving and reload validation; excludes shutdown, separate evaluation/video and shell/conda launch before this timer.",
+  "limitations": [
+    "Timing implementations and diagnostic overhead differ; not a controlled algorithm speed benchmark.",
+    "Dyna-PPO used the old reward; no claim of equivalent-quality speedup versus current PPO.",
+    "Historical runs used a fixed environment-transition budget, not a fixed wall-time budget or a predefined joint success criterion."
+  ],
+  "groups": {
+    "PPO": {
+      "training_stage_seconds": {
+        "mean": 327.0013387997945,
+        "sd": 0.46250287055111144,
+        "mean_minutes": 5.450022313329908
+      },
+      "program_total_seconds": {
+        "mean": 334.50550333534676,
+        "sd": 1.639719078596122,
+        "mean_minutes": 5.575091722255779
+      }
+    },
+    "SAC": {
+      "training_stage_seconds": {
+        "mean": 207.42932191242775,
+        "sd": 2.1169410946892415,
+        "mean_minutes": 3.457155365207129
+      },
+      "program_total_seconds": {
+        "mean": 212.26935191762945,
+        "sd": 2.6268476042434843,
+        "mean_minutes": 3.537822531960491
+      }
+    },
+    "DQN": {
+      "training_stage_seconds": {
+        "mean": 170.87600425320366,
+        "sd": 0.6371917458274169,
+        "mean_minutes": 2.847933404220061
+      },
+      "program_total_seconds": {
+        "mean": 175.34682909895977,
+        "sd": 0.6807581026005701,
+        "mean_minutes": 2.9224471516493296
+      }
+    },
+    "Dyna-PPO": {
+      "training_stage_seconds": {
+        "mean": 251.99199994405112,
+        "sd": 0.08303454331987586,
+        "mean_minutes": 4.199866665734185
+      },
+      "program_total_seconds": {
+        "mean": 257.90384606520337,
+        "sd": 0.24330194756947357,
+        "mean_minutes": 4.298397434420056
+      }
+    }
+  },
+  "runs": [
+    {
+      "method": "PPO",
+      "seed": 42,
+      "training_stage_seconds": 326.48207354545593,
+      "program_total_seconds": 332.7204514108598,
+      "run_dir": "runs/ppo_heading_20261105/training/heading_seed42",
+      "sources_sha256": {
+        "runs/ppo_heading_20261105/training/heading_seed42/result.json": "ea701f1beaf4bcf05f8bbc5ed564465237cddeffb175676fcb6de5713e3fb11c",
+        "runs/ppo_heading_20261105/training/heading_seed42/training.jsonl": "31042e81648539ee06b7d839afb02b578954e3460cbefd13450451a94f4e7320"
+      }
+    },
+    {
+      "method": "PPO",
+      "seed": 43,
+      "training_stage_seconds": 327.1528899669647,
+      "program_total_seconds": 334.8513384554535,
+      "run_dir": "runs/ppo_heading_20261105/training/heading_seed43",
+      "sources_sha256": {
+        "runs/ppo_heading_20261105/training/heading_seed43/result.json": "1fe28c1867694b79dc70a21d210807008e32ed79fba88c6470b8abc8aca82aad",
+        "runs/ppo_heading_20261105/training/heading_seed43/training.jsonl": "8729bd0218dd746d9fda459c65ae1c773bf999e099ba6992cae0304cc21ce09a"
+      }
+    },
+    {
+      "method": "PPO",
+      "seed": 44,
+      "training_stage_seconds": 327.3690528869629,
+      "program_total_seconds": 335.944720139727,
+      "run_dir": "runs/ppo_heading_20261105/training/heading_seed44",
+      "sources_sha256": {
+        "runs/ppo_heading_20261105/training/heading_seed44/result.json": "a6ce34568becd601a857ef94c6e98c427e452a9b38c3d11e98f5247df138af2f",
+        "runs/ppo_heading_20261105/training/heading_seed44/training.jsonl": "03f2b9a429a606f839e6ba3178319f1c1332c4c6b5b634b34101d55376fa9828"
+      }
+    },
+    {
+      "method": "SAC",
+      "seed": 42,
+      "training_stage_seconds": 209.7584505006671,
+      "program_total_seconds": 215.21946821175516,
+      "run_dir": "runs/offpolicy_heading_20261107/training/sac_seed42",
+      "sources_sha256": {
+        "runs/offpolicy_heading_20261107/training/sac_seed42/result.json": "b6992b5be32c27b4d43dc54b005259f060226f16fcea56f2f806c5e804fc2507",
+        "runs/offpolicy_heading_20261107/training/sac_seed42/training.jsonl": "20dee147e73a00ab97acfca5d8d81eef177e381cd1408e4ac386c8f1e28b9bd8"
+      }
+    },
+    {
+      "method": "SAC",
+      "seed": 43,
+      "training_stage_seconds": 205.62225500121713,
+      "program_total_seconds": 210.18360667861998,
+      "run_dir": "runs/offpolicy_heading_20261107/training/sac_seed43",
+      "sources_sha256": {
+        "runs/offpolicy_heading_20261107/training/sac_seed43/result.json": "b01e794520cf76587be24ee7714098fbaa6a721ad4c299afa7e97aa18c610cc1",
+        "runs/offpolicy_heading_20261107/training/sac_seed43/training.jsonl": "42a1d44e2132b52518607040fb311e9459bbccaee3877ea790a051ce77672da4"
+      }
+    },
+    {
+      "method": "SAC",
+      "seed": 44,
+      "training_stage_seconds": 206.907260235399,
+      "program_total_seconds": 211.40498086251318,
+      "run_dir": "runs/offpolicy_heading_20261107/training/sac_seed44",
+      "sources_sha256": {
+        "runs/offpolicy_heading_20261107/training/sac_seed44/result.json": "7d25e597ca35377ec0b6078706670eee743cad3db57beed00818fcd984cb52fa",
+        "runs/offpolicy_heading_20261107/training/sac_seed44/training.jsonl": "fd94e4c4b0fefb7315ad4bf58dee51f89c0c543049a8cecc41afbf26afcbddd8"
+      }
+    },
+    {
+      "method": "DQN",
+      "seed": 42,
+      "training_stage_seconds": 170.15010716579854,
+      "program_total_seconds": 174.5741582736373,
+      "run_dir": "runs/offpolicy_heading_20261107/training/dqn_seed42",
+      "sources_sha256": {
+        "runs/offpolicy_heading_20261107/training/dqn_seed42/result.json": "24dbb9b6bdee61b1f50f5126c6bf2ad53db46d6ce49a8106eb8390dccfbbb4b7",
+        "runs/offpolicy_heading_20261107/training/dqn_seed42/training.jsonl": "65a8be4b9b5b3011fdf2acd4bb45d89134cfdf19e60ee950bd30da3490f7c38e"
+      }
+    },
+    {
+      "method": "DQN",
+      "seed": 43,
+      "training_stage_seconds": 171.34296426177025,
+      "program_total_seconds": 175.85833016596735,
+      "run_dir": "runs/offpolicy_heading_20261107/training/dqn_seed43",
+      "sources_sha256": {
+        "runs/offpolicy_heading_20261107/training/dqn_seed43/result.json": "7370bf3e677a7d76f6ff03c202c602894abe4f709f9d624fe01f0964ff9c0dea",
+        "runs/offpolicy_heading_20261107/training/dqn_seed43/training.jsonl": "7c403bfcd03d984c467d84a0cff81aafb4091e5c9c6be43411c5c5b741c0beec"
+      }
+    },
+    {
+      "method": "DQN",
+      "seed": 44,
+      "training_stage_seconds": 171.13494133204222,
+      "program_total_seconds": 175.60799885727465,
+      "run_dir": "runs/offpolicy_heading_20261107/training/dqn_seed44",
+      "sources_sha256": {
+        "runs/offpolicy_heading_20261107/training/dqn_seed44/result.json": "e4ba5fa6f10c63a0a00fd1dc78da6c59044fba300bbaca412d38f7b277976f36",
+        "runs/offpolicy_heading_20261107/training/dqn_seed44/training.jsonl": "8fea1d427322fe8abe751856fe9ec9dcb47b7c6ac3c9ffc276b68b76ec9595f3"
+      }
+    },
+    {
+      "method": "Dyna-PPO",
+      "seed": 42,
+      "training_stage_seconds": 252.08781957626343,
+      "program_total_seconds": 258.11728672496974,
+      "run_dir": "runs/dyna_ppo_20261103/training/dyna_ppo_seed42",
+      "sources_sha256": {
+        "runs/dyna_ppo_20261103/training/dyna_ppo_seed42/result.json": "9c20aaf407e785b1820b95fabe0cbbdac2296ada67643d7f7475f802deca671f",
+        "runs/dyna_ppo_20261103/training/dyna_ppo_seed42/training.jsonl": "14e5b3dfd86ae802126bc771e3b3c4045da2dc0fb9abcb09c67d7f6a3b2f9df1"
+      }
+    },
+    {
+      "method": "Dyna-PPO",
+      "seed": 43,
+      "training_stage_seconds": 251.94703698158264,
+      "program_total_seconds": 257.9553286153823,
+      "run_dir": "runs/dyna_ppo_20261103/training/dyna_ppo_seed43",
+      "sources_sha256": {
+        "runs/dyna_ppo_20261103/training/dyna_ppo_seed43/result.json": "572511c158f4cc0a894f35ff615883afcdccdd9739c55ef9ece66cf08d8ab293",
+        "runs/dyna_ppo_20261103/training/dyna_ppo_seed43/training.jsonl": "e355882bde2230e8118523ad0e5d590651348f98348daec3f3ed2dafa8e519df"
+      }
+    },
+    {
+      "method": "Dyna-PPO",
+      "seed": 44,
+      "training_stage_seconds": 251.94114327430725,
+      "program_total_seconds": 257.638922855258,
+      "run_dir": "runs/dyna_ppo_20261103/training/dyna_ppo_seed44",
+      "sources_sha256": {
+        "runs/dyna_ppo_20261103/training/dyna_ppo_seed44/result.json": "bcd8aeeafecd04f1bc31cd7c083913630251b85974bc795439a2e995230d6d61",
+        "runs/dyna_ppo_20261103/training/dyna_ppo_seed44/training.jsonl": "986467a55ac37fccc4b12bbb38083996dbcef7b1cc4bd25ac784c779a5be2664"
+      }
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "edition": "ppo_sac_dqn_metrics_and_dyna_history",
   "source": "/home/ywwang/sesame/docs/HANDOVER_20261106.md",
-  "source_sha256": "e7154309246e63359fc362e14ad2da9beb62fe0ca0ba8ed98623711310b0143b",
+  "source_sha256": "9d15045878cfdad491fede2401618061ce232e26bae6d0444f440fc180c47b7e",
   "html": "/home/ywwang/sesame/docs/HANDOVER_20261106.html",
-  "html_sha256": "122736e99d0d4f0469d31ecf36a70697556782009859d5c9f4c3a98016b38ecf",
-  "local_link_count": 39,
+  "html_sha256": "06b4cb1e6c83897f54bf984d63d82361e2521e8b25ae9b80cbf8366a388df837",
+  "local_link_count": 41,
   "local_links": [
     {
       "target": "../sesame_rl/environment.py",
@@ -184,6 +184,11 @@
       "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json"
     },
     {
+      "target": "../reports/training_times_20261109.json",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/reports/training_times_20261109.json"
+    },
+    {
       "target": "../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
       "exists": true,
       "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4"
@@ -202,6 +207,11 @@
       "target": "../runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4",
       "exists": true,
       "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4"
+    },
+    {
+      "target": "course_requirements.txt",
+      "exists": true,
+      "resolved_path": "/home/ywwang/sesame/docs/course_requirements.txt"
     }
   ],
   "bash_blocks_syntax_checked": 5,
@@ -267,7 +277,7 @@
   },
   "model_or_simulator_execution": false,
   "main_section_count": 4,
-  "new_markdown_bytes": 18315,
+  "new_markdown_bytes": 20148,
   "results_tables": {
     "source_sha256": {
       "/home/ywwang/sesame/runs/offpolicy_heading_20261107/analysis/summary.json": "e13897fbe8a1823f8d17343a088711ed623241c340bd5e6be8670db6913ab65e",
@@ -641,5 +651,8 @@
   "terminology": "Names retained from the report; implementation differences explained separately.",
   "weight_links_verified": 12,
   "retained_weight_sha256_unchanged": true,
-  "cleanup_record": "/home/ywwang/sesame/reports/model_cleanup_20261108.json"
+  "cleanup_record": "/home/ywwang/sesame/reports/model_cleanup_20261108.json",
+  "training_time_source": "reports/training_times_20261109.json",
+  "training_time_rows_verified": 4,
+  "improvement_directions": 3
 }

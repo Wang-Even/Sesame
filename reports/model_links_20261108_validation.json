@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "retained_model_count": 12,
   "retained_weight_sha256_unchanged": true,
   "main_report_weight_links": 12,
@@ -94,8 +94,8 @@
   ],
   "documents": {
     "HANDOVER_20261106": {
-      "markdown_sha256": "e7154309246e63359fc362e14ad2da9beb62fe0ca0ba8ed98623711310b0143b",
-      "html_sha256": "122736e99d0d4f0469d31ecf36a70697556782009859d5c9f4c3a98016b38ecf",
+      "markdown_sha256": "9d15045878cfdad491fede2401618061ce232e26bae6d0444f440fc180c47b7e",
+      "html_sha256": "06b4cb1e6c83897f54bf984d63d82361e2521e8b25ae9b80cbf8366a388df837",
       "weight_links": 12,
       "all_weight_files_exist": true,
       "weight_sha256_unchanged": true,
@@ -276,6 +276,11 @@
           "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/analysis/summary.json"
         },
         {
+          "target": "../reports/training_times_20261109.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/reports/training_times_20261109.json"
+        },
+        {
           "target": "../runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
           "exists": true,
           "resolved_path": "/home/ywwang/sesame/runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4"
@@ -294,15 +299,19 @@
           "target": "../runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4",
           "exists": true,
           "resolved_path": "/home/ywwang/sesame/runs/dyna_ppo_20261103/videos/dyna_ppo_seed42/ppo_study_dyna_ppo_seed42_seed3042.mp4"
+        },
+        {
+          "target": "course_requirements.txt",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/docs/course_requirements.txt"
         }
       ],
       "bash_blocks_syntax_checked": 5,
-      "html_tables": 10,
       "html_video_count": 0
     },
     "OFFPOLICY_STUDY_20261107": {
-      "markdown_sha256": "76c1deed0655b1bac1c7ec4b276119bbcead7de898866ed421858f13b2d1ff5b",
-      "html_sha256": "21b8e0f7864c49e93e49706cc4b7d8e5f5bb3d4f286cf504f1cd2ff4b664261f",
+      "markdown_sha256": "d76f4955c76c882254dbc458de2bb009668a69f555cc3770e31b85f95936dde7",
+      "html_sha256": "5645590e6deb369859eca064a715b6be015734883329227aae88ef5d76231a4a",
       "weight_links": 9,
       "all_weight_files_exist": true,
       "weight_sha256_unchanged": true,
@@ -311,6 +320,16 @@
           "target": "HANDOVER_20261106.md#2-奖励函数设计",
           "exists": true,
           "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+        },
+        {
+          "target": "HANDOVER_20261106.md#训练时间",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/docs/HANDOVER_20261106.md"
+        },
+        {
+          "target": "../reports/training_times_20261109.json",
+          "exists": true,
+          "resolved_path": "/home/ywwang/sesame/reports/training_times_20261109.json"
         },
         {
           "target": "../runs/ppo_heading_20261105/training/heading_seed42/final.pt",
@@ -409,7 +428,6 @@
         }
       ],
       "bash_blocks_syntax_checked": 1,
-      "html_tables": 4,
       "html_video_count": 3
     }
   },
