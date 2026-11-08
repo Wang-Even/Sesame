@@ -1,0 +1,30 @@
+{
+  "source": "/home/ywwang/sesame/docs/HANDOVER_20261106.md",
+  "source_sha256": "9d15045878cfdad491fede2401618061ce232e26bae6d0444f440fc180c47b7e",
+  "pdf": "/home/ywwang/sesame/docs/HANDOVER_20261106.pdf",
+  "pdf_sha256": "d6d9a4d0ad3e2ea58ed07f53a70af197b1c2e00d4c0531c7f88232ac66f7d221",
+  "date": "2026-11-09",
+  "generator": "WeasyPrint 70.0",
+  "pages": 7,
+  "bytes": 450918,
+  "table_count": 10,
+  "text_characters_per_page": [
+    856,
+    1587,
+    1697,
+    1247,
+    1581,
+    779,
+    1278
+  ],
+  "weight_links": 12,
+  "external_links": 41,
+  "local_file_links": 0,
+  "horizontal_text_overflows": [],
+  "passed": true,
+  "table_cells_verified": 228,
+  "all_pages_visually_reviewed": true,
+  "chinese_fonts_embedded": true,
+  "a4_portrait": true,
+  "source_content_unchanged": true
+}

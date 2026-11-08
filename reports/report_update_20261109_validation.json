@@ -21,8 +21,10 @@
     "docs/HANDOVER_20261106.html": "06b4cb1e6c83897f54bf984d63d82361e2521e8b25ae9b80cbf8366a388df837",
     "docs/OFFPOLICY_STUDY_20261107.md": "d76f4955c76c882254dbc458de2bb009668a69f555cc3770e31b85f95936dde7",
     "docs/OFFPOLICY_STUDY_20261107.html": "5645590e6deb369859eca064a715b6be015734883329227aae88ef5d76231a4a",
-    "INTRODUCTION.md": "07fe1ce75e9f9b7d9f89c61c4d75a4a908d3c1c862d9902291bcd91464ccc31b",
+    "INTRODUCTION.md": "2c62cc083015958fa0b9ac39b3dfa3dcab7a9243cab4d9ef71d913d929993993",
     "docs/DYNA_PPO_STUDY.md": "316f1f0a4259c47b7c04573ae458f315ab87e77dc5d9f504ef31e8969f555779",
-    "reports/training_times_20261109.json": "ab764261878fc12957cedbee177ff08dfbb3f5d127d067e65081d0ff6c380cad"
-  }
+    "reports/training_times_20261109.json": "ab764261878fc12957cedbee177ff08dfbb3f5d127d067e65081d0ff6c380cad",
+    "docs/HANDOVER_20261106.pdf": "d6d9a4d0ad3e2ea58ed07f53a70af197b1c2e00d4c0531c7f88232ac66f7d221"
+  },
+  "pdf_export_validation": "reports/pdf_export_20261109_validation.json"
 }
