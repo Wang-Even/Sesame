@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward diagonal trot for Sesame at 0.1 m/s with a distinct smooth parameter set (freq 2.46 Hz, hip amplitude 0.265 rad, hip center 1.592 rad, stance knee flex 0.146 rad, swing knee lift 0.545 rad, phase origin 0.105, constant base height 0.04673357 m).",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, z=0.04673357 m; zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cos(2*pi*pA) about center 1.592 rad with amplitude 0.265 rad, knees held at flexA=0.146 rad (R3=L4=pi-0.146). Pair B (RR,LF) in swing: hips cos(2*pi*pB) with pB=pA+0.5, knees flexB=0.146+0.545*sin(pi*sB) with normalized sB=(pB-0.5)*2."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "swing_A_stance_B",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height; no ripple or correction.",
+      "limb_motion": "Pair A swings with knee lift arch sin(pi*sA), sA=(pA-0.5)*2; pair B holds stance knee flex 0.146 rad. Hip waves mirrored: R1=center+A*cos(pA), R2=pi-center+A*cos(pB), L1=pi-center-A*cos(pB), L2=center-A*cos(pA)."
+    }
+  ],
+  "coding_notes": "Parameters: freq=2.46 Hz, A=0.265 rad, center=1.592 rad, stance_flex=0.146 rad, swing_lift=0.545 rad, phase0=0.105, base_z=0.04673357 m. Compute pA=freq*t+phase0 then pA-=floor(pA); pB=pA+0.5 then pB-=floor(pB). cA=cos(2*pi*pA), cB=cos(2*pi*pB). Joints: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing flags pA>=0.5, pB>=0.5; sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA, stance_flex+swing_lift*archA, stance_flex); flexB=where(swingB, stance_flex+swing_lift*archB, stance_flex). R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q=[R1,R3,R2,R4,L1,L3,L2,L4]. root_pos_w=[speed*t, 0*t, base_z*(1+0*t)], root_rpy=[0,0,0]. contacts=[pA<0.5, pB<0.5, pB<0.5, pA<0.5]. No clipping, no projection, no ground correction; normalized swing phase before sine avoids wrap discontinuity."
+}

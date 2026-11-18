@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on level ground using a diagonal-pair gait (A=RF+LR, B=RR+LF) with direct smooth joint trajectories, constant base height, and declared diagonal stance contacts.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant z=0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cos wave, knees held at stance flex 0.148 rad (R3=L4=pi-0.148). Pair B (RR,LF) in swing: hips cos wave offset half cycle, knees flex up to 0.148+0.558 rad via normalized sine arch sin(pi*s), s in [0,1]."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "stance_B_swing_A",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward velocity, height, and zero attitude.",
+      "limb_motion": "Pair B (RR,LF) in stance: knees at 0.148 rad (R4=L3=0.148). Pair A (RF,LR) in swing: knees flex up to 0.148+0.558 rad with normalized sine arch; hips continue cos wave."
+    }
+  ],
+  "coding_notes": "Parameters: freq=2.50 Hz, hip amplitude A=0.272 rad, hip center=1.602 rad, stance knee flex=0.148 rad, swing knee lift=0.558 rad, phase origin=0.118, base height=0.04673357 m. Phase pA = frac(freq*t + 0.118); pB = frac(pA+0.5). Hips: R1=center+A*cos(2pi*pA); R2=pi-center+A*cos(2pi*pB); L1=pi-center-A*cos(2pi*pB); L2=center-A*cos(2pi*pA). Knees: flexA=where(pA>=0.5, 0.148+0.558*sin(pi*(pA-0.5)*2), 0.148); flexB analogous with pB. R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. q order R1,R3,R2,R4,L1,L3,L2,L4. Contacts: contactA=pA<0.5, contactB=pB<0.5; contacts=[contactA,contactB,contactB,contactA]. Root: x=0.1*t, y=0, z=0.04673357 constant; rpy all zero. No clipping, no base ripple, no projection. Normalize swing phase before sine to avoid wrap discontinuity."
+}

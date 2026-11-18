@@ -1,0 +1,10 @@
+{
+  "checkpoint": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/supermimic_deepseek/final.pt",
+  "checkpoint_sha256": "d73effba77864c828e039537acaf313c5a796c9e7fae266a4e2c5fa35c2e48d2",
+  "checkpoint_real_steps": 2097152,
+  "training_protocol_sha256": "3875f9c5ea5994858cb9e5d7b0e8721c844f956edce3ccd0f1961e589c248eb2",
+  "trace_sha256": "b99f089d902883c952a0201d7f587d11547b680a214f2bdae9d33d124ea26b8d",
+  "initial_state_max_abs_difference_from_first_group": 0.0,
+  "world_model_rollouts_used": false,
+  "inference": "Actor outputs executed in native CUDA physics; world model only supplies representation/configuration interfaces"
+}

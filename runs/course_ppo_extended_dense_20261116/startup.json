@@ -1,0 +1,6 @@
+{
+  "training_s": 10.904369171708822,
+  "real_steps": 16384,
+  "updates": 1,
+  "definition": "First completed parameter update; includes data accumulation and initial compilation, not a pure compilation measurement"
+}

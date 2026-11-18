@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s with diagonal pairs A=(RF,LR) and B=(RR,LF) offset half cycle; smooth joint-space gait with declared stance contacts, constant base height, no clipping or base ripple.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x; constant base height 0.04673357 m; zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep from forward to rear via cos(2*pi*pA) with pA in [0,0.5); knees R3/L4 hold stance flex 0.15 rad (angle pi-0.15). Pair B (RR,LF) in swing: hips follow cos(2*pi*pB) with pB=pA+0.5 in [0.5,1); knees R4/L3 lift with normalized sine arch up to 0.55 rad extra flexion."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "swing_A_stance_B",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward velocity and base height; no yaw drift.",
+      "limb_motion": "Pair A swings with knee lift arch; pair B holds stance flex. Hip waves continue smoothly; phase wrap normalized before sine to avoid discontinuities."
+    }
+  ],
+  "coding_notes": "Chosen gait parameters: frequency 2.52 Hz, hip amplitude 0.268 rad, hip center 1.605 rad, stance knee flex 0.15 rad, swing knee lift 0.56 rad, phase origin 0.112, base height 0.04673357 m. Joint order R1,R3,R2,R4,L1,L3,L2,L4. Compute pA=freq*t+phase0 mod 1, pB=pA+0.5 mod 1. Hips: R1=center+A*cos(2*pi*pA); R2=pi-center+A*cos(2*pi*pB); L1=pi-center-A*cos(2*pi*pB); L2=center-A*cos(2*pi*pA). Knees: flexA=where(pA>=0.5, stance_flex+swing_lift*sin(pi*(pA-0.5)*2), stance_flex); flexB similarly from pB. R3=pi-flexA; L4=pi-flexA; R4=flexB; L3=flexB. Contacts: contactA=pA<0.5, contactB=pB<0.5; stack [contactA, contactB, contactB, contactA]. Root: x=speed*t, y=0, z=base_z constant; rpy all zero. Use 0*t for constant columns; no clipping, no loops, no tensor methods."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "source_run": "/home/ywwang/sesame/runs/agent32_collection_20261114",
+  "attempts": 45,
+  "accepted_count": 41,
+  "nominal_pass_count": 44,
+  "unique_generated_references": 45,
+  "new_physics_trials": 0,
+  "reassessed_existing_trials": 180,
+  "api_calls": 0,
+  "elapsed_s": 0.10932054929435253,
+  "diagnostic_only_metrics": [
+    "velocity_rmse_m_s",
+    "contact_foot_speed_rms_m_s"
+  ],
+  "remaining_nominal_failures": {
+    "exceeds:heading_rms_deg": 1,
+    "exceeds:heading_max_deg": 1
+  },
+  "remaining_randomized_failures": {
+    "exceeds:heading_max_deg": 5,
+    "exceeds:heading_rms_deg": 1
+  },
+  "note": "Reassessment of saved measurements under current user-selected gates, not a new experiment; no speed measurement correction"
+}

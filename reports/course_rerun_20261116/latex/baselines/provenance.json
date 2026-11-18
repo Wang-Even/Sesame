@@ -1,0 +1,31 @@
+{
+  "source_sha256": {
+    "runs/offpolicy_heading_20261107/analysis/training_curve_data.csv": "fb003c2badc90ceea7a262783824dd9754c5d0bad6b68ea0dcbe9079a8b7d45b",
+    "runs/offpolicy_heading_20261107/analysis/group_summary.csv": "4f88e2a3cbf3e5a97512e845c86654a0d09c9fc92936416daef2b35fa03a3099",
+    "runs/offpolicy_heading_20261107/training/dqn_seed42/training.jsonl": "65a8be4b9b5b3011fdf2acd4bb45d89134cfdf19e60ee950bd30da3490f7c38e",
+    "runs/offpolicy_heading_20261107/training/dqn_seed43/training.jsonl": "7c403bfcd03d984c467d84a0cff81aafb4091e5c9c6be43411c5c5b741c0beec",
+    "runs/offpolicy_heading_20261107/training/dqn_seed44/training.jsonl": "8fea1d427322fe8abe751856fe9ec9dcb47b7c6ac3c9ffc276b68b76ec9595f3",
+    "runs/ppo_heading_20261105/training/heading_seed42/training.jsonl": "31042e81648539ee06b7d839afb02b578954e3460cbefd13450451a94f4e7320",
+    "runs/ppo_heading_20261105/training/heading_seed43/training.jsonl": "8729bd0218dd746d9fda459c65ae1c773bf999e099ba6992cae0304cc21ce09a",
+    "runs/ppo_heading_20261105/training/heading_seed44/training.jsonl": "03f2b9a429a606f839e6ba3178319f1c1332c4c6b5b634b34101d55376fa9828",
+    "runs/offpolicy_heading_20261107/training/sac_seed42/training.jsonl": "20dee147e73a00ab97acfca5d8d81eef177e381cd1408e4ac386c8f1e28b9bd8",
+    "runs/offpolicy_heading_20261107/training/sac_seed43/training.jsonl": "42a1d44e2132b52518607040fb311e9459bbccaee3877ea790a051ce77672da4",
+    "runs/offpolicy_heading_20261107/training/sac_seed44/training.jsonl": "fd94e4c4b0fefb7315ad4bf58dee51f89c0c543049a8cecc41afbf26afcbddd8"
+  },
+  "plot_notes": [
+    "No model, simulator or GPU work was run for this metadata-only report.",
+    "Training curves retain original log windows: PPO 100 episodes; SAC/DQN 256.",
+    "Top panels: mean and sample SD at common steps across 3 seeds; faint individual curves.",
+    "Bottom panels: individual seed time curves, no interpolated mean.",
+    "PPO time sums collection/update; SAC/DQN use recorded loop wall time.",
+    "heading_rms_rad in archived plot CSV is already multiplied by display_scale=180/pi."
+  ],
+  "scene_image": {
+    "path": "isaac_scene.png",
+    "source": "runs/offpolicy_heading_20261107/videos/ppo_seed42/offpolicy_ppo_seed42_seed25042.mp4",
+    "time_s": 2.0,
+    "kind": "Frame from recorded actual Isaac RTX policy execution, not an import-tool screenshot."
+  },
+  "go2_reference_url": "https://github.com/unitreerobotics/unitree_rl_lab/blob/main/source/unitree_rl_lab/unitree_rl_lab/tasks/locomotion/robots/go2/velocity_env_cfg.py",
+  "go2_reference_accessed": "2026-11-15"
+}

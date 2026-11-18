@@ -1,0 +1,837 @@
+{
+  "source": "reports/course_rerun_20261116/report.md",
+  "source_sha256": "138d0adb3325d8c5865184aa4501e94dcb37beb24af9f58d5025da699d3d2853",
+  "tex_sha256": "d2674ccc4ea8d283b128d2df242a2c86b35b318b8527e2301e13c5f6a9d3f72f",
+  "export_date": "2026-11-18",
+  "experiment_report_date": "2026-11-16",
+  "table_count": 13,
+  "figure_count": 9,
+  "headings": [
+    "仿真模型与实验环境",
+    "DQN、PPO 与 SAC 基线比较",
+    "固定参数评估与域随机化评估",
+    "训练曲线与共同测试结果",
+    "行走奖励函数设计",
+    "动作平滑性实验",
+    "基于世界模型的策略学习与参考轨迹对照",
+    "方法与实现",
+    "参考轨迹来源与对照组",
+    "实验设置与评价指标",
+    "跟踪奖励与网络参数",
+    "主对照结果",
+    "想象长度与 Critic 消融",
+    "计算与数据准备成本",
+    "延长 PPO 预算的训练时间对照",
+    "结论"
+  ],
+  "table_layout_source_indices": [
+    1,
+    2,
+    4,
+    5,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "tables": [
+    [
+      [
+        "设置",
+        "实验配置"
+      ],
+      [
+        "GPU",
+        "NVIDIA RTX 4090 D，24 GB 显存"
+      ],
+      [
+        "基线仿真环境",
+        "Isaac Sim 4.5、Isaac Lab 2.3、PyTorch 2.7、CUDA 12.8"
+      ],
+      [
+        "地形与指令",
+        "水平地面，沿世界 +X 方向以 0.10 m/s 前进"
+      ],
+      [
+        "控制频率",
+        "50 Hz；物理步长 2 ms，每 10 个物理步更新动作"
+      ],
+      [
+        "观测与动作",
+        "36 维观测，8 维关节位置偏移动作"
+      ],
+      [
+        "并行规模",
+        "256 个环境，每回合最多 10 秒"
+      ],
+      [
+        "随机化",
+        "质量、接触摩擦、PD 参数、电机能力、控制时延/滞后和初始状态"
+      ]
+    ],
+    [
+      [
+        "条件",
+        "方法",
+        "测试回报",
+        "前向速度 RMSE（m/s）",
+        "航向 RMS（°）"
+      ],
+      [
+        "固定参数",
+        "DQN",
+        "15.00 ± 0.55",
+        "0.0753 ± 0.0017",
+        "14.76 ± 3.31"
+      ],
+      [
+        "固定参数",
+        "PPO",
+        "17.65 ± 0.32",
+        "0.0657 ± 0.0026",
+        "6.68 ± 1.50"
+      ],
+      [
+        "固定参数",
+        "SAC",
+        "19.24 ± 0.77",
+        "0.0466 ± 0.0054",
+        "8.58 ± 0.70"
+      ],
+      [
+        "域随机化",
+        "DQN",
+        "17.85 ± 1.33",
+        "0.0610 ± 0.0046",
+        "14.87 ± 4.06"
+      ],
+      [
+        "域随机化",
+        "PPO",
+        "23.30 ± 0.13",
+        "0.0361 ± 0.0013",
+        "4.80 ± 0.09"
+      ],
+      [
+        "域随机化",
+        "SAC",
+        "22.15 ± 0.26",
+        "0.0440 ± 0.0014",
+        "6.55 ± 0.97"
+      ]
+    ],
+    [
+      [
+        "类别",
+        "奖励率",
+        "作用"
+      ],
+      [
+        "速度跟踪",
+        "`1.5 exp(−((vx−0.1)²+vy²)/0.01)u²`",
+        "接近目标速度并限制横向运动；倾倒时削弱奖励"
+      ],
+      [
+        "前向运动",
+        "`clip(vx/0.1,−1,1)u²`",
+        "提供持续前向运动激励"
+      ],
+      [
+        "航向保持",
+        "`−0.5(1−cos(ψ−ψ_cmd))`",
+        "约束机身朝向与世界 +X 轴一致； `ψ_cmd=0`"
+      ],
+      [
+        "直立",
+        "`+0.35u`",
+        "鼓励保持机身直立"
+      ],
+      [
+        "横向速度",
+        "`−0.10(vy/0.10)²`",
+        "减少侧向漂移"
+      ],
+      [
+        "偏航角速度",
+        "`−0.03ωz²`",
+        "约束瞬时偏航角速度"
+      ],
+      [
+        "横滚/俯仰角速度",
+        "`−0.01(ωx²+ωy²)`",
+        "减少机身快速摇摆"
+      ],
+      [
+        "垂直速度",
+        "`−0.02(vz/0.10)²`",
+        "减少上下跳动"
+      ],
+      [
+        "力矩",
+        "`−0.02 mean((τ/0.18)²)`",
+        "对关节力矩实施平方正则化"
+      ],
+      [
+        "相邻动作差",
+        "`−0.08 mean((a_t−a_(t−1))²)`",
+        "约束相邻控制信号变化"
+      ],
+      [
+        "站姿偏离",
+        "`−0.10 mean((q−q_stand)²)`",
+        "抑制过大姿态偏离，保留正常步态空间"
+      ]
+    ],
+    [
+      [
+        "条件",
+        "方法",
+        "共同奖励回报",
+        "目标加速度 RMS（rad/s²）",
+        "实际关节加速度 RMS（rad/s²）",
+        "前进速度（m/s）",
+        "速度 RMSE（m/s）",
+        "航向 RMS（°）",
+        "跌倒数 / 回合数"
+      ],
+      [
+        "固定参数",
+        "基线",
+        "17.606",
+        "503.25",
+        "519.11",
+        "0.1249",
+        "0.0692",
+        "4.41",
+        "0/128"
+      ],
+      [
+        "域随机化",
+        "基线",
+        "22.770",
+        "140.08",
+        "296.30",
+        "0.1232",
+        "0.0394",
+        "3.72",
+        "0/128"
+      ],
+      [
+        "固定参数",
+        "动作差惩罚加倍",
+        "17.863",
+        "498.43",
+        "524.62",
+        "0.1387",
+        "0.0697",
+        "3.28",
+        "0/128"
+      ],
+      [
+        "域随机化",
+        "动作差惩罚加倍",
+        "23.162",
+        "138.56",
+        "283.62",
+        "0.1146",
+        "0.0356",
+        "2.60",
+        "0/128"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "策略训练方法",
+        "训练参考来源",
+        "对照目的"
+      ],
+      [
+        "PPO",
+        "物理仿真中的 PPO",
+        "原始参考",
+        "无世界模型的基线"
+      ],
+      [
+        "SuperMimic（官方代码）",
+        "官方 SuperMimic 的 Sesame 适配",
+        "与 PPO 相同的原始参考",
+        "更换策略训练方法的影响"
+      ],
+      [
+        "SuperMimic（DeepSeek）",
+        "同一 SuperMimic 实现",
+        "`deepseek-flash` 生成程序，经检查和仿真验证后的参考",
+        "DeepSeek 数据生成流程与训练组合的效果"
+      ],
+      [
+        "SuperMimic（Codex）",
+        "同一 SuperMimic 实现",
+        "Codex 生成程序，经检查和仿真验证后的参考",
+        "Codex 数据生成流程与训练组合的效果"
+      ]
+    ],
+    [
+      [
+        "奖励项",
+        "权重 w",
+        "尺度",
+        "作用"
+      ],
+      [
+        "机身位置跟踪",
+        "0.5",
+        "0.3 m",
+        "跟踪参考的整体位移"
+      ],
+      [
+        "机身姿态跟踪",
+        "0.5",
+        "0.4 rad",
+        "保持参考方向与姿态"
+      ],
+      [
+        "非足端连杆位置",
+        "1.0",
+        "0.3 m",
+        "学习身体与腿部协调"
+      ],
+      [
+        "非足端连杆姿态",
+        "1.0",
+        "0.4 rad",
+        "限制错误的肢体构型"
+      ],
+      [
+        "非足端连杆线速度",
+        "1.0",
+        "1.0 m/s",
+        "跟踪运动速度"
+      ],
+      [
+        "非足端连杆角速度",
+        "1.0",
+        "3.14 rad/s",
+        "跟踪转动速度"
+      ],
+      [
+        "相邻动作差平方和",
+        "−0.1",
+        "—",
+        "减少动作跳变"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "测试 Return",
+        "速度 RMSE（m/s）",
+        "偏航 RMS（°）",
+        "机身 RMSE（cm）"
+      ],
+      [
+        "PPO",
+        "14.681",
+        "0.1395",
+        "20.20",
+        "35.74"
+      ],
+      [
+        "SuperMimic（官方代码）",
+        "20.299",
+        "0.0959",
+        "15.88",
+        "21.67"
+      ],
+      [
+        "SuperMimic（DeepSeek）",
+        "22.071",
+        "0.0936",
+        "5.13",
+        "18.20"
+      ],
+      [
+        "SuperMimic（Codex）",
+        "22.353",
+        "0.0898",
+        "5.20",
+        "18.17"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "测试参考来源",
+        "测试 Return"
+      ],
+      [
+        "PPO",
+        "原始参考",
+        "15.384"
+      ],
+      [
+        "SuperMimic（官方代码）",
+        "原始参考",
+        "23.496"
+      ],
+      [
+        "SuperMimic（DeepSeek）",
+        "DeepSeek",
+        "24.173"
+      ],
+      [
+        "SuperMimic（Codex）",
+        "Codex",
+        "24.372"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "实际前进速度（m/s）",
+        "参考速度（m/s）",
+        "绝对横向位移（cm）",
+        "运动方向偏差（°）",
+        "完整执行"
+      ],
+      [
+        "PPO",
+        "0.0064",
+        "0.1048",
+        "7.02",
+        "70.61",
+        "12/12"
+      ],
+      [
+        "SuperMimic（官方代码）",
+        "0.0412",
+        "0.1048",
+        "8.22",
+        "26.49",
+        "12/12"
+      ],
+      [
+        "SuperMimic（DeepSeek）",
+        "0.0563",
+        "0.1048",
+        "4.40",
+        "13.75",
+        "12/12"
+      ],
+      [
+        "SuperMimic（Codex）",
+        "0.0507",
+        "0.1048",
+        "3.69",
+        "14.97",
+        "12/12"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "测试 Return",
+        "速度 RMSE（m/s）",
+        "偏航 RMS（°）",
+        "机身 RMSE（cm）"
+      ],
+      [
+        "H=32，有 Critic",
+        "20.299",
+        "0.0959",
+        "15.88",
+        "21.67"
+      ],
+      [
+        "H=16，有 Critic",
+        "21.509",
+        "0.0855",
+        "8.04",
+        "13.34"
+      ],
+      [
+        "H=64，有 Critic",
+        "20.888",
+        "0.0996",
+        "7.35",
+        "25.23"
+      ],
+      [
+        "H=32，无 Critic",
+        "20.083",
+        "0.1012",
+        "13.87",
+        "28.20"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "训练（分钟）",
+        "端到端运行（分钟）",
+        "真实步数",
+        "想象步数",
+        "提前终止",
+        "采样显存峰值（GiB）"
+      ],
+      [
+        "PPO",
+        "2.44",
+        "11.79",
+        "2097152",
+        "0",
+        "0/12",
+        "1.01"
+      ],
+      [
+        "SuperMimic（官方代码）",
+        "8.32",
+        "18.17",
+        "2097152",
+        "53608448",
+        "0/12",
+        "3.20"
+      ],
+      [
+        "SuperMimic（DeepSeek）",
+        "8.27",
+        "18.06",
+        "2097152",
+        "53608448",
+        "0/12",
+        "3.20"
+      ],
+      [
+        "SuperMimic（Codex）",
+        "8.25",
+        "18.08",
+        "2097152",
+        "53608448",
+        "0/12",
+        "3.20"
+      ],
+      [
+        "H=16，有 Critic",
+        "7.98",
+        "17.89",
+        "2097152",
+        "26804224",
+        "0/12",
+        "2.15"
+      ],
+      [
+        "H=64，有 Critic",
+        "8.84",
+        "18.60",
+        "2097152",
+        "107216896",
+        "0/12",
+        "5.30"
+      ],
+      [
+        "H=32，无 Critic",
+        "8.03",
+        "17.83",
+        "2097152",
+        "53608448",
+        "0/12",
+        "2.99"
+      ]
+    ],
+    [
+      [
+        "数据准备阶段",
+        "阶段性质",
+        "合格参考",
+        "生成/修订次数",
+        "API 次数"
+      ],
+      [
+        "DeepSeek 试采集",
+        "先导采集",
+        "3",
+        "3",
+        "6"
+      ],
+      [
+        "DeepSeek 探索采集（中止）",
+        "中止探索",
+        "4",
+        "12",
+        "26"
+      ],
+      [
+        "DeepSeek 正式采集",
+        "参考采集",
+        "32",
+        "33",
+        "66"
+      ],
+      [
+        "Codex 参考采集",
+        "参考采集",
+        "32",
+        "45",
+        "0"
+      ],
+      [
+        "Codex 验收规则复核",
+        "既有轨迹检验",
+        "41",
+        "45",
+        "0"
+      ]
+    ],
+    [
+      [
+        "方法",
+        "实际评估时间（分钟）",
+        "已用真实步数",
+        "验证 Return"
+      ],
+      [
+        "PPO（延长预算）",
+        "8.31",
+        "7405568",
+        "16.690"
+      ],
+      [
+        "SuperMimic（官方代码）",
+        "8.32",
+        "2097152",
+        "20.578"
+      ],
+      [
+        "SuperMimic（DeepSeek）",
+        "8.27",
+        "2097152",
+        "22.158"
+      ],
+      [
+        "SuperMimic（Codex）",
+        "8.25",
+        "2097152",
+        "22.319"
+      ]
+    ]
+  ],
+  "figures": [
+    {
+      "number": 1,
+      "file": "baselines/isaac_scene.png",
+      "caption": "Sesame 在 Isaac 平地环境中执行 PPO 行走策略。图像截取自策略仿真轨迹第 2 秒。"
+    },
+    {
+      "number": 2,
+      "file": "baselines/baseline_learning_curves.png",
+      "caption": "三种基线的学习曲线。横轴为累计真实环境步数，纵轴依次为训练回报、前向速度 RMSE 与航向 RMS。每种方法的实线表示三个训练种子在共同环境步数处的 EMA 均值。EMA 半衰期为 131,072 步，在完整记录上计算后截取正式训练区间。PPO 误差指标包含 16 个诊断时刻；回报窗口为 PPO 最近 100 回合和 SAC/DQN 最近 256 回合。最终测试指标直接由原始轨迹统计。"
+    },
+    {
+      "number": 3,
+      "file": "baselines/baseline_test_metrics.png",
+      "caption": "三种基线在固定参数和域随机化条件下的测试结果，评估设置见第 2.1 节。所有模型均采用域随机化训练。实线连接两种测试条件下的均值，阴影表示三个训练种子的样本标准差；每种方法在每种条件下共评估 384 回合。横轴为离散评估条件，结果采用未经平滑的测试统计。"
+    },
+    {
+      "number": 4,
+      "file": "improvements/smoothness_comparison.png",
+      "caption": "动作差惩罚加倍与原设置 PPO 的平滑性对照。(a) 执行目标角加速度 RMS；(b) 实际关节加速度 RMS；(c) 前向速度 RMSE；(d) 航向 RMS。固定参数与域随机化评估设置见第 2.1 节。实线连接两种评估条件下的原始测试均值，每组采用单个训练种子，每种条件评估 128 回合。横轴为离散评估条件，平滑性与跟踪误差联合分析。小图表示动作差惩罚加倍相对原设置的变化百分比，计算方式为两者之差除以原设置的测量值，再乘以 100%；灰色水平线表示零变化。"
+    },
+    {
+      "number": 5,
+      "file": "method_flow.png",
+      "caption": "参考生成与世界模型策略学习流程。参考轨迹定义跟踪目标；策略在物理仿真中采集状态转移以训练世界模型，并通过想象轨迹优化跟踪回报。"
+    },
+    {
+      "number": 6,
+      "file": "reference_execution_comparison.png",
+      "caption": "Codex 生成的参考轨迹与反馈控制加 PD 控制器的仿真执行对比。(a) 前向位移；(b) 横向位移；(c) 机身偏航角。横轴为仿真时间，蓝线表示运动学参考，橙线表示控制器执行；位移以初始位置为原点，方向沿世界坐标轴。连续实线连接 50 Hz 原始记录，包含初始状态和 300 个控制步后的状态，未作平滑。该片段为参考采集中的单条标称参数检验示例，入库数据采用通过检验的实际执行轨迹。"
+    },
+    {
+      "number": 7,
+      "file": "supermimic_comparison.png",
+      "caption": "共同验证集上的回报与跟踪误差。各组从首次更新后的实测评估开始，每 32,768 个真实环境步评估一次；横轴排除启动及评估耗时。实线为半衰期 131072 步的因果 EMA，各组使用训练种子 42。蓝、橙、绿、紫分别区分官方代码 SuperMimic、PPO、DeepSeek 与 Codex；回报面板的小图放大两组 Agent 在 2.4–3.1 分钟的结果。误差面板按观测范围设置纵轴。"
+    },
+    {
+      "number": 8,
+      "file": "supermimic_ablation.png",
+      "caption": "想象长度与 Critic 的消融实验。各组使用原始参考、相同真实环境步预算、奖励和评估集，比较 H=16、32、64 及 H=32 无 Critic 配置。横轴为扣除启动及评估耗时的训练时间；实线为半衰期 131072 步的因果 EMA，评估间隔为 32,768 个真实环境步，训练种子为 42。回报面板的小图放大 1.8–2.8 分钟的结果，误差面板按观测范围设置纵轴。"
+    },
+    {
+      "number": 9,
+      "file": "ppo_extended_time_comparison.png",
+      "caption": "延长预算 PPO 与三组 SuperMimic 的验证回报。横轴为首次更新后的训练时间，排除启动及评估耗时；实线为半衰期 131072 步的因果 EMA，各组曲线终止于各自预算。评估间隔为 32,768 个真实环境步，训练种子为 42。表中时间对照采用包含启动开销的训练计时。左图展示完整训练过程，右图放大 1.7–3.15 分钟、回报 20.0–22.7 的区域，以区分三组 SuperMimic 的回报。"
+    }
+  ],
+  "assets": {
+    "baselines/isaac_scene.png": {
+      "source": "reports/course_rerun_20261116/baselines/isaac_scene.png",
+      "sha256": "13c66a827103573771c9886a4695b77186baf961a5b8dc95d722c22df6f0a09e"
+    },
+    "baselines/baseline_learning_curves.png": {
+      "source": "reports/course_rerun_20261116/paper_style/baselines/baseline_learning_curves.png",
+      "sha256": "72fab1064fe9b8a237dd239093e2514f23f6110bdaf93755ef895d35fc384549"
+    },
+    "baselines/baseline_test_metrics.png": {
+      "source": "reports/course_rerun_20261116/paper_style/baselines/baseline_test_metrics.png",
+      "sha256": "d125f2bd52bdeaf288ed313aa486700bb76394dd6a4d40fc90808adb5f17cd64"
+    },
+    "improvements/smoothness_comparison.png": {
+      "source": "reports/course_rerun_20261116/paper_style/improvements/smoothness_comparison.png",
+      "sha256": "588104ab3af501ea36e15618efe5b8c3e8adf94c2d6b78fcbe00ebec2480bf03"
+    },
+    "method_flow.png": {
+      "source": "reports/course_rerun_20261116/method_flow.png",
+      "sha256": "ac5229f3321bea0848cf11657a2b055d38121cc92da55b1e1015f5b3f3742ab8"
+    },
+    "reference_execution_comparison.png": {
+      "source": "reports/course_rerun_20261116/paper_style/reference_execution_comparison.png",
+      "sha256": "d39a9d0ebbc3c25278e600e28f08fe0621c9f30195fe2f6be85ec73dfddcd86e"
+    },
+    "supermimic_comparison.png": {
+      "source": "reports/course_rerun_20261116/paper_style/supermimic_comparison.png",
+      "sha256": "3b85354e3481a6f274d42e3bf0aabdd7fca36eb1faeea7cbb68c38cd00446603"
+    },
+    "supermimic_ablation.png": {
+      "source": "reports/course_rerun_20261116/paper_style/supermimic_ablation.png",
+      "sha256": "872bde427a8632298d7b374684acbe628caef90f4119fdfc723336c4c8031864"
+    },
+    "ppo_extended_time_comparison.png": {
+      "source": "reports/course_rerun_20261116/paper_style/ppo_extended_time_comparison.png",
+      "sha256": "487035ae83e033e144c850b9ae0956add58dec1de006013fa02cbd07f08fa0dd"
+    },
+    "supermimic_test_results.csv": {
+      "source": "reports/course_rerun_20261116/supermimic_test_results.csv",
+      "sha256": "d89d2769fddcd398bf51f9f05e3db63b10c55633dc2f11f473a0a74d7d7e374a"
+    },
+    "ppo_extended_time_points.csv": {
+      "source": "reports/course_rerun_20261116/ppo_extended_time_points.csv",
+      "sha256": "ebce1182e9e0e0ec85d81ed5045c1b047a174ffae0d42c6ca495406a1120b6e5"
+    },
+    "rerun_timing_summary.csv": {
+      "source": "reports/course_rerun_20261116/rerun_timing_summary.csv",
+      "sha256": "9b08acd120c8ef0069663f73e75b81d42bf8a14e50525372d4d2df5c931976a5"
+    },
+    "data_preparation_costs.csv": {
+      "source": "reports/course_rerun_20261116/data_preparation_costs.csv",
+      "sha256": "2ef82ef7d4ed913f1369d75c0f9a4f325d64b39aca41e7f20ae261305a9e6285"
+    },
+    "ppo_extended_post_startup_time_points.csv": {
+      "source": "reports/course_rerun_20261116/ppo_extended_post_startup_time_points.csv",
+      "sha256": "6f491161f284e92dee38f29d27fdbab5f740d2bb0b2ac5eb3082bb3eeb262ca1"
+    },
+    "supermimic_test_by_source.csv": {
+      "source": "reports/course_rerun_20261116/supermimic_test_by_source.csv",
+      "sha256": "b4ea1918de7b618bf5ba5c8b81d2b02b3de6f6bce393b84d39b3495c5b41a918"
+    },
+    "ppo_extended_final_result.csv": {
+      "source": "reports/course_rerun_20261116/ppo_extended_final_result.csv",
+      "sha256": "e8164bf8fc837fd3843ce3bf2749a0f9d8ab119ce34b3d75a73eed028b653920"
+    },
+    "ppo_extended_curve_data.csv": {
+      "source": "reports/course_rerun_20261116/ppo_extended_curve_data.csv",
+      "sha256": "83fd86a9da87a8c6a5e4edc32cb1f8a395bdd844b50f4860fce3a1cc343472ba"
+    },
+    "supermimic_curve_data.csv": {
+      "source": "reports/course_rerun_20261116/supermimic_curve_data.csv",
+      "sha256": "03abde72361a7e51b4989792272b51096f165a8559cd3a6aa42647354b478cf3"
+    },
+    "motion_reevaluation_by_source.csv": {
+      "source": "reports/course_rerun_20261116/motion_reevaluation_by_source.csv",
+      "sha256": "4c93d1ddd27afb77ee0ca8f2d20b26a29c8db82c1b69fa675b7da931808e3d7d"
+    },
+    "motion_reevaluation.csv": {
+      "source": "reports/course_rerun_20261116/motion_reevaluation.csv",
+      "sha256": "7bf69164ed89768e9b80784d07b772f8a583b87396ff85262a1dd427acdf1e95"
+    },
+    "baselines/baseline_curve_data.csv": {
+      "source": "reports/course_rerun_20261116/baselines/baseline_curve_data.csv",
+      "sha256": "96792fc894b0f53be56f60d24c26f5ab66574d025cdeb305dc163fdcd37ab9a8"
+    },
+    "baselines/baseline_test_results.csv": {
+      "source": "reports/course_rerun_20261116/baselines/baseline_test_results.csv",
+      "sha256": "79bd50979b5fa461bbbf58c8ea5b8e7dc50648bf77ff8e6b3e2a375ef41e95ff"
+    },
+    "improvements/motion_results.csv": {
+      "source": "reports/course_rerun_20261116/improvements/motion_results.csv",
+      "sha256": "943960678ceed3526509ac3089e8fd05f38a8f07d3eb23178b4a46b08351834f"
+    },
+    "baselines/provenance.json": {
+      "source": "reports/course_rerun_20261116/baselines/provenance.json",
+      "sha256": "4889d6f4ee1ee514033e543a3dee23fcd3696e0f92c71b28df68c07f9ec30b50"
+    },
+    "source_report.md": {
+      "source": "reports/course_rerun_20261116/report.md",
+      "source_sha256": "138d0adb3325d8c5865184aa4501e94dcb37beb24af9f58d5025da699d3d2853",
+      "sha256": "138d0adb3325d8c5865184aa4501e94dcb37beb24af9f58d5025da699d3d2853",
+      "transformation": "Paper-style figure captions replaced; original report.md unchanged."
+    },
+    "paper_style/report_overrides.json": {
+      "source": "reports/course_rerun_20261116/paper_style/report_overrides.json",
+      "sha256": "59aab38090c2698463c7422c61a66ed85b3c0bc06b4cc27cc320b3cb9245c881"
+    },
+    "paper_style/plot_protocol.md": {
+      "source": "reports/course_rerun_20261116/paper_style/plot_protocol.md",
+      "sha256": "30202715f1525dd891c2acfac3b0b693ddea1e64bf7e90fcadae009380cc2ba6"
+    },
+    "paper_style/smoothing_protocol.json": {
+      "source": "reports/course_rerun_20261116/paper_style/smoothing_protocol.json",
+      "sha256": "c9a4547875043fe67dd5372628e8bc8e6e2b0a72e2af66bd20811f12625a88ad"
+    },
+    "paper_style/display_curve_data.csv": {
+      "source": "reports/course_rerun_20261116/paper_style/display_curve_data.csv",
+      "sha256": "2aa36f20d1260280d73a90f7d2591244d69bba97c8c8fe1e2aa89e7690da3a82"
+    },
+    "paper_style/plot_manifest.json": {
+      "source": "reports/course_rerun_20261116/paper_style/plot_manifest.json",
+      "sha256": "986578c104c7d47eaa21198cea095723d4223005517b033b07c04bbef96cfb57"
+    },
+    "paper_style/reference_execution_data.csv": {
+      "source": "reports/course_rerun_20261116/paper_style/reference_execution_data.csv",
+      "sha256": "948353eebb3696a429c981f79b27bb7811238c53a3bf6707af182ad32bc62d0a"
+    },
+    "paper_style/reference_execution_metadata.json": {
+      "source": "reports/course_rerun_20261116/paper_style/reference_execution_metadata.json",
+      "sha256": "f2b7e06eda33114c0c363576a43e156658392eb8ebdfe5ef0a6b5614bbf5353b"
+    }
+  },
+  "note": "Recorded results converted to LaTeX with paper-style plotting overrides. Exporter performs no experiments, resampling or smoothing. Continuous post-startup curves without markers or raw overlays. Every run is cropped at its first valid update log and time is rebased to that timestamp. EMA half-life remains 131072 real steps, calculated before cropping. Baseline training curves show only the three-seed mean; final-test figures retain sample SD. Baseline training comparisons use environment steps only. Raw data and all test/table values remain unchanged; cost tables include startup.",
+  "paper_style": {
+    "overrides_source": "reports/course_rerun_20261116/paper_style/report_overrides.json",
+    "overrides_sha256": "59aab38090c2698463c7422c61a66ed85b3c0bc06b4cc27cc320b3cb9245c881",
+    "figure_sources": {
+      "baselines/baseline_learning_curves.png": "paper_style/baselines/baseline_learning_curves.png",
+      "baselines/baseline_test_metrics.png": "paper_style/baselines/baseline_test_metrics.png",
+      "improvements/smoothness_comparison.png": "paper_style/improvements/smoothness_comparison.png",
+      "reference_execution_comparison.png": "paper_style/reference_execution_comparison.png",
+      "supermimic_comparison.png": "paper_style/supermimic_comparison.png",
+      "supermimic_ablation.png": "paper_style/supermimic_ablation.png",
+      "ppo_extended_time_comparison.png": "paper_style/ppo_extended_time_comparison.png"
+    },
+    "caption_overrides": {
+      "1": "Sesame 在 Isaac 平地环境中执行 PPO 行走策略。图像截取自策略仿真轨迹第 2 秒。",
+      "2": "三种基线的学习曲线。横轴为累计真实环境步数，纵轴依次为训练回报、前向速度 RMSE 与航向 RMS。每种方法的实线表示三个训练种子在共同环境步数处的 EMA 均值。EMA 半衰期为 131,072 步，在完整记录上计算后截取正式训练区间。PPO 误差指标包含 16 个诊断时刻；回报窗口为 PPO 最近 100 回合和 SAC/DQN 最近 256 回合。最终测试指标直接由原始轨迹统计。",
+      "3": "三种基线在固定参数和域随机化条件下的测试结果，评估设置见第 2.1 节。所有模型均采用域随机化训练。实线连接两种测试条件下的均值，阴影表示三个训练种子的样本标准差；每种方法在每种条件下共评估 384 回合。横轴为离散评估条件，结果采用未经平滑的测试统计。",
+      "4": "动作差惩罚加倍与原设置 PPO 的平滑性对照。(a) 执行目标角加速度 RMS；(b) 实际关节加速度 RMS；(c) 前向速度 RMSE；(d) 航向 RMS。固定参数与域随机化评估设置见第 2.1 节。实线连接两种评估条件下的原始测试均值，每组采用单个训练种子，每种条件评估 128 回合。横轴为离散评估条件，平滑性与跟踪误差联合分析。小图表示动作差惩罚加倍相对原设置的变化百分比，计算方式为两者之差除以原设置的测量值，再乘以 100%；灰色水平线表示零变化。",
+      "5": "参考生成与世界模型策略学习流程。参考轨迹定义跟踪目标；策略在物理仿真中采集状态转移以训练世界模型，并通过想象轨迹优化跟踪回报。",
+      "6": "Codex 生成的参考轨迹与反馈控制加 PD 控制器的仿真执行对比。(a) 前向位移；(b) 横向位移；(c) 机身偏航角。横轴为仿真时间，蓝线表示运动学参考，橙线表示控制器执行；位移以初始位置为原点，方向沿世界坐标轴。连续实线连接 50 Hz 原始记录，包含初始状态和 300 个控制步后的状态，未作平滑。该片段为参考采集中的单条标称参数检验示例，入库数据采用通过检验的实际执行轨迹。",
+      "7": "共同验证集上的回报与跟踪误差。各组从首次更新后的实测评估开始，每 32,768 个真实环境步评估一次；横轴排除启动及评估耗时。实线为半衰期 131072 步的因果 EMA，各组使用训练种子 42。蓝、橙、绿、紫分别区分官方代码 SuperMimic、PPO、DeepSeek 与 Codex；回报面板的小图放大两组 Agent 在 2.4–3.1 分钟的结果。误差面板按观测范围设置纵轴。",
+      "8": "想象长度与 Critic 的消融实验。各组使用原始参考、相同真实环境步预算、奖励和评估集，比较 H=16、32、64 及 H=32 无 Critic 配置。横轴为扣除启动及评估耗时的训练时间；实线为半衰期 131072 步的因果 EMA，评估间隔为 32,768 个真实环境步，训练种子为 42。回报面板的小图放大 1.8–2.8 分钟的结果，误差面板按观测范围设置纵轴。",
+      "9": "延长预算 PPO 与三组 SuperMimic 的验证回报。横轴为首次更新后的训练时间，排除启动及评估耗时；实线为半衰期 131072 步的因果 EMA，各组曲线终止于各自预算。评估间隔为 32,768 个真实环境步，训练种子为 42。表中时间对照采用包含启动开销的训练计时。左图展示完整训练过程，右图放大 1.7–3.15 分钟、回报 20.0–22.7 的区域，以区分三组 SuperMimic 的回报。"
+    },
+    "link_sources": {},
+    "extra_assets": [
+      "paper_style/plot_protocol.md",
+      "paper_style/smoothing_protocol.json",
+      "paper_style/display_curve_data.csv",
+      "paper_style/plot_manifest.json",
+      "paper_style/reference_execution_data.csv",
+      "paper_style/reference_execution_metadata.json"
+    ],
+    "plotting_and_smoothing_note": "Continuous post-startup curves without markers or raw overlays. Every run is cropped at its first valid update log and time is rebased to that timestamp. EMA half-life remains 131072 real steps, calculated before cropping. Baseline training curves show only the three-seed mean; final-test figures retain sample SD. Baseline training comparisons use environment steps only. Raw data and all test/table values remain unchanged; cost tables include startup."
+  }
+}

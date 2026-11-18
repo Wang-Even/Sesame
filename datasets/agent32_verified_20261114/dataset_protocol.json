@@ -1,0 +1,284 @@
+{
+  "source_collection": "/home/ywwang/sesame/runs/agent32_collection_20261114",
+  "source_protocol_sha256": "d64edb5e46fea1763c1ed6b2f1216355a3cb8c92d9e3890ae3531f8380f91a4d",
+  "source_manifest_sha256": "0b29516e407108eb9bbff6248d59880340bc6dae3cb61c6e1365d5cc2d46cc05",
+  "total_unique_clips": 32,
+  "splits": {
+    "train": [
+      {
+        "index": 21,
+        "id": "candidate_029_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_029/attempt_00/report.json",
+        "motion_sha256": "0b2d24797f7b3ed0bd71f3ba41d7286a7dd3e4a2f46d6ef660a00f0beee3e47f"
+      },
+      {
+        "index": 29,
+        "id": "candidate_042_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_042/attempt_00/report.json",
+        "motion_sha256": "c53867875fc2a6dc5cf2643b6781d65326ae17f28f093cff32564122738fd265"
+      },
+      {
+        "index": 5,
+        "id": "candidate_006_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_006/attempt_00/report.json",
+        "motion_sha256": "d1267bf3761b42a6fc44744d9c97e8d597d9c4d7f7405af2aed70805ae8bac73"
+      },
+      {
+        "index": 23,
+        "id": "candidate_032_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_032/attempt_00/report.json",
+        "motion_sha256": "3d13fd8e209e18eb3cddb3f8f40daf02d0bf3b934ca5c1f674413733c2c87950"
+      },
+      {
+        "index": 9,
+        "id": "candidate_010_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_010/attempt_00/report.json",
+        "motion_sha256": "3965e5d538c777330cd7500094b7a965d32ed048cbb4bb2ba1eecbc88620eaa6"
+      },
+      {
+        "index": 1,
+        "id": "candidate_001_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_001/attempt_00/report.json",
+        "motion_sha256": "f3bdeeff03120c4b0c447a448a70e2dd4ecfea44b5e036dfcd0c05d8e06b360d"
+      },
+      {
+        "index": 8,
+        "id": "candidate_009_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_009/attempt_00/report.json",
+        "motion_sha256": "231110a53bae202ce9ad117e57cb72daa269d7b799c8087b2ee821d40a51671a"
+      },
+      {
+        "index": 10,
+        "id": "candidate_011_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_011/attempt_00/report.json",
+        "motion_sha256": "87573550ab9caf89f3e596af23eccb5650289cb05ac22b93a2abb9aadc0811b1"
+      },
+      {
+        "index": 2,
+        "id": "candidate_002_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_002/attempt_00/report.json",
+        "motion_sha256": "81bd61509fab6a18a8c062fd4f09e534347d9b1f47ef61e70909a93b54d84ef7"
+      },
+      {
+        "index": 20,
+        "id": "candidate_026_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_026/attempt_00/report.json",
+        "motion_sha256": "55b20568145e956dbf2dd5836e5dc20ae6a8b59ec124b8d978d8952a170e11e5"
+      },
+      {
+        "index": 26,
+        "id": "candidate_036_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_036/attempt_00/report.json",
+        "motion_sha256": "43c6e7ac2836d494874ab5bb1a6f7df05abc2ae4ec2f4d59da8e64dbabecaa61"
+      },
+      {
+        "index": 3,
+        "id": "candidate_003_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_003/attempt_00/report.json",
+        "motion_sha256": "887ce485e1ca218f1e09705ecdd5733ae744904e7d0997d9c1d0bbfb54034909"
+      },
+      {
+        "index": 28,
+        "id": "candidate_040_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_040/attempt_00/report.json",
+        "motion_sha256": "0497ccb0d3b33652bf43f4e13e5a1b3357ffa44afde1f0c145687e420073a3bf"
+      },
+      {
+        "index": 11,
+        "id": "candidate_014_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_014/attempt_00/report.json",
+        "motion_sha256": "06852bf34cd856dc85929a859c8fd42863d7a86f5cd22779c868a6abeeb788b7"
+      },
+      {
+        "index": 6,
+        "id": "candidate_007_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_007/attempt_00/report.json",
+        "motion_sha256": "91f369b98510077ccc34c3342af7d7e7e40c78ba287ac3314010e9c33ac2aa00"
+      },
+      {
+        "index": 12,
+        "id": "candidate_015_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_015/attempt_00/report.json",
+        "motion_sha256": "b94aad7e04fd707e76f96b4d981a69a2b73943fb992c43c7cafbc614fbd11479"
+      },
+      {
+        "index": 19,
+        "id": "candidate_025_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_025/attempt_00/report.json",
+        "motion_sha256": "183b0f2f1fcd01798fa12243651251a65ee6b2da3d8377d258e8b69451b5c6c5"
+      },
+      {
+        "index": 22,
+        "id": "candidate_030_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_030/attempt_00/report.json",
+        "motion_sha256": "fb6c56a00835f7f8f1c9dd6fcf2dada9a41d656285f70a2200bfa4d0b2260582"
+      },
+      {
+        "index": 25,
+        "id": "candidate_035_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_035/attempt_00/report.json",
+        "motion_sha256": "0f0e4a7b68ae6d9d8e7eac67f6c777f6c6a15cbf43d05a735b93ffbad4586afe"
+      },
+      {
+        "index": 13,
+        "id": "candidate_016_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_016/attempt_00/report.json",
+        "motion_sha256": "f20f83baef8f3d51340a7d17bae16781c585134211757781e80e166e823ba43e"
+      },
+      {
+        "index": 30,
+        "id": "candidate_043_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_043/attempt_00/report.json",
+        "motion_sha256": "1eaebdf4e3818af542e21999ea886a5c4184a3adb8004eed081532c2f1ab862d"
+      },
+      {
+        "index": 14,
+        "id": "candidate_020_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_020/attempt_00/report.json",
+        "motion_sha256": "5899972e250bd538e74450e9492e6f1ccea145d895c3136ada1a94905f5b12b8"
+      },
+      {
+        "index": 0,
+        "id": "candidate_000_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_000/attempt_00/report.json",
+        "motion_sha256": "baf4bf235410a755d3491aac2dc9417e1e01fd879657eb7d7077979a07ea67eb"
+      },
+      {
+        "index": 27,
+        "id": "candidate_039_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_039/attempt_00/report.json",
+        "motion_sha256": "08f70178ff1826768b42706c8b043647ed25f9904495b78a19f2760377a22c0f"
+      }
+    ],
+    "validation": [
+      {
+        "index": 31,
+        "id": "candidate_044_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_044/attempt_00/report.json",
+        "motion_sha256": "c984988d36f481081c9ea8d39f872d862b9fa5c76f8015ee521acfc3ed46c502"
+      },
+      {
+        "index": 24,
+        "id": "candidate_033_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_033/attempt_00/report.json",
+        "motion_sha256": "9872c64a84c0721a33fffd4dcc3db9ea4db625cf9fb9392bb6e8d94bcd96a3c9"
+      },
+      {
+        "index": 16,
+        "id": "candidate_022_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_022/attempt_00/report.json",
+        "motion_sha256": "a99873519e25102cbbed3e123ecf53ac9709d71c25dcf9b1691045009c76dd57"
+      },
+      {
+        "index": 15,
+        "id": "candidate_021_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_021/attempt_00/report.json",
+        "motion_sha256": "2f50bd604d4d2c3c362420e6085912dcb56cb95bf8fc813fd21ab994f54d3526"
+      }
+    ],
+    "test": [
+      {
+        "index": 18,
+        "id": "candidate_024_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_024/attempt_00/report.json",
+        "motion_sha256": "ad183d752d49ce23b03feb1f2428af50212473ac209c9b831d60849882abca87"
+      },
+      {
+        "index": 17,
+        "id": "candidate_023_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_023/attempt_00/report.json",
+        "motion_sha256": "dcceaf64e63d2a1998fcc62cf760055247f0daa2b8d3938123babd444a10d87c"
+      },
+      {
+        "index": 7,
+        "id": "candidate_008_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_008/attempt_00/report.json",
+        "motion_sha256": "afd0c3e6e5c43587961d6cfc533d767d09cfe4ce4d60520207f8e026bcd60369"
+      },
+      {
+        "index": 4,
+        "id": "candidate_004_attempt_00",
+        "report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_004/attempt_00/report.json",
+        "motion_sha256": "15cd0733cceb2a7a1f0b9042dce0d72081580f80c56bdc38148cae70262cd374"
+      }
+    ]
+  },
+  "split_seed": 20261114,
+  "split_rule": "whole programs/trajectories; no frame-level mixing",
+  "limitations": "Gait parameter variants share a waveform family; this is not an unseen-skill generalization benchmark",
+  "motion_loader_cuda_verified": true,
+  "training_command": [
+    "/home/ywwang/sesame/.venv_supermimic_research/bin/python",
+    "-u",
+    "/home/ywwang/sesame/scripts/train_research_sesame.py",
+    "--method",
+    "supermimic",
+    "--output",
+    "/home/ywwang/sesame/runs/supermimic_agent32_seed42_20261114",
+    "--motion-file",
+    "/home/ywwang/sesame/datasets/agent32_verified_20261114/train",
+    "--validation-file",
+    "/home/ywwang/sesame/datasets/agent32_verified_20261114/validation",
+    "--test-file",
+    "/home/ywwang/sesame/datasets/agent32_verified_20261114/test",
+    "--seed",
+    "42",
+    "--envs",
+    "512",
+    "--steps",
+    "2097152",
+    "--width",
+    "512",
+    "--batch",
+    "2048",
+    "--horizon",
+    "32",
+    "--wm-batch",
+    "512",
+    "--wm-batches",
+    "10",
+    "--eval-every",
+    "262144",
+    "--eval-steps",
+    "300",
+    "--physics-dt",
+    "0.0005",
+    "--replay-ratio",
+    "16",
+    "--diagnostic-only-metrics",
+    "velocity_rmse_m_s",
+    "contact_foot_speed_rms_m_s"
+  ],
+  "array_sha256": {
+    "train/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "train/motion_names.json": "913c6bfc5bc7bbff3b4c0e767a399ebbeb661437b005e4add06f9e1457beff34",
+    "train/meta.json": "26b76feda4ff3f4ac8ecbade6fe46466d335ab2ee5f84bad9da693021169f251",
+    "train/root_lin_vel_w.npy": "bd53d142f250b1d313cfe902e19680755fb224e272391b059e51c74a6c244ec1",
+    "train/joint_pos.npy": "159d18dffd6f86ca303b416df00e5d2ff958d04061d00fb6b4602fe7ea738f5f",
+    "train/root_ang_vel_w.npy": "3cd671fd23d0739eff02e53b635c1c1d1695c4866394778736468df9ce9719d4",
+    "train/root_pos_w.npy": "2b3d752045c0b46d2c0ff455a3b5730cc710e937f660b139792de82dcf85e362",
+    "train/root_quat_w.npy": "3ce9073d1d68b2eaca5459e4fee4ab9c3a75f0e63e2fc962961461c49e44e851",
+    "train/motion_ends.npy": "281af70903c512c7ced1df39b8e6a4acfc57b5e4b1c35152557fcd10cf7412ef",
+    "train/joint_vel.npy": "39ab144870096a2c582eca0baff6636fe23d3915c373545044ecbb338b6f274d",
+    "validation/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "validation/motion_names.json": "ae1f495c586d325eaa20610e32b6d8e6e18ca9728ad6e1c2a51522fa433d1fd5",
+    "validation/meta.json": "ef45240ea84709c44067cad2ef203c1676083ed463ef64b97cf04b86ee4deb82",
+    "validation/root_lin_vel_w.npy": "e131ff723ad644be879b39fc60a3f5b7273f1a4bcd119b3c01ba3e0f7ebc770b",
+    "validation/joint_pos.npy": "b6527baa71976431c8b1dae82a1e221fb6638ddd3f7115e038845df2a6ace2e8",
+    "validation/root_ang_vel_w.npy": "c24109d89dbd3d064f1b32423c00ef3cdd71669ac564af63bd180a1e4676afa0",
+    "validation/root_pos_w.npy": "5f28d6efac137dce7d78083beab0476bcc898a3dabfd15e0784c62db85f8a186",
+    "validation/root_quat_w.npy": "9489923ed4d7da6105698b7a2db6db981c9e3ac940f658e72f37c86e5aa10480",
+    "validation/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "validation/joint_vel.npy": "15a674fc756cef197de773265f40681586ecac7b00c5d4a1994be1a070e802c3",
+    "test/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "test/motion_names.json": "354d744f26513186dd7676874f04f42330458d574cacd177a3b1f70380329778",
+    "test/meta.json": "bb7f1ebe32a8319bde2528f486b83b60b7776e83cf9c2cac9f72710899d2d05c",
+    "test/root_lin_vel_w.npy": "ef2560e93fe91b7a3fcc708ad2c33ad7be793a039c66d247d6de60f638ff4078",
+    "test/joint_pos.npy": "48b2488df603027adab6589204d6ba7fddffdf8c8c3c368cd4143676294818f0",
+    "test/root_ang_vel_w.npy": "f56aa92e4b482fc474184794ff1be43d47ad32664e6902fd0156efd764b7482f",
+    "test/root_pos_w.npy": "81fff11a641ba3788181df0d8fcf34f5140d4dc115d274a7b5a2334db59346a3",
+    "test/root_quat_w.npy": "aef48582007586ca3e367ddb171d670a8a804b32c1749479a2667f427e7825c8",
+    "test/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "test/joint_vel.npy": "cee5dd01965f4ee0b7b6534f1183e713e85498e196a61fe31bb603c6a69a2730"
+  }
+}

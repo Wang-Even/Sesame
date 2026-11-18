@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward diagonal trot for Sesame at 0.1 m/s; candidate 4 explores a slightly higher-frequency, larger-amplitude, higher-center gait with stronger swing knee lift and a later phase origin than prior accepted candidates.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward x = home['speed']*t, y=0, constant z=0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cosine from center+A toward center-A; knees hold stance flexion 0.15 rad (R3=L4=pi-0.15). Pair B (RR,LF) in swing: hips sweep mirrored cosine; knees follow sine arch lift 0.58 rad normalized over swing (R4=L3=0.15+0.58*sin(pi*s))."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "swing_A_stance_B",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation, constant base height, zero rpy.",
+      "limb_motion": "Pair A swings with sine-arch knee lift 0.58 rad; pair B holds stance flexion 0.15 rad while hips sweep back. Mirrored hip signs per URDF; diagonal knee mapping preserved."
+    }
+  ],
+  "coding_notes": "Exact parameters: freq=2.52 Hz, hip amplitude A=0.278 rad, hip center=1.632 rad, stance knee flexion=0.15 rad, swing knee lift=0.58 rad, phase origin=0.105, base height=0.04673357 m, forward speed=home['speed']. Phase pA=freq*t+0.105 normalized by floor; pB=pA+0.5 normalized. Hips: R1=center+A*cos(2pi*pA); R2=pi-center+A*cos(2pi*pB); L1=pi-center-A*cos(2pi*pB); L2=center-A*cos(2pi*pA). Swing normalized s=(p-0.5)*2 before sin(pi*s) to avoid wrap discontinuity. Knees: flexA=where(pA>=0.5, 0.15+0.58*archA, 0.15); flexB likewise; R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. q order R1,R3,R2,R4,L1,L3,L2,L4 via m.stack(dim=-1). root_pos_w=m.stack([home['speed']*t, 0*t, 0.04673357*(1+0*t)], dim=-1); root_rpy zeros. contacts=m.stack([pA<0.5, pB<0.5, pB<0.5, pA<0.5], dim=-1). No clipping, projection, or base ripple."
+}

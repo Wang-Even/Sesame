@@ -1,0 +1,46 @@
+[
+  {
+    "source": "codex",
+    "name": "candidate_025_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 22,
+    "frames": [
+      6622,
+      6923
+    ],
+    "content_sha256": "3fb88b7828b5cd44e84bd4fa725c44651dc4981424a0e3b7e650fd7da3fb67c2"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_016_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 15,
+    "frames": [
+      4515,
+      4816
+    ],
+    "content_sha256": "faf9e380a1e155d61f66a7242b0f9187ad79acb80c5ab4c94852b40f63598333"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_000_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 0,
+    "frames": [
+      0,
+      301
+    ],
+    "content_sha256": "7bf3656c39ab5c3578293b43ee09bc8a3dbd1b14c88cbe91a5601f138bb55eb3"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_022_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 19,
+    "frames": [
+      5719,
+      6020
+    ],
+    "content_sha256": "197aea719f177159eab48919752eef5a2b121500b6f99d237f9c3a8eee9bc7b6"
+  }
+]

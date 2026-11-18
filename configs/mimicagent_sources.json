@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/Luckykantnayak/mimicagent-humnaoid",
+  "accessed": "2026-11-14",
+  "files": [
+    {
+      "path": "agent/prompts/templates/motion_planner.txt",
+      "github_blob_sha": "5046a922f97dc7fe9849a49adfacb95f6a7221d8",
+      "url": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/agent/prompts/templates/motion_planner.txt"
+    },
+    {
+      "path": "agent/prompts/templates/coder.txt",
+      "github_blob_sha": "268d5960b9c4588dfafdb6075bc3333c2bf54ee8",
+      "url": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/agent/prompts/templates/coder.txt"
+    },
+    {
+      "path": "agent/prompts/templates/motion_failure_diagnosis.txt",
+      "github_blob_sha": "0818f0a81e585aa6e32cfb1a97279c7a894f20b1",
+      "url": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/agent/prompts/templates/motion_failure_diagnosis.txt"
+    },
+    {
+      "path": "agent/prompts/templates/critic_coder.txt",
+      "github_blob_sha": "220277c870160b129497e7bf698a857777037d11",
+      "url": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/agent/prompts/templates/critic_coder.txt"
+    },
+    {
+      "path": "LICENSE",
+      "github_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "url": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/LICENSE"
+    }
+  ]
+}

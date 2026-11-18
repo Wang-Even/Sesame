@@ -1,0 +1,431 @@
+{
+  "report_date": "2026-11-16",
+  "new_training_runs": 8,
+  "fresh_motion_reevaluation": true,
+  "pages": 14,
+  "tables": 13,
+  "report_figures": 9,
+  "exported_figure_groups": 8,
+  "tex_sha256": "d2674ccc4ea8d283b128d2df242a2c86b35b318b8527e2301e13c5f6a9d3f72f",
+  "pdf_sha256": "24bb47a59f0b8e3d948a878a81371de90cd4b3f3948340c5470d05cf2016f1f7",
+  "all_asset_hashes_match": true,
+  "all_report_source_hashes_match": true,
+  "missing_characters": false,
+  "overfull_boxes": false,
+  "all_pdf_text_within_page_bounds": true,
+  "pdf_text_font_warnings": false,
+  "independent_numerical_audit": {
+    "display_records": 8304,
+    "curve_groups": 66,
+    "raw_value_max_difference": 0.0,
+    "time_max_difference": 0.0,
+    "ema_max_difference": 0.0,
+    "dense_curve_groups_with_measured_zero": 36,
+    "baseline_sample_std_ddof": 1
+  },
+  "style_audit": [
+    {
+      "figure": "baselines/baseline_learning_curves",
+      "solid_lines": 9,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": []
+    },
+    {
+      "figure": "baselines/baseline_test_metrics",
+      "solid_lines": 9,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 9,
+      "detail_views": []
+    },
+    {
+      "figure": "improvements/smoothness_comparison",
+      "solid_lines": 14,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": [
+        {
+          "kind": "relative_change",
+          "formula": "100 * (smooth - original) / original",
+          "original": [
+            503.24829053878784,
+            140.07777094841003
+          ],
+          "smooth": [
+            498.4293522834778,
+            138.55967074632645
+          ],
+          "change_percent": [
+            -0.957566741091322,
+            -1.0837552538173216
+          ],
+          "conditions": [
+            "nominal",
+            "randomized"
+          ]
+        },
+        {
+          "kind": "relative_change",
+          "formula": "100 * (smooth - original) / original",
+          "original": [
+            519.1088328361511,
+            296.29970049858093
+          ],
+          "smooth": [
+            524.6219503879547,
+            283.6158084869385
+          ],
+          "change_percent": [
+            1.062035011364124,
+            -4.280764371445324
+          ],
+          "conditions": [
+            "nominal",
+            "randomized"
+          ]
+        },
+        {
+          "kind": "relative_change",
+          "formula": "100 * (smooth - original) / original",
+          "original": [
+            0.06915883295005187,
+            0.03939431060280185
+          ],
+          "smooth": [
+            0.06970534852007404,
+            0.035579012968810275
+          ],
+          "change_percent": [
+            0.7902324933922353,
+            -9.684895040961118
+          ],
+          "conditions": [
+            "nominal",
+            "randomized"
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "reference_execution_comparison",
+      "solid_lines": 6,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": []
+    },
+    {
+      "figure": "supermimic_comparison",
+      "solid_lines": 18,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": [
+        {
+          "kind": "zoom",
+          "xlim": [
+            2.4,
+            3.1
+          ],
+          "ylim": [
+            22.0,
+            22.5
+          ],
+          "methods": [
+            "SuperMimic (DeepSeek)",
+            "SuperMimic (Codex)"
+          ],
+          "coordinates": "Exact copies of displayed EMA line coordinates"
+        }
+      ]
+    },
+    {
+      "figure": "supermimic_ablation",
+      "solid_lines": 20,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": [
+        {
+          "kind": "zoom",
+          "xlim": [
+            1.8,
+            2.8
+          ],
+          "ylim": [
+            20.0,
+            22.1
+          ],
+          "methods": [
+            "$H=32$, critic",
+            "$H=16$, critic",
+            "$H=64$, critic",
+            "$H=32$, no critic"
+          ],
+          "coordinates": "Exact copies of displayed EMA line coordinates"
+        }
+      ]
+    },
+    {
+      "figure": "ppo_extended_time_comparison",
+      "solid_lines": 8,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": [
+        {
+          "kind": "zoom",
+          "xlim": [
+            1.7,
+            3.15
+          ],
+          "ylim": [
+            20.0,
+            22.7
+          ],
+          "coordinates": "Exact copies of displayed EMA line coordinates"
+        }
+      ]
+    },
+    {
+      "figure": "overview_paper_layout",
+      "solid_lines": 6,
+      "dashed_lines": 0,
+      "marker_lines": 0,
+      "scatter_collections": 0,
+      "uncertainty_bands": 0,
+      "detail_views": []
+    }
+  ],
+  "startup_boundaries": [
+    {
+      "method": "ppo",
+      "seed": 42,
+      "startup_s": 10.619794746860862,
+      "first_logged_update_real_steps": 16384,
+      "source": "runs/course_comparison_dense_20261116/ppo/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/ppo/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "ppo_extended",
+      "seed": 42,
+      "startup_s": 10.904369171708822,
+      "first_logged_update_real_steps": 16384,
+      "source": "runs/course_ppo_extended_dense_20261116/startup.json",
+      "update_source": "runs/course_ppo_extended_dense_20261116/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic",
+      "seed": 42,
+      "startup_s": 313.7618461493403,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_codex",
+      "seed": 42,
+      "startup_s": 309.02784123271704,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_codex/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_codex/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_deepseek",
+      "seed": 42,
+      "startup_s": 310.94183759205043,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_deepseek/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_deepseek/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_h16",
+      "seed": 42,
+      "startup_s": 311.0740692857653,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_h16/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_h16/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_h64",
+      "seed": 42,
+      "startup_s": 308.96586423926055,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_h64/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_h64/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_no_critic",
+      "seed": 42,
+      "startup_s": 309.1557649690658,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_no_critic/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_no_critic/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "dqn",
+      "seed": 42,
+      "startup_s": 4.935388503596187,
+      "source": "runs/offpolicy_heading_20261107/training/dqn_seed42/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "dqn",
+      "seed": 43,
+      "startup_s": 4.99552365578711,
+      "source": "runs/offpolicy_heading_20261107/training/dqn_seed43/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "dqn",
+      "seed": 44,
+      "startup_s": 4.960692198947072,
+      "source": "runs/offpolicy_heading_20261107/training/dqn_seed44/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "ppo",
+      "seed": 42,
+      "startup_s": 1.9665544033050537,
+      "source": "runs/ppo_heading_20261105/training/heading_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "ppo",
+      "seed": 43,
+      "startup_s": 1.5786054134368896,
+      "source": "runs/ppo_heading_20261105/training/heading_seed43/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "ppo",
+      "seed": 44,
+      "startup_s": 1.7727279663085938,
+      "source": "runs/ppo_heading_20261105/training/heading_seed44/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "sac",
+      "seed": 42,
+      "startup_s": 6.059598132967949,
+      "source": "runs/offpolicy_heading_20261107/training/sac_seed42/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "sac",
+      "seed": 43,
+      "startup_s": 5.06843744404614,
+      "source": "runs/offpolicy_heading_20261107/training/sac_seed43/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "sac",
+      "seed": 44,
+      "startup_s": 5.048144521191716,
+      "source": "runs/offpolicy_heading_20261107/training/sac_seed44/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "baseline",
+      "seed": 42,
+      "startup_s": 0.7715158462524414,
+      "source": "runs/ppo_motion_study_20261115/training/baseline_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "smooth",
+      "seed": 42,
+      "startup_s": 0.7234687805175781,
+      "source": "runs/ppo_motion_study_20261115/training/smooth_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "fast",
+      "seed": 42,
+      "startup_s": 0.7294754981994629,
+      "source": "runs/ppo_motion_study_20261115/training/fast_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    }
+  ],
+  "dense_sampling": {
+    "interval_real_steps": 32768,
+    "main_displayed_points": 65,
+    "extended_displayed_points": 257,
+    "time_zero": "measured first-update evaluation"
+  },
+  "single_seed_uncertainty_bands": false,
+  "visual_review": "Verified PDF page 8 figure 6 has all three panels, legend and caption, and page 14 has the clickable repository address immediately after the conclusion.",
+  "preview_files": [
+    ".runtime/latex_toolchain/dense_report_preview/page-01.png",
+    ".runtime/latex_toolchain/dense_report_preview/page-03.png",
+    ".runtime/latex_toolchain/dense_report_preview/page-10.png",
+    ".runtime/latex_toolchain/dense_report_preview/page-14.png"
+  ],
+  "layout_notes": "3 underfull warnings; no overfull boxes or missing characters."
+}

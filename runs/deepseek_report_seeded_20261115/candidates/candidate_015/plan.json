@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint (2-DoF/leg, vertical-axis hip) quadruped using direct smooth joint curves with diagonal pairs A=(RF,LR), B=(RR,LF) offset by half cycle; distinct gait variant from prior accepted candidates.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, constant base height 0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cosine from center+A toward center-A, knees held at stance flex 0.15 rad (R3/L4=pi-0.15, R4/L3=0.15). Pair B (RR,LF) in swing: hips sweep mirrored cosine, knees flex with positive sine arch up to 0.15+0.585 rad."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "stance_B_swing_A",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height; no ripple or correction.",
+      "limb_motion": "Pair B in stance with stance flex 0.15 rad; pair A in swing with sine-arch knee lift up to 0.15+0.585 rad; hip cosine waves continue smoothly across wrap."
+    }
+  ],
+  "coding_notes": "Chosen parameters: freq=2.57 Hz, hip amplitude A=0.258 rad, hip center=1.596 rad, stance knee flex=0.15 rad, swing knee lift=0.585 rad, phase origin=0.135, base height=0.04673357 m. Phase pA=freq*t+0.135 wrapped by floor; pB=pA+0.5 wrapped. Hips: R1=center+A*cos(2pi*pA); R2=pi-center+A*cos(2pi*pB); L1=pi-center-A*cos(2pi*pB); L2=center-A*cos(2pi*pA). Swing normalized s=(p-0.5)*2 before sin(pi*s) to avoid wrap discontinuity. Knee mapping: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB where flexA=where(pA>=0.5, 0.15+0.585*archA, 0.15), flexB analogous. Output order R1,R3,R2,R4,L1,L3,L2,L4 via m.stack(dim=-1). Root: x=home['speed']*t, y=0*t, z=0.04673357*(1+0*t); rpy zeros. Contacts: contactA=pA<0.5, contactB=pB<0.5; stack [contactA, contactB, contactB, contactA]. No clipping, projection, or ground correction; all math via m.API, single return."
+}

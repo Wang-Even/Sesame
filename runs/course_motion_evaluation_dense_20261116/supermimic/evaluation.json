@@ -1,0 +1,124 @@
+{
+  "episodes": 12,
+  "steps_per_episode": 300,
+  "evaluation_scope": "local_motion_tracking_research_not_course_scoring",
+  "metric_definitions": {
+    "success_rate": "configured local motion-tracking checks, excluding diagnostic_only_metrics; not course or paper success",
+    "fall_rate": "local environment termination fraction",
+    "return": "local motion-tracking reward; not course scoring reward"
+  },
+  "diagnostic_only_metrics": [
+    "velocity_rmse_m_s",
+    "contact_foot_speed_rms_m_s"
+  ],
+  "normalized_return": 0.6765491366386414,
+  "return": 20.296472549438477,
+  "success_rate": 0.0833333358168602,
+  "fall_rate": 0.0,
+  "velocity_rmse_m_s": 0.09534940123558044,
+  "heading_rms_deg": 15.787075996398926,
+  "joint_position_rmse_rad": 0.31318002939224243,
+  "root_position_rmse_m": 0.2191009819507599,
+  "episode_returns": [
+    23.427486419677734,
+    24.353036880493164,
+    22.831661224365234,
+    23.324874877929688,
+    18.72780418395996,
+    18.705896377563477,
+    18.39810562133789,
+    18.042320251464844,
+    18.782503128051758,
+    19.534927368164062,
+    18.091642379760742,
+    19.33740997314453
+  ],
+  "episode_passed": [
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "episode_metrics": [
+    {
+      "velocity_rmse_m_s": 0.0896768867969513,
+      "heading_rms_deg": 5.05783224105835,
+      "joint_position_rmse_rad": 0.1355973482131958,
+      "root_position_rmse_m": 0.13914327323436737
+    },
+    {
+      "velocity_rmse_m_s": 0.08516421914100647,
+      "heading_rms_deg": 2.8864755630493164,
+      "joint_position_rmse_rad": 0.11850382387638092,
+      "root_position_rmse_m": 0.08748245239257812
+    },
+    {
+      "velocity_rmse_m_s": 0.10902383178472519,
+      "heading_rms_deg": 4.565427303314209,
+      "joint_position_rmse_rad": 0.1433139592409134,
+      "root_position_rmse_m": 0.19040977954864502
+    },
+    {
+      "velocity_rmse_m_s": 0.09794478863477707,
+      "heading_rms_deg": 3.285595655441284,
+      "joint_position_rmse_rad": 0.1423337757587433,
+      "root_position_rmse_m": 0.1374790221452713
+    },
+    {
+      "velocity_rmse_m_s": 0.09607351571321487,
+      "heading_rms_deg": 21.394426345825195,
+      "joint_position_rmse_rad": 0.3855137526988983,
+      "root_position_rmse_m": 0.2490859478712082
+    },
+    {
+      "velocity_rmse_m_s": 0.0959266945719719,
+      "heading_rms_deg": 19.59849739074707,
+      "joint_position_rmse_rad": 0.3933280408382416,
+      "root_position_rmse_m": 0.23546482622623444
+    },
+    {
+      "velocity_rmse_m_s": 0.1015082448720932,
+      "heading_rms_deg": 24.83702278137207,
+      "joint_position_rmse_rad": 0.39626792073249817,
+      "root_position_rmse_m": 0.29321542382240295
+    },
+    {
+      "velocity_rmse_m_s": 0.09466960281133652,
+      "heading_rms_deg": 26.355846405029297,
+      "joint_position_rmse_rad": 0.4209270477294922,
+      "root_position_rmse_m": 0.23308753967285156
+    },
+    {
+      "velocity_rmse_m_s": 0.09423365443944931,
+      "heading_rms_deg": 20.02843475341797,
+      "joint_position_rmse_rad": 0.4096970558166504,
+      "root_position_rmse_m": 0.2725093364715576
+    },
+    {
+      "velocity_rmse_m_s": 0.09298299252986908,
+      "heading_rms_deg": 19.031949996948242,
+      "joint_position_rmse_rad": 0.3826046884059906,
+      "root_position_rmse_m": 0.27808505296707153
+    },
+    {
+      "velocity_rmse_m_s": 0.09722773730754852,
+      "heading_rms_deg": 26.70656394958496,
+      "joint_position_rmse_rad": 0.41807088255882263,
+      "root_position_rmse_m": 0.2813168168067932
+    },
+    {
+      "velocity_rmse_m_s": 0.08976064622402191,
+      "heading_rms_deg": 15.696845054626465,
+      "joint_position_rmse_rad": 0.4120015501976013,
+      "root_position_rmse_m": 0.23193222284317017
+    }
+  ]
+}

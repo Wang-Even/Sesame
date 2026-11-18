@@ -1,0 +1,147 @@
+{
+  "scope": "Read-only artifact/hash/protocol verification; no model computation or numerical simulation",
+  "study": "/home/ywwang/sesame/runs/ppo_motion_study_20261115",
+  "source_checks": {
+    "scripts/train_ppo_motion_study.py": true,
+    "scripts/evaluate_ppo_motion_study.py": true,
+    "scripts/summarize_ppo_motion_study.py": true,
+    "scripts/run_ppo_motion_study.py": true
+  },
+  "training": [
+    {
+      "variant": "baseline",
+      "complete": true,
+      "steps": 2048000,
+      "logged_updates": 250,
+      "last_logged_steps": 2048000,
+      "initial_network_sha256": "e5333963cdcb4b717d0f7c7cb4da2fc6a2a5c3e1c1e99d9327942b9ca6ae4824",
+      "initial_condition_sha256": "0034a82fec804bfd971eb7f629cf984811bc24d31f8f12cc32789e2ba8a3b95e",
+      "checkpoint_hash_matches": true,
+      "source_snapshots_match": true,
+      "pid_exited": true
+    },
+    {
+      "variant": "smooth",
+      "complete": true,
+      "steps": 2048000,
+      "logged_updates": 250,
+      "last_logged_steps": 2048000,
+      "initial_network_sha256": "e5333963cdcb4b717d0f7c7cb4da2fc6a2a5c3e1c1e99d9327942b9ca6ae4824",
+      "initial_condition_sha256": "0034a82fec804bfd971eb7f629cf984811bc24d31f8f12cc32789e2ba8a3b95e",
+      "checkpoint_hash_matches": true,
+      "source_snapshots_match": true,
+      "pid_exited": true
+    },
+    {
+      "variant": "fast",
+      "complete": true,
+      "steps": 2048000,
+      "logged_updates": 250,
+      "last_logged_steps": 2048000,
+      "initial_network_sha256": "e5333963cdcb4b717d0f7c7cb4da2fc6a2a5c3e1c1e99d9327942b9ca6ae4824",
+      "initial_condition_sha256": "0034a82fec804bfd971eb7f629cf984811bc24d31f8f12cc32789e2ba8a3b95e",
+      "checkpoint_hash_matches": true,
+      "source_snapshots_match": true,
+      "pid_exited": true
+    }
+  ],
+  "evaluation_status": "completed",
+  "episodes": 1024,
+  "action_rate_reward_accounting_verified": true,
+  "cases": [
+    {
+      "case": "evaluation/speed_0.10/baseline_seed42_nominal.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.10/baseline_seed42_randomized.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.10/smooth_seed42_nominal.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.10/smooth_seed42_randomized.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.20/baseline_seed42_nominal.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.20/baseline_seed42_randomized.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.20/fast_seed42_nominal.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    },
+    {
+      "case": "evaluation/speed_0.20/fast_seed42_randomized.json",
+      "episodes": 128,
+      "duration_min_s": 10.0,
+      "duration_max_s": 10.0,
+      "pairing": true,
+      "actions_observations_rewards_finite": true,
+      "domain_readbacks_passed": true,
+      "checkpoint_hash_matches": true,
+      "trajectory_hash_matches": true
+    }
+  ],
+  "report_links": {
+    "improvements/smoothness_comparison.png": true,
+    "improvements/speed_comparison.png": true,
+    "improvements/motion_training_curves.pdf": true
+  },
+  "passed": true
+}

@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint (2-DoF-per-leg) vertical-axis hips, using direct smooth joint curves with diagonal pairs A=(RF,LR) and B=(RR,LF) offset by half a cycle; distinct gait variant from prior candidates.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, constant base height 0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Diagonal pair A (RF,LR) in stance: hips sweep via cos(2*pi*pA) around center, knees hold stance flex 0.15 rad (R3/L4=pi-0.15). Pair B (RR,LF) in swing: hips sweep cos(2*pi*pB), knees lift with sin(pi*sB) arch up to swing_lift."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "swing_A_stance_B",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation, height, and zero attitude.",
+      "limb_motion": "Pair A swings with knee lift arch; pair B holds stance flex. Hip waves mirrored: R1=center+A*cos(pA), R2=pi-center+A*cos(pB), L1=pi-center-A*cos(pB), L2=center-A*cos(pA)."
+    }
+  ],
+  "coding_notes": "Chosen parameters (distinct from prior candidates 009-012): frequency=2.48 Hz, hip amplitude A=0.262 rad, hip center=1.605 rad, stance knee flex=0.15 rad, swing knee lift=0.56 rad, phase origin=0.105, base height=0.04673357 m. Diagonal knee mapping preserved: R3 and L4 share flexA (pair A), R4 and L3 share flexB (pair B). Swing phase normalized sA=(pA-0.5)*2 before sin(pi*sA) to avoid wrap discontinuity. pA=freq*t+phase0 mod 1; pB=pA+0.5 mod 1. Contacts: A stance when pA<0.5, B stance when pB<0.5; contacts order [RF,RR,LF,LR]=[contactA,contactB,contactB,contactA]. Root: x=home['speed']*t, y=0, z=base_z*(1+0*t); rpy all zero. No clipping, no ground correction, no base ripple. Build q via m.stack([R1,R3,R2,R4,L1,L3,L2,L4],dim=-1)."
+}

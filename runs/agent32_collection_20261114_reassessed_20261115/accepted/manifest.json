@@ -1,0 +1,336 @@
+{
+  "accepted_count": 41,
+  "entries": [
+    {
+      "id": "candidate_000_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_000/attempt_00/nominal_execution.npz",
+      "trace_sha256": "4d94055bf3b35f1d57529dce6130220a64caddb250996a4dad8fa53a45199001",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_000/attempt_00/report.json",
+      "validation_sha256": "6afb90ee24f831f0a2640ada5f4631a4c660367b7ca2d20e82ae1ffa8e14b075"
+    },
+    {
+      "id": "candidate_001_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_001/attempt_00/nominal_execution.npz",
+      "trace_sha256": "e0424373dd516c783725ecfd637cb164c934531ca591c556b8f04d137c29b888",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_001/attempt_00/report.json",
+      "validation_sha256": "043af4da61ff7eeb8227fb7d741118919c04dc2320d970881d3235813e839781"
+    },
+    {
+      "id": "candidate_002_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_002/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c2c6cec1f6c5fca78cdd08b954e13d66a2d1ee8dcfd357e05efe4b7a36fe2c08",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_002/attempt_00/report.json",
+      "validation_sha256": "8f5ff630937fee583df81870a11063e27c13cb6b5906e415ba0ac6a097f4fd4f"
+    },
+    {
+      "id": "candidate_003_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_003/attempt_00/nominal_execution.npz",
+      "trace_sha256": "4ebc1707de8778c1e951ae47f50a6eda372fc6482472c408a018bc907b7be848",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_003/attempt_00/report.json",
+      "validation_sha256": "d9f0bc4d8009c606f2c285bf2385b7c48dfc82132748a04ca53f89ead48cbdb0"
+    },
+    {
+      "id": "candidate_004_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_004/attempt_00/nominal_execution.npz",
+      "trace_sha256": "f03cb19d2627034d1fcd0a9c72efb15c9b351dee6a2d06e663c20f45303b4fd4",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_004/attempt_00/report.json",
+      "validation_sha256": "f5255bbd62ce5ca85b508153286dfe93a033fe031b6933884185c38f3af5f0a4"
+    },
+    {
+      "id": "candidate_006_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_006/attempt_00/nominal_execution.npz",
+      "trace_sha256": "4136a8ea733b0eab3e30fd249a034f2c1494b9ee104185788e84ca95dcd3cfb8",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_006/attempt_00/report.json",
+      "validation_sha256": "c4a78c80b50ccec89a7a89ec628d66a5965fd40994e3fc3c9238396fa3d58ebb"
+    },
+    {
+      "id": "candidate_007_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_007/attempt_00/nominal_execution.npz",
+      "trace_sha256": "2c1ab193fd978d45dacf2964147b082a3af8d00df593ba461f5bee8a3a369970",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_007/attempt_00/report.json",
+      "validation_sha256": "f589cbeee9f9a5a292a1b42f51c15cadae5b3804d1452b51521793585cad4ca2"
+    },
+    {
+      "id": "candidate_008_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_008/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c584d579d70351efee7ce127d16c5a9ba392d1cf679598be6c3b2f7e02f28f81",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_008/attempt_00/report.json",
+      "validation_sha256": "431362a67eddaa9ceac1be036ed4b03c67b02c721a350305eb9ff4a8ec0834a7"
+    },
+    {
+      "id": "candidate_009_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_009/attempt_00/nominal_execution.npz",
+      "trace_sha256": "78870d723874e632f62e42e3847e5b25206a61f6db6f0e05c248b57d1a736499",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_009/attempt_00/report.json",
+      "validation_sha256": "33cd1ebbc5444c2ea67d06546d97d0f52218bb2ee0f025117cb55e4d6fa1f2ae"
+    },
+    {
+      "id": "candidate_010_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_010/attempt_00/nominal_execution.npz",
+      "trace_sha256": "61ed2d867471d178bb1357c247b400349fb420bed83bd2297fda4fde48ad5d77",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_010/attempt_00/report.json",
+      "validation_sha256": "e6511f48746587c650f00ec59b165dd459168bd0e5da22b75065776e26da72a4"
+    },
+    {
+      "id": "candidate_011_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_011/attempt_00/nominal_execution.npz",
+      "trace_sha256": "95acdcc6567404cfee867c69907e243ce00425e83e962a8f66f796c913bc5ced",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_011/attempt_00/report.json",
+      "validation_sha256": "bb8fd963d4eca1e1a8e3c1ced0930508d037836f8001d6d2eb0362e6beeffb2c"
+    },
+    {
+      "id": "candidate_012_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_012/attempt_00/nominal_execution.npz",
+      "trace_sha256": "3674bf60f527e86ed9dffb36de37d0aece40d5e6253d9cd69cdd82e79574f2a9",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_012/attempt_00/report.json",
+      "validation_sha256": "5579786a25b762ba182e1e01e5e60f9f0c8b4ab0b4bcac17048ed23d4c5ba583"
+    },
+    {
+      "id": "candidate_013_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_013/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c7e9ef09fa7390fddb48c5a5842091b8cd5390f4915f5c6ee5367966d6ef9822",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_013/attempt_00/report.json",
+      "validation_sha256": "f073fadba664f620c47e1c80a0edd261bfbe3769e6b462e2f58b4d9e40b20c51"
+    },
+    {
+      "id": "candidate_014_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_014/attempt_00/nominal_execution.npz",
+      "trace_sha256": "993542f97eac0083e5fa5f64f51360e094532165b7f7243d25bb1e06e3646877",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_014/attempt_00/report.json",
+      "validation_sha256": "faf20b202d2408c0fd667d044cdab17128b5a37b13772445bea270c1c30a050d"
+    },
+    {
+      "id": "candidate_015_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_015/attempt_00/nominal_execution.npz",
+      "trace_sha256": "53f1d4f2dc4c5e0418721366e37f9fd3d157646e293cfffb6bc239d39adfd9a0",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_015/attempt_00/report.json",
+      "validation_sha256": "8f7ae96e0a0b0200246eb9de632d15ed2e4c02a539f3dcc8bdf54e46330cb7ad"
+    },
+    {
+      "id": "candidate_016_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_016/attempt_00/nominal_execution.npz",
+      "trace_sha256": "44de06522582bea05dd769898cf672371a0383af0246b52cea3b66283ab5b577",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_016/attempt_00/report.json",
+      "validation_sha256": "0617174d7861d63a61a2dd37a8475bdb433ac1174b9f04e6b9e7af30dd14670b"
+    },
+    {
+      "id": "candidate_019_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_019/attempt_00/nominal_execution.npz",
+      "trace_sha256": "9d2de67038de03567108818b33978579afa88130304e8e9e76cfd7ff05733978",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_019/attempt_00/report.json",
+      "validation_sha256": "a2b54144bf2a6e0b2c77c186d12a8caf94e468bec18d53a79700ca0d103aa430"
+    },
+    {
+      "id": "candidate_020_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_020/attempt_00/nominal_execution.npz",
+      "trace_sha256": "81f609781ae41ef82c57fe2e019406687094e0a0e5f4befb8633d936436e4db9",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_020/attempt_00/report.json",
+      "validation_sha256": "0630cc6d4147c68dfdef3ad9ce300e1eee8048846e35124380258082fd3bd913"
+    },
+    {
+      "id": "candidate_021_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_021/attempt_00/nominal_execution.npz",
+      "trace_sha256": "a2d57494392fb270fc47651866e1e02ef0ecf3b6a56c1f63ec50df9c58521a16",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_021/attempt_00/report.json",
+      "validation_sha256": "e5c52f593c978033d0bb6fdabc2dfe803e6809104a915e8b8cbe855e36485260"
+    },
+    {
+      "id": "candidate_022_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_022/attempt_00/nominal_execution.npz",
+      "trace_sha256": "630be6ceed46c75401c1c2ffca28370b4b57ab8e3e8914d5d03f49cee754b3e1",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_022/attempt_00/report.json",
+      "validation_sha256": "06af32bf9f7969874b058ec18c55ab606a127d5360da6cd83cb223659f97bfa4"
+    },
+    {
+      "id": "candidate_023_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_023/attempt_00/nominal_execution.npz",
+      "trace_sha256": "5d6636cb93151e8e3bd753372952bbe3613379258314583d77e4af0630cf9784",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_023/attempt_00/report.json",
+      "validation_sha256": "bb7a56a3be376b3cdbedb83d58fb06fb4871420c539bc10273fc3792967d841d"
+    },
+    {
+      "id": "candidate_024_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_024/attempt_00/nominal_execution.npz",
+      "trace_sha256": "d00ae9fdcb8010731bd5f73d918d9c20609a8cb2bda9d4465e07bfa07ea67342",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_024/attempt_00/report.json",
+      "validation_sha256": "5050df27367e2e8a5ec16bc00709e1c887b50ee2cc0cbdce443becfbaa9e0cc5"
+    },
+    {
+      "id": "candidate_025_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_025/attempt_00/nominal_execution.npz",
+      "trace_sha256": "0be2773c72792693eaea74c74ad450ebb2bf2ebb87a39beab47c1e82df9be9f8",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_025/attempt_00/report.json",
+      "validation_sha256": "1f9aed8efaf81391ae89941e91ad4e8325b5e4276e359a62316e7920f8a76b89"
+    },
+    {
+      "id": "candidate_026_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_026/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c1045f79b6004276445fc9da9f706ebb25d54e606b1f70f0d40afc88e6e7eb75",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_026/attempt_00/report.json",
+      "validation_sha256": "3619a2b47b05f8d78ab57e4fee4fd9fe871fcbf148b063bf62f966099eb73295"
+    },
+    {
+      "id": "candidate_027_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_027/attempt_00/nominal_execution.npz",
+      "trace_sha256": "051a4372f55f0c30ad5a5bb9347c01b40f39a53ffc7e84bf7cb94d60ac000189",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_027/attempt_00/report.json",
+      "validation_sha256": "06f8506b1cf55b5eb3ce4a9c7550aced870be5d6024d2e3a1e5e9238b696cde2"
+    },
+    {
+      "id": "candidate_028_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_028/attempt_00/nominal_execution.npz",
+      "trace_sha256": "2559ee9e5d781a971c749ed7d528d04d32dfb404a1bd30df20f46b177ee6d9c0",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_028/attempt_00/report.json",
+      "validation_sha256": "7a550cb884c67440da848241ca267ed88d005f7e25a20440dd77624c46f166e9"
+    },
+    {
+      "id": "candidate_029_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_029/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c735d0a19c01bbe59d5d833a04d7223bae425d8294a80bf5c5fc6376f8d2569a",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_029/attempt_00/report.json",
+      "validation_sha256": "79e0d810251ced46caf1482557fe1a185f6d499b5180212ab770a50e0e777831"
+    },
+    {
+      "id": "candidate_030_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_030/attempt_00/nominal_execution.npz",
+      "trace_sha256": "54cae6deae66c02ab359ce317307b396257729f2daca93eea525cd47a4c59e94",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_030/attempt_00/report.json",
+      "validation_sha256": "e5dd3b92912d7780b39e61c07c8a85b77a4ca37b27ddeeed346e859c53b34fad"
+    },
+    {
+      "id": "candidate_031_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_031/attempt_00/nominal_execution.npz",
+      "trace_sha256": "d6682698a443216fac31b0b0588e1f6869fdd5a87642b4d32e34e5e04518596e",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_031/attempt_00/report.json",
+      "validation_sha256": "297fdb9ae60b6872bd7f9f17c50e33d9898cc06eb079fc1adeb0311d18a8cde7"
+    },
+    {
+      "id": "candidate_032_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_032/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c4d52fc4372b07f9340e6646b8bf3a8671a2911f7e419ee5e4b542e9ec94355e",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_032/attempt_00/report.json",
+      "validation_sha256": "460f1381c632c022fd74bf6cce939c0c946577cf0bbc7bdb750d2b91a07bb0e5"
+    },
+    {
+      "id": "candidate_033_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_033/attempt_00/nominal_execution.npz",
+      "trace_sha256": "f6f7a4a62178d8a7bb0b9e63f98a991c9f22ee2ef51d83e9e4e23981658e8505",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_033/attempt_00/report.json",
+      "validation_sha256": "4df97851cbed5c2f020dec9700b092c1a5b464084ede2ba174b1deccc087e099"
+    },
+    {
+      "id": "candidate_035_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_035/attempt_00/nominal_execution.npz",
+      "trace_sha256": "acb5c42a8fcff63c0fc07d25ca520d23ed58c58a497d81aeb365931a75ddcd64",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_035/attempt_00/report.json",
+      "validation_sha256": "8edae6c8e9a22b55d3c7526a57bbc7ca800a38836f759d788de37c75151c2f9c"
+    },
+    {
+      "id": "candidate_036_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_036/attempt_00/nominal_execution.npz",
+      "trace_sha256": "42d43f8d8776e4d81dbc26584e3d2892fe45270d4c55014fe0008ec354333cc2",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_036/attempt_00/report.json",
+      "validation_sha256": "f5474a62736c0e39b5b16d9055fa1eacc04e1ad0d92ba9dce5bccc70c96766be"
+    },
+    {
+      "id": "candidate_037_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_037/attempt_00/nominal_execution.npz",
+      "trace_sha256": "703aa16494aaf32bf94489cf1a3489360e9a0f91182754a8eb45c9a33fc6e0ef",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_037/attempt_00/report.json",
+      "validation_sha256": "f966cf72cff7177ed78b45af31fd0027eb57d7c6b93bf6aa7e0f2bbf1730679a"
+    },
+    {
+      "id": "candidate_038_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_038/attempt_00/nominal_execution.npz",
+      "trace_sha256": "ef8eb237c37f2bcbaa8193660cd088587e8b06604fbeb50f1dd4669b7d447d53",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_038/attempt_00/report.json",
+      "validation_sha256": "6cbc7c9a31df4dbdb0278abb1b3de02189370aec50e16192a14159e630e1695c"
+    },
+    {
+      "id": "candidate_039_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_039/attempt_00/nominal_execution.npz",
+      "trace_sha256": "be7da561e6510f5a4dca2099998b50634dc23b04ae26c7efce674c04edcc8f2c",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_039/attempt_00/report.json",
+      "validation_sha256": "9caf0177ed89f101256e7adca9066cd13007e9c9ac4714b360e1e0ce3479e936"
+    },
+    {
+      "id": "candidate_040_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_040/attempt_00/nominal_execution.npz",
+      "trace_sha256": "2fd9389e11299714a009c4b3fab4ee35bacfa740268caac08d9539e0c7811a06",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_040/attempt_00/report.json",
+      "validation_sha256": "0d4a70a9c2fffafd3a09aab138cecd6f27d5327baa733aec0d5f288b7daa6be8"
+    },
+    {
+      "id": "candidate_041_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_041/attempt_00/nominal_execution.npz",
+      "trace_sha256": "b68b44d734da3c086c7e9502e73a1cfb45da7c53bcf0e7937c838e6fb735b731",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_041/attempt_00/report.json",
+      "validation_sha256": "1f2671a688a584b0648f7e3584c013bcd9add7b702518bb282c6fb3b5724a256"
+    },
+    {
+      "id": "candidate_042_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_042/attempt_00/nominal_execution.npz",
+      "trace_sha256": "59e73f8c6e96d0d5173f6024c0320855eb89da6f39b007378413aec359fd3bce",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_042/attempt_00/report.json",
+      "validation_sha256": "be1b898629cf7027d6a516058c134190e63225a96a22a2c125e894a784ba8848"
+    },
+    {
+      "id": "candidate_043_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_043/attempt_00/nominal_execution.npz",
+      "trace_sha256": "3a9f2c8b47e2427a755e587d533430808e17ef1e44167e286088aa2cbfa20c17",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_043/attempt_00/report.json",
+      "validation_sha256": "45bc3e9b082981f4b1198fb1ce15a67cc93142fcae7c11547b9e73684934a21b"
+    },
+    {
+      "id": "candidate_044_attempt_00",
+      "source_clip": "agent_motion_program",
+      "trace": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_044/attempt_00/nominal_execution.npz",
+      "trace_sha256": "c9dd8c9eee44fa02063551a026f9f035583d44ab136b05d52a8dcee926949160",
+      "validation": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/candidates/candidate_044/attempt_00/report.json",
+      "validation_sha256": "5eb7e3de6f1f12a7536c70a499836209fa103ca52198c60d3d6b8e1aa02f7861"
+    }
+  ],
+  "protocol_sha256": "e822dedf11cf05f36e9e7735f1d0ae01d46fd833bca9c13b653e7a38339fac2f",
+  "train_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+  "note": "Only accepted, fully validated executed trajectories are admitted as training data. Unvalidated or failed candidates are diagnostics only. Existing validation/test references are untouched. No train directory is created when zero candidates pass."
+}

@@ -1,0 +1,256 @@
+{
+  "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111",
+  "format": "official mjlab_research packed root/joint trajectories",
+  "splits": {
+    "train": {
+      "meta": {
+        "body_names": [
+          "base",
+          "r1_link",
+          "r3_link",
+          "r3_foot",
+          "r2_link",
+          "r4_link",
+          "r4_foot",
+          "l1_link",
+          "l3_link",
+          "l3_foot",
+          "l2_link",
+          "l4_link",
+          "l4_foot",
+          "imu",
+          "front_camera"
+        ],
+        "joint_names": [
+          "R1",
+          "R3",
+          "R2",
+          "R4",
+          "L1",
+          "L3",
+          "L2",
+          "L4"
+        ],
+        "clips": 24,
+        "frames": 10824,
+        "fps": 50,
+        "duration_h": 0.06,
+        "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111/train.npz",
+        "source_sha256": "d375de186c85f3ca31ea5901f289999531ef68c83cc6e313c734e278b4492290",
+        "conversion": "Copy root-link and joint arrays exactly; FK is recomputed by official MotionLoader on CUDA."
+      },
+      "files_sha256": {
+        "joint_names.json": "59559dce18b67e1eefc01657ce185caab8ba7ecf10ced38c6bacb44bb5290b58",
+        "motion_names.json": "3f4099e27338480a9150b5353890d840479ebed41fa86da43d4db752edd400f1",
+        "meta.json": "cb9a2e70ea8e2fdee658137d17331f0ce94769f23d43eae76125c730df2c29f4",
+        "root_lin_vel_w.npy": "d33b71220fce29c74660e3244bac5887602581a6585bbbf923583abd0f0b2f2a",
+        "joint_pos.npy": "d694eb14dc57c3ae7d72402dfe8f263ff65ad37f5a72b107e1881686f3e1c8f4",
+        "root_ang_vel_w.npy": "c3b6f30155005d53147a8cc807dc051c20870db8d5cd740c893466e20437b4ad",
+        "root_pos_w.npy": "145d282b53ba69d7ff275d5922ab58ae2435afe6870a35568653f9c8a78a9fda",
+        "root_quat_w.npy": "3aa3cf81524be0fcd0aafd7074a911bc5fa9e5e9a111822a3d5f9a839ebea7fc",
+        "motion_ends.npy": "a562cd09d4c0a3af9fe6a9ba342099375997c4340c3f7479c626599a7b7d575c",
+        "joint_vel.npy": "f1b62cc8d6582df32fd0f304705e6f132820c5b0657dd6e5abd19c6c34bdc3e0"
+      }
+    },
+    "validation": {
+      "meta": {
+        "body_names": [
+          "base",
+          "r1_link",
+          "r3_link",
+          "r3_foot",
+          "r2_link",
+          "r4_link",
+          "r4_foot",
+          "l1_link",
+          "l3_link",
+          "l3_foot",
+          "l2_link",
+          "l4_link",
+          "l4_foot",
+          "imu",
+          "front_camera"
+        ],
+        "joint_names": [
+          "R1",
+          "R3",
+          "R2",
+          "R4",
+          "L1",
+          "L3",
+          "L2",
+          "L4"
+        ],
+        "clips": 8,
+        "frames": 3608,
+        "fps": 50,
+        "duration_h": 0.02,
+        "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111/validation.npz",
+        "source_sha256": "018bc92b821acad2fe48afc4393621837ef4ca8481d808915b1cb3eca26e4054",
+        "conversion": "Copy root-link and joint arrays exactly; FK is recomputed by official MotionLoader on CUDA."
+      },
+      "files_sha256": {
+        "joint_names.json": "59559dce18b67e1eefc01657ce185caab8ba7ecf10ced38c6bacb44bb5290b58",
+        "motion_names.json": "33d7ab28bd0602e50c19c6c3f8bd9eb687fdeb79be9937d875b5d109f826609d",
+        "meta.json": "edf3b5db6e18c23b285eabb3adde8827689bf6c37f8513d5c5b8f1d4276ae296",
+        "root_lin_vel_w.npy": "9aea4d588a7d115974c4a9dce696f93977fdde53e1e9cf62eff103ec2b063c83",
+        "joint_pos.npy": "5c15eb939904d9302fc10ad1a5aa3d907188fce0da71d0b9640b716101826931",
+        "root_ang_vel_w.npy": "da5851adc5898cb0f751a4c4b5d017d1caf313cbb68c4d50615681dd60b63dbe",
+        "root_pos_w.npy": "e147097a122a34b99000e6a51abdc967b91a305046440f2cd5269099bd967075",
+        "root_quat_w.npy": "298f9ad5804a721ae36adf63c4eeeb9931f18223b82ab325579d18cc043adbeb",
+        "motion_ends.npy": "46c8a9ba29318fff7340206faf569bec0cb63a55e62d29e0af10e0b5c7a5f5f1",
+        "joint_vel.npy": "c3786dc08fa3343f9f968c4cd0ab1a4cbaaedf82bade279f7f5bc152c1f0a768"
+      }
+    },
+    "test": {
+      "meta": {
+        "body_names": [
+          "base",
+          "r1_link",
+          "r3_link",
+          "r3_foot",
+          "r2_link",
+          "r4_link",
+          "r4_foot",
+          "l1_link",
+          "l3_link",
+          "l3_foot",
+          "l2_link",
+          "l4_link",
+          "l4_foot",
+          "imu",
+          "front_camera"
+        ],
+        "joint_names": [
+          "R1",
+          "R3",
+          "R2",
+          "R4",
+          "L1",
+          "L3",
+          "L2",
+          "L4"
+        ],
+        "clips": 8,
+        "frames": 3608,
+        "fps": 50,
+        "duration_h": 0.02,
+        "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111/test.npz",
+        "source_sha256": "4dec42383562fb521573d7877ba8010331c2c93daedf273f5e33e53f91f09aac",
+        "conversion": "Copy root-link and joint arrays exactly; FK is recomputed by official MotionLoader on CUDA."
+      },
+      "files_sha256": {
+        "joint_names.json": "59559dce18b67e1eefc01657ce185caab8ba7ecf10ced38c6bacb44bb5290b58",
+        "motion_names.json": "7ae055f71f565d8a482a21b25f11c54c5e0f094bc070ea9548b449912e370dd1",
+        "meta.json": "c857a9eae616692edad04364e19b3c561fbda7d6c034fd0f353665a8eacb7544",
+        "root_lin_vel_w.npy": "5cf2028dfed3042171e5705ac049427e15aba93cfe000ccd1f67189015e8e16d",
+        "joint_pos.npy": "522bce69d9280680d7d58180925c47be6e7d2b1a6d983572a6f90c70af9b74c7",
+        "root_ang_vel_w.npy": "daf94e1310cc58e71320e0771f3715cf0e5a8a69297d1958ade99ce4cb632953",
+        "root_pos_w.npy": "a1b146394ca3f5d4269e8b87172393648020ed1b0b688a5d37041a9f1f5b085e",
+        "root_quat_w.npy": "a65abcdfe464be4702f091cb94fd88dd3ba2c389a9b5eda00c4b1a5852176e6a",
+        "motion_ends.npy": "46c8a9ba29318fff7340206faf569bec0cb63a55e62d29e0af10e0b5c7a5f5f1",
+        "joint_vel.npy": "1f07b3ca300b11cb7232423ee85c5be8513837fb0d86e7fc5490653550fdf228"
+      }
+    },
+    "train_6": {
+      "meta": {
+        "body_names": [
+          "base",
+          "r1_link",
+          "r3_link",
+          "r3_foot",
+          "r2_link",
+          "r4_link",
+          "r4_foot",
+          "l1_link",
+          "l3_link",
+          "l3_foot",
+          "l2_link",
+          "l4_link",
+          "l4_foot",
+          "imu",
+          "front_camera"
+        ],
+        "joint_names": [
+          "R1",
+          "R3",
+          "R2",
+          "R4",
+          "L1",
+          "L3",
+          "L2",
+          "L4"
+        ],
+        "clips": 6,
+        "frames": 2706,
+        "fps": 50,
+        "duration_h": 0.015,
+        "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111/train_6.npz",
+        "source_sha256": "af4d5bcf6b4a65dbb04b80866ca5f34aafc30131bc74e65d9956f48203fc16bf",
+        "conversion": "Copy root-link and joint arrays exactly; FK is recomputed by official MotionLoader on CUDA."
+      },
+      "files_sha256": {
+        "joint_names.json": "59559dce18b67e1eefc01657ce185caab8ba7ecf10ced38c6bacb44bb5290b58",
+        "motion_names.json": "5f2cbe6e4b139d62dc53a6d20809e9eeabd834a2b731584b902d7895212114d8",
+        "meta.json": "0763ac8d2ff01611a433e43e992645f12d82ec84b3f837f7e2fbe29901a89153",
+        "root_lin_vel_w.npy": "a583ad96870f4726001d844c94069f99856fc2ba3cf3e6b9dc32fd85c0d3354a",
+        "joint_pos.npy": "d3a075c47d76781100484ee35552c8fbcd63efe4b92abd1c3ea756bea7de6bde",
+        "root_ang_vel_w.npy": "1a1eee9fd1ef22c45921a9f46ab09f0bd6f2097ded5f31951a40383de3d3aa14",
+        "root_pos_w.npy": "a668cbad49e602713c06dcbd484403298afbab195aca69bd56a2ad9cda4bf519",
+        "root_quat_w.npy": "c6cae8a923c27af7452990457921cbc7719016f69b29366022868f3296f2cc55",
+        "motion_ends.npy": "8fb96657faa47beef7a9519b6f385d91eac0097b918b10305338463430d46c15",
+        "joint_vel.npy": "404585f59887ad6d2094961554c2814132d19f2088302e317693b89000d4adf6"
+      }
+    },
+    "train_12": {
+      "meta": {
+        "body_names": [
+          "base",
+          "r1_link",
+          "r3_link",
+          "r3_foot",
+          "r2_link",
+          "r4_link",
+          "r4_foot",
+          "l1_link",
+          "l3_link",
+          "l3_foot",
+          "l2_link",
+          "l4_link",
+          "l4_foot",
+          "imu",
+          "front_camera"
+        ],
+        "joint_names": [
+          "R1",
+          "R3",
+          "R2",
+          "R4",
+          "L1",
+          "L3",
+          "L2",
+          "L4"
+        ],
+        "clips": 12,
+        "frames": 5412,
+        "fps": 50,
+        "duration_h": 0.03,
+        "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111/train_12.npz",
+        "source_sha256": "f75b4ff812db4449c7d38518d9ae93afd4ea150de6a3336a72cb71641efa7a52",
+        "conversion": "Copy root-link and joint arrays exactly; FK is recomputed by official MotionLoader on CUDA."
+      },
+      "files_sha256": {
+        "joint_names.json": "59559dce18b67e1eefc01657ce185caab8ba7ecf10ced38c6bacb44bb5290b58",
+        "motion_names.json": "ec669d64004ffda93e8159260c6a3af363f89470cbf1e074ac86fad504cf215f",
+        "meta.json": "b2c12af3bb3cd2880152093b7688e63d35f2865784fc06ccb4a4cc755b4c842b",
+        "root_lin_vel_w.npy": "eef1e88682d7f7f333b1257dd2b48bb279b99ce9e1bfc00a8f765d14a09a3786",
+        "joint_pos.npy": "cfbb6d9694174de3c9a79b893b69716c3dc7c85d42a42c22d2b00f5a47730e5b",
+        "root_ang_vel_w.npy": "8793be78e1f077a58bb19ce56fb724ec2cfa90b18866f50e9627c068c1a1776a",
+        "root_pos_w.npy": "4057a57df57c93016350063c5619cd47cfa53e9905b583ce089583283c33a65a",
+        "root_quat_w.npy": "7854edc2ce8a1f358f9d135d355f8a1436867cc67e23eb22d0697aa93a6d18e4",
+        "motion_ends.npy": "01e8f838fdfc72bdb147363f29d089fab6c56fc1f42e95a6fead8ef6d2af0ebb",
+        "joint_vel.npy": "61f09e1a0fc54ee78e12c50d4f9893551f2c7d2e357c63aa6a22083ec7641b93"
+      }
+    }
+  }
+}

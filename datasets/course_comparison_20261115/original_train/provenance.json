@@ -1,0 +1,266 @@
+[
+  {
+    "source": "original",
+    "name": "train_clip_000",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 0,
+    "frames": [
+      0,
+      301
+    ],
+    "content_sha256": "4054a99d7ee521b907779169f16bf1862627f136d0d70124e200064d101f8152"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_001",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 1,
+    "frames": [
+      451,
+      752
+    ],
+    "content_sha256": "d69cfdda48c7f993a2f04977adfdaaf690c9701521ef8ebb1b1d78808dd83325"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_002",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 2,
+    "frames": [
+      902,
+      1203
+    ],
+    "content_sha256": "0b57c160145d6a767214a6c53667ba5577502a26f1dda18de0f14483c81ce9aa"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_003",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 3,
+    "frames": [
+      1353,
+      1654
+    ],
+    "content_sha256": "ae384ac6377013d2c382323a98a77b5ebd1290c9f1cd94f03c74d91700603041"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_004",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 4,
+    "frames": [
+      1804,
+      2105
+    ],
+    "content_sha256": "e185d5424a330b976da6c1d71c2c57f27abc78b3feaf1ca7d46e097cab1af34e"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_005",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 5,
+    "frames": [
+      2255,
+      2556
+    ],
+    "content_sha256": "a006c9173bc009ce18fbd7e87241ef02488efdce3812c509d98a4cbe9812a4b2"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_006",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 6,
+    "frames": [
+      2706,
+      3007
+    ],
+    "content_sha256": "54750ade010c261bfc910d1749154dad97bfc7fd8134a6e280181832ac936dca"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_007",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 7,
+    "frames": [
+      3157,
+      3458
+    ],
+    "content_sha256": "d612f2d3234f900fdb86c35fd20c5eb924636b4a01fa8299b4c0cba28efad0e6"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_008",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 8,
+    "frames": [
+      3608,
+      3909
+    ],
+    "content_sha256": "faa704213bbe24878019a9b340ed1c8de442830be5a05b4db85a88e14969c169"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_009",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 9,
+    "frames": [
+      4059,
+      4360
+    ],
+    "content_sha256": "bea2175324b28ae46be45074d6a21f075177b38c0582aeed1c4bf6d223ee082b"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_010",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 10,
+    "frames": [
+      4510,
+      4811
+    ],
+    "content_sha256": "8c68e19831a0795f69e63d32cfdffe38c7445e82de3fca5cf0f88e1f268a24d1"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_011",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 11,
+    "frames": [
+      4961,
+      5262
+    ],
+    "content_sha256": "3ff685fd4e7025ed3accfca3f7f4217d6fb1cb7c07181786e539276dc9324210"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_012",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 12,
+    "frames": [
+      5412,
+      5713
+    ],
+    "content_sha256": "666935f5e1908285e419fb808098cbf042e053fce6514030f2bea0baf628ec6d"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_013",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 13,
+    "frames": [
+      5863,
+      6164
+    ],
+    "content_sha256": "cfb17c9ef74d710626b333618b09d913caff81f60f10cde6769bcdb5115b3022"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_014",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 14,
+    "frames": [
+      6314,
+      6615
+    ],
+    "content_sha256": "5de353e3e92ade6ee6077eb9629c3bac3e5f0970f826580c6ccb9b17648fe33c"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_015",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 15,
+    "frames": [
+      6765,
+      7066
+    ],
+    "content_sha256": "b5f435282bc9350e31c009b202f3e77b0a8106b8a41e8e02210dfaca77a49ec7"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_016",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 16,
+    "frames": [
+      7216,
+      7517
+    ],
+    "content_sha256": "053590c7dadfa8c180a86ccf2e85efc2d7a19b150d35e8b04683e7d4d61cc9c2"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_017",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 17,
+    "frames": [
+      7667,
+      7968
+    ],
+    "content_sha256": "87d60bc93617465049dd105f25def964b52d6d5e93f67968b71dd4459bfe0b22"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_018",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 18,
+    "frames": [
+      8118,
+      8419
+    ],
+    "content_sha256": "8e6a47b8257ba51bbc15663be74f0748a4707e2c81866635ba0dad28e889c455"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_019",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 19,
+    "frames": [
+      8569,
+      8870
+    ],
+    "content_sha256": "600a7bcad27af21029a12a9660f992450360041ae0e2ca24148873953187d20d"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_020",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 20,
+    "frames": [
+      9020,
+      9321
+    ],
+    "content_sha256": "27f6416fb07fba38a4f487cf3c0e02e9fb1e191790e570d088b42c6e77f451c2"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_021",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 21,
+    "frames": [
+      9471,
+      9772
+    ],
+    "content_sha256": "405017798a4142ff6fe895a68aee432e3cc9620b8c26730f72cc1283845bb32a"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_022",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 22,
+    "frames": [
+      9922,
+      10223
+    ],
+    "content_sha256": "88e77de9a9d3480fc9301e3aaa12dea46b3d9ad795c3da396442f01d59781dd8"
+  },
+  {
+    "source": "original",
+    "name": "train_clip_023",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+    "source_index": 23,
+    "frames": [
+      10373,
+      10674
+    ],
+    "content_sha256": "f56cbd4d334b922a8623b0cfacdbf9124c41654ec4d3b60f179f3cdc6a1f99c6"
+  }
+]

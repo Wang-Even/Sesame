@@ -1,0 +1,290 @@
+{
+  "version": 5,
+  "style_reference": "User-provided SuperMimic paper figure; continuous post-startup curves",
+  "report_source": "reports/course_rerun_20261116",
+  "omit_high_speed": true,
+  "report_figure_numbers": {
+    "baselines/isaac_scene": "1",
+    "baselines/baseline_learning_curves": "2",
+    "baselines/baseline_test_metrics": "3",
+    "improvements/smoothness_comparison": "4",
+    "method_flow": "5",
+    "reference_execution_comparison": "6",
+    "supermimic_comparison": "7",
+    "supermimic_ablation": "8",
+    "ppo_extended_time_comparison": "9"
+  },
+  "run_suite": "runs/course_comparison_dense_20261116",
+  "extended_ppo": "runs/course_ppo_extended_dense_20261116",
+  "evaluation_interval_real_steps": {
+    "ppo": 32768,
+    "ppo_extended": 32768,
+    "supermimic": 32768,
+    "supermimic_codex": 32768,
+    "supermimic_deepseek": 32768,
+    "supermimic_h16": 32768,
+    "supermimic_h64": 32768,
+    "supermimic_no_critic": 32768
+  },
+  "first_update_evaluation": {
+    "ppo": true,
+    "ppo_extended": true,
+    "supermimic": true,
+    "supermimic_codex": true,
+    "supermimic_deepseek": true,
+    "supermimic_h16": true,
+    "supermimic_h64": true,
+    "supermimic_no_critic": true
+  },
+  "training_curve_smoothing": {
+    "method": "causal EMA",
+    "half_life_real_steps": 131072,
+    "alpha": "1 - 2 ** (-(steps[i] - steps[i-1]) / half_life_real_steps)",
+    "initialization": "first recorded value",
+    "artificial_endpoint_forcing": false,
+    "interpolation": false,
+    "extrapolation": false
+  },
+  "uncertainty": "Baseline training curves: one mean line per method; no uncertainty bands. Means use three separately smoothed training seeds at shared retained steps. Baseline training comparisons use environment steps only. Baseline final-test figures retain sample SD bands. No confidence bands for single-seed experiments.",
+  "baseline_training_uncertainty_bands": false,
+  "baseline_training_time_comparison": false,
+  "time_origin": "Each run uses its first valid parameter-update log timestamp. Drop earlier observations, then display recorded training_s minus startup_s. Evaluation time is excluded by the training logger. Dense runs include a measured first-update evaluation at time zero; older runs start at the first retained measurement. No synthetic zero-time observation.",
+  "crop_order": "Compute EMA on the full recorded history, then crop; no reinitialization of EMA.",
+  "startup_boundaries": [
+    {
+      "method": "ppo",
+      "seed": 42,
+      "startup_s": 10.619794746860862,
+      "first_logged_update_real_steps": 16384,
+      "source": "runs/course_comparison_dense_20261116/ppo/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/ppo/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "ppo_extended",
+      "seed": 42,
+      "startup_s": 10.904369171708822,
+      "first_logged_update_real_steps": 16384,
+      "source": "runs/course_ppo_extended_dense_20261116/startup.json",
+      "update_source": "runs/course_ppo_extended_dense_20261116/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic",
+      "seed": 42,
+      "startup_s": 313.7618461493403,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_codex",
+      "seed": 42,
+      "startup_s": 309.02784123271704,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_codex/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_codex/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_deepseek",
+      "seed": 42,
+      "startup_s": 310.94183759205043,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_deepseek/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_deepseek/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_h16",
+      "seed": 42,
+      "startup_s": 311.0740692857653,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_h16/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_h16/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_h64",
+      "seed": 42,
+      "startup_s": 308.96586423926055,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_h64/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_h64/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "supermimic_no_critic",
+      "seed": 42,
+      "startup_s": 309.1557649690658,
+      "first_logged_update_real_steps": 5632,
+      "source": "runs/course_comparison_dense_20261116/supermimic_no_critic/startup.json",
+      "update_source": "runs/course_comparison_dense_20261116/supermimic_no_critic/updates.jsonl",
+      "eval_every_real_steps": 32768,
+      "first_update_evaluation": true,
+      "rule": "First valid parameter-update log timestamp; retain observations at or after it.",
+      "zero_time_evaluation_observed": true
+    },
+    {
+      "method": "dqn",
+      "seed": 42,
+      "startup_s": 4.935388503596187,
+      "source": "runs/offpolicy_heading_20261107/training/dqn_seed42/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "dqn",
+      "seed": 43,
+      "startup_s": 4.99552365578711,
+      "source": "runs/offpolicy_heading_20261107/training/dqn_seed43/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "dqn",
+      "seed": 44,
+      "startup_s": 4.960692198947072,
+      "source": "runs/offpolicy_heading_20261107/training/dqn_seed44/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "ppo",
+      "seed": 42,
+      "startup_s": 1.9665544033050537,
+      "source": "runs/ppo_heading_20261105/training/heading_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "ppo",
+      "seed": 43,
+      "startup_s": 1.5786054134368896,
+      "source": "runs/ppo_heading_20261105/training/heading_seed43/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "ppo",
+      "seed": 44,
+      "startup_s": 1.7727279663085938,
+      "source": "runs/ppo_heading_20261105/training/heading_seed44/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "sac",
+      "seed": 42,
+      "startup_s": 6.059598132967949,
+      "source": "runs/offpolicy_heading_20261107/training/sac_seed42/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "sac",
+      "seed": 43,
+      "startup_s": 5.06843744404614,
+      "source": "runs/offpolicy_heading_20261107/training/sac_seed43/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "sac",
+      "seed": 44,
+      "startup_s": 5.048144521191716,
+      "source": "runs/offpolicy_heading_20261107/training/sac_seed44/training.jsonl",
+      "rule": "First periodic log with optimizer_updates > 0; exact first-update time is not recorded.",
+      "logged_real_steps": 73728,
+      "logged_optimizer_updates": 64
+    },
+    {
+      "method": "baseline",
+      "seed": 42,
+      "startup_s": 0.7715158462524414,
+      "source": "runs/ppo_motion_study_20261115/training/baseline_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "smooth",
+      "seed": 42,
+      "startup_s": 0.7234687805175781,
+      "source": "runs/ppo_motion_study_20261115/training/smooth_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    },
+    {
+      "method": "fast",
+      "seed": 42,
+      "startup_s": 0.7294754981994629,
+      "source": "runs/ppo_motion_study_20261115/training/fast_seed42/training.jsonl",
+      "rule": "Cumulative collection_seconds + update_seconds at the first completed PPO update.",
+      "logged_real_steps": 8192,
+      "logged_optimizer_updates": 1
+    }
+  ],
+  "raw_measurements": "Preserved in display_curve_data.csv; not overlaid on the plots.",
+  "curve_rendering": "One continuous solid EMA line per method, no markers, scatter, dashed connectors or raw auxiliary lines. Adjacent recorded EMA values are joined without resampling.",
+  "readability": {
+    "palette": "Distinct blue, orange, green and purple for four-method comparisons",
+    "zooms": "Copy existing EMA line coordinates; bounds explicitly labeled and audited",
+    "error_axes": "Bounds follow the full observed EMA range plus padding",
+    "smoothness": "Absolute means plus 100 * (smooth - original) / original insets",
+    "vertical_offsets": false,
+    "altered_smoothing": false
+  },
+  "gaps": "Intervals longer than three times the median interval remain in gap_audit. All intervals use solid lines between recorded EMA values; no additional evaluations are introduced.",
+  "test_results": "No smoothing or changes to final test values, sample SD or report tables.",
+  "units": "Keep Return and minutes. Plot time excludes startup; all cost and matched-total-time tables retain original inclusive timing.",
+  "baseline_heading": "Archived baseline CSV values already in degrees; not multiplied again.",
+  "colors": {
+    "ppo": "#c65520",
+    "ppo_extended": "#c65520",
+    "supermimic": "#1054ad",
+    "supermimic_deepseek": "#00866b",
+    "supermimic_codex": "#a3468c",
+    "dqn": "#8a7367",
+    "sac": "#1054ad",
+    "baseline": "#c65520",
+    "smooth": "#1054ad",
+    "fast": "#1054ad"
+  },
+  "seed_counts": {
+    "historical_baselines": 3,
+    "current_supermimic_and_improvements": 1
+  },
+  "no_training_or_model_computation": true
+}

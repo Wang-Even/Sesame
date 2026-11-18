@@ -1,0 +1,29 @@
+{
+  "intent": "Walk straight at 0.1 m/s using hip rotation about the actual Sesame vertical axes",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "support_A_transfer_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "x = 0.1 t, fixed authored height, level body",
+      "limb_motion": "Support hips retract, opposite pair lifts; piecewise cubic hip recovery and smooth knee lift"
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "support_B_transfer_A",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Continue forward; swap support pairs",
+      "limb_motion": "Opposite diagonal supports and retracts; other pair transfers"
+    }
+  ],
+  "coding_notes": "Agent-authored reachable diagonal trot parameter variants. Geometry, speed measurement and analytic execution feedback calibrated separately before collection. No trained-policy rollouts are used as generated programs. Each version must pass nominal and all 3 randomized executions.; phase origin and support overlap are explicitly encoded in motion.py."
+}

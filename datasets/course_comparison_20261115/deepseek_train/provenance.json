@@ -1,0 +1,266 @@
+[
+  {
+    "source": "deepseek",
+    "name": "candidate_004_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 4,
+    "frames": [
+      1204,
+      1505
+    ],
+    "content_sha256": "b44b17af79ee7da4ec779536a9f8d13dd11233990961de2f6c1a60b0954ffb3e"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_030_attempt_01",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 30,
+    "frames": [
+      9030,
+      9331
+    ],
+    "content_sha256": "408c2935f1a50c4127d6f2ce82c38cb2c1f40a3ab190b1753d32d4241ce9cbcd"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_026_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 26,
+    "frames": [
+      7826,
+      8127
+    ],
+    "content_sha256": "4a5d9ef9b386ad8ade287d302993885cebcd556c576f22d0442c5ba66332e321"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_018_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 18,
+    "frames": [
+      5418,
+      5719
+    ],
+    "content_sha256": "873ce2ab4d037921c58718bae6c9162da243181e540c0c09cceb262c37331b6e"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_010_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 10,
+    "frames": [
+      3010,
+      3311
+    ],
+    "content_sha256": "845aaac2fb30fbd7a6fa1b08095543d770b83fa0b1ebe25b666446de97c52ebd"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_013_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 13,
+    "frames": [
+      3913,
+      4214
+    ],
+    "content_sha256": "edacb8ab0bb40403e53292464e8447ceb7c94ba53d8a8d2230a8ac94534e736c"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_027_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 27,
+    "frames": [
+      8127,
+      8428
+    ],
+    "content_sha256": "424a890f31e84428513aa4e1ef9825fbb5f854408060a5dc7527edd520842d33"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_009_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 9,
+    "frames": [
+      2709,
+      3010
+    ],
+    "content_sha256": "7cb8bffa5cd10a4f52925700c110da57ea8bc7ab16ee36963ce504e1e85b5b85"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_029_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 29,
+    "frames": [
+      8729,
+      9030
+    ],
+    "content_sha256": "9037cf4ec08065016cf819e1989ade1793e96b265e5004a5716194873fd52c7f"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_012_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 12,
+    "frames": [
+      3612,
+      3913
+    ],
+    "content_sha256": "4370edb65bdc03ebceb18e627767f717c2771e7599a95fd04821bc4319dbcbfa"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_020_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 20,
+    "frames": [
+      6020,
+      6321
+    ],
+    "content_sha256": "cc9f18d6e979edf77ecd2d7023b61e074a0c9554f088d01da7e18e7d352ebe27"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_016_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 16,
+    "frames": [
+      4816,
+      5117
+    ],
+    "content_sha256": "b33c2b4ea9fd21f5e1a6a3dd013d770fe3e6ffe86423684288aa44e7cd93f61f"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_008_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 8,
+    "frames": [
+      2408,
+      2709
+    ],
+    "content_sha256": "257a5b7a4d06608a5c3a589594d75eae2400f8ccd523ffe4e9eab062b8c04298"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_017_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 17,
+    "frames": [
+      5117,
+      5418
+    ],
+    "content_sha256": "944eabefcaf41e20a864cea6ac2f7de311d44bdb7bd381b03b8b6250bcee9d8a"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_002_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 2,
+    "frames": [
+      602,
+      903
+    ],
+    "content_sha256": "df52896a7771fa9af43ddc09e0f17d6172b3f45a9c2b1fe916ae7764785561c8"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_025_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 25,
+    "frames": [
+      7525,
+      7826
+    ],
+    "content_sha256": "b2d272afbda570b22e44b4a7e40e2ba1ed4837ab52dfe9980e8eda8b02ec36e1"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_007_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 7,
+    "frames": [
+      2107,
+      2408
+    ],
+    "content_sha256": "180a4096fd6f65536b1b6ebd395752b40978e07a58f5a96dc58ef246453a43d8"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_001_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 1,
+    "frames": [
+      301,
+      602
+    ],
+    "content_sha256": "0baed63a5135d03c49091615efb70a21bfbcffd1fe54465d6c236ed5103b56ac"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_003_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 3,
+    "frames": [
+      903,
+      1204
+    ],
+    "content_sha256": "eadecfd53ca5559d5f3978e2e68b8843637d09924f8ecca5da5865fe3ae0b774"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_006_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 6,
+    "frames": [
+      1806,
+      2107
+    ],
+    "content_sha256": "0561561327c514bfc71ffa19f0bbbe278d57295853445a80ce43cb88bd991a29"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_014_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 14,
+    "frames": [
+      4214,
+      4515
+    ],
+    "content_sha256": "58efdb05bba4b37b96b54b8f97072b912509372c2f7eca36b9cf44d80c421922"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_023_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 23,
+    "frames": [
+      6923,
+      7224
+    ],
+    "content_sha256": "d2d87a5dd46a9dbd496257b7cf7edecc427398a095dfc7886710eaadf07e68c0"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_011_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 11,
+    "frames": [
+      3311,
+      3612
+    ],
+    "content_sha256": "285ed19a84ed0ca840ee5a8874ef4586fc3d47d25db7779766871cf31e84a613"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_005_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 5,
+    "frames": [
+      1505,
+      1806
+    ],
+    "content_sha256": "3eaec29a8bfd7b717b08aba58dc9f5534bbc0404f31c888019f747641fcf15bf"
+  }
+]

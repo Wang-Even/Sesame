@@ -1,0 +1,60 @@
+{
+  "all": {
+    "episodes": 12,
+    "complete_episodes": 12,
+    "valid_speed_episodes": 12,
+    "direction_defined_episodes": 12,
+    "mean_forward_speed_from_displacement_m_s": 0.04121371344512654,
+    "mean_reference_forward_speed_from_displacement_m_s": 0.10478020445293142,
+    "mean_forward_displacement_m": 0.2464580237865448,
+    "mean_abs_lateral_displacement_m": 0.0822264552116394,
+    "mean_max_abs_lateral_displacement_m": 0.08395027369260788,
+    "mean_abs_net_movement_direction_deg": 26.49123191833496,
+    "mean_abs_final_body_yaw_deg": 15.33990478515625,
+    "mean_world_body_yaw_rms_deg": 15.833686828613281
+  },
+  "by_source": {
+    "original": {
+      "episodes": 4,
+      "complete_episodes": 4,
+      "valid_speed_episodes": 4,
+      "direction_defined_episodes": 4,
+      "mean_forward_speed_from_displacement_m_s": 0.08026783083593565,
+      "mean_reference_forward_speed_from_displacement_m_s": 0.11743357947040162,
+      "mean_forward_displacement_m": 0.48000162839889526,
+      "mean_abs_lateral_displacement_m": 0.060231663286685944,
+      "mean_max_abs_lateral_displacement_m": 0.0650842934846878,
+      "mean_abs_net_movement_direction_deg": 7.166077136993408,
+      "mean_abs_final_body_yaw_deg": 4.430534362792969,
+      "mean_world_body_yaw_rms_deg": 4.695711135864258
+    },
+    "deepseek": {
+      "episodes": 4,
+      "complete_episodes": 4,
+      "valid_speed_episodes": 4,
+      "direction_defined_episodes": 4,
+      "mean_forward_speed_from_displacement_m_s": 0.022613938686042324,
+      "mean_reference_forward_speed_from_displacement_m_s": 0.09808424224821619,
+      "mean_forward_displacement_m": 0.13523134589195251,
+      "mean_abs_lateral_displacement_m": 0.10068464279174805,
+      "mean_max_abs_lateral_displacement_m": 0.1007923036813736,
+      "mean_abs_net_movement_direction_deg": 36.359310150146484,
+      "mean_abs_final_body_yaw_deg": 20.26585578918457,
+      "mean_world_body_yaw_rms_deg": 22.40428352355957
+    },
+    "codex": {
+      "episodes": 4,
+      "complete_episodes": 4,
+      "valid_speed_episodes": 4,
+      "direction_defined_episodes": 4,
+      "mean_forward_speed_from_displacement_m_s": 0.020759370813401644,
+      "mean_reference_forward_speed_from_displacement_m_s": 0.0988227916401764,
+      "mean_forward_displacement_m": 0.12414103746414185,
+      "mean_abs_lateral_displacement_m": 0.08576305210590363,
+      "mean_max_abs_lateral_displacement_m": 0.08597420156002045,
+      "mean_abs_net_movement_direction_deg": 35.94830322265625,
+      "mean_abs_final_body_yaw_deg": 21.323322296142578,
+      "mean_world_body_yaw_rms_deg": 20.40106773376465
+    }
+  }
+}

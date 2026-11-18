@@ -1,0 +1,51 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint (2-DoF-per-leg) vertical-axis hips, using direct smooth joint curves with diagonal pairs A=(RF,LR) and B=(RR,LF) offset by half a cycle; constant base height, mirrored hip cosine waves, and diagonal knee flexion with a normalized swing arch.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.25,
+      "name": "A-stance / B-swing (early)",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, z=0.04673357 m; zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep via cos(2*pi*pA) around center 1.60 with amplitude 0.265; knees R3/L4 at pi-stance_flex (0.15). Pair B (RR,LF) in swing: hips via cos(2*pi*pB); knees R4/L3 flexing with normalized sine arch up to 0.58."
+    },
+    {
+      "start": 0.25,
+      "end": 0.5,
+      "name": "A-stance / B-swing (late)",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height.",
+      "limb_motion": "Pair A continues stance sweep; pair B swing arch peaks then returns toward stance_flex as pB approaches 0.5 wrap."
+    },
+    {
+      "start": 0.5,
+      "end": 0.75,
+      "name": "B-stance / A-swing (early)",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height.",
+      "limb_motion": "Pair B (RR,LF) in stance with knees R4/L3 at 0.15; pair A (RF,LR) in swing with knees R3/L4 flexing up to 0.58 via normalized sine arch."
+    },
+    {
+      "start": 0.75,
+      "end": 1.0,
+      "name": "B-stance / A-swing (late)",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height.",
+      "limb_motion": "Pair B continues stance sweep; pair A swing arch returns toward stance_flex, wrapping smoothly into next cycle."
+    }
+  ],
+  "coding_notes": "Parameters (distinct from prior candidates 008-011): freq=2.55 Hz, hip amplitude A=0.264 rad, hip center=1.602 rad, stance knee flex=0.15 rad, swing knee lift=0.57 rad, phase origin=0.13, base height=0.04673357 m. Joint order R1,R3,R2,R4,L1,L3,L2,L4. Compute pA=freq*t+phase0 then pA-=floor(pA); pB=pA+0.5 then pB-=floor(pB). cA=cos(2*pi*pA), cB=cos(2*pi*pB). Hips: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing flags swingA=pA>=0.5, swingB=pB>=0.5. Normalize sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB). flexA=where(swingA, stance_flex+swing_lift*archA, stance_flex); flexB=where(swingB, stance_flex+swing_lift*archB, stance_flex). Knees: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q. root_pos_w=[speed*t, 0*t, base_z*(1+0*t)]; root_rpy=[0*t,0*t,0*t]. Contacts: contactA=pA<0.5, contactB=pB<0.5; stack [contactA, contactB, contactB, contactA] for RF,RR,LF,LR. No clipping, no ground correction, no base ripple. Normalize swing phase before sine to avoid wrap discontinuity."
+}

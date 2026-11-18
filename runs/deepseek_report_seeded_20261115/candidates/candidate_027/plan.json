@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint quadruped using diagonal pairs A=(RF,LR) and B=(RR,LF) offset by half cycle; direct smooth joint curves with normalized swing arch, constant base height, no clipping or base ripple.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, z=0.04673357 m; zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep via cos(2*pi*pA) around center 1.60 with amplitude 0.27; knees R3,L4 held at pi-stance_flex (0.15). Pair B (RR,LF) in swing: hips via cos(2*pi*pB); knees R4,L3 = stance_flex + swing_lift*sin(pi*sB) with swing_lift 0.55, normalized sB in [0,1]."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "swing_A_stance_B",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height; no yaw or lateral motion.",
+      "limb_motion": "Pair A (RF,LR) in swing: knees R3,L4 = stance_flex + swing_lift*sin(pi*sA); hips continue cos wave. Pair B (RR,LF) in stance: knees R4,L3 held at stance_flex; hips continue cos wave. Phase wraps continuously via floor normalization."
+    }
+  ],
+  "coding_notes": "Exact parameters: freq=2.44 Hz, hip amplitude A=0.265 rad, hip center=1.595 rad, stance knee flex=0.147 rad, swing knee lift=0.562 rad, phase origin=0.121, base height=0.04673357 m. Joint order R1,R3,R2,R4,L1,L3,L2,L4. pA=freq*t+phase0 normalized by floor; pB=pA+0.5 normalized. cA=cos(2*pi*pA), cB=cos(2*pi*pB). R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. swingA=pA>=0.5, swingB=pB>=0.5; sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA, stance_flex+swing_lift*archA, stance_flex); flexB=where(swingB, stance_flex+swing_lift*archB, stance_flex); R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Contacts: contactA=pA<0.5, contactB=pB<0.5; stack [contactA, contactB, contactB, contactA]. Root pos stack [speed*t, 0*t, base_z*(1+0*t)], rpy all zeros. No clipping, no base ripple, no tensor methods; use m.stack, m.where, m.floor, m.sin, m.cos."
+}

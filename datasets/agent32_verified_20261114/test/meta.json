@@ -1,0 +1,36 @@
+{
+  "body_names": [
+    "base",
+    "r1_link",
+    "r3_link",
+    "r3_foot",
+    "r2_link",
+    "r4_link",
+    "r4_foot",
+    "l1_link",
+    "l3_link",
+    "l3_foot",
+    "l2_link",
+    "l4_link",
+    "l4_foot",
+    "imu",
+    "front_camera"
+  ],
+  "joint_names": [
+    "R1",
+    "R3",
+    "R2",
+    "R4",
+    "L1",
+    "L3",
+    "L2",
+    "L4"
+  ],
+  "fps": 50,
+  "clips": 4,
+  "frames": 1204,
+  "duration_h": 0.006666666666666667,
+  "source": "actual nominal MuJoCo execution, after fixed nominal and perturbation gates",
+  "protocol_sha256": "d64edb5e46fea1763c1ed6b2f1216355a3cb8c92d9e3890ae3531f8380f91a4d",
+  "split": "test"
+}

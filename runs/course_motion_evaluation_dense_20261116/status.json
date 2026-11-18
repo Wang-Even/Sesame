@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "completed": [
+    "ppo",
+    "supermimic",
+    "supermimic_deepseek",
+    "supermimic_codex"
+  ],
+  "started_unix": 1794805481.7988782,
+  "current": "supermimic_codex",
+  "finished_unix": 1794805519.774763
+}

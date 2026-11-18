@@ -1,0 +1,15 @@
+{
+  "target_accepted": 32,
+  "candidate_budget": 256,
+  "initial_submitted_programs": 81,
+  "split_counts": {
+    "train": 24,
+    "validation": 4,
+    "test": 4
+  },
+  "split_seed": 20261114,
+  "teacher": "authored phase gait + analytic feedback + native PD",
+  "training": "fresh official SuperMimic, seed42, 512 envs, 2097152 real steps, 0.5 ms physics",
+  "measurement_audit": "runs/agent32_collection_20261114_diagnostics/velocity_audit.json",
+  "controller_calibration": "runs/agent32_collection_20261114_diagnostics/feedback_10/report.json"
+}

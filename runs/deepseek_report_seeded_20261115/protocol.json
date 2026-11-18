@@ -1,0 +1,125 @@
+{
+  "config": {
+    "source": "datasets/supermimic_research_sesame_20261112/train",
+    "seed": 42,
+    "rounds": 4,
+    "candidates_per_round": 6,
+    "duration_s": 6.0,
+    "fps": 50,
+    "target_speed_m_s": 0.1,
+    "robust_trials": 3,
+    "gates": {
+      "joint_velocity_max_rad_s": 10.471975512,
+      "joint_acceleration_max_rad_s2": 400.0,
+      "foot_surface_min_z_m": -0.003,
+      "root_height_min_m": 0.035,
+      "tilt_max_deg": 45.0,
+      "velocity_rmse_max_m_s": 0.05,
+      "mean_speed_error_max_m_s": 0.025,
+      "heading_rms_max_deg": 10.0,
+      "heading_max_deg": 20.0,
+      "lateral_displacement_max_m": 0.12,
+      "joint_tracking_rmse_max_rad": 0.25,
+      "root_tracking_rmse_max_m": 0.1,
+      "contact_foot_speed_rms_max_m_s": 0.05,
+      "nonfoot_contact_fraction_max": 0.01,
+      "torque_near_stall_fraction_max": 0.25,
+      "action_rate_rms_max_per_s": 20.0
+    },
+    "api": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "api_key_env": "DEEPSEEK_API_KEY"
+    },
+    "physics_dt_s": 0.0005,
+    "diagnostic_only_metrics": [
+      "velocity_rmse_m_s",
+      "contact_foot_speed_rms_m_s"
+    ],
+    "mean_speed_measurement": "displacement",
+    "execution_feedback": {
+      "position_gain": 12.0,
+      "velocity_gain": 1.0,
+      "heading_gain": 1.5,
+      "lateral_gain": 8.0,
+      "yaw_rate_gain": 0.03,
+      "velocity_filter_alpha": 0.15
+    }
+  },
+  "generator": "mimicagent_sesame",
+  "model": "deepseek-flash",
+  "candidates": 64,
+  "repairs": 1,
+  "accepted_target": 32,
+  "source_sha256": {
+    "sesame_trajectory_agent/mimic_prompts.py": "6bdfefebcea9f5b4eff80aead7ab4ae603f8caf1e36e1881c78d1001241f1f33",
+    "sesame_trajectory_agent/proposer.py": "bb8cea6b1599ef30f5bbf0ada952ff682ae3359a5cc5bebee718e949bbb12cf9",
+    "sesame_trajectory_agent/motion_program.py": "3d08e67debb63136501e6ac2a5fd681835f6fb23893f946cba7af92c95d5f9b0",
+    "sesame_trajectory_agent/schema.py": "6f3d36eb49c565aaae11c3bc4acdf83bd3c8bf5c87c3c32262be4bb3ccb9cb6e",
+    "sesame_trajectory_agent/decisions.py": "97bd4384713484217a58ca9abe2e911684db452a9ee5e6e7e1ac834f63c4042e",
+    "sesame_trajectory_agent/validation.py": "65e9f32e5d73471bfc6c302c6a9561eb9cf33c86259a4fedab158e0e3c1c5fe3",
+    "sesame_trajectory_agent/__init__.py": "88f43298679139d370da910cb5c77e1e6208f15f80537f2cc62768df29bd509a",
+    "sesame_trajectory_agent/api_client.py": "82bdc89cb2e9817af6cfbabb1ac0729b32653364e8079608f58364c7611b0f8e",
+    "sesame_trajectory_agent/trajectories.py": "6c25e2b7eb7704bc50e97504378624bb7ef4cb23716f1c062b2c65e37fabea80",
+    "sesame_trajectory_agent/mimic_motion.py": "d703ac35cf3558c916240cc7c91548b8d3ead6ad79dc16999d70c2a856f99984",
+    "scripts/run_mimicagent.py": "375a47f6b4cc13134c21190a259864908f0f4c321aac8fd8b6bec97276ea188b",
+    "sesame_research/robot.py": "2eb1b2309031d4b6bd1a06ee4a3409e98184472570f4b8913795ebf675446d2a",
+    "sesame_research/task.py": "c9d3b28beee71441ae31254b5417c51f4ffe364ce6eefa92504ea046280b60a5"
+  },
+  "continue_on_candidate_error": true,
+  "paper": "https://arxiv.org/abs/2609.24145",
+  "public_workflow": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/agent/pipeline.py",
+  "provenance": "Local Sesame adaptation of paper and public humanoid workflow; quadruped official code not released",
+  "acceptance": "all kinematic checks + native PD nominal trial + every configured randomized trial",
+  "acceptance_scope": "existing experimental dynamic gates, not course requirements or MimicAgent paper success criteria",
+  "execution_feedback": {
+    "position_gain": 12.0,
+    "velocity_gain": 1.0,
+    "heading_gain": 1.5,
+    "lateral_gain": 8.0,
+    "yaw_rate_gain": 0.03,
+    "velocity_filter_alpha": 0.15
+  },
+  "mean_speed_measurement": "displacement",
+  "generation": "agent-authored executable expressions on CUDA, no joint clipping, root adjustment or seed resampling",
+  "changes_from_paper": [
+    "deepseek-flash instead of paper Claude models",
+    "Sesame eight-joint CUDA adapter",
+    "0.035 m minimum height and twice actual standing height; Go2's 0.1 m would reject all Sesame standing poses",
+    "fixed task semantics and native PD dynamics verification before admission at user's request",
+    "only successful actual executed traces exported for SuperMimic"
+  ],
+  "limitations": [
+    "PD failure does not imply untrackable by learned RL policy",
+    "self collision disabled in inherited model",
+    "50 Hz sampled validation; contact velocity is a slip proxy",
+    "search trials are not held-out evaluations"
+  ],
+  "engineering_context": {
+    "source": "/home/ywwang/sesame/configs/trajectory_agent_deepseek_seeded_report_context.json",
+    "sha256": "ac7fd0f40db1e4bef85e9e0b8162b1272db00fdefe9950f41e6daba0325a4bf3",
+    "content": {
+      "experiment": "DeepSeek-flash generated programs with shared calibrated feedback controller",
+      "provenance": "Engineering hints from robot geometry and prior Codex-agent training-data collection; no held-out policy evaluation or test reference contents used. DeepSeek independently returns every complete plan and motion program. This is not a blind equal-budget language-model benchmark. The positive code example is the model own previously validated API output, not Codex source code; preflight and aborted sampling costs are logged separately.",
+      "task_note": "The native execution controller already supplies position and heading feedback on hip amplitudes. Author a reachable nominal gait; do not add root corrections or clip joint angles. The runtime will physically execute the complete program and admit only passed trials.",
+      "geometric_prior": [
+        "Use direct smooth joint trajectories; generic planar leg IK is inappropriate for the vertical-axis Sesame hips.",
+        "A calibrated diagonal pair arrangement is A=(right_front,left_rear), B=(right_rear,left_front); B phase=A phase+0.5 modulo 1.",
+        "Useful engineering nominal: frequency about 2.5 Hz, hip oscillation amplitude about 0.27 rad, front-right/rear-left hip center about 1.60 rad (opposite centers pi-center), knee flexion in stance about 0.15 rad and extra swing flexion about 0.55 rad, authored base height about 0.04673357 m.",
+        "With phase p in [0,1), hip motion can be cos(2*pi*p); stance is p<0.5, swing is p>=0.5; positive sine arch of normalized swing controls knee lift. R3 and L4 angle=pi-flexion; R4 and L3 angle=flexion.",
+        "Mirrored hip wave signs: R1=center+A*cos(phaseA); R2=pi-center+A*cos(phaseB); L1=pi-center-A*cos(phaseB); L2=center-A*cos(phaseA). Joint output order R1,R3,R2,R4,L1,L3,L2,L4.",
+        "The nominal initial phase about 0.125 avoids starting at peak stance reversal. Close smooth variations of phase, frequency, center, amplitude or lift are appropriate data diversity; preserve accurate declared contacts."
+      ],
+      "diversity_request": "For each candidate, choose a distinct set of several smooth gait parameters near the nominal engineering prior. Small variations are deliberate training-data augmentation. You choose the values and write the full code; no external code generator will replace them. Do not repeat any previous program. Read prior measured failures before adjusting. Numerical hints are not hard limits, no clipping is performed. In the plan coding_notes specify your exact numerical frequency, amplitude, hip center, knee bias, knee lift, phase origin and base height. Read previous_attempts generation_explanation; pick meaningfully different motion values instead of merely changing code wording. At least one of frequency, amplitude, center, lift or phase should differ from prior choices by a real gait variation, not floating-point rounding. Candidate 0 may use the nominal, later candidates should explore nearby smooth variants. Values near frequency 2.4 to 2.6, amplitude 0.25 to 0.29, center 1.58 to 1.65, knee lift 0.50 to 0.60, phase 0.09 to 0.16 describe useful engineering variation; these are suggestions, not runtime limits. Never modify ground rules to force acceptance.",
+      "code_notes": "Follow only the documented m.API. No loops, imports, helper functions or tensor methods. Use independent local names, compute explicit A and B phase columns, broadcast constant output columns with 0*t. Do not square the knee-lift sine by default, as it changes actual support clearance. JSON must be valid; explanation briefly names chosen gait parameters.",
+      "validated_self_example": {
+        "source": "runs/deepseek_report_pilot_20261115/candidates/candidate_000/attempt_00",
+        "author": "deepseek-flash (verified API response in pilot)",
+        "validation": "passed kinematics, nominal and all three randomized native physics trials",
+        "code": "def generate(t, home, m):\n    freq = 2.5\n    A = 0.27\n    center = 1.60\n    stance_flex = 0.15\n    swing_lift = 0.55\n    base_z = 0.04673357\n    phase0 = 0.125\n    pi = 3.141592653589793\n    two_pi = 6.283185307179586\n\n    pA = freq * t + phase0\n    pA = pA - m.floor(pA)\n    pB = pA + 0.5\n    pB = pB - m.floor(pB)\n\n    cA = m.cos(two_pi * pA)\n    cB = m.cos(two_pi * pB)\n\n    R1 = center + A * cA\n    R2 = pi - center + A * cB\n    L1 = pi - center - A * cB\n    L2 = center - A * cA\n\n    swingA = pA >= 0.5\n    swingB = pB >= 0.5\n\n    sA = (pA - 0.5) * 2.0\n    sB = (pB - 0.5) * 2.0\n    archA = m.sin(pi * sA)\n    archB = m.sin(pi * sB)\n\n    flexA = m.where(swingA, stance_flex + swing_lift * archA, stance_flex)\n    flexB = m.where(swingB, stance_flex + swing_lift * archB, stance_flex)\n\n    R3 = pi - flexA\n    L4 = pi - flexA\n    R4 = flexB\n    L3 = flexB\n\n    q = m.stack([R1, R3, R2, R4, L1, L3, L2, L4], dim=-1)\n\n    z = 0 * t\n    o = 1 + z\n    root_pos_w = m.stack([home['speed'] * t, z, base_z * o], dim=-1)\n    root_rpy = m.stack([z, z, z], dim=-1)\n\n    contactA = pA < 0.5\n    contactB = pB < 0.5\n    contacts = m.stack([contactA, contactB, contactB, contactA], dim=-1)\n\n    return {\"root_pos_w\": root_pos_w, \"root_rpy\": root_rpy, \"joint_pos\": q, \"contacts\": contacts}",
+        "instruction": "This positive example was written by DeepSeek, not by a deterministic code template. For a new candidate, independently generate a complete program with at least two meaningful numerical gait variations (frequency, amplitude, hip center, knee lift or initial phase). Preserve correct diagonal knee mapping: R3 and L4 share flexA; R4 and L3 share flexB. Normalize swing phase to 0..1 before sine; sin(pi*(p-.5)) without division by .5 is discontinuous at wrap. Avoid adding base ripple unless necessary. Never repeat this exact parameter set."
+      }
+    },
+    "scope": "prompt context only; no runtime limits or admission changes"
+  }
+}

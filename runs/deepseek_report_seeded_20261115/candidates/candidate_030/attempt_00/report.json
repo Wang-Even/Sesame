@@ -1,0 +1,23 @@
+{
+  "id": "candidate_030_attempt_00",
+  "generator": "mimicagent_sesame",
+  "accepted": false,
+  "validation_complete": false,
+  "protocol_sha256": "ec990fcf63dde8917f15fda8ae9ef5843d4f74416ca4b39918482e4ac5fc946d",
+  "plan_sha256": "696fa31a6c29f900056d102a0d6da08e8d0466777f996830c4f220dfc2a52a9e",
+  "generation_explanation": "Diagonal trot with freq=2.52 Hz, hip amplitude 0.268 rad, hip center 1.605 rad, stance knee flex 0.150 rad, swing knee lift 0.560 rad, phase origin 0.112, constant base height 0.04673357 m. Direct smooth joint curves with normalized swing arch; diagonal knee mapping R3=L4=pi-flexA, R4=L3=flexB; contacts declared for stance pairs A=(RF,LR), B=(RR,LF).",
+  "motion_program_sha256": "33c8e8868809113317f823f885e0e3d7f3d4db4b06d21b074c99dace612bea9c",
+  "candidate_reference_sha256": "e3fb40cd67eb840463652bfd1725eed0f66cd2ec1c423324d9733ae8744933f6",
+  "generation": {
+    "generation_clipping": false,
+    "automatic_root_correction": false,
+    "source": "agent-authored phase motion program; no source-clip resampling",
+    "ik_target_error_max_m": 0.0
+  },
+  "trajectory_sha256": "4ef09c8dfe2a03fe8611b49cbc6d6895fd40583cf20d6ea9805788b653446e31",
+  "declared_contacts_sha256": "97365d10a49f452ae691120d4861505bc2e1e42d3638f6e9cb3a8270acbce517",
+  "stage": "program_rejected",
+  "reasons": [
+    "ValueError: Identical trajectory AND contacts already tested: candidate_025_attempt_00; changing comments or unused expressions is not a revision"
+  ]
+}

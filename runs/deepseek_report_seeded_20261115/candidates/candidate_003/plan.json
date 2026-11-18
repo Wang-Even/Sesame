@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward diagonal trot at 0.1 m/s for Sesame's 8-joint (2-DoF-per-leg) morphology, using direct smooth joint curves with mirrored hip signs and diagonal pair phasing; candidate 3 explores a slightly lower frequency, larger hip amplitude, higher hip center, and larger swing knee lift than prior accepted candidates.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "pairA_stance_pairB_swing",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=home['speed']*t, y=0, constant authored base height 0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep via cos(2*pi*pA) with R1=center+A*cA, L2=center-A*cA; knees R3=L4=pi-stance_flex (0.15 rad). Pair B (RR,LF) in swing: R2=pi-center+A*cB, L1=pi-center-A*cB; knees R4=L3=stance_flex+swing_lift*sin(pi*sB) with sB normalized 0..1 over swing."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "pairA_swing_pairB_stance",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and constant base height; no ripple or correction.",
+      "limb_motion": "Pair A (RF,LR) in swing: knee flex R3=L4=stance_flex+swing_lift*sin(pi*sA); hips continue cosine sweep. Pair B (RR,LF) in stance: knees R4=L3=stance_flex; hips continue cosine sweep. Phase wraps handled by floor-based normalization before sine."
+    }
+  ],
+  "coding_notes": "Chosen gait parameters (distinct from candidates 0-2): frequency=2.48 Hz, hip amplitude A=0.28 rad, hip center=1.64 rad, stance knee flexion=0.15 rad, swing knee lift=0.58 rad, phase origin=0.10, base height=0.04673357 m, forward speed=home['speed']. Pair A=(right_front,left_rear) phase pA=freq*t+phase0 normalized by floor; pair B pB=pA+0.5 normalized. Hip signs per URDF vertical-axis hips: R1=center+A*cos(2pi*pA); R2=pi-center+A*cos(2pi*pB); L1=pi-center-A*cos(2pi*pB); L2=center-A*cos(2pi*pA). Knee mapping: R3=L4=pi-flexA (flexA from pair A swing), R4=L3=flexB (flexB from pair B swing). Swing arch uses s=(p-0.5)*2 then sin(pi*s) to avoid wrap discontinuity. Contacts declared as diagonal stance windows: RF,LR contact when pA<0.5; RR,LF contact when pB<0.5. Output q order R1,R3,R2,R4,L1,L3,L2,L4 via m.stack. Root pos = [home['speed']*t, 0*t, base_z*(1+0*t)], root_rpy zeros. No clipping, projection, or hidden ground correction; rely on native PD and feedback controller."
+}

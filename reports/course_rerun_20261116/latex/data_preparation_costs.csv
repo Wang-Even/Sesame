@@ -1,0 +1,6 @@
+﻿label,source,status,accepted,attempts,api_calls,elapsed_s,time_basis
+DeepSeek 试采集,runs/deepseek_report_pilot_20261115/summary.json,complete,3,3,6,61.183124573901296,elapsed_s
+DeepSeek 探索采集（中止）,runs/deepseek_report_20261115/status.json,interrupted,4,12,26,155.43181252479553,recorded finished_unix - started_unix
+DeepSeek 正式采集,runs/deepseek_report_seeded_20261115/summary.json,complete,32,33,66,606.6446055583656,elapsed_s
+Codex 历史正式采集,runs/agent32_collection_20261114/summary.json,complete,32,45,0,507.2325588911772,elapsed_s
+Codex 统一验收规则复核,runs/agent32_collection_20261114_reassessed_20261115/summary.json,complete,41,45,0,0.10932054929435253,elapsed_s

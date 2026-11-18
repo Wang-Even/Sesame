@@ -1,0 +1,1609 @@
+{
+  "selection_seed": 20261115,
+  "collection_sources": {
+    "codex": {
+      "run": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115",
+      "manifest_sha256": "80fd876da2ec401172233f8ad233b34df80b5856f41fa6c56d687ea7e47572fc",
+      "protocol_sha256": "e822dedf11cf05f36e9e7735f1d0ae01d46fd833bca9c13b653e7a38339fac2f",
+      "accepted_available": 41,
+      "selected": 32
+    },
+    "deepseek": {
+      "run": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115",
+      "manifest_sha256": "19c30bd02c743a60cbc962d8850bbdb6eaea3495447805ff38fa6a0d565a1f9d",
+      "protocol_sha256": "ec990fcf63dde8917f15fda8ae9ef5843d4f74416ca4b39918482e4ac5fc946d",
+      "accepted_available": 32,
+      "selected": 32
+    }
+  },
+  "mapping": {
+    "original_train": [
+      {
+        "source": "original",
+        "name": "train_clip_000",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "4054a99d7ee521b907779169f16bf1862627f136d0d70124e200064d101f8152"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_001",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 1,
+        "frames": [
+          451,
+          752
+        ],
+        "content_sha256": "d69cfdda48c7f993a2f04977adfdaaf690c9701521ef8ebb1b1d78808dd83325"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_002",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 2,
+        "frames": [
+          902,
+          1203
+        ],
+        "content_sha256": "0b57c160145d6a767214a6c53667ba5577502a26f1dda18de0f14483c81ce9aa"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_003",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 3,
+        "frames": [
+          1353,
+          1654
+        ],
+        "content_sha256": "ae384ac6377013d2c382323a98a77b5ebd1290c9f1cd94f03c74d91700603041"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_004",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 4,
+        "frames": [
+          1804,
+          2105
+        ],
+        "content_sha256": "e185d5424a330b976da6c1d71c2c57f27abc78b3feaf1ca7d46e097cab1af34e"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_005",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 5,
+        "frames": [
+          2255,
+          2556
+        ],
+        "content_sha256": "a006c9173bc009ce18fbd7e87241ef02488efdce3812c509d98a4cbe9812a4b2"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_006",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 6,
+        "frames": [
+          2706,
+          3007
+        ],
+        "content_sha256": "54750ade010c261bfc910d1749154dad97bfc7fd8134a6e280181832ac936dca"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_007",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 7,
+        "frames": [
+          3157,
+          3458
+        ],
+        "content_sha256": "d612f2d3234f900fdb86c35fd20c5eb924636b4a01fa8299b4c0cba28efad0e6"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_008",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 8,
+        "frames": [
+          3608,
+          3909
+        ],
+        "content_sha256": "faa704213bbe24878019a9b340ed1c8de442830be5a05b4db85a88e14969c169"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_009",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 9,
+        "frames": [
+          4059,
+          4360
+        ],
+        "content_sha256": "bea2175324b28ae46be45074d6a21f075177b38c0582aeed1c4bf6d223ee082b"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_010",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 10,
+        "frames": [
+          4510,
+          4811
+        ],
+        "content_sha256": "8c68e19831a0795f69e63d32cfdffe38c7445e82de3fca5cf0f88e1f268a24d1"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_011",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 11,
+        "frames": [
+          4961,
+          5262
+        ],
+        "content_sha256": "3ff685fd4e7025ed3accfca3f7f4217d6fb1cb7c07181786e539276dc9324210"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_012",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 12,
+        "frames": [
+          5412,
+          5713
+        ],
+        "content_sha256": "666935f5e1908285e419fb808098cbf042e053fce6514030f2bea0baf628ec6d"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_013",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 13,
+        "frames": [
+          5863,
+          6164
+        ],
+        "content_sha256": "cfb17c9ef74d710626b333618b09d913caff81f60f10cde6769bcdb5115b3022"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_014",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 14,
+        "frames": [
+          6314,
+          6615
+        ],
+        "content_sha256": "5de353e3e92ade6ee6077eb9629c3bac3e5f0970f826580c6ccb9b17648fe33c"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_015",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 15,
+        "frames": [
+          6765,
+          7066
+        ],
+        "content_sha256": "b5f435282bc9350e31c009b202f3e77b0a8106b8a41e8e02210dfaca77a49ec7"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_016",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 16,
+        "frames": [
+          7216,
+          7517
+        ],
+        "content_sha256": "053590c7dadfa8c180a86ccf2e85efc2d7a19b150d35e8b04683e7d4d61cc9c2"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_017",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 17,
+        "frames": [
+          7667,
+          7968
+        ],
+        "content_sha256": "87d60bc93617465049dd105f25def964b52d6d5e93f67968b71dd4459bfe0b22"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_018",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 18,
+        "frames": [
+          8118,
+          8419
+        ],
+        "content_sha256": "8e6a47b8257ba51bbc15663be74f0748a4707e2c81866635ba0dad28e889c455"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_019",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 19,
+        "frames": [
+          8569,
+          8870
+        ],
+        "content_sha256": "600a7bcad27af21029a12a9660f992450360041ae0e2ca24148873953187d20d"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_020",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 20,
+        "frames": [
+          9020,
+          9321
+        ],
+        "content_sha256": "27f6416fb07fba38a4f487cf3c0e02e9fb1e191790e570d088b42c6e77f451c2"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_021",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 21,
+        "frames": [
+          9471,
+          9772
+        ],
+        "content_sha256": "405017798a4142ff6fe895a68aee432e3cc9620b8c26730f72cc1283845bb32a"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_022",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 22,
+        "frames": [
+          9922,
+          10223
+        ],
+        "content_sha256": "88e77de9a9d3480fc9301e3aaa12dea46b3d9ad795c3da396442f01d59781dd8"
+      },
+      {
+        "source": "original",
+        "name": "train_clip_023",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/train",
+        "source_index": 23,
+        "frames": [
+          10373,
+          10674
+        ],
+        "content_sha256": "f56cbd4d334b922a8623b0cfacdbf9124c41654ec4d3b60f179f3cdc6a1f99c6"
+      }
+    ],
+    "original_validation": [
+      {
+        "source": "original",
+        "name": "validation_clip_000",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "2e4ec4aea4f13f7744dfe8f10b653e44e9fb9d2b84392d74203c2e459ab037c7"
+      },
+      {
+        "source": "original",
+        "name": "validation_clip_001",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 1,
+        "frames": [
+          451,
+          752
+        ],
+        "content_sha256": "574e4b38507143b65f86d2883d88d4413deb88d74dfcca8c8e4bdce04d478177"
+      },
+      {
+        "source": "original",
+        "name": "validation_clip_002",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 2,
+        "frames": [
+          902,
+          1203
+        ],
+        "content_sha256": "31896d221182c7824d0c15b6678131c1483ea03d1c556fd1b87602fcd5b13c4b"
+      },
+      {
+        "source": "original",
+        "name": "validation_clip_003",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 3,
+        "frames": [
+          1353,
+          1654
+        ],
+        "content_sha256": "c8f861e325d0f551108439b523ecd79d356e94ac4a377e21d9b9e58190affdec"
+      }
+    ],
+    "original_test": [
+      {
+        "source": "original",
+        "name": "test_clip_000",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "cf6742e3db94b02126f09866ade91d53d969a26992f45bbe584ec1f5ba07d59e"
+      },
+      {
+        "source": "original",
+        "name": "test_clip_001",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 1,
+        "frames": [
+          451,
+          752
+        ],
+        "content_sha256": "853803ef72f0d619470a527a06eb360e81b13f31839a7b5aee6b91b034f787e3"
+      },
+      {
+        "source": "original",
+        "name": "test_clip_002",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 2,
+        "frames": [
+          902,
+          1203
+        ],
+        "content_sha256": "459d1d22ce560032baabe5bc5a86e7fe396e0462dca9b7ffdcd3c27ea8355314"
+      },
+      {
+        "source": "original",
+        "name": "test_clip_003",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 3,
+        "frames": [
+          1353,
+          1654
+        ],
+        "content_sha256": "dbd619d30e709d26349be86e975bbfa2fb4b07d8d53474f7d1c1c390897251a4"
+      }
+    ],
+    "codex_train": [
+      {
+        "source": "codex",
+        "name": "candidate_004_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 4,
+        "frames": [
+          1204,
+          1505
+        ],
+        "content_sha256": "86499fed8d5a821c49a59cc1e2a2704a074c4d9502be28de696ff4825292f129"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_033_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 30,
+        "frames": [
+          9030,
+          9331
+        ],
+        "content_sha256": "36986f15ff6d5fadcfc12c4b7baa6c6795279785c6a54b6d16bb4b3f95e9378a"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_029_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 26,
+        "frames": [
+          7826,
+          8127
+        ],
+        "content_sha256": "7207675a4ee219f6e800e39acd1608a1f9f731232002d759550ca5d0b0f7ce8e"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_021_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 18,
+        "frames": [
+          5418,
+          5719
+        ],
+        "content_sha256": "e61e48cdb821da98e51e7f6ecd24637382430410081f4253f5350da5c069a90d"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_011_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 10,
+        "frames": [
+          3010,
+          3311
+        ],
+        "content_sha256": "c9af44dfcab7725aa938bb955f4b91d006779830c7f610a235a8787e80aac340"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_014_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 13,
+        "frames": [
+          3913,
+          4214
+        ],
+        "content_sha256": "305490e657bad82886e73585d5a9fd1e1ba7a91bd13787f8a89b4bb4e6a893fb"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_030_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 27,
+        "frames": [
+          8127,
+          8428
+        ],
+        "content_sha256": "c138b1f6253e77301476155b69c041c908ffa5011858ec23466db6276bc6160a"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_010_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 9,
+        "frames": [
+          2709,
+          3010
+        ],
+        "content_sha256": "e5b43b86ef0d5eef1c102f78a1e999e407a034e0148138133003cf8fed55dd54"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_032_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 29,
+        "frames": [
+          8729,
+          9030
+        ],
+        "content_sha256": "6f0cdfe4da56d9992bdd6504eda178dd96b50a9089b68140907e36f720b8488a"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_013_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 12,
+        "frames": [
+          3612,
+          3913
+        ],
+        "content_sha256": "5e81de968dd8596ae95301427a58619f10bddebb9f0f40e95d02729e0963edb8"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_023_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 20,
+        "frames": [
+          6020,
+          6321
+        ],
+        "content_sha256": "5d3c05f215d3c2b180a71a3a89bcb8d8769a1d1bcce6d58318a0d436ce1ae9dc"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_019_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 16,
+        "frames": [
+          4816,
+          5117
+        ],
+        "content_sha256": "d5ebab6e1be43ff5c428c969ccb6713c6da011728085affa01ecdf19c5018851"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_009_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 8,
+        "frames": [
+          2408,
+          2709
+        ],
+        "content_sha256": "f7707a27532eae5899fb680f896297061943c44cd687c3f10bad2ccc80dc087e"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_020_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 17,
+        "frames": [
+          5117,
+          5418
+        ],
+        "content_sha256": "21f6fae061330cbd6f08818e8be8dfeac9dd889c1bc3dc21395c51483ada0ce1"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_002_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 2,
+        "frames": [
+          602,
+          903
+        ],
+        "content_sha256": "c1d4324db2310ac350f489c149048b466d853eb7e2d450ca84c0c600d29bed54"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_028_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 25,
+        "frames": [
+          7525,
+          7826
+        ],
+        "content_sha256": "cf5409631762a94f8c9e76cbeee7750f81334296ede515c2b75c87f580f457e4"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_008_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 7,
+        "frames": [
+          2107,
+          2408
+        ],
+        "content_sha256": "5617143e7c5d944b7d2b2f518b10b963f5373cf2f096930cb04fc2356d011997"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_001_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 1,
+        "frames": [
+          301,
+          602
+        ],
+        "content_sha256": "e770ce826cff127ad84cb5950f03e2d3837ad68da3b6f346cd69c9675c495c1c"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_003_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 3,
+        "frames": [
+          903,
+          1204
+        ],
+        "content_sha256": "a339453a9e08f715052aca519799235acf3aa71a4b6fc0a7913a41cd88f282d8"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_007_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 6,
+        "frames": [
+          1806,
+          2107
+        ],
+        "content_sha256": "1be51a92ec1efd4e91910f85072d4c35d6ee89538a3c210ecfec052f3615cf67"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_015_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 14,
+        "frames": [
+          4214,
+          4515
+        ],
+        "content_sha256": "7387c3e8ccfcbfd7e170c55341e69079fd520d04681c2f80f5cfcfa312f4c3c6"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_026_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 23,
+        "frames": [
+          6923,
+          7224
+        ],
+        "content_sha256": "79a41d22f0ea2ad5ac76170543ae080bfaa809a9d76cff18979a62f72777f3ea"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_012_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 11,
+        "frames": [
+          3311,
+          3612
+        ],
+        "content_sha256": "45014f089c6868d31bfefdcf060c7c58cb31c7ff9ef297606d7391451901d672"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_006_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 5,
+        "frames": [
+          1505,
+          1806
+        ],
+        "content_sha256": "650476ef946c05b4401e5c1fffea77aeed22c203a4fccd1fcf722dc5e1cb2885"
+      }
+    ],
+    "codex_validation": [
+      {
+        "source": "codex",
+        "name": "candidate_035_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 31,
+        "frames": [
+          9331,
+          9632
+        ],
+        "content_sha256": "ae7b334650cf0b46ff884049759726b3ee4cc2acaa7addfc21ef146895c4349c"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_024_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 21,
+        "frames": [
+          6321,
+          6622
+        ],
+        "content_sha256": "df3eb23c992682aba6c4dc4f2be6c809ef8385dcd6ab0a24ed1bc5647ce1f0ba"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_031_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 28,
+        "frames": [
+          8428,
+          8729
+        ],
+        "content_sha256": "93b0688c3ed766fc0fe92ff905a6c32d77ccc9955d1b5c72f4c8417b79328300"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_027_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 24,
+        "frames": [
+          7224,
+          7525
+        ],
+        "content_sha256": "5be55ac40eb44f01b624c5b3f373f1832d0da8b1fdf0541b053087f6162c0f07"
+      }
+    ],
+    "codex_test": [
+      {
+        "source": "codex",
+        "name": "candidate_025_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 22,
+        "frames": [
+          6622,
+          6923
+        ],
+        "content_sha256": "3fb88b7828b5cd44e84bd4fa725c44651dc4981424a0e3b7e650fd7da3fb67c2"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_016_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 15,
+        "frames": [
+          4515,
+          4816
+        ],
+        "content_sha256": "faf9e380a1e155d61f66a7242b0f9187ad79acb80c5ab4c94852b40f63598333"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_000_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "7bf3656c39ab5c3578293b43ee09bc8a3dbd1b14c88cbe91a5601f138bb55eb3"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_022_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 19,
+        "frames": [
+          5719,
+          6020
+        ],
+        "content_sha256": "197aea719f177159eab48919752eef5a2b121500b6f99d237f9c3a8eee9bc7b6"
+      }
+    ],
+    "deepseek_train": [
+      {
+        "source": "deepseek",
+        "name": "candidate_004_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 4,
+        "frames": [
+          1204,
+          1505
+        ],
+        "content_sha256": "b44b17af79ee7da4ec779536a9f8d13dd11233990961de2f6c1a60b0954ffb3e"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_030_attempt_01",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 30,
+        "frames": [
+          9030,
+          9331
+        ],
+        "content_sha256": "408c2935f1a50c4127d6f2ce82c38cb2c1f40a3ab190b1753d32d4241ce9cbcd"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_026_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 26,
+        "frames": [
+          7826,
+          8127
+        ],
+        "content_sha256": "4a5d9ef9b386ad8ade287d302993885cebcd556c576f22d0442c5ba66332e321"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_018_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 18,
+        "frames": [
+          5418,
+          5719
+        ],
+        "content_sha256": "873ce2ab4d037921c58718bae6c9162da243181e540c0c09cceb262c37331b6e"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_010_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 10,
+        "frames": [
+          3010,
+          3311
+        ],
+        "content_sha256": "845aaac2fb30fbd7a6fa1b08095543d770b83fa0b1ebe25b666446de97c52ebd"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_013_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 13,
+        "frames": [
+          3913,
+          4214
+        ],
+        "content_sha256": "edacb8ab0bb40403e53292464e8447ceb7c94ba53d8a8d2230a8ac94534e736c"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_027_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 27,
+        "frames": [
+          8127,
+          8428
+        ],
+        "content_sha256": "424a890f31e84428513aa4e1ef9825fbb5f854408060a5dc7527edd520842d33"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_009_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 9,
+        "frames": [
+          2709,
+          3010
+        ],
+        "content_sha256": "7cb8bffa5cd10a4f52925700c110da57ea8bc7ab16ee36963ce504e1e85b5b85"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_029_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 29,
+        "frames": [
+          8729,
+          9030
+        ],
+        "content_sha256": "9037cf4ec08065016cf819e1989ade1793e96b265e5004a5716194873fd52c7f"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_012_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 12,
+        "frames": [
+          3612,
+          3913
+        ],
+        "content_sha256": "4370edb65bdc03ebceb18e627767f717c2771e7599a95fd04821bc4319dbcbfa"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_020_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 20,
+        "frames": [
+          6020,
+          6321
+        ],
+        "content_sha256": "cc9f18d6e979edf77ecd2d7023b61e074a0c9554f088d01da7e18e7d352ebe27"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_016_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 16,
+        "frames": [
+          4816,
+          5117
+        ],
+        "content_sha256": "b33c2b4ea9fd21f5e1a6a3dd013d770fe3e6ffe86423684288aa44e7cd93f61f"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_008_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 8,
+        "frames": [
+          2408,
+          2709
+        ],
+        "content_sha256": "257a5b7a4d06608a5c3a589594d75eae2400f8ccd523ffe4e9eab062b8c04298"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_017_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 17,
+        "frames": [
+          5117,
+          5418
+        ],
+        "content_sha256": "944eabefcaf41e20a864cea6ac2f7de311d44bdb7bd381b03b8b6250bcee9d8a"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_002_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 2,
+        "frames": [
+          602,
+          903
+        ],
+        "content_sha256": "df52896a7771fa9af43ddc09e0f17d6172b3f45a9c2b1fe916ae7764785561c8"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_025_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 25,
+        "frames": [
+          7525,
+          7826
+        ],
+        "content_sha256": "b2d272afbda570b22e44b4a7e40e2ba1ed4837ab52dfe9980e8eda8b02ec36e1"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_007_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 7,
+        "frames": [
+          2107,
+          2408
+        ],
+        "content_sha256": "180a4096fd6f65536b1b6ebd395752b40978e07a58f5a96dc58ef246453a43d8"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_001_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 1,
+        "frames": [
+          301,
+          602
+        ],
+        "content_sha256": "0baed63a5135d03c49091615efb70a21bfbcffd1fe54465d6c236ed5103b56ac"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_003_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 3,
+        "frames": [
+          903,
+          1204
+        ],
+        "content_sha256": "eadecfd53ca5559d5f3978e2e68b8843637d09924f8ecca5da5865fe3ae0b774"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_006_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 6,
+        "frames": [
+          1806,
+          2107
+        ],
+        "content_sha256": "0561561327c514bfc71ffa19f0bbbe278d57295853445a80ce43cb88bd991a29"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_014_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 14,
+        "frames": [
+          4214,
+          4515
+        ],
+        "content_sha256": "58efdb05bba4b37b96b54b8f97072b912509372c2f7eca36b9cf44d80c421922"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_023_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 23,
+        "frames": [
+          6923,
+          7224
+        ],
+        "content_sha256": "d2d87a5dd46a9dbd496257b7cf7edecc427398a095dfc7886710eaadf07e68c0"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_011_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 11,
+        "frames": [
+          3311,
+          3612
+        ],
+        "content_sha256": "285ed19a84ed0ca840ee5a8874ef4586fc3d47d25db7779766871cf31e84a613"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_005_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 5,
+        "frames": [
+          1505,
+          1806
+        ],
+        "content_sha256": "3eaec29a8bfd7b717b08aba58dc9f5534bbc0404f31c888019f747641fcf15bf"
+      }
+    ],
+    "deepseek_validation": [
+      {
+        "source": "deepseek",
+        "name": "candidate_031_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 31,
+        "frames": [
+          9331,
+          9632
+        ],
+        "content_sha256": "bd0f5449b2d3b9880ef0c72daf0712dd9d8fec04db1341f435e831e87b978cfb"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_021_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 21,
+        "frames": [
+          6321,
+          6622
+        ],
+        "content_sha256": "cac65f2b538c819dfc8fad80aa3bfc61f28a009554ba08f17f4f1da57de601aa"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_028_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 28,
+        "frames": [
+          8428,
+          8729
+        ],
+        "content_sha256": "f97f953eb27474ed5b23a436224630e1fd5590380bcdc4e6c66f95c9c9abad24"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_024_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 24,
+        "frames": [
+          7224,
+          7525
+        ],
+        "content_sha256": "8b8f415273b55e78737832a4be13d36c6969de01ed310ea6f89261e48dba629c"
+      }
+    ],
+    "deepseek_test": [
+      {
+        "source": "deepseek",
+        "name": "candidate_022_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 22,
+        "frames": [
+          6622,
+          6923
+        ],
+        "content_sha256": "8e2bd20de7653ca674867731782014a6a9c182c7c43c538441918c8300fe5578"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_015_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 15,
+        "frames": [
+          4515,
+          4816
+        ],
+        "content_sha256": "aea9ee1c5d6758d4f14bbb50f9d546022b211d13ab0aab90c1a87316d72cad03"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_000_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "3591debba33ceea8a02fa2efe70882100705fe1884cabcb97f5e74270f0ce373"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_019_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 19,
+        "frames": [
+          5719,
+          6020
+        ],
+        "content_sha256": "661c4ea780069728cc3b79b48fb64b097c131cbda52f20b846435e36e74ac0b9"
+      }
+    ],
+    "common_validation": [
+      {
+        "source": "original",
+        "name": "validation_clip_000",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "2e4ec4aea4f13f7744dfe8f10b653e44e9fb9d2b84392d74203c2e459ab037c7"
+      },
+      {
+        "source": "original",
+        "name": "validation_clip_001",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 1,
+        "frames": [
+          451,
+          752
+        ],
+        "content_sha256": "574e4b38507143b65f86d2883d88d4413deb88d74dfcca8c8e4bdce04d478177"
+      },
+      {
+        "source": "original",
+        "name": "validation_clip_002",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 2,
+        "frames": [
+          902,
+          1203
+        ],
+        "content_sha256": "31896d221182c7824d0c15b6678131c1483ea03d1c556fd1b87602fcd5b13c4b"
+      },
+      {
+        "source": "original",
+        "name": "validation_clip_003",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+        "source_index": 3,
+        "frames": [
+          1353,
+          1654
+        ],
+        "content_sha256": "c8f861e325d0f551108439b523ecd79d356e94ac4a377e21d9b9e58190affdec"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_031_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 31,
+        "frames": [
+          9331,
+          9632
+        ],
+        "content_sha256": "bd0f5449b2d3b9880ef0c72daf0712dd9d8fec04db1341f435e831e87b978cfb"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_021_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 21,
+        "frames": [
+          6321,
+          6622
+        ],
+        "content_sha256": "cac65f2b538c819dfc8fad80aa3bfc61f28a009554ba08f17f4f1da57de601aa"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_028_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 28,
+        "frames": [
+          8428,
+          8729
+        ],
+        "content_sha256": "f97f953eb27474ed5b23a436224630e1fd5590380bcdc4e6c66f95c9c9abad24"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_024_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 24,
+        "frames": [
+          7224,
+          7525
+        ],
+        "content_sha256": "8b8f415273b55e78737832a4be13d36c6969de01ed310ea6f89261e48dba629c"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_035_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 31,
+        "frames": [
+          9331,
+          9632
+        ],
+        "content_sha256": "ae7b334650cf0b46ff884049759726b3ee4cc2acaa7addfc21ef146895c4349c"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_024_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 21,
+        "frames": [
+          6321,
+          6622
+        ],
+        "content_sha256": "df3eb23c992682aba6c4dc4f2be6c809ef8385dcd6ab0a24ed1bc5647ce1f0ba"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_031_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 28,
+        "frames": [
+          8428,
+          8729
+        ],
+        "content_sha256": "93b0688c3ed766fc0fe92ff905a6c32d77ccc9955d1b5c72f4c8417b79328300"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_027_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 24,
+        "frames": [
+          7224,
+          7525
+        ],
+        "content_sha256": "5be55ac40eb44f01b624c5b3f373f1832d0da8b1fdf0541b053087f6162c0f07"
+      }
+    ],
+    "common_test": [
+      {
+        "source": "original",
+        "name": "test_clip_000",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "cf6742e3db94b02126f09866ade91d53d969a26992f45bbe584ec1f5ba07d59e"
+      },
+      {
+        "source": "original",
+        "name": "test_clip_001",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 1,
+        "frames": [
+          451,
+          752
+        ],
+        "content_sha256": "853803ef72f0d619470a527a06eb360e81b13f31839a7b5aee6b91b034f787e3"
+      },
+      {
+        "source": "original",
+        "name": "test_clip_002",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 2,
+        "frames": [
+          902,
+          1203
+        ],
+        "content_sha256": "459d1d22ce560032baabe5bc5a86e7fe396e0462dca9b7ffdcd3c27ea8355314"
+      },
+      {
+        "source": "original",
+        "name": "test_clip_003",
+        "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+        "source_index": 3,
+        "frames": [
+          1353,
+          1654
+        ],
+        "content_sha256": "dbd619d30e709d26349be86e975bbfa2fb4b07d8d53474f7d1c1c390897251a4"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_022_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 22,
+        "frames": [
+          6622,
+          6923
+        ],
+        "content_sha256": "8e2bd20de7653ca674867731782014a6a9c182c7c43c538441918c8300fe5578"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_015_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 15,
+        "frames": [
+          4515,
+          4816
+        ],
+        "content_sha256": "aea9ee1c5d6758d4f14bbb50f9d546022b211d13ab0aab90c1a87316d72cad03"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_000_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "3591debba33ceea8a02fa2efe70882100705fe1884cabcb97f5e74270f0ce373"
+      },
+      {
+        "source": "deepseek",
+        "name": "candidate_019_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+        "source_index": 19,
+        "frames": [
+          5719,
+          6020
+        ],
+        "content_sha256": "661c4ea780069728cc3b79b48fb64b097c131cbda52f20b846435e36e74ac0b9"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_025_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 22,
+        "frames": [
+          6622,
+          6923
+        ],
+        "content_sha256": "3fb88b7828b5cd44e84bd4fa725c44651dc4981424a0e3b7e650fd7da3fb67c2"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_016_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 15,
+        "frames": [
+          4515,
+          4816
+        ],
+        "content_sha256": "faf9e380a1e155d61f66a7242b0f9187ad79acb80c5ab4c94852b40f63598333"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_000_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 0,
+        "frames": [
+          0,
+          301
+        ],
+        "content_sha256": "7bf3656c39ab5c3578293b43ee09bc8a3dbd1b14c88cbe91a5601f138bb55eb3"
+      },
+      {
+        "source": "codex",
+        "name": "candidate_022_attempt_00",
+        "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+        "source_index": 19,
+        "frames": [
+          5719,
+          6020
+        ],
+        "content_sha256": "197aea719f177159eab48919752eef5a2b121500b6f99d237f9c3a8eee9bc7b6"
+      }
+    ]
+  },
+  "reference_sha256": {
+    "codex": {
+      "candidate_000_attempt_00": "baf4bf235410a755d3491aac2dc9417e1e01fd879657eb7d7077979a07ea67eb",
+      "candidate_001_attempt_00": "f3bdeeff03120c4b0c447a448a70e2dd4ecfea44b5e036dfcd0c05d8e06b360d",
+      "candidate_002_attempt_00": "81bd61509fab6a18a8c062fd4f09e534347d9b1f47ef61e70909a93b54d84ef7",
+      "candidate_003_attempt_00": "887ce485e1ca218f1e09705ecdd5733ae744904e7d0997d9c1d0bbfb54034909",
+      "candidate_004_attempt_00": "15cd0733cceb2a7a1f0b9042dce0d72081580f80c56bdc38148cae70262cd374",
+      "candidate_006_attempt_00": "d1267bf3761b42a6fc44744d9c97e8d597d9c4d7f7405af2aed70805ae8bac73",
+      "candidate_007_attempt_00": "91f369b98510077ccc34c3342af7d7e7e40c78ba287ac3314010e9c33ac2aa00",
+      "candidate_008_attempt_00": "afd0c3e6e5c43587961d6cfc533d767d09cfe4ce4d60520207f8e026bcd60369",
+      "candidate_009_attempt_00": "231110a53bae202ce9ad117e57cb72daa269d7b799c8087b2ee821d40a51671a",
+      "candidate_010_attempt_00": "3965e5d538c777330cd7500094b7a965d32ed048cbb4bb2ba1eecbc88620eaa6",
+      "candidate_011_attempt_00": "87573550ab9caf89f3e596af23eccb5650289cb05ac22b93a2abb9aadc0811b1",
+      "candidate_012_attempt_00": "2481b5eb65f0aa2b3aedf5e0a4b6e894461629e9e984b5c8fa2c7168aa396c9e",
+      "candidate_013_attempt_00": "0b57f6dcc7e5ed1104159ce29d2d2d8f2bcdc4a7ef98d37b8d998788b3e865fb",
+      "candidate_014_attempt_00": "06852bf34cd856dc85929a859c8fd42863d7a86f5cd22779c868a6abeeb788b7",
+      "candidate_015_attempt_00": "b94aad7e04fd707e76f96b4d981a69a2b73943fb992c43c7cafbc614fbd11479",
+      "candidate_016_attempt_00": "f20f83baef8f3d51340a7d17bae16781c585134211757781e80e166e823ba43e",
+      "candidate_019_attempt_00": "f2c54b623c9e6c811105103a866add9b984d620d88b7c82c6a1def4837af538b",
+      "candidate_020_attempt_00": "5899972e250bd538e74450e9492e6f1ccea145d895c3136ada1a94905f5b12b8",
+      "candidate_021_attempt_00": "2f50bd604d4d2c3c362420e6085912dcb56cb95bf8fc813fd21ab994f54d3526",
+      "candidate_022_attempt_00": "a99873519e25102cbbed3e123ecf53ac9709d71c25dcf9b1691045009c76dd57",
+      "candidate_023_attempt_00": "dcceaf64e63d2a1998fcc62cf760055247f0daa2b8d3938123babd444a10d87c",
+      "candidate_024_attempt_00": "ad183d752d49ce23b03feb1f2428af50212473ac209c9b831d60849882abca87",
+      "candidate_025_attempt_00": "183b0f2f1fcd01798fa12243651251a65ee6b2da3d8377d258e8b69451b5c6c5",
+      "candidate_026_attempt_00": "55b20568145e956dbf2dd5836e5dc20ae6a8b59ec124b8d978d8952a170e11e5",
+      "candidate_027_attempt_00": "dd6cd151b4d0cc16e18f4f2eecc100341996679e18bac86890eccb9e736e6d45",
+      "candidate_028_attempt_00": "149b9e42d23b4ba67a8406164aa3c04495e6ec8bee260949b0dd8005ee7fd265",
+      "candidate_029_attempt_00": "0b2d24797f7b3ed0bd71f3ba41d7286a7dd3e4a2f46d6ef660a00f0beee3e47f",
+      "candidate_030_attempt_00": "fb6c56a00835f7f8f1c9dd6fcf2dada9a41d656285f70a2200bfa4d0b2260582",
+      "candidate_031_attempt_00": "0217d1828049a55370ee214e3bb60d7ef452a3354aee2961b2d47e3e375d433e",
+      "candidate_032_attempt_00": "3d13fd8e209e18eb3cddb3f8f40daf02d0bf3b934ca5c1f674413733c2c87950",
+      "candidate_033_attempt_00": "9872c64a84c0721a33fffd4dcc3db9ea4db625cf9fb9392bb6e8d94bcd96a3c9",
+      "candidate_035_attempt_00": "0f0e4a7b68ae6d9d8e7eac67f6c777f6c6a15cbf43d05a735b93ffbad4586afe"
+    },
+    "deepseek": {
+      "candidate_000_attempt_00": "bb888cb7135399c980ffa3bf83b7478d88ad78272eeb3528483b237685895178",
+      "candidate_001_attempt_00": "fd0a78ef5b04500bb82123ec6ebb765f119e10745c2adee8c112dc65df3f1b9a",
+      "candidate_002_attempt_00": "c2b5cb044779ead534ca82f32828e35cac4f0bae5c17bd64efe3b94526829b7a",
+      "candidate_003_attempt_00": "2281358da24eacf7d04f9a5b4e05f5f6fb0cf79079b804d5c558da2e7a98e07f",
+      "candidate_004_attempt_00": "2cd1cbec21e22c3248a25982d7d09c3fd9290a1b5f05195969ca76883cd408d4",
+      "candidate_005_attempt_00": "91f1a3c60dd54d90e38ef221d85466b666be7d3bee0b53cfe268f3fcb2e0104e",
+      "candidate_006_attempt_00": "9057fc10066fb49e2864b29c288008ee60ffa0d32d1cbd1293e0f750c3bd5217",
+      "candidate_007_attempt_00": "74a0bc047d6fba0d62f46214eceef68ef2a4d996e2443dc0198e1a93ba8d6b2a",
+      "candidate_008_attempt_00": "1dde91006e12ae2fab7617aa34a389764a39edf7322cf4cc58ca46b72af6e7ec",
+      "candidate_009_attempt_00": "73aa92807131c0ab06f9261118931eede8a928636d2d91f3020b924b8027ba34",
+      "candidate_010_attempt_00": "679519642b270305d4b8bf8176e2e7cf53819320fddb1888c7e9d4759c1c37c7",
+      "candidate_011_attempt_00": "015a329cfaa034655279621c453227d659968e0bb95a5598a0bc5b85a719c0fd",
+      "candidate_012_attempt_00": "f1c8eca45ae3493b94ea6909547a10bb5373c4895bf558148fc818a727f15cee",
+      "candidate_013_attempt_00": "4e4bd21154a668c7cd871155c6e32755f0009a335695cf7a8a496a2b1b08b9a0",
+      "candidate_014_attempt_00": "19acf5eb8d8807566e495fd960419bd739aae42978447986f8e816164694780a",
+      "candidate_015_attempt_00": "ca326cc3426b67c650db328a87ae880e56fd0713af368242dfba643cbca94288",
+      "candidate_016_attempt_00": "51f63f750fd919e3338c312df994f996061da821c24bc7e68e18edcebfde8acc",
+      "candidate_017_attempt_00": "31f7a839711930b5dbd089b1ea3c92777fbe931c8346ea6271fe6338b6a469b0",
+      "candidate_018_attempt_00": "33bf3497b6c3e1e0cc011643b6062f452ccd859ff5d5cd49d08fcf0ad64b4c95",
+      "candidate_019_attempt_00": "12ebfcaf6bb33dcdbd67952ef37e3c7eebe389d8ed6447e602dbaaf34706b646",
+      "candidate_020_attempt_00": "e4a5d0a2ed7b493f4a51dc7b7a2f38586649895972431af34922df2c40de78f6",
+      "candidate_021_attempt_00": "0cc3e0fa4ebdcf8370b5fdb049fa531e16379741a7610b5af020a94372fbe28f",
+      "candidate_022_attempt_00": "e6e4b21f8bc0d30545eefff1cf910fe2f9788f5d61e44d1659bb5e80c55b7c19",
+      "candidate_023_attempt_00": "c40012dafac2c10a324923b23172271c6ba6677474db2d4227d7e562c5a79853",
+      "candidate_024_attempt_00": "2f924c58fec8e5e575c633b920b058206a906105e329400c0c9240a717c931c2",
+      "candidate_025_attempt_00": "4ef09c8dfe2a03fe8611b49cbc6d6895fd40583cf20d6ea9805788b653446e31",
+      "candidate_026_attempt_00": "b9ae6b6763cb0628a39490a9ca4cbd3da7062a7b7e8c2f817c46c0f65dcb1b77",
+      "candidate_027_attempt_00": "149bc3a6a0961eb46e5c94673cd15da7f2e990e8dac9a8863ebc4fbd071e87b1",
+      "candidate_028_attempt_00": "3bf9eee35f8afbb016f5a03ef616847fec658dfb1d4245450fd22f7f2a84501d",
+      "candidate_029_attempt_00": "07feb9a21a99f37e43217ede1740f7a83dc982048aa4b6b85ec0a0a3a7c14076",
+      "candidate_030_attempt_01": "bcfbe6613ab272706a9029c73ae3478cb1803f59586660cb0086424424f27930",
+      "candidate_031_attempt_00": "f01b94f7d34d1254cc7f9f9b13a6fde8d7665b058abd15107255abedceceda11"
+    }
+  },
+  "shared_agent_acceptance": {
+    "seed": 42,
+    "gates": {
+      "joint_velocity_max_rad_s": 10.471975512,
+      "joint_acceleration_max_rad_s2": 400.0,
+      "foot_surface_min_z_m": -0.003,
+      "root_height_min_m": 0.035,
+      "tilt_max_deg": 45.0,
+      "velocity_rmse_max_m_s": 0.05,
+      "mean_speed_error_max_m_s": 0.025,
+      "heading_rms_max_deg": 10.0,
+      "heading_max_deg": 20.0,
+      "lateral_displacement_max_m": 0.12,
+      "joint_tracking_rmse_max_rad": 0.25,
+      "root_tracking_rmse_max_m": 0.1,
+      "contact_foot_speed_rms_max_m_s": 0.05,
+      "nonfoot_contact_fraction_max": 0.01,
+      "torque_near_stall_fraction_max": 0.25,
+      "action_rate_rms_max_per_s": 20.0
+    },
+    "duration_s": 6.0,
+    "fps": 50,
+    "robust_trials": 3,
+    "physics_dt_s": 0.0005,
+    "diagnostic_only_metrics": [
+      "velocity_rmse_m_s",
+      "contact_foot_speed_rms_m_s"
+    ],
+    "mean_speed_measurement": "displacement",
+    "execution_feedback": {
+      "position_gain": 12.0,
+      "velocity_gain": 1.0,
+      "heading_gain": 1.5,
+      "lateral_gain": 8.0,
+      "yaw_rate_gain": 0.03,
+      "velocity_filter_alpha": 0.15
+    }
+  },
+  "train_clips_per_method": 24,
+  "train_duration_s": 144,
+  "common_validation_clips": 12,
+  "common_test_clips": 12,
+  "common_eval_order": [
+    "original 4",
+    "deepseek 4",
+    "codex 4"
+  ],
+  "heldout": "whole trajectories, content hashes checked disjoint across all new training/validation/test splits",
+  "limitations": [
+    "Agent programs are related gait variants, not independent unseen skills",
+    "Historical reference generation was informed by earlier development experiments",
+    "Original references originated from a learned Isaac policy; its training cost is a prior shared resource"
+  ],
+  "array_sha256": {
+    "deepseek_train/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "deepseek_train/motion_names.json": "dd8630d0331f4e6415815e5db4d58e4ffe7c1595a37140552eadca5690e69cca",
+    "deepseek_train/meta.json": "72d471a3f44030acfdd222fe19132fba4f0e6c18c12fb180c36cd65e1fad6d4c",
+    "deepseek_train/provenance.json": "b275780d8d499602604d2fc378191dc1c5c539a17778ed9ed60da4d48ab066ae",
+    "deepseek_train/root_lin_vel_w.npy": "5a78fe5c1ce851d604b709cacf782fca72182cafdb52343704f8cfbb4c28746f",
+    "deepseek_train/joint_pos.npy": "ee33e9c7399341d6949641b9bacd5c47520015b097f41c83c1ea388acb7ee94b",
+    "deepseek_train/root_ang_vel_w.npy": "6b11baa9c13e93ee6c300a4c9263c3ae836f71b07bbaf95bd7b76e80fedb40c6",
+    "deepseek_train/root_pos_w.npy": "240c430a027f2236673e2cdba64c97c425da0180aca27900115ae6d37c1e8469",
+    "deepseek_train/root_quat_w.npy": "4db95c48a2c7a5c36d9ccb22c50b1cb46356f9989ae3127ff2ee158b0bdc0b5d",
+    "deepseek_train/motion_ends.npy": "281af70903c512c7ced1df39b8e6a4acfc57b5e4b1c35152557fcd10cf7412ef",
+    "deepseek_train/joint_vel.npy": "a9dbcac3daac6151016e5fa8d5558ea933673f102fa89fb01b3c4c64be8f53bf",
+    "deepseek_test/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "deepseek_test/motion_names.json": "976298767dcec9a142a4308b7c331adcaa4630f401b4ea554706f3d2c86648ee",
+    "deepseek_test/meta.json": "c47b289275cf53b765f1b42dd092944d9378dbbaf75d87dfc73907a6a05408d1",
+    "deepseek_test/provenance.json": "8467708c409057fdc77161a65243b10f9255991c6923a766a5c113df22084b9b",
+    "deepseek_test/root_lin_vel_w.npy": "5863c5050031f72983fcb6a899e99e0802546b987a12249ee733be66935daeed",
+    "deepseek_test/joint_pos.npy": "e0621b51bd7b058e4b1cb3f24891b575c95eb1f6ca82b3429434756ef189c9a0",
+    "deepseek_test/root_ang_vel_w.npy": "5dae3861da69e1b9ac27b1fb2bc226a4a3eb4c2c2d651edf8a0bd5dc501900f8",
+    "deepseek_test/root_pos_w.npy": "dcb9c5c68a3bcdc06813a413dc2611b5fd2d260bd07f4e46fee33cfce9521425",
+    "deepseek_test/root_quat_w.npy": "6a976fb5f79798ea432032e42f136e8fac07d5d8b8c0153869010fb438c37ba6",
+    "deepseek_test/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "deepseek_test/joint_vel.npy": "543084265ca9ec03fe23990b3140fd87da26cd17020308324367e9075ce0888e",
+    "common_validation/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "common_validation/motion_names.json": "93ca0d78acc4f196e6fec389484227daed0f9ee829c8c25bc0be48aaadb8dd4a",
+    "common_validation/meta.json": "2588cda3c53c2fbdb4aa34e888498ce9b4520194a2ffc4633ab09960e68f190a",
+    "common_validation/provenance.json": "5a3b4c59bb805bd16c30033192878c2a1e161a87229da77776a1ed48fc4a7ad0",
+    "common_validation/root_lin_vel_w.npy": "73de3255c8faf405d4ff31f789577028ebf7c9c945af3dc8c7468cd39389f41b",
+    "common_validation/joint_pos.npy": "8cc9df37578819683d5bc69440770bef5825fc478112d2aedd42cff38ba18e31",
+    "common_validation/root_ang_vel_w.npy": "e7465f4e8828a696ee51e0a917c66e4a027ca550fcb97302aa95f3e48692563f",
+    "common_validation/root_pos_w.npy": "2ad7d2aedcd632f98e67db4bc521788ba24a1f1e66fab8b7cba13025fef5ea3d",
+    "common_validation/root_quat_w.npy": "701523c6c2444667edfa8a9a3481397cee0f09db8fe8fdb6d915c8832e817399",
+    "common_validation/motion_ends.npy": "73252e71ad32031daee0bf5c8b508669e9960b50af2a0e5a9915444a3445a99a",
+    "common_validation/joint_vel.npy": "32f0aed03ac20ef6e8b8e46c75498a4427367927a05c3910178150ea1c0a5d34",
+    "common_test/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "common_test/motion_names.json": "92e9a0c964c19097573b3d7679934731901bebb090be7bee1818b35a6bebe122",
+    "common_test/meta.json": "2588cda3c53c2fbdb4aa34e888498ce9b4520194a2ffc4633ab09960e68f190a",
+    "common_test/provenance.json": "aa912c1b3503a7c2e7b7939cfabf8bb87f3619a1d13ae57eba904268f5739170",
+    "common_test/root_lin_vel_w.npy": "782ab656fee20bff6363be3d0c8fb96e91615d544ff6eff26586ea32947aa852",
+    "common_test/joint_pos.npy": "64a8e34e7a780590a2bc955f6ee23a2c7ecaab6f18b9c65bdff6e2c2fed16905",
+    "common_test/root_ang_vel_w.npy": "72893ceea576167b3c3c92364e27b4582c3591bf86f6b84b500da8e1150976c8",
+    "common_test/root_pos_w.npy": "fae197666c3f0dbe58efa07824c5f334f91c11aacd11542e437ccf3823966f90",
+    "common_test/root_quat_w.npy": "2588a85ae4ff165fd1fd1107a64f01d70f1c63b151035ded86c5a5f2984afc8e",
+    "common_test/motion_ends.npy": "73252e71ad32031daee0bf5c8b508669e9960b50af2a0e5a9915444a3445a99a",
+    "common_test/joint_vel.npy": "a901f9d49d80628e269fb5af563e4142c0e1dccc0c558d7c5b43fdc1318ce016",
+    "codex_validation/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "codex_validation/motion_names.json": "4d50f43d71a00775517f30b8d16b65263279ba90ef0ab957dc56f5d0f250305c",
+    "codex_validation/meta.json": "c47b289275cf53b765f1b42dd092944d9378dbbaf75d87dfc73907a6a05408d1",
+    "codex_validation/provenance.json": "8c4f34581ff49ebf162d387832b7cb2845dff9a975273cb044719edd83748a7b",
+    "codex_validation/root_lin_vel_w.npy": "4bf3b01fbb35aedbba2fb63148004087ad676d7a73131b050a11ef5388061125",
+    "codex_validation/joint_pos.npy": "4f8eb6a2637c569c2b16c98c31e61791debf766798484d767eaa4ac3cb82fdb4",
+    "codex_validation/root_ang_vel_w.npy": "e94ebe413aeb93ba8a7f97101a48605bc233c76546938228ce807d6eaad30bbf",
+    "codex_validation/root_pos_w.npy": "825841466ebf72c333392cb2a635bd77a35247ad7a5863f6f14beb7e5fcd7857",
+    "codex_validation/root_quat_w.npy": "eceeb616fa9e9dddddc5a433ef9d715bc6965543adcd2a1c614507d18e69f99b",
+    "codex_validation/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "codex_validation/joint_vel.npy": "76d102071f75ef04490747a9ddae3f32cd2b22b0222331d26fda7a0c9f6bd67f",
+    "original_train/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "original_train/motion_names.json": "d33160f41bdebbab5b1996b5552222531297c1c0d1154a2354dd41d572475d8e",
+    "original_train/meta.json": "72d471a3f44030acfdd222fe19132fba4f0e6c18c12fb180c36cd65e1fad6d4c",
+    "original_train/provenance.json": "bd04476543c8b8ddb9ce9fe328b9bcc0ae24d9f4af92f9fc9d2139dff41d333b",
+    "original_train/root_lin_vel_w.npy": "ad29eec66c45fb2a98141d518bf852f75906949bfb2ae7370f01165e77cb2cf9",
+    "original_train/joint_pos.npy": "f6dfee7ad6cac5cad0e8e5daa7e2332a2f3b39aef96812733e6c51a28db2248b",
+    "original_train/root_ang_vel_w.npy": "dc49036de71406151f37c602bf75f564b3ed4e1b5904e421d956cf5988dc0662",
+    "original_train/root_pos_w.npy": "2f1e8f646dcae73755185a113c10d24f7407d2bdfea1f8f5c2f0522f1aaeea55",
+    "original_train/root_quat_w.npy": "365a7f9cd3a06b1f29d571292d992c309704c1c5b58a0ed04635f7601e90b1ec",
+    "original_train/motion_ends.npy": "281af70903c512c7ced1df39b8e6a4acfc57b5e4b1c35152557fcd10cf7412ef",
+    "original_train/joint_vel.npy": "6e57443eb89e09f074059140d333fdfb416e2b003d14a3af1b80da00515aae4c",
+    "codex_test/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "codex_test/motion_names.json": "c88384b3055677f6e14527a33e11bac996c0efb9d685e9b16636ee2661cfcceb",
+    "codex_test/meta.json": "c47b289275cf53b765f1b42dd092944d9378dbbaf75d87dfc73907a6a05408d1",
+    "codex_test/provenance.json": "5b8ecafb01e259381d873e6ab8bc93852ba85e7d46b1f6e6bd3fea5650177c11",
+    "codex_test/root_lin_vel_w.npy": "d228f8935ad5acee6fc6f3d4bcf4fb1405d5744c89b8d11b52e74bace2d52eeb",
+    "codex_test/joint_pos.npy": "4430b332945b19034d7cd209c01177e71c085bdba33d002f827995f9f5ddf97d",
+    "codex_test/root_ang_vel_w.npy": "9995d05f78e80cc45db719293a152ea006292d30d2f6629130e899ec91131896",
+    "codex_test/root_pos_w.npy": "034223f860e88cdbc8e0bd86b464b9bfb0e16cfd35ad9db0539411c62f9f7d84",
+    "codex_test/root_quat_w.npy": "8e308e1b5296df97739cee523b7da78d572e422ef0b4aa5f86a82727cdb6b69e",
+    "codex_test/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "codex_test/joint_vel.npy": "efb4f327b3e9f29eb9d3321ff7607bca41584457260862aadbd4281d8cabce5c",
+    "original_test/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "original_test/motion_names.json": "a90520a3ce39c35d37a5681683618700b8c42d2d03a8164bc47c762eb9e2be34",
+    "original_test/meta.json": "c47b289275cf53b765f1b42dd092944d9378dbbaf75d87dfc73907a6a05408d1",
+    "original_test/provenance.json": "13bb6bd6b6a65f6b111280fbd3b4e53a1abb3825732ace3f8caca5594361fa45",
+    "original_test/root_lin_vel_w.npy": "e179281ea09acced115760ebcb9bc743b4977d5c1ed706fd3c5bdeadb42d246f",
+    "original_test/joint_pos.npy": "c3e5fdbcac60a64c4edcd22fead3b36d9f32fd9721978393898083870749273a",
+    "original_test/root_ang_vel_w.npy": "9b843754b3a4b6d144b83b64d5db3c77e141e18f004d7a4ff705d477d2e75c51",
+    "original_test/root_pos_w.npy": "5cdab96b62ab5d393991dd507df8d397824700d337cef260d542637ddb463725",
+    "original_test/root_quat_w.npy": "1e8ba233275f7da9941f49036b25f49eb934b09076b13a9423bef964410b4170",
+    "original_test/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "original_test/joint_vel.npy": "b04a8bc783481fc8365314c6a984f886dd433a0668c8638e9e437585cf945b7a",
+    "original_validation/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "original_validation/motion_names.json": "fadcdd3da05062d294be287955d60c07846dec713cf54102a46c20524c7426bf",
+    "original_validation/meta.json": "c47b289275cf53b765f1b42dd092944d9378dbbaf75d87dfc73907a6a05408d1",
+    "original_validation/provenance.json": "d781c17ce03d34067a64fe8501a4f3540885bd8672c57bd6dc6965abb3ba0696",
+    "original_validation/root_lin_vel_w.npy": "58d2657f501ca4555d5667ca4eb4e9937932479272f6572a57f83ed114c30964",
+    "original_validation/joint_pos.npy": "46260ce185d0d173244102d9e766a698f4032287893bd3991f00a6332b7066b1",
+    "original_validation/root_ang_vel_w.npy": "7678ddb6e5e1416adb8a8f2303126e6b32b18295e3da95ece32cbcbbf686d248",
+    "original_validation/root_pos_w.npy": "7100818b6f83fd6074ea7fa258cf9498e521579334c09ac78cc84d098de87c15",
+    "original_validation/root_quat_w.npy": "8db302d49c49332d54cd91a5117bb545e833caf26ca0920d093339c8c6c81bc4",
+    "original_validation/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "original_validation/joint_vel.npy": "e27d544f7b63207a4953f40541b0c9d9d31ab9b10a7a8c4ba2c5cfd71b8e9961",
+    "codex_train/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "codex_train/motion_names.json": "b3842e5b0bb042e4e9c7487bf4f8bd2a7c34e259ee7807a2b89568d1ec76ce64",
+    "codex_train/meta.json": "72d471a3f44030acfdd222fe19132fba4f0e6c18c12fb180c36cd65e1fad6d4c",
+    "codex_train/provenance.json": "a907f971abfdcb63982870de905f2ffca84939ee979a292dced47696377a1f34",
+    "codex_train/root_lin_vel_w.npy": "ee3c6706fab695e5080e635088da90dc8257aa23a8fa601cddcfae6a96006a85",
+    "codex_train/joint_pos.npy": "ba941ecd1a72cb75d7bc29f4ca0175a90540337093b554a81667f9f5f1d508cc",
+    "codex_train/root_ang_vel_w.npy": "188afe02ec1b5b03b9603b677128304798aad9d068b9227e93c011bba8044392",
+    "codex_train/root_pos_w.npy": "b8c620bf70184da36279f9d4895d76325e741d41209970036e1e623c11dab3f4",
+    "codex_train/root_quat_w.npy": "91232963ae1f3c89051cf80835d14693b117554d439826c30f4f42e9d8cc6ce0",
+    "codex_train/motion_ends.npy": "281af70903c512c7ced1df39b8e6a4acfc57b5e4b1c35152557fcd10cf7412ef",
+    "codex_train/joint_vel.npy": "7b66bd79fe2393d612c18399f7be0e611c0b7d79caf0cf56f102a874d2dd73bc",
+    "deepseek_validation/joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "deepseek_validation/motion_names.json": "0e7c6218bd8e3d8d88c6dbff12ed302b2fb277290b6c7fd4975af3cedf28a950",
+    "deepseek_validation/meta.json": "c47b289275cf53b765f1b42dd092944d9378dbbaf75d87dfc73907a6a05408d1",
+    "deepseek_validation/provenance.json": "d1372e9042ccfb58448609aa1e51dbd3cf38c3540c9582c19aae648a381123e3",
+    "deepseek_validation/root_lin_vel_w.npy": "4aa815e144c51dca36ba835f1d458c4d4221ee0d1d39c6f49fbc83568f726ef1",
+    "deepseek_validation/joint_pos.npy": "f903f0c6f081ee6cdb1fdabf696126dacba026b9b6e9a6699471305e31e49542",
+    "deepseek_validation/root_ang_vel_w.npy": "468216ecd2a16ed5a302bf8e890bd2e0816c9db3cb757094d3f9c5c189bbafd9",
+    "deepseek_validation/root_pos_w.npy": "29c0258a4625749fb4584703a9f7c09d70b3cc0383fd015c60f38bf04884fe8d",
+    "deepseek_validation/root_quat_w.npy": "9b2240b60c2f8fb0c7e3019f1e3ac9fae642eb63a0dc8477b56d2e75f7879ebf",
+    "deepseek_validation/motion_ends.npy": "5564c647454e9f108372661c4ab3c43a8a1544117328846b1bf457784d8201a3",
+    "deepseek_validation/joint_vel.npy": "3c405f08dc97453130e6723ecd6b1306422c7f12445b78023bab4c3ece06a29d"
+  }
+}

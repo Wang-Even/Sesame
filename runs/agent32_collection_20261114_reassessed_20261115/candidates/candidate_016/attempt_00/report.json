@@ -1,0 +1,340 @@
+{
+  "id": "candidate_016_attempt_00",
+  "generator": "mimicagent_sesame",
+  "accepted": true,
+  "validation_complete": true,
+  "protocol_sha256": "e822dedf11cf05f36e9e7735f1d0ae01d46fd833bca9c13b653e7a38339fac2f",
+  "plan_sha256": "30632be1d9f4281d70467ea3133ff9f2a1a46ff6a9a2b2265a0eaad52b9c6fc5",
+  "motion_program_sha256": "31aa98f2f6d8f30fca46cbe65ecf29a712199b221bcb497f034745cd5f1a702e",
+  "candidate_reference_sha256": "885a3918a1ee3ce9d43ef96346a5abbe91629627ad8f7921f22085f933237070",
+  "generation": {
+    "generation_clipping": false,
+    "automatic_root_correction": false,
+    "source": "agent-authored phase motion program; no source-clip resampling",
+    "ik_target_error_max_m": 0.0
+  },
+  "trajectory_sha256": "f20f83baef8f3d51340a7d17bae16781c585134211757781e80e166e823ba43e",
+  "declared_contacts_sha256": "2b0f4fe5d9e8eb3004dc983988eb1f79b38dcb1fbb22da4787942e55b2c2532f",
+  "kinematics": {
+    "passed": true,
+    "reasons": [],
+    "checks": {
+      "base_height_envelope": true,
+      "non_aerial_support_half_cycle": true,
+      "ik_reachability": true,
+      "declared_contacts_match_ground": true,
+      "fixed_forward_goal": true
+    },
+    "metrics": {
+      "joint_velocity_max_rad_s": 6.88343620300293,
+      "joint_acceleration_max_rad_s2": 141.87338256835938,
+      "foot_surface_min_z_m": -1.955777406692505e-08,
+      "quaternion_norm_max_error": 0.0,
+      "base_height_min_m": 0.04673356935381889,
+      "base_height_max_m": 0.04673356935381889,
+      "base_height_allowed_m": [
+        0.035,
+        0.09388861060142517
+      ],
+      "support_fraction": 1.0,
+      "ik_target_error_max_m": 0.0,
+      "foot_gap_min_m_by_leg": [
+        -1.210719347000122e-08,
+        -1.955777406692505e-08,
+        -1.210719347000122e-08,
+        -1.955777406692505e-08
+      ],
+      "foot_gap_max_m_by_leg": [
+        0.0068490831181406975,
+        0.0068490831181406975,
+        0.0068490831181406975,
+        0.006849090568721294
+      ],
+      "joint_min_rad": [
+        1.3234472274780273,
+        2.497748374938965,
+        1.2650396823883057,
+        0.15000000596046448,
+        1.2650396823883057,
+        0.15000000596046448,
+        1.3234472274780273,
+        2.497748374938965
+      ],
+      "joint_max_rad": [
+        1.8765528202056885,
+        2.9915926456451416,
+        1.818145513534546,
+        0.6438443660736084,
+        1.818145513534546,
+        0.6438443660736084,
+        1.8765528202056885,
+        2.9915926456451416
+      ]
+    },
+    "motion_readout": [
+      {
+        "phase": [
+          0.0,
+          0.25
+        ],
+        "root_start": [
+          0.0,
+          0.0,
+          0.04673356935381889
+        ],
+        "root_end": [
+          0.15000000596046448,
+          0.0,
+          0.04673356935381889
+        ],
+        "foot_ground_fraction": [
+          0.6842105388641357,
+          0.6842105388641357,
+          0.6842105388641357,
+          0.6842105388641357
+        ],
+        "declared_contact_fraction": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "phase": [
+          0.25,
+          0.5
+        ],
+        "root_start": [
+          0.15000000596046448,
+          0.0,
+          0.04673356935381889
+        ],
+        "root_end": [
+          0.30000001192092896,
+          0.0,
+          0.04673356935381889
+        ],
+        "foot_ground_fraction": [
+          0.7368420958518982,
+          0.6842105388641357,
+          0.6842105388641357,
+          0.7368420958518982
+        ],
+        "declared_contact_fraction": [
+          0.5263158082962036,
+          0.4736842215061188,
+          0.4736842215061188,
+          0.5263158082962036
+        ]
+      },
+      {
+        "phase": [
+          0.5,
+          0.75
+        ],
+        "root_start": [
+          0.30000001192092896,
+          0.0,
+          0.04673356935381889
+        ],
+        "root_end": [
+          0.45000001788139343,
+          0.0,
+          0.04673356935381889
+        ],
+        "foot_ground_fraction": [
+          0.6842105388641357,
+          0.6842105388641357,
+          0.6842105388641357,
+          0.6842105388641357
+        ],
+        "declared_contact_fraction": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "phase": [
+          0.75,
+          1.0
+        ],
+        "root_start": [
+          0.45000001788139343,
+          0.0,
+          0.04673356935381889
+        ],
+        "root_end": [
+          0.6000000238418579,
+          0.0,
+          0.04673356935381889
+        ],
+        "foot_ground_fraction": [
+          0.6842105388641357,
+          0.7368420958518982,
+          0.7368420958518982,
+          0.6842105388641357
+        ],
+        "declared_contact_fraction": [
+          0.4736842215061188,
+          0.5263158082962036,
+          0.5263158082962036,
+          0.4736842215061188
+        ]
+      }
+    ]
+  },
+  "nominal_trace_sha256": "44de06522582bea05dd769898cf672371a0383af0246b52cea3b66283ab5b577",
+  "nominal": {
+    "trial": 0,
+    "randomized": false,
+    "passed": true,
+    "reasons": [],
+    "metrics": {
+      "velocity_rmse_m_s": 0.06615094095468521,
+      "mean_forward_speed_m_s": 0.10086243599653244,
+      "mean_speed_error_m_s": 0.0008624345064163208,
+      "control_sample_mean_forward_speed_m_s": 0.06913423538208008,
+      "displacement_mean_forward_speed_m_s": 0.10086243599653244,
+      "heading_rms_deg": 3.9102485179901123,
+      "heading_max_deg": 8.485119819641113,
+      "lateral_displacement_max_m": 0.01888999156653881,
+      "joint_tracking_rmse_rad": 0.0178996529430151,
+      "root_tracking_rmse_m": 0.008540437556803226,
+      "contact_foot_speed_rms_m_s": 0.12092520296573639,
+      "nonfoot_contact_fraction": 0.0,
+      "torque_near_stall_fraction": 0.0,
+      "joint_torque_peak_Nm": 0.1261609047651291,
+      "action_rate_rms_per_s": 5.893248558044434,
+      "finite": true,
+      "completed": true,
+      "fell": false,
+      "steps": 300,
+      "contact_observations": 598
+    }
+  },
+  "nominal_metrics": {
+    "velocity_rmse_m_s": 0.06615094095468521,
+    "mean_forward_speed_m_s": 0.10086243599653244,
+    "mean_speed_error_m_s": 0.0008624345064163208,
+    "control_sample_mean_forward_speed_m_s": 0.06913423538208008,
+    "displacement_mean_forward_speed_m_s": 0.10086243599653244,
+    "heading_rms_deg": 3.9102485179901123,
+    "heading_max_deg": 8.485119819641113,
+    "lateral_displacement_max_m": 0.01888999156653881,
+    "joint_tracking_rmse_rad": 0.0178996529430151,
+    "root_tracking_rmse_m": 0.008540437556803226,
+    "contact_foot_speed_rms_m_s": 0.12092520296573639,
+    "nonfoot_contact_fraction": 0.0,
+    "torque_near_stall_fraction": 0.0,
+    "joint_torque_peak_Nm": 0.1261609047651291,
+    "action_rate_rms_per_s": 5.893248558044434,
+    "finite": true,
+    "completed": true,
+    "fell": false,
+    "steps": 300,
+    "contact_observations": 598
+  },
+  "randomized_trace_sha256": "f7372a702db0457ba15632bb4410105d3a2b950d305a4ae4195672ee32c8fea0",
+  "randomized": [
+    {
+      "trial": 0,
+      "randomized": true,
+      "passed": true,
+      "reasons": [],
+      "metrics": {
+        "velocity_rmse_m_s": 0.06779292225837708,
+        "mean_forward_speed_m_s": 0.09958671033382416,
+        "mean_speed_error_m_s": 0.00041329115629196167,
+        "control_sample_mean_forward_speed_m_s": 0.06917447596788406,
+        "displacement_mean_forward_speed_m_s": 0.09958671033382416,
+        "heading_rms_deg": 3.737823009490967,
+        "heading_max_deg": 7.672985553741455,
+        "lateral_displacement_max_m": 0.014617502689361572,
+        "joint_tracking_rmse_rad": 0.02137630619108677,
+        "root_tracking_rmse_m": 0.008928735740482807,
+        "contact_foot_speed_rms_m_s": 0.11983860284090042,
+        "nonfoot_contact_fraction": 0.0,
+        "torque_near_stall_fraction": 0.0,
+        "joint_torque_peak_Nm": 0.1262868344783783,
+        "action_rate_rms_per_s": 6.0518412590026855,
+        "finite": true,
+        "completed": true,
+        "fell": false,
+        "steps": 300,
+        "contact_observations": 615
+      }
+    },
+    {
+      "trial": 1,
+      "randomized": true,
+      "passed": true,
+      "reasons": [],
+      "metrics": {
+        "velocity_rmse_m_s": 0.06956028193235397,
+        "mean_forward_speed_m_s": 0.10031428933143616,
+        "mean_speed_error_m_s": 0.00031428784132003784,
+        "control_sample_mean_forward_speed_m_s": 0.06986965239048004,
+        "displacement_mean_forward_speed_m_s": 0.10031428933143616,
+        "heading_rms_deg": 3.7186062335968018,
+        "heading_max_deg": 8.715730667114258,
+        "lateral_displacement_max_m": 0.013529101386666298,
+        "joint_tracking_rmse_rad": 0.02285425178706646,
+        "root_tracking_rmse_m": 0.007207728456705809,
+        "contact_foot_speed_rms_m_s": 0.11757106333971024,
+        "nonfoot_contact_fraction": 0.0,
+        "torque_near_stall_fraction": 0.0,
+        "joint_torque_peak_Nm": 0.1336686909198761,
+        "action_rate_rms_per_s": 5.856108665466309,
+        "finite": true,
+        "completed": true,
+        "fell": false,
+        "steps": 300,
+        "contact_observations": 593
+      }
+    },
+    {
+      "trial": 2,
+      "randomized": true,
+      "passed": true,
+      "reasons": [],
+      "metrics": {
+        "velocity_rmse_m_s": 0.07218509167432785,
+        "mean_forward_speed_m_s": 0.0989701971411705,
+        "mean_speed_error_m_s": 0.0010298043489456177,
+        "control_sample_mean_forward_speed_m_s": 0.07117908447980881,
+        "displacement_mean_forward_speed_m_s": 0.0989701971411705,
+        "heading_rms_deg": 4.721744537353516,
+        "heading_max_deg": 11.56302547454834,
+        "lateral_displacement_max_m": 0.03098697029054165,
+        "joint_tracking_rmse_rad": 0.026742542162537575,
+        "root_tracking_rmse_m": 0.017248110845685005,
+        "contact_foot_speed_rms_m_s": 0.11682765930891037,
+        "nonfoot_contact_fraction": 0.0,
+        "torque_near_stall_fraction": 0.0,
+        "joint_torque_peak_Nm": 0.16249890625476837,
+        "action_rate_rms_per_s": 5.903461933135986,
+        "finite": true,
+        "completed": true,
+        "fell": false,
+        "steps": 300,
+        "contact_observations": 579
+      }
+    }
+  ],
+  "stage": "accepted",
+  "reasons": [],
+  "previous_decision": {
+    "source_report": "/home/ywwang/sesame/runs/agent32_collection_20261114/candidates/candidate_016/attempt_00/report.json",
+    "sha256": "a33ac50d77b6004f44ee4cfa24754012bac325f2a988e66e8c9792518c0bf724",
+    "accepted": true,
+    "reasons": [],
+    "protocol_sha256": "d64edb5e46fea1763c1ed6b2f1216355a3cb8c92d9e3890ae3531f8380f91a4d"
+  },
+  "diagnostic_only_metrics": [
+    "velocity_rmse_m_s",
+    "contact_foot_speed_rms_m_s"
+  ]
+}

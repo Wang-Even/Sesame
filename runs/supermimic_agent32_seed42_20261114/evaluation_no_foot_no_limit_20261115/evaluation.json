@@ -1,0 +1,60 @@
+{
+  "episodes": 4,
+  "steps_per_episode": 300,
+  "evaluation_scope": "local_motion_tracking_research_not_course_scoring",
+  "metric_definitions": {
+    "success_rate": "configured local motion-tracking checks, excluding diagnostic_only_metrics; not course or paper success",
+    "fall_rate": "local environment termination fraction",
+    "return": "local motion-tracking reward; not course scoring reward"
+  },
+  "diagnostic_only_metrics": [
+    "velocity_rmse_m_s",
+    "contact_foot_speed_rms_m_s"
+  ],
+  "normalized_return": 0.813607394695282,
+  "return": 24.408220291137695,
+  "success_rate": 1.0,
+  "fall_rate": 0.0,
+  "velocity_rmse_m_s": 0.0865529328584671,
+  "heading_rms_deg": 4.458956241607666,
+  "joint_position_rmse_rad": 0.16348960995674133,
+  "root_position_rmse_m": 0.049685925245285034,
+  "episode_returns": [
+    24.768753051757812,
+    24.342248916625977,
+    24.322593688964844,
+    24.19928550720215
+  ],
+  "episode_passed": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "episode_metrics": [
+    {
+      "velocity_rmse_m_s": 0.08882081508636475,
+      "heading_rms_deg": 3.3079841136932373,
+      "joint_position_rmse_rad": 0.15284185111522675,
+      "root_position_rmse_m": 0.041953179985284805
+    },
+    {
+      "velocity_rmse_m_s": 0.08743935823440552,
+      "heading_rms_deg": 4.807995796203613,
+      "joint_position_rmse_rad": 0.15864445269107819,
+      "root_position_rmse_m": 0.07070808112621307
+    },
+    {
+      "velocity_rmse_m_s": 0.0825451910495758,
+      "heading_rms_deg": 5.486203670501709,
+      "joint_position_rmse_rad": 0.17028771340847015,
+      "root_position_rmse_m": 0.04140733554959297
+    },
+    {
+      "velocity_rmse_m_s": 0.08740638196468353,
+      "heading_rms_deg": 4.233640193939209,
+      "joint_position_rmse_rad": 0.17218446731567383,
+      "root_position_rmse_m": 0.044675104320049286
+    }
+  ]
+}

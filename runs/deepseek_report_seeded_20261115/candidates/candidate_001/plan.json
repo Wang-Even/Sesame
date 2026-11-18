@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint (2-DoF-per-leg) morphology using diagonal pairs A=(RF,LR) and B=(RR,LF) with a smooth cosine hip wave and sine-arch swing knee lift; candidate 1 explores a slightly slower, wider-amplitude, higher-center gait than the accepted candidate 0.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "pairA_stance_pairB_swing",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=home['speed']*t, y=0, z=0.04673357 m constant; zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep via cos(2*pi*pA) with pA in [0,0.5); knees hold stance flexion 0.15 rad (R3=L4=pi-0.15). Pair B (RR,LF) in swing: pB=pA+0.5 in [0.5,1); knees flex up to 0.15+0.55*sin(pi*sB) with sB=2*(pB-0.5); hips follow cos(2*pi*pB)."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "pairB_stance_pairA_swing",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height; no ripple or correction.",
+      "limb_motion": "Pair B (RR,LF) in stance: knees hold 0.15 rad flexion (R4=L3=0.15). Pair A (RF,LR) in swing: knees lift via sine arch up to 0.70 rad total; hips continue cosine sweep. Mirrored hip signs: R1=center+A*cos(pA), R2=pi-center+A*cos(pB), L1=pi-center-A*cos(pB), L2=center-A*cos(pA)."
+    }
+  ],
+  "coding_notes": "Exact parameters: freq=2.40 Hz, A=0.285 rad, center=1.635 rad, stance_flex=0.15 rad, swing_lift=0.55 rad, phase0=0.095, base_z=0.04673357 m, speed=home['speed']. Phase pA=freq*t+phase0 mod 1; pB=pA+0.5 mod 1. Hip wave cA=cos(2*pi*pA), cB=cos(2*pi*pB). Joints: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing flags pA>=0.5, pB>=0.5; normalized sA=2*(pA-0.5), sB=2*(pB-0.5); archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA,0.15+0.55*archA,0.15); flexB=where(swingB,0.15+0.55*archB,0.15). Knee mapping: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q=[R1,R3,R2,R4,L1,L3,L2,L4]. root_pos_w=[speed*t, 0*t, base_z*(1+0*t)]; root_rpy=[0,0,0]. Contacts: contactA=pA<0.5, contactB=pB<0.5; stack [contactA, contactB, contactB, contactA] for order RF,RR,LF,LR. No clipping, no projection, no base ripple; smooth phase wrap via mod-1 normalization before sine. Differences from candidate 0: freq 2.40 vs 2.45, A 0.285 vs 0.265, center 1.635 vs 1.615, phase0 0.095 vs 0.11."
+}

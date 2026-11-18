@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "pid": 2058968,
+  "started_unix": 1794795557.2382321,
+  "completed": [
+    "ppo",
+    "supermimic",
+    "supermimic_deepseek",
+    "supermimic_codex",
+    "supermimic_h16",
+    "supermimic_h64",
+    "supermimic_no_critic",
+    "ppo_extended"
+  ],
+  "failed": [],
+  "total": 8,
+  "current": "motion_evaluation",
+  "child_pid": 2185799,
+  "current_started_unix": 1794802829.8851113,
+  "motion_returncode": 0,
+  "finished_unix": 1794805521.6271498
+}

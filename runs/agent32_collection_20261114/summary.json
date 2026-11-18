@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "started_unix": 1794650567.2978983,
+  "method": "MimicAgent workflow adapted to Sesame",
+  "accepted_count": 32,
+  "attempts": 45,
+  "api_calls": 0,
+  "kinematic_pass_count": 45,
+  "candidate_errors": 0,
+  "api_errors": 0,
+  "consecutive_api_errors": 0,
+  "candidate_budget": 256,
+  "completed_candidates": 45,
+  "accepted_target": 32,
+  "candidate": 44,
+  "attempt": 0,
+  "elapsed_s": 507.2325588911772,
+  "finished_unix": 1794651074.5304565,
+  "target_reached": true,
+  "peak_process_memory_mib": 488,
+  "torch_peak_reserved_gib": 0.009765625,
+  "note": "Completion is not success; only accepted_count counts admitted training references"
+}

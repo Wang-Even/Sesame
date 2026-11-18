@@ -1,0 +1,13 @@
+{
+  "positive_example_source": "runs/deepseek_report_pilot_20261115/candidates/candidate_000/attempt_00/report.json",
+  "generated_reference_sha256": "f3bdeeff03120c4b0c447a448a70e2dd4ecfea44b5e036dfcd0c05d8e06b360d",
+  "matching_codex_clips": {
+    "candidate_001_attempt_00": [
+      "codex_train"
+    ]
+  },
+  "prompt_example_only_in_new_training_split": true,
+  "validation_test_exact_overlap": false,
+  "dataset_protocol_sha256": "af7e7827cfdd65ee40f354d3abbc1920e783a48a578e1060920f32895aa4d3ed",
+  "note": "The DeepSeek pilot positive example was independently generated but exactly matches a Codex reference; verified against the NEW course split, not only the historical split. Gait-family similarity remains."
+}

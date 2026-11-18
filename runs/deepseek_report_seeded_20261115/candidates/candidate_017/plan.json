@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint quadruped, using diagonal pairs A=(RF,LR) and B=(RR,LF) offset by half a cycle, with mirrored vertical-axis hip cosine waves and swing-phase knee flexion; constant forward root x and fixed base height.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "pair_A_stance_pair_B_swing",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, fixed base height 0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cosine from +A toward -A about center; R3/L4 knee held at stance flex 0.15 rad (angle pi-0.15). Pair B (RR,LF) in swing: hips sweep opposite cosine; R4/L3 knee flexes with positive sine arch over normalized swing up to 0.15+0.57 rad."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "pair_B_stance_pair_A_swing",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation, fixed base height, zero rpy.",
+      "limb_motion": "Pair B (RR,LF) in stance with R4/L3 knee at 0.15 rad; pair A (RF,LR) in swing with R3/L4 knee arching up to 0.15+0.57 rad. Hip cosine waves continue smoothly across the wrap."
+    }
+  ],
+  "coding_notes": "Parameters: freq=2.49 Hz, hip amplitude A=0.264 rad, hip center=1.602 rad, stance knee flex=0.15 rad, swing knee lift=0.57 rad, phase origin=0.10, base height=0.04673357 m. Compute pA=freq*t+0.10 then pA-=floor(pA); pB=pA+0.5 then pB-=floor(pB). cA=cos(2*pi*pA), cB=cos(2*pi*pB). Hips: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing masks pA>=0.5, pB>=0.5; normalized sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA,0.15+0.57*archA,0.15); flexB likewise. Knees: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q in order R1,R3,R2,R4,L1,L3,L2,L4. root_pos_w=[0.1*t, 0*t, 0.04673357*(1+0*t)]; root_rpy zeros. contacts=[pA<0.5, pB<0.5, pB<0.5, pA<0.5] for RF,RR,LF,LR. No clipping, no ground correction, no base ripple."
+}

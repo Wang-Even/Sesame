@@ -1,0 +1,107 @@
+{
+  "suite": "/home/ywwang/sesame/runs/course_comparison_dense_20261116",
+  "suite_protocol_sha256": "e4c3ff4ca31a8c546d4d7abf010f89823797bc757e1a4619ade3f926fa64e930",
+  "seed": 91042,
+  "groups": [
+    "ppo",
+    "supermimic",
+    "supermimic_deepseek",
+    "supermimic_codex"
+  ],
+  "test_source": "/home/ywwang/sesame/datasets/course_comparison_20261115/common_test",
+  "clip_order": [
+    "original__test_clip_000",
+    "original__test_clip_001",
+    "original__test_clip_002",
+    "original__test_clip_003",
+    "deepseek__candidate_022_attempt_00",
+    "deepseek__candidate_015_attempt_00",
+    "deepseek__candidate_000_attempt_00",
+    "deepseek__candidate_019_attempt_00",
+    "codex__candidate_025_attempt_00",
+    "codex__candidate_016_attempt_00",
+    "codex__candidate_000_attempt_00",
+    "codex__candidate_022_attempt_00"
+  ],
+  "test_files_sha256": {
+    "joint_names.json": "abff496a9b060e4dfe6c730937defd42db4b950ccb2fb5d156eb8b0e85563a2f",
+    "motion_names.json": "92e9a0c964c19097573b3d7679934731901bebb090be7bee1818b35a6bebe122",
+    "meta.json": "2588cda3c53c2fbdb4aa34e888498ce9b4520194a2ffc4633ab09960e68f190a",
+    "provenance.json": "aa912c1b3503a7c2e7b7939cfabf8bb87f3619a1d13ae57eba904268f5739170",
+    "root_lin_vel_w.npy": "782ab656fee20bff6363be3d0c8fb96e91615d544ff6eff26586ea32947aa852",
+    "joint_pos.npy": "64a8e34e7a780590a2bc955f6ee23a2c7ecaab6f18b9c65bdff6e2c2fed16905",
+    "root_ang_vel_w.npy": "72893ceea576167b3c3c92364e27b4582c3591bf86f6b84b500da8e1150976c8",
+    "root_pos_w.npy": "fae197666c3f0dbe58efa07824c5f334f91c11aacd11542e437ccf3823966f90",
+    "root_quat_w.npy": "2588a85ae4ff165fd1fd1107a64f01d70f1c63b151035ded86c5a5f2984afc8e",
+    "motion_ends.npy": "73252e71ad32031daee0bf5c8b508669e9960b50af2a0e5a9915444a3445a99a",
+    "joint_vel.npy": "a901f9d49d80628e269fb5af563e4142c0e1dccc0c558d7c5b43fdc1318ce016"
+  },
+  "checkpoint_selection": "Fixed final.pt for all groups; all test clips in stored order, one evaluation each",
+  "evaluation": "Fresh unified motion diagnosis, separate from the training-end final_test results",
+  "course_scoring": false,
+  "video_rendering": false,
+  "physics_dt_s": 0.0005,
+  "control_dt_s": 0.02,
+  "evaluation_steps": 300,
+  "reward_horizon_s": 6.0,
+  "statistics_interval_s": [
+    0.0,
+    5.98
+  ],
+  "early_failure": "Motion statistics stop at the last alive pre-step state; reset states are retained only in raw trace with alive=False",
+  "complete_definition": "No local failure during all 300 transitions, including the last transition; normal timeout does not count as failure",
+  "direction_definition": "atan2(net world Y displacement, net world X displacement), separate from world-frame body yaw; undefined below 1e-6 m net displacement",
+  "speed_definition": "Net world X displacement divided by valid pre-step trace duration; 5.98 s for full clips. Raw instantaneous velocity is diagnostic only.",
+  "aggregation": "Means of per-clip CUDA statistics; early-failed clips use their valid durations, complete count reported separately",
+  "initial_state_match_tolerance": 1e-06,
+  "reward_version": "sesame_nonfoot_no_joint_limit_20261115",
+  "source_sha256": {
+    "scripts/evaluate_course_motion.py": "216e5dea9a39cbd4a72a3cb48cad14c9ec5c75d596fccfb6e8ddaef3b7968774",
+    "sesame_research/evaluation.py": "d50027221c1aec6f2b0a87b48a8a78498e6237b2a64d4d4da364f9aa30fb78a2",
+    "sesame_research/task.py": "c9d3b28beee71441ae31254b5417c51f4ffe364ce6eefa92504ea046280b60a5",
+    "sesame_research/robot.py": "2eb1b2309031d4b6bd1a06ee4a3409e98184472570f4b8913795ebf675446d2a",
+    "sesame_research/reward.py": "5c4347cfab739e45f43bcc6a880933a74530ea3b93083bd656099ed80c526753"
+  },
+  "models": {
+    "ppo": {
+      "checkpoint": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/ppo/final.pt",
+      "checkpoint_sha256": "0ba23f2de0bab904ae4fa582c262d26d6be35962eadffd923f51c8a41fbcb312",
+      "checkpoint_real_steps": 2097152,
+      "training_protocol_sha256": "93c7f644423f274ff480a58bc205425c0c140cfa2f6011897d7d1f0d6b28d27b",
+      "trace_sha256": "0aa32184e0f9ea9607b05e7e1a271992996bca22da6944f5fd8e272cf4599c06",
+      "initial_state_max_abs_difference_from_first_group": 0.0,
+      "world_model_rollouts_used": false,
+      "inference": "Actor outputs executed in native CUDA physics; world model only supplies representation/configuration interfaces"
+    },
+    "supermimic": {
+      "checkpoint": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/supermimic/final.pt",
+      "checkpoint_sha256": "5e825fdf1c0ee80f63db4e88293ee708d20e801161f4ad1e8c3676a02c06f945",
+      "checkpoint_real_steps": 2097152,
+      "training_protocol_sha256": "1f358ba5594ca3fbdb00b589dcda202b5ca9f496fc753f9351dc9da54b3fad6d",
+      "trace_sha256": "c0ec58451f4a2c28bbbf507e287cc45bb2bfdb59c2f597cd079144f8e1f265a9",
+      "initial_state_max_abs_difference_from_first_group": 0.0,
+      "world_model_rollouts_used": false,
+      "inference": "Actor outputs executed in native CUDA physics; world model only supplies representation/configuration interfaces"
+    },
+    "supermimic_deepseek": {
+      "checkpoint": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/supermimic_deepseek/final.pt",
+      "checkpoint_sha256": "d73effba77864c828e039537acaf313c5a796c9e7fae266a4e2c5fa35c2e48d2",
+      "checkpoint_real_steps": 2097152,
+      "training_protocol_sha256": "3875f9c5ea5994858cb9e5d7b0e8721c844f956edce3ccd0f1961e589c248eb2",
+      "trace_sha256": "b99f089d902883c952a0201d7f587d11547b680a214f2bdae9d33d124ea26b8d",
+      "initial_state_max_abs_difference_from_first_group": 0.0,
+      "world_model_rollouts_used": false,
+      "inference": "Actor outputs executed in native CUDA physics; world model only supplies representation/configuration interfaces"
+    },
+    "supermimic_codex": {
+      "checkpoint": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/supermimic_codex/final.pt",
+      "checkpoint_sha256": "183c1b89667fd4d579391ebe38d3f6ab539acd8d04313f0a4a0ba47d7ec49529",
+      "checkpoint_real_steps": 2097152,
+      "training_protocol_sha256": "3ef7227bb791487401cb070ac41ad2254fdd5ab528ae287432da851be64bdc7e",
+      "trace_sha256": "31a186d961461c705d28721e7bf90fb755c3e57329aa5ace5d51e4166cb36469",
+      "initial_state_max_abs_difference_from_first_group": 0.0,
+      "world_model_rollouts_used": false,
+      "inference": "Actor outputs executed in native CUDA physics; world model only supplies representation/configuration interfaces"
+    }
+  }
+}

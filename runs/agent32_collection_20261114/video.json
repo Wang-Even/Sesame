@@ -1,0 +1,51 @@
+{
+  "video": "runs/agent32_collection_20261114/reference_vs_execution.mp4",
+  "selected_attempt": "runs/agent32_collection_20261114/candidates/candidate_000/attempt_00",
+  "selection": "first physically executed attempt in candidate/attempt order",
+  "reference": {
+    "duration_s": 6.0,
+    "forward_displacement_m": 0.6000000238418579,
+    "lateral_displacement_m": 0.0,
+    "forward_speed_from_displacement_m_s": 0.10000000894069672,
+    "mean_vx_m_s": 0.10000000894069672,
+    "mean_vy_m_s": 0.0,
+    "mean_planar_speed_m_s": 0.10000000894069672,
+    "reference_mean_vx_m_s": 0.10000000149011612,
+    "reference_mean_vy_m_s": 0.0,
+    "net_movement_direction_deg": 0.0,
+    "final_body_yaw_deg": 0.0,
+    "world_body_yaw_rms_deg": 0.0,
+    "completed_without_local_termination": null
+  },
+  "execution": {
+    "duration_s": 6.0,
+    "forward_displacement_m": 0.5845366716384888,
+    "lateral_displacement_m": -0.0026366037782281637,
+    "forward_speed_from_displacement_m_s": 0.0974227786064148,
+    "mean_vx_m_s": 0.06972656399011612,
+    "mean_vy_m_s": -0.002180803567171097,
+    "mean_planar_speed_m_s": 0.0844762921333313,
+    "reference_mean_vx_m_s": 0.10000000149011612,
+    "reference_mean_vy_m_s": 0.0,
+    "net_movement_direction_deg": -0.25843584537506104,
+    "final_body_yaw_deg": 11.429965019226074,
+    "world_body_yaw_rms_deg": 6.423649311065674,
+    "completed_without_local_termination": null
+  },
+  "accepted": true,
+  "reasons": [],
+  "controller": "反馈控制＋原生 PD 实际执行",
+  "display_velocity": "position difference over preceding 0.2 s",
+  "execution_feedback": {
+    "position_gain": 12.0,
+    "velocity_gain": 1.0,
+    "heading_gain": 1.5,
+    "lateral_gain": 8.0,
+    "yaw_rate_gain": 0.03,
+    "velocity_filter_alpha": 0.15
+  },
+  "reference_sha256": "ad48787998e963e1a70220bfbf4432873904ea8a24d04e0c0ddf898eca2e7ffd",
+  "execution_sha256": "4d94055bf3b35f1d57529dce6130220a64caddb250996a4dad8fa53a45199001",
+  "video_sha256": "51a2040fb91a7af1ad4df5304b1070fb8291e9dab6fe504d824ccca2739b6923",
+  "note": "Reference animation vs recorded physical execution; NOT trained-policy inference; GPU FK/EGL, 1x speed"
+}

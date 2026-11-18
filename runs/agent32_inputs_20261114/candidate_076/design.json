@@ -1,0 +1,18 @@
+{
+  "author": "current Codex conversation agent",
+  "api_calls": 0,
+  "candidate_index": 76,
+  "parameters": {
+    "frequency": 2.3333333333333335,
+    "amplitude": 0.3,
+    "hip_center": 1.55,
+    "knee_lift": 0.55,
+    "hip_wave": "cosine",
+    "lift_shape": "sine"
+  },
+  "rationale": "Agent-authored reachable diagonal trot parameter variants. Geometry, speed measurement and analytic execution feedback calibrated separately before collection. No trained-policy rollouts are used as generated programs. Each version must pass nominal and all 3 randomized executions.",
+  "feedback_reports": [
+    "feedback_10_calibration"
+  ],
+  "note": "Manual adaptive design; no learned policy clips, source resampling, clipping or gate changes"
+}

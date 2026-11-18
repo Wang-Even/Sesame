@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint (2-DoF-per-leg) morphology using direct smooth joint trajectories: diagonal pairs A=(RF,LR) and B=(RR,LF) offset half cycle, hip cosine wave with mirrored signs, knee flexion from stance bias plus positive sine swing arch, constant authored base height, declared diagonal stance contacts.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "pairA_stance_pairB_swing",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant base height 0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep from cos peak toward cos trough (R1=center+A*cos, L2=center-A*cos), knees held at stance flex 0.145 rad (R3=L4=pi-0.145). Pair B (RR,LF) in swing: hips sweep opposite (R2=pi-center+A*cos, L1=pi-center-A*cos), knees lift with positive sine arch up to 0.145+0.565 rad (R4=L3=flexion)."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "pairA_swing_pairB_stance",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward velocity 0.1 m/s, y=0, constant base height, zero attitude.",
+      "limb_motion": "Pair A (RF,LR) in swing: knee lift arch on R3/L4 up to 0.145+0.565 rad, hips continue cosine sweep. Pair B (RR,LF) in stance: knees held at 0.145 rad (R4=L3=0.145), hips sweep back. Swing arch normalized s=(p-0.5)*2 then sin(pi*s) to avoid wrap discontinuity."
+    }
+  ],
+  "coding_notes": "Chosen gait parameters (distinct from prior candidates 22-25): frequency 2.46 Hz, hip amplitude 0.258 rad, hip center 1.588 rad, stance knee flex 0.145 rad, swing knee lift 0.565 rad, phase origin 0.108, constant base height 0.04673357 m. Pair A phase pA = frac(2.46*t + 0.108); pair B pB = frac(pA+0.5). Hip waves: R1=center+A*cos(2pi*pA); R2=pi-center+A*cos(2pi*pB); L1=pi-center-A*cos(2pi*pB); L2=center-A*cos(2pi*pA). Knee mapping: R3=L4=pi-flexA (pair A), R4=L3=flexB (pair B), where flex = where(swing, stance_flex+swing_lift*sin(pi*(p-0.5)*2), stance_flex). Stack q in order R1,R3,R2,R4,L1,L3,L2,L4. root_pos_w = [speed*t, 0*t, base_z*(1+0*t)]; root_rpy all zeros. Contacts: contactA = pA<0.5, contactB = pB<0.5; stack [contactA, contactB, contactB, contactA] for RF,RR,LF,LR. No clipping, no base ripple, no ground correction; all math via m.API with 0*t broadcast columns."
+}

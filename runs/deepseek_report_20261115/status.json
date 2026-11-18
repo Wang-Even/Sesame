@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "started_unix": 1794748053.0516138,
+  "method": "MimicAgent workflow adapted to Sesame",
+  "accepted_count": 4,
+  "attempts": 12,
+  "api_calls": 26,
+  "kinematic_pass_count": 5,
+  "candidate_errors": 0,
+  "api_errors": 0,
+  "consecutive_api_errors": 0,
+  "candidate_budget": 64,
+  "completed_candidates": 8,
+  "accepted_target": 32,
+  "candidate": 8,
+  "attempt": 0,
+  "error": "Traceback (most recent call last):\n  File \"/home/ywwang/sesame/scripts/run_mimicagent.py\", line 203, in main\n    trials,trace=engine.execute(ref,body)\n                 ~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/home/ywwang/sesame/.venv_supermimic_research/lib/python3.13/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File \"/home/ywwang/sesame/sesame_trajectory_agent/validation.py\", line 161, in execute\n    _,_,terminated,truncated,_ = env.step(action)\n                                 ~~~~~~~~^^^^^^^^\n  File \"/home/ywwang/sesame/third_party/mjlab_research_dd51a9fc/src/mjlab/envs/manager_based_rl_env.py\", line 439, in step\n    self.action_manager.apply_action()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/ywwang/sesame/third_party/mjlab_research_dd51a9fc/src/mjlab/managers/action_manager.py\", line 184, in apply_action\n    term.apply_actions()\n    ~~~~~~~~~~~~~~~~~~^^\nKeyboardInterrupt\n",
+  "finished_unix": 1794748208.4834263
+}

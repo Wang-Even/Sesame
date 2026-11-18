@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint (2-DoF-per-leg) vertical-axis hips, using diagonal pairs A=(right_front,left_rear) and B=(right_rear,left_front) offset by half a cycle, with mirrored hip cosine waves and diagonal knee flexion; distinct gait variant from prior candidates.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward x = speed*t, y=0, fixed base height 0.04673357 m, zero roll/pitch/yaw. No ripple, no correction.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep via cos(2*pi*pA) with pA in [0,0.5); knees hold stance flex 0.15 rad (R3=pi-0.15, L4=pi-0.15). Pair B (RR,LF) in swing: hips follow cos(2*pi*pB) with pB=pA+0.5; knees lift with positive sine arch over normalized swing (R4=L3=0.15+0.55*sin(pi*sB))."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "stance_B_swing_A",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward x, fixed base height, zero rpy.",
+      "limb_motion": "Pair B in stance: hips sweep, knees hold 0.15 rad (R4=L3=0.15). Pair A in swing: knees lift with sine arch (R3=L4=0.15+0.55*sin(pi*sA)); hips continue mirrored cosine. Swing phase normalized to [0,1] before sine to avoid wrap discontinuity."
+    }
+  ],
+  "coding_notes": "Chosen gait parameters (distinct from candidates 014-017): frequency 2.55 Hz, hip amplitude 0.262 rad, hip center 1.598 rad, stance knee flex 0.15 rad, swing knee lift 0.56 rad, phase origin 0.12, base height 0.04673357 m. Joint order R1,R3,R2,R4,L1,L3,L2,L4. Hips: R1=center+A*cos(2*pi*pA); R2=pi-center+A*cos(2*pi*pB); L1=pi-center-A*cos(2*pi*pB); L2=center-A*cos(2*pi*pA). Knees: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB where flexA=where(pA>=0.5, 0.15+0.56*sin(pi*2*(pA-0.5)), 0.15) and flexB analogous with pB. Normalize pA=freq*t+phase0 minus floor; pB=pA+0.5 minus floor. Contacts: contactA=pA<0.5 for RF and LR; contactB=pB<0.5 for RR and LF; stack as [contactA, contactB, contactB, contactA]. Root: x=speed*t, y=0*t, z=base_z*(1+0*t); rpy all zero. No clipping, no projection, no ground correction; rely on native PD and feedback controller. Use m.stack(...,dim=-1) for q, root_pos_w, root_rpy, contacts. All math via m.API; no loops, imports, or tensor methods."
+}

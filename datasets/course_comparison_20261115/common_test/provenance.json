@@ -1,0 +1,134 @@
+[
+  {
+    "source": "original",
+    "name": "test_clip_000",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+    "source_index": 0,
+    "frames": [
+      0,
+      301
+    ],
+    "content_sha256": "cf6742e3db94b02126f09866ade91d53d969a26992f45bbe584ec1f5ba07d59e"
+  },
+  {
+    "source": "original",
+    "name": "test_clip_001",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+    "source_index": 1,
+    "frames": [
+      451,
+      752
+    ],
+    "content_sha256": "853803ef72f0d619470a527a06eb360e81b13f31839a7b5aee6b91b034f787e3"
+  },
+  {
+    "source": "original",
+    "name": "test_clip_002",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+    "source_index": 2,
+    "frames": [
+      902,
+      1203
+    ],
+    "content_sha256": "459d1d22ce560032baabe5bc5a86e7fe396e0462dca9b7ffdcd3c27ea8355314"
+  },
+  {
+    "source": "original",
+    "name": "test_clip_003",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+    "source_index": 3,
+    "frames": [
+      1353,
+      1654
+    ],
+    "content_sha256": "dbd619d30e709d26349be86e975bbfa2fb4b07d8d53474f7d1c1c390897251a4"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_022_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 22,
+    "frames": [
+      6622,
+      6923
+    ],
+    "content_sha256": "8e2bd20de7653ca674867731782014a6a9c182c7c43c538441918c8300fe5578"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_015_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 15,
+    "frames": [
+      4515,
+      4816
+    ],
+    "content_sha256": "aea9ee1c5d6758d4f14bbb50f9d546022b211d13ab0aab90c1a87316d72cad03"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_000_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 0,
+    "frames": [
+      0,
+      301
+    ],
+    "content_sha256": "3591debba33ceea8a02fa2efe70882100705fe1884cabcb97f5e74270f0ce373"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_019_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 19,
+    "frames": [
+      5719,
+      6020
+    ],
+    "content_sha256": "661c4ea780069728cc3b79b48fb64b097c131cbda52f20b846435e36e74ac0b9"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_025_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 22,
+    "frames": [
+      6622,
+      6923
+    ],
+    "content_sha256": "3fb88b7828b5cd44e84bd4fa725c44651dc4981424a0e3b7e650fd7da3fb67c2"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_016_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 15,
+    "frames": [
+      4515,
+      4816
+    ],
+    "content_sha256": "faf9e380a1e155d61f66a7242b0f9187ad79acb80c5ab4c94852b40f63598333"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_000_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 0,
+    "frames": [
+      0,
+      301
+    ],
+    "content_sha256": "7bf3656c39ab5c3578293b43ee09bc8a3dbd1b14c88cbe91a5601f138bb55eb3"
+  },
+  {
+    "source": "codex",
+    "name": "candidate_022_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/agent32_collection_20261114_reassessed_20261115/accepted/train",
+    "source_index": 19,
+    "frames": [
+      5719,
+      6020
+    ],
+    "content_sha256": "197aea719f177159eab48919752eef5a2b121500b6f99d237f9c3a8eee9bc7b6"
+  }
+]

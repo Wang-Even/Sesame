@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward walking at 0.1 m/s on Sesame's 8-joint (2-DoF/leg) vertical-axis hip quadruped using a diagonal trot: pair A=(right_front,left_rear) and pair B=(right_rear,left_front) 180° out of phase. Direct smooth joint trajectories (no generic sagittal IK), with hip cosine wave and knee flexion that is small in stance and larger during swing, declared diagonal contacts matching the stance windows.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "pairA_stance_pairB_swing",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, fixed authored base height ~0.04673 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep with cos(2*pi*pA) from center+ toward center-, knees at stance flexion ~0.15 rad (R3=L4=pi-flexA). Pair B (RR,LF) in swing: hips follow cos(2*pi*pB) with pB=pA+0.5, knees lift with positive sine arch of normalized swing (flexB=0.15+0.55*sin(pi*sB)), R4=L3=flexB."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "pairA_swing_pairB_stance",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height; no ripple or correction.",
+      "limb_motion": "Pair A swings (knee lift arch on flexA, R3=L4=pi-flexA), pair B holds stance flexion ~0.15 rad (R4=L3=flexB) while its hips sweep. Hip waves remain continuous across the wrap because phase is normalized with floor and knee arch uses sin(pi*s) with s=(p-0.5)*2."
+    }
+  ],
+  "coding_notes": "Exact parameters: freq=2.45 Hz, hip amplitude A=0.265 rad, hip center=1.615 rad, stance knee flexion=0.15 rad, swing knee lift=0.55 rad, phase origin phase0=0.11, base height=0.04673357 m, speed=home['speed']=0.1 m/s. Joint order R1,R3,R2,R4,L1,L3,L2,L4. Hip mapping: R1=center+A*cos(2*pi*pA); R2=pi-center+A*cos(2*pi*pB); L1=pi-center-A*cos(2*pi*pB); L2=center-A*cos(2*pi*pA). Knee mapping: flexA (pair A) drives R3=pi-flexA and L4=pi-flexA; flexB (pair B) drives R4=flexB and L3=flexB. Normalize pA=freq*t+phase0 minus floor, pB=pA+0.5 minus floor; swing when p>=0.5; s=(p-0.5)*2; arch=sin(pi*s); flex=where(swing, 0.15+0.55*arch, 0.15). Contacts: contactA=pA<0.5, contactB=pB<0.5; contacts=[contactA, contactB, contactB, contactA] for feet order RF,RR,LF,LR. Root: root_pos_w=stack([speed*t, 0*t, base_z*(1+0*t)]); root_rpy=zeros. Build q with m.stack(...,dim=-1); use 0*t and 1+0*t for constant columns; no clipping, no loops, no tensor methods. This differs from the validated example by frequency 2.45 (vs 2.5), amplitude 0.265 (vs 0.27), center 1.615 (vs 1.60), and phase origin 0.11 (vs 0.125)."
+}

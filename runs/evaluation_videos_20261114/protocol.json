@@ -1,0 +1,51 @@
+{
+  "seed": 91042,
+  "physics_dt_s": 0.0005,
+  "control_hz": 50,
+  "video_fps": 25,
+  "playback_speed": 1,
+  "test_source": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/test",
+  "test_clips": 8,
+  "clip_order": [
+    "test_clip_000",
+    "test_clip_001",
+    "test_clip_002",
+    "test_clip_003",
+    "test_clip_004",
+    "test_clip_005",
+    "test_clip_006",
+    "test_clip_007"
+  ],
+  "selection": "all test clips in stored order; first clip preview is not best-of-N",
+  "agent_selection": "all candidates in stored order; nominal and randomized trial 0 shown side by side",
+  "sources": {
+    "scripts/export_research_evaluation_videos.py": "592923408b962b704c23b2a7566af445bbacedcb83e914dd10ba6e586e656b9b",
+    "sesame_research/evaluation.py": "415e8f6bf7355ee784e8bc193fbbe91915d9611a67d5d4f7471253a78d1c2413",
+    "sesame_research/task.py": "0a81135fcb201c0bc67817835dfe2aa4d920f29d0e46643e2f5da27527c7a850",
+    "sesame_research/robot.py": "2eb1b2309031d4b6bd1a06ee4a3409e98184472570f4b8913795ebf675446d2a"
+  },
+  "models": {
+    "supermimic": {
+      "checkpoint": "/home/ywwang/sesame/runs/agent_reference_comparison_20261113/supermimic_original_seed42/final.pt",
+      "sha256": "ed0128b1d8f2fb49eacf064c858cc99c4011c20d0de734fed27595ebda24efae",
+      "trace_sha256": "2fc0bd456bf12de2f7bd811943fcd48ba69f58b976cdc4160f1942c58f7c6361",
+      "actor_parameters": 793032
+    },
+    "ppo": {
+      "checkpoint": "/home/ywwang/sesame/runs/agent_reference_comparison_20261113/ppo_original_seed42/final.pt",
+      "sha256": "e929a65d5ad478dabe0448bf658df786cb29b4100db74045d987ef2154567323",
+      "trace_sha256": "299e655c2539bdff1004d149c6d7c3f74d754e6f85292994e07d9721aa27d593",
+      "actor_parameters": 793032
+    }
+  },
+  "course_scoring": false,
+  "video_note": "EGL rendering of recorded actual CUDA simulator states; no world-model prediction or target-pose playback",
+  "velocity_overlay": "0.2 s trailing mean of measured world-frame root-link velocity; raw samples retained",
+  "heading": "body yaw in world frame; movement direction separately derived from net displacement",
+  "policy_statistics_interval_s": [
+    0.0,
+    8.98
+  ],
+  "policy_endpoint_note": "Only frames 0..449 (pre-step states) are used. A legacy frame 450, if present, is post-timeout reset and is excluded.",
+  "render_source_sha256": "2c0cf2e3e01f45eadb0716df89b1de5dcfec91b3918aeb3e668a3bea37b63897"
+}

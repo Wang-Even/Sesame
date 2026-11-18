@@ -1,0 +1,179 @@
+{
+  "args": {
+    "method": "ppo",
+    "output": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/ppo",
+    "seed": 42,
+    "envs": 512,
+    "steps": 2097152,
+    "width": 512,
+    "batch": 2048,
+    "horizon": 32,
+    "no_critic": false,
+    "wm_batch": 512,
+    "wm_batches": 10,
+    "eval_every": 32768,
+    "eval_steps": 300,
+    "eval_after_first_update": true,
+    "motion_file": "/home/ywwang/sesame/datasets/course_comparison_20261115/original_train",
+    "validation_file": "/home/ywwang/sesame/datasets/course_comparison_20261115/common_validation",
+    "test_file": "/home/ywwang/sesame/datasets/course_comparison_20261115/common_test",
+    "diagnostic_only_metrics": [
+      "velocity_rmse_m_s",
+      "contact_foot_speed_rms_m_s"
+    ],
+    "sampling_mode": "uniform",
+    "physics_dt": 0.0005,
+    "replay_ratio": 16.0
+  },
+  "official_commit": "5efbf114e11f725c31d83e217be987c13c0e4ce2",
+  "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "backend": "unmodified HybridRobotics/mjlab_research; native motion loader, FK, reset and termination",
+  "package_versions": {
+    "mjlab": "1.6.0",
+    "torch": "2.14.1+cu126",
+    "mujoco": "3.16.0",
+    "mujoco-warp": "3.16.0",
+    "warp-lang": "1.19.0+cu12",
+    "rsl-rl-lib": "5.5.2"
+  },
+  "runner_config": {
+    "wandb_project": "supermimic",
+    "run_name": null,
+    "wandb_run_path": null,
+    "headless": true,
+    "buffer_size": 1000,
+    "representation": "gencoord",
+    "actor_obs": "proprio",
+    "log_interval": 10,
+    "save_interval": 1000,
+    "history_length": 10,
+    "termination_softness": 0.05,
+    "dynamics_hidden_dims": [
+      512,
+      512,
+      512
+    ],
+    "wm": {
+      "lr": 0.0002,
+      "num_batches": 10,
+      "batch_size": 512,
+      "horizon": 8,
+      "nominal_error_root_pose_pos": 0.01,
+      "nominal_error_root_pose_ori": 0.02,
+      "nominal_error_joint_pos": 0.1,
+      "nominal_error_joint_vel": 3.14,
+      "nominal_error_body_pos": 0.05,
+      "nominal_error_body_rot": 0.1,
+      "nominal_error_body_vel": 1.0,
+      "nominal_error_body_avel": 3.14
+    },
+    "max_iterations": 1000000,
+    "replay_ratio": 16.0,
+    "latent_dim": 32,
+    "actor_hidden_dims": [
+      512,
+      256,
+      128
+    ],
+    "critic_hidden_dims": [
+      256,
+      128
+    ],
+    "latent_bc_weight": 0.1,
+    "tasks": {
+      "velocity": {
+        "lin_vel_x_range": [
+          -1.5,
+          1.5
+        ],
+        "lin_vel_y_range": [
+          -0.5,
+          0.5
+        ],
+        "ang_vel_z_range": [
+          -3.14,
+          3.14
+        ],
+        "window_frames": 25,
+        "command_noise": [
+          0.5,
+          0.5,
+          0.785
+        ]
+      }
+    },
+    "slot_mix": {
+      "motion": 1.0,
+      "velocity": 0.0
+    },
+    "policy": {
+      "lr": 0.0002,
+      "num_batches": 1,
+      "batch_size": 2048,
+      "noise": 0.1,
+      "horizon": 32,
+      "gamma": 0.99,
+      "survival_masking": true,
+      "beta2": 0.95,
+      "grad_clip_value": 0.1,
+      "lam": 0.95
+    },
+    "sampling_mode": "uniform",
+    "return_sampler": {
+      "gamma": 0.99,
+      "horizon": 20,
+      "memory": 256,
+      "steepness": 25.0,
+      "explore": 0.5,
+      "keep": 0.1
+    }
+  },
+  "sources": {
+    "sesame_research/runner.py": "bb2c1afa5b0b57ddd6b2e5bd0ceb6e14ad50c31ae07e769141c59225ac13ac6c",
+    "sesame_research/task.py": "c9d3b28beee71441ae31254b5417c51f4ffe364ce6eefa92504ea046280b60a5",
+    "sesame_research/robot.py": "2eb1b2309031d4b6bd1a06ee4a3409e98184472570f4b8913795ebf675446d2a",
+    "sesame_research/__init__.py": "eb491130e7b8e029370518355bf6681c8bf761cd1be12498db0be0cc39073c7b",
+    "sesame_research/reward.py": "5c4347cfab739e45f43bcc6a880933a74530ea3b93083bd656099ed80c526753",
+    "sesame_research/evaluation.py": "d50027221c1aec6f2b0a87b48a8a78498e6237b2a64d4d4da364f9aa30fb78a2",
+    "sesame_research/ppo.py": "1835948c3c74d957ac388dc523458608d2afa2702fc6966e25e0d12dba521366",
+    "sesame_research/resources.py": "40a13ebfe0485598d54a43ccc98d7ad391e4602dfc0caaed20d09828943b31d6",
+    "scripts/run_research_sesame_suite.py": "adb8be23b06d53dfe83dfc49b7951bf01081fcd0ebe131628b99e34a8343f55c",
+    "scripts/plot_research_sesame.py": "559e00cbb8fc6b7fa9164faa53288ecf68840ecf87007576df857958958e4302",
+    "scripts/prepare_research_sesame.py": "4946a00db20ff1e0c7c84913c363689339eaf8d0f89cd3edca6c8d93276ae469",
+    "scripts/train_research_sesame.py": "18c8f1b6d2b9757a2ac9dd4d1684b179f906353646a14a8e0723b6496c0000c2",
+    "scripts/smoke_research_sesame.py": "9a399ef09d3a07e634c69ea4dd829faa6c2dd4ac02fe210bd02f7863ca590941"
+  },
+  "dataset_hours": 0.04,
+  "target_normalized_return": 0.82,
+  "return_ceiling_per_second": 5.0,
+  "gpu_count": 1,
+  "time_metric": "training sampling + updates including first compilation; excludes evaluation and env setup",
+  "post_startup_time_metric": "training_s minus the first completed update timestamp; evaluation and checkpoint time excluded",
+  "evaluation_schedule": "initial, optional first completed update, global eval_every step boundaries, and budget end",
+  "shared_gpu": true,
+  "seed_count": 1,
+  "normalization": "fixed full horizon; early failure remainder zero",
+  "actor_observation": "30-dimensional proprio x 10 history + 220-dimensional motion goal",
+  "action_dim": 8,
+  "evaluation": "fixed held-out clips from start, no sensor noise, nominal dynamics",
+  "diagnostic_only_metrics": [
+    "velocity_rmse_m_s",
+    "contact_foot_speed_rms_m_s"
+  ],
+  "ppo": "rsl_rl PPO; same MultiEncoderAE and GELU/LayerNorm critic and reset sampling mode as SuperMimic",
+  "ppo_config": {
+    "num_steps_per_env": 32,
+    "epochs": 5,
+    "minibatches": 4,
+    "clip_param": 0.2,
+    "gamma": 0.99,
+    "lambda": 0.95,
+    "learning_rate": 0.001,
+    "entropy_coef": 0.005,
+    "desired_kl": 0.01,
+    "initial_action_std": 0.1,
+    "max_grad_norm": 1.0
+  },
+  "reward_version": "sesame_nonfoot_no_joint_limit_20261115",
+  "reward_note": "Task reward excludes foot links from position/orientation/velocity tracking and removes joint-limit cost; native simulator and imagined rollouts use matching rewards"
+}

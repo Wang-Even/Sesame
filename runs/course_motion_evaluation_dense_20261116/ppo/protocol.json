@@ -1,0 +1,10 @@
+{
+  "checkpoint": "/home/ywwang/sesame/runs/course_comparison_dense_20261116/ppo/final.pt",
+  "checkpoint_sha256": "0ba23f2de0bab904ae4fa582c262d26d6be35962eadffd923f51c8a41fbcb312",
+  "checkpoint_real_steps": 2097152,
+  "training_protocol_sha256": "93c7f644423f274ff480a58bc205425c0c140cfa2f6011897d7d1f0d6b28d27b",
+  "trace_sha256": "0aa32184e0f9ea9607b05e7e1a271992996bca22da6944f5fd8e272cf4599c06",
+  "initial_state_max_abs_difference_from_first_group": 0.0,
+  "world_model_rollouts_used": false,
+  "inference": "Actor outputs executed in native CUDA physics; world model only supplies representation/configuration interfaces"
+}

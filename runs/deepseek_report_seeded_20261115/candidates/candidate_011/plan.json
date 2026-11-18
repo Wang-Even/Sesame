@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint quadruped using direct smooth joint curves: diagonal pairs A=(RF,LR) and B=(RR,LF) offset by half cycle, mirrored hip cosine waves, stance knee flex plus positive-sine swing lift, constant base height, declared diagonal contacts.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "pairA_stance_pairB_swing",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward translation x=0.1*t, y=0, constant z=0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cosine from +A toward -A about center, knees held at stance flex 0.15 rad (R3=pi-0.15, L4=pi-0.15). Pair B (RR,LF) in swing: hips sweep opposite cosine, knees lift with sin(pi*s) arch up to 0.58 rad (R4=L3=0.15+0.58*arch)."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "pairB_stance_pairA_swing",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation, constant height, zero attitude.",
+      "limb_motion": "Pair B (RR,LF) in stance with knees at 0.15 rad; pair A (RF,LR) in swing with knee lift arch up to 0.58 rad. Hip waves continue smoothly across the phase wrap."
+    }
+  ],
+  "coding_notes": "Parameters: freq=2.53 Hz, hip amplitude A=0.266 rad, hip center=1.598 rad, stance knee flex=0.15 rad, swing knee lift=0.58 rad, phase origin=0.115, base height=0.04673357 m. Compute pA=freq*t+0.115, wrap with pA-m.floor(pA); pB=pA+0.5 wrapped. cA=cos(2*pi*pA), cB=cos(2*pi*pB). Hips: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing flags pA>=0.5, pB>=0.5; normalized sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA,0.15+0.58*archA,0.15); flexB=where(swingB,0.15+0.58*archB,0.15). Knees: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q in order R1,R3,R2,R4,L1,L3,L2,L4. root_pos_w=[0.1*t, 0*t, 0.04673357*(1+0*t)]; root_rpy zeros. contacts=[pA<0.5, pB<0.5, pB<0.5, pA<0.5] for RF,RR,LF,LR. No clipping, projection, or ground correction; swing sine normalized before arch to avoid wrap discontinuity."
+}

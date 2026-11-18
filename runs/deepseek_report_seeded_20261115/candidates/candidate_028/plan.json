@@ -1,0 +1,51 @@
+{
+  "intent": "Sustained forward trot at 0.1 m/s on Sesame's 8-joint vertical-axis hips: diagonal pairs A=(RF,LR) and B=(RR,LF) half-cycle offset, direct smooth joint curves with normalized swing arch, constant base height, declared diagonal stance contacts.",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.25,
+      "name": "A-stance / B-swing (early)",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant z=0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A hips sweep cos(2*pi*pA) with pA in [0,0.25) (stance, knee flex ~0.152 rad); pair B in swing with normalized arch sin(pi*sB) adding ~0.552 rad knee lift; R3=L4=pi-flexA, R4=L3=flexB."
+    },
+    {
+      "start": 0.25,
+      "end": 0.5,
+      "name": "A-stance / B-swing (late)",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height.",
+      "limb_motion": "Pair A continues stance sweep toward rear; pair B swing arch descends to touchdown at pB->0.5; knee flex returns to stance bias."
+    },
+    {
+      "start": 0.5,
+      "end": 0.75,
+      "name": "B-stance / A-swing (early)",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height.",
+      "limb_motion": "Pair B now in stance with knee flex ~0.152 rad; pair A swings with normalized arch lift ~0.552 rad; mirrored hip signs preserved (R1=center+A*cos, L2=center-A*cos, R2=pi-center+A*cos, L1=pi-center-A*cos)."
+    },
+    {
+      "start": 0.75,
+      "end": 1.0,
+      "name": "B-stance / A-swing (late)",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation and fixed base height.",
+      "limb_motion": "Pair B stance sweep completes; pair A swing arch descends to touchdown; loop wraps smoothly to phase 0 with continuous hip cosine and zeroed swing arch."
+    }
+  ],
+  "coding_notes": "Exact parameters: freq=2.48 Hz, A=0.262 rad, center=1.598 rad, stance_flex=0.152 rad, swing_lift=0.552 rad, phase0=0.115, base_z=0.04673357 m. Compute pA=freq*t+phase0 then pA-=floor(pA); pB=pA+0.5 then pB-=floor(pB). cA=cos(2*pi*pA), cB=cos(2*pi*pB). R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. swingA=pA>=0.5, swingB=pB>=0.5; sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA, stance_flex+swing_lift*archA, stance_flex); flexB=where(swingB, stance_flex+swing_lift*archB, stance_flex). R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. q=m.stack([R1,R3,R2,R4,L1,L3,L2,L4],dim=-1). root_pos_w=m.stack([home['speed']*t, 0*t, base_z*(1+0*t)],dim=-1); root_rpy=m.stack([0*t,0*t,0*t],dim=-1). contacts=m.stack([pA<0.5, pB<0.5, pB<0.5, pA<0.5],dim=-1). No clipping, no base ripple, no Python max/min or tensor methods; all math via m.API."
+}

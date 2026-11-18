@@ -1,0 +1,46 @@
+[
+  {
+    "source": "original",
+    "name": "validation_clip_000",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+    "source_index": 0,
+    "frames": [
+      0,
+      301
+    ],
+    "content_sha256": "2e4ec4aea4f13f7744dfe8f10b653e44e9fb9d2b84392d74203c2e459ab037c7"
+  },
+  {
+    "source": "original",
+    "name": "validation_clip_001",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+    "source_index": 1,
+    "frames": [
+      451,
+      752
+    ],
+    "content_sha256": "574e4b38507143b65f86d2883d88d4413deb88d74dfcca8c8e4bdce04d478177"
+  },
+  {
+    "source": "original",
+    "name": "validation_clip_002",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+    "source_index": 2,
+    "frames": [
+      902,
+      1203
+    ],
+    "content_sha256": "31896d221182c7824d0c15b6678131c1483ea03d1c556fd1b87602fcd5b13c4b"
+  },
+  {
+    "source": "original",
+    "name": "validation_clip_003",
+    "source_directory": "/home/ywwang/sesame/datasets/supermimic_research_sesame_20261112/validation",
+    "source_index": 3,
+    "frames": [
+      1353,
+      1654
+    ],
+    "content_sha256": "c8f861e325d0f551108439b523ecd79d356e94ac4a377e21d9b9e58190affdec"
+  }
+]

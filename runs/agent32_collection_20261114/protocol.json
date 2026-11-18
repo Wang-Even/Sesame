@@ -1,0 +1,106 @@
+{
+  "config": {
+    "source": "datasets/supermimic_research_sesame_20261112/train",
+    "seed": 42,
+    "rounds": 4,
+    "candidates_per_round": 6,
+    "duration_s": 6.0,
+    "fps": 50,
+    "target_speed_m_s": 0.1,
+    "robust_trials": 3,
+    "gates": {
+      "joint_velocity_max_rad_s": 10.471975512,
+      "joint_acceleration_max_rad_s2": 400.0,
+      "foot_surface_min_z_m": -0.003,
+      "root_height_min_m": 0.035,
+      "tilt_max_deg": 45.0,
+      "velocity_rmse_max_m_s": 0.05,
+      "mean_speed_error_max_m_s": 0.025,
+      "heading_rms_max_deg": 10.0,
+      "heading_max_deg": 20.0,
+      "lateral_displacement_max_m": 0.12,
+      "joint_tracking_rmse_max_rad": 0.25,
+      "root_tracking_rmse_max_m": 0.1,
+      "foot_tracking_rmse_max_m": 0.02,
+      "contact_foot_speed_rms_max_m_s": 0.05,
+      "nonfoot_contact_fraction_max": 0.01,
+      "torque_near_stall_fraction_max": 0.25,
+      "action_rate_rms_max_per_s": 20.0,
+      "joint_limit_violation_max_rad": 0.02
+    },
+    "api": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "api_key_env": "DEEPSEEK_API_KEY"
+    },
+    "physics_dt_s": 0.0005,
+    "diagnostic_only_metrics": [
+      "velocity_rmse_m_s",
+      "contact_foot_speed_rms_m_s"
+    ],
+    "mean_speed_measurement": "displacement",
+    "execution_feedback": {
+      "position_gain": 12.0,
+      "velocity_gain": 1.0,
+      "heading_gain": 1.5,
+      "lateral_gain": 8.0,
+      "yaw_rate_gain": 0.03,
+      "velocity_filter_alpha": 0.15
+    }
+  },
+  "generator": "mimicagent_sesame",
+  "model": "current Codex conversation agent",
+  "candidates": 256,
+  "repairs": 0,
+  "accepted_target": 32,
+  "source_sha256": {
+    "sesame_trajectory_agent/mimic_prompts.py": "3b00096bec6489c00d630de8dc251100ed7fb1031c7e8d3a7b7ffd4fc8c42b71",
+    "sesame_trajectory_agent/proposer.py": "bb8cea6b1599ef30f5bbf0ada952ff682ae3359a5cc5bebee718e949bbb12cf9",
+    "sesame_trajectory_agent/motion_program.py": "3d08e67debb63136501e6ac2a5fd681835f6fb23893f946cba7af92c95d5f9b0",
+    "sesame_trajectory_agent/schema.py": "7b073203288e303716214796f364e8b55a55ed170bb106a9989cc2975e6e456c",
+    "sesame_trajectory_agent/decisions.py": "61cd71ffda6254a0651aee686519e9b5a2c5470f2668c21f2cd96f459955b32d",
+    "sesame_trajectory_agent/validation.py": "825eb4e5fe25a78b25a5a01c2109fab2a81f35a10be512fcb5c65e0b1945ad5a",
+    "sesame_trajectory_agent/__init__.py": "88f43298679139d370da910cb5c77e1e6208f15f80537f2cc62768df29bd509a",
+    "sesame_trajectory_agent/api_client.py": "82bdc89cb2e9817af6cfbabb1ac0729b32653364e8079608f58364c7611b0f8e",
+    "sesame_trajectory_agent/trajectories.py": "6c25e2b7eb7704bc50e97504378624bb7ef4cb23716f1c062b2c65e37fabea80",
+    "sesame_trajectory_agent/mimic_motion.py": "d703ac35cf3558c916240cc7c91548b8d3ead6ad79dc16999d70c2a856f99984",
+    "scripts/run_mimicagent.py": "d144e262eeb7751de56a3ef0790e7875079022266369a59b535177e05175d824",
+    "sesame_research/robot.py": "2eb1b2309031d4b6bd1a06ee4a3409e98184472570f4b8913795ebf675446d2a",
+    "sesame_research/task.py": "0a81135fcb201c0bc67817835dfe2aa4d920f29d0e46643e2f5da27527c7a850"
+  },
+  "continue_on_candidate_error": false,
+  "paper": "https://arxiv.org/abs/2609.24145",
+  "public_workflow": "https://github.com/Luckykantnayak/mimicagent-humnaoid/blob/main/agent/pipeline.py",
+  "provenance": "Local Sesame adaptation of paper and public humanoid workflow; quadruped official code not released",
+  "acceptance": "all kinematic checks + native PD nominal trial + every configured randomized trial",
+  "acceptance_scope": "existing experimental dynamic gates, not course requirements or MimicAgent paper success criteria",
+  "execution_feedback": {
+    "position_gain": 12.0,
+    "velocity_gain": 1.0,
+    "heading_gain": 1.5,
+    "lateral_gain": 8.0,
+    "yaw_rate_gain": 0.03,
+    "velocity_filter_alpha": 0.15
+  },
+  "mean_speed_measurement": "displacement",
+  "generation": "agent-authored executable expressions on CUDA, no joint clipping, root adjustment or seed resampling",
+  "changes_from_paper": [
+    "current Codex conversation agent; no external API",
+    "Sesame eight-joint CUDA adapter",
+    "0.035 m minimum height and twice actual standing height; Go2's 0.1 m would reject all Sesame standing poses",
+    "fixed task semantics and native PD dynamics verification before admission at user's request",
+    "only successful actual executed traces exported for SuperMimic"
+  ],
+  "limitations": [
+    "PD failure does not imply untrackable by learned RL policy",
+    "self collision disabled in inherited model",
+    "50 Hz sampled validation; contact velocity is a slip proxy",
+    "search trials are not held-out evaluations"
+  ],
+  "authored_input": {
+    "directory": "/home/ywwang/sesame/runs/agent32_inputs_20261114",
+    "api_calls": 0,
+    "budget_unit": "one submitted program version, including each revision",
+    "comparison_limit": "Author has seen prior DeepSeek results and may run recorded CUDA geometry diagnostics; not a blind or equal-budget model comparison"
+  }
+}

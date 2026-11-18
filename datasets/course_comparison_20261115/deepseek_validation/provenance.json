@@ -1,0 +1,46 @@
+[
+  {
+    "source": "deepseek",
+    "name": "candidate_031_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 31,
+    "frames": [
+      9331,
+      9632
+    ],
+    "content_sha256": "bd0f5449b2d3b9880ef0c72daf0712dd9d8fec04db1341f435e831e87b978cfb"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_021_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 21,
+    "frames": [
+      6321,
+      6622
+    ],
+    "content_sha256": "cac65f2b538c819dfc8fad80aa3bfc61f28a009554ba08f17f4f1da57de601aa"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_028_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 28,
+    "frames": [
+      8428,
+      8729
+    ],
+    "content_sha256": "f97f953eb27474ed5b23a436224630e1fd5590380bcdc4e6c66f95c9c9abad24"
+  },
+  {
+    "source": "deepseek",
+    "name": "candidate_024_attempt_00",
+    "source_directory": "/home/ywwang/sesame/runs/deepseek_report_seeded_20261115/accepted/train",
+    "source_index": 24,
+    "frames": [
+      7224,
+      7525
+    ],
+    "content_sha256": "8b8f415273b55e78737832a4be13d36c6969de01ed310ea6f89261e48dba629c"
+  }
+]

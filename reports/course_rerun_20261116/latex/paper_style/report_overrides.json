@@ -1,0 +1,32 @@
+{
+  "figure_sources": {
+    "baselines/baseline_learning_curves.png": "paper_style/baselines/baseline_learning_curves.png",
+    "baselines/baseline_test_metrics.png": "paper_style/baselines/baseline_test_metrics.png",
+    "improvements/smoothness_comparison.png": "paper_style/improvements/smoothness_comparison.png",
+    "reference_execution_comparison.png": "paper_style/reference_execution_comparison.png",
+    "supermimic_comparison.png": "paper_style/supermimic_comparison.png",
+    "supermimic_ablation.png": "paper_style/supermimic_ablation.png",
+    "ppo_extended_time_comparison.png": "paper_style/ppo_extended_time_comparison.png"
+  },
+  "caption_overrides": {
+    "1": "Sesame 在 Isaac 平地环境中执行 PPO 行走策略。图像截取自策略仿真轨迹第 2 秒。",
+    "2": "三种基线的学习曲线。横轴为累计真实环境步数，纵轴依次为训练回报、前向速度 RMSE 与航向 RMS。每种方法的实线表示三个训练种子在共同环境步数处的 EMA 均值。EMA 半衰期为 131,072 步，在完整记录上计算后截取正式训练区间。PPO 误差指标包含 16 个诊断时刻；回报窗口为 PPO 最近 100 回合和 SAC/DQN 最近 256 回合。最终测试指标直接由原始轨迹统计。",
+    "3": "三种基线在固定参数和域随机化条件下的测试结果，评估设置见第 2.1 节。所有模型均采用域随机化训练。实线连接两种测试条件下的均值，阴影表示三个训练种子的样本标准差；每种方法在每种条件下共评估 384 回合。横轴为离散评估条件，结果采用未经平滑的测试统计。",
+    "4": "动作差惩罚加倍与原设置 PPO 的平滑性对照。(a) 执行目标角加速度 RMS；(b) 实际关节加速度 RMS；(c) 前向速度 RMSE；(d) 航向 RMS。固定参数与域随机化评估设置见第 2.1 节。实线连接两种评估条件下的原始测试均值，每组采用单个训练种子，每种条件评估 128 回合。横轴为离散评估条件，平滑性与跟踪误差联合分析。小图表示动作差惩罚加倍相对原设置的变化百分比，计算方式为两者之差除以原设置的测量值，再乘以 100%；灰色水平线表示零变化。",
+    "5": "参考生成与世界模型策略学习流程。参考轨迹定义跟踪目标；策略在物理仿真中采集状态转移以训练世界模型，并通过想象轨迹优化跟踪回报。",
+    "6": "Codex 生成的参考轨迹与反馈控制加 PD 控制器的仿真执行对比。(a) 前向位移；(b) 横向位移；(c) 机身偏航角。横轴为仿真时间，蓝线表示运动学参考，橙线表示控制器执行；位移以初始位置为原点，方向沿世界坐标轴。连续实线连接 50 Hz 原始记录，包含初始状态和 300 个控制步后的状态，未作平滑。该片段为参考采集中的单条标称参数检验示例，入库数据采用通过检验的实际执行轨迹。",
+    "7": "共同验证集上的回报与跟踪误差。各组从首次更新后的实测评估开始，每 32,768 个真实环境步评估一次；横轴排除启动及评估耗时。实线为半衰期 131072 步的因果 EMA，各组使用训练种子 42。蓝、橙、绿、紫分别区分官方代码 SuperMimic、PPO、DeepSeek 与 Codex；回报面板的小图放大两组 Agent 在 2.4–3.1 分钟的结果。误差面板按观测范围设置纵轴。",
+    "8": "想象长度与 Critic 的消融实验。各组使用原始参考、相同真实环境步预算、奖励和评估集，比较 H=16、32、64 及 H=32 无 Critic 配置。横轴为扣除启动及评估耗时的训练时间；实线为半衰期 131072 步的因果 EMA，评估间隔为 32,768 个真实环境步，训练种子为 42。回报面板的小图放大 1.8–2.8 分钟的结果，误差面板按观测范围设置纵轴。",
+    "9": "延长预算 PPO 与三组 SuperMimic 的验证回报。横轴为首次更新后的训练时间，排除启动及评估耗时；实线为半衰期 131072 步的因果 EMA，各组曲线终止于各自预算。评估间隔为 32,768 个真实环境步，训练种子为 42。表中时间对照采用包含启动开销的训练计时。左图展示完整训练过程，右图放大 1.7–3.15 分钟、回报 20.0–22.7 的区域，以区分三组 SuperMimic 的回报。"
+  },
+  "link_sources": {},
+  "extra_assets": [
+    "paper_style/plot_protocol.md",
+    "paper_style/smoothing_protocol.json",
+    "paper_style/display_curve_data.csv",
+    "paper_style/plot_manifest.json",
+    "paper_style/reference_execution_data.csv",
+    "paper_style/reference_execution_metadata.json"
+  ],
+  "note": "Continuous post-startup curves without markers or raw overlays. Every run is cropped at its first valid update log and time is rebased to that timestamp. EMA half-life remains 131072 real steps, calculated before cropping. Baseline training curves show only the three-seed mean; final-test figures retain sample SD. Baseline training comparisons use environment steps only. Raw data and all test/table values remain unchanged; cost tables include startup."
+}

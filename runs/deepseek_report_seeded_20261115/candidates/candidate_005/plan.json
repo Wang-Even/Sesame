@@ -1,0 +1,29 @@
+{
+  "intent": "Sustained forward diagonal trot for Sesame at 0.1 m/s with a distinct smooth parameter set (freq 2.60 Hz, hip amplitude 0.265 rad, hip center 1.585 rad, stance knee flex 0.15 rad, swing knee lift 0.52 rad, phase origin 0.145, constant base height 0.04673357 m).",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "name": "stance_A_swing_B",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward x = home['speed']*t, y=0, constant z=0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance: hips sweep cosine from center+/-A toward center-/+A with mirrored signs; knees held at stance flex 0.15 rad (R3=L4=pi-0.15, R4=L3=0.15). Pair B (RR,LF) in swing: hips sweep with half-cycle offset; knees flex up to 0.15+0.52 rad following normalized sine arch over swing."
+    },
+    {
+      "start": 0.5,
+      "end": 1.0,
+      "name": "stance_B_swing_A",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Same constant forward translation, fixed base height, zero attitude.",
+      "limb_motion": "Pair B (RR,LF) in stance with stance knee flex 0.15 rad; pair A (RF,LR) in swing with sine-arch knee lift up to 0.52 rad and mirrored hip cosine sweep. Phase wraps smoothly because swing parameter s=(p-0.5)*2 is normalized before sin."
+    }
+  ],
+  "coding_notes": "Parameters: freq=2.60 Hz, A=0.265 rad, center=1.585 rad, stance_flex=0.15 rad, swing_lift=0.52 rad, phase0=0.145, base_z=0.04673357 m. Compute pA=freq*t+phase0 then pA-=floor(pA); pB=pA+0.5 then pB-=floor(pB). cA=cos(2*pi*pA), cB=cos(2*pi*pB). Hips: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing flags pA>=0.5, pB>=0.5; sA=(pA-0.5)*2, sB=(pB-0.5)*2; archA=sin(pi*sA), archB=sin(pi*sB); flexA=where(swingA, stance_flex+swing_lift*archA, stance_flex); flexB likewise. Knees: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q in order R1,R3,R2,R4,L1,L3,L2,L4. root_pos_w=[home['speed']*t, 0*t, base_z*(1+0*t)], root_rpy zeros. Contacts: contactA=pA<0.5, contactB=pB<0.5; stack [contactA, contactB, contactB, contactA] for RF,RR,LF,LR. No clipping, projection, or base ripple; all math via m.API with one final return."
+}

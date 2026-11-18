@@ -1,0 +1,18 @@
+
+@font-face {font-family:ReportNoto;src:url("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc");}
+@page {size:A4;margin:14mm 14mm 16mm;@bottom-center{content:counter(page) " / " counter(pages);font-family:ReportNoto;font-size:8pt;color:#64748b;}}
+body{font-family:ReportNoto,"Noto Sans CJK SC",sans-serif;font-size:9pt;line-height:1.5;color:#203047;margin:0;}
+h1{font-size:21pt;line-height:1.3;margin:0 0 4mm;color:#142c47;}
+h2{font-size:14pt;line-height:1.35;margin:7mm 0 3mm;padding-bottom:1.5mm;border-bottom:1pt solid #d5dfec;break-after:avoid;}
+h3{font-size:11pt;margin:4mm 0 2mm;break-after:avoid;}
+p{margin:0 0 2.5mm;orphans:3;widows:3;}
+img{display:block;max-width:100%;max-height:100mm;margin:3mm auto;object-fit:contain;}
+p:has(img){break-inside:avoid;break-after:avoid;}
+p:has(img)+p{font-size:8pt;color:#55677a;}
+table{border-collapse:collapse;width:100%;font-size:7.5pt;line-height:1.4;table-layout:fixed;margin:3mm 0 4mm;break-inside:avoid;}
+thead{display:table-header-group;}tr{break-inside:avoid;}th,td{border:.4pt solid #d4deea;padding:1.3mm;vertical-align:top;overflow-wrap:anywhere;}
+th{background:#eaf1f9;}tbody tr:nth-child(even){background:#f8fafc;}
+table.method-table th:first-child{width:24%;}table.method-table td:first-child{overflow-wrap:normal;}
+a{color:#185ba0;text-decoration:none;}code{font-family:"DejaVu Sans Mono",ReportNoto,monospace;font-size:.8em;overflow-wrap:anywhere;}
+ul,ol{padding-left:5mm;}li{margin-bottom:1.5mm;}
+@media screen{body{max-width:1060px;margin:30px auto;padding:0 24px;font-size:15px;}img{max-height:700px;}table{font-size:13px;}}

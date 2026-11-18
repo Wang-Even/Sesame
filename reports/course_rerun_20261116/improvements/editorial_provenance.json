@@ -1,0 +1,7 @@
+{
+  "generated_section_sha256": "63059c41cfd7d3a87935ccfdd165db62574144e0ee58c28141380a86d9578b93",
+  "final_section_sha256": "c39c3b89301f4ef9dc8e53171be1c6f9e7783908a0c69672ef367119686b5134",
+  "summary_sha256": "d6afafc09440942c4ee534a22fef07f9de917db157962740736631e20d623fa4",
+  "note": "Post-run report interpretation and timing-label clarification only. Training/evaluation/plot source hashes remain unchanged.",
+  "condition_terminology_revision": "Fixed parameters / domain randomization are evaluation conditions, not training treatments."
+}

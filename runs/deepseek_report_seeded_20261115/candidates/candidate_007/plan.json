@@ -1,0 +1,51 @@
+{
+  "intent": "Sustained forward diagonal trot for Sesame at 0.1 m/s with a distinct smooth parameter set (freq 2.55 Hz, hip amplitude 0.272 rad, hip center 1.625 rad, stance knee flex 0.15 rad, swing knee lift 0.56 rad, phase origin 0.13, constant base height 0.04673357 m).",
+  "cyclic": true,
+  "phases": [
+    {
+      "start": 0.0,
+      "end": 0.25,
+      "name": "trot_quarter_1",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant base height 0.04673357 m, zero roll/pitch/yaw.",
+      "limb_motion": "Pair A (RF,LR) in stance with hip cos wave; pair B (RR,LF) in swing with normalized sine knee-lift arch; mirrored hip signs per URDF, R3/L4 share flexA, R4/L3 share flexB."
+    },
+    {
+      "start": 0.25,
+      "end": 0.5,
+      "name": "trot_quarter_2",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant base height, zero attitude.",
+      "limb_motion": "Pair A transitions to swing (sine knee lift), pair B enters stance; diagonal support swaps at half-cycle."
+    },
+    {
+      "start": 0.5,
+      "end": 0.75,
+      "name": "trot_quarter_3",
+      "contacts": [
+        "right_rear",
+        "left_front"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant base height, zero attitude.",
+      "limb_motion": "Pair B continues stance hip sweep; pair A in swing with knee-lift arch; smooth continuous joint curves across wrap."
+    },
+    {
+      "start": 0.75,
+      "end": 1.0,
+      "name": "trot_quarter_4",
+      "contacts": [
+        "right_front",
+        "left_rear"
+      ],
+      "base_motion": "Constant forward velocity 0.1 m/s along world x, y=0, constant base height, zero attitude.",
+      "limb_motion": "Pair A returns to stance, pair B swings; cycle closes continuously at phase wrap with normalized swing sine."
+    }
+  ],
+  "coding_notes": "Parameters: freq=2.55 Hz, A=0.272 rad, center=1.625 rad, stance_flex=0.15 rad, swing_lift=0.56 rad, phase0=0.13, base_z=0.04673357 m, speed=home['speed']. Compute pA=freq*t+phase0 normalized by floor; pB=pA+0.5 normalized. cA=cos(2*pi*pA), cB=cos(2*pi*pB). Hips: R1=center+A*cA; R2=pi-center+A*cB; L1=pi-center-A*cB; L2=center-A*cA. Swing masks pA>=0.5, pB>=0.5; normalized s=(p-0.5)*2; arch=sin(pi*s); flexA=where(swingA, stance_flex+swing_lift*archA, stance_flex); flexB likewise. Knees: R3=pi-flexA, L4=pi-flexA, R4=flexB, L3=flexB. Stack q in order R1,R3,R2,R4,L1,L3,L2,L4. root_pos_w=[speed*t, 0*t, base_z*(1+0*t)]; root_rpy zeros. contacts=[pA<0.5, pB<0.5, pB<0.5, pA<0.5] for RF,RR,LF,LR. No clipping, projection, or ground correction; swing sine normalized to avoid wrap discontinuity."
+}

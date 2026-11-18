@@ -1,0 +1,36 @@
+{
+  "body_names": [
+    "base",
+    "r1_link",
+    "r3_link",
+    "r3_foot",
+    "r2_link",
+    "r4_link",
+    "r4_foot",
+    "l1_link",
+    "l3_link",
+    "l3_foot",
+    "l2_link",
+    "l4_link",
+    "l4_foot",
+    "imu",
+    "front_camera"
+  ],
+  "joint_names": [
+    "R1",
+    "R3",
+    "R2",
+    "R4",
+    "L1",
+    "L3",
+    "L2",
+    "L4"
+  ],
+  "clips": 24,
+  "frames": 10824,
+  "fps": 50,
+  "duration_h": 0.06,
+  "source": "/home/ywwang/sesame/datasets/supermimic_official_sesame_20261111/train.npz",
+  "source_sha256": "d375de186c85f3ca31ea5901f289999531ef68c83cc6e313c734e278b4492290",
+  "conversion": "Copy root-link and joint arrays exactly; FK is recomputed by official MotionLoader on CUDA."
+}
